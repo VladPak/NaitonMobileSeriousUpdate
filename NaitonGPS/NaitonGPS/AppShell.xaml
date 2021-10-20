@@ -5,10 +5,7 @@
     x:Class="NaitonGPS.AppShell"
     xmlns:local="clr-namespace:NaitonGPS.Views"  
     x:Name="appShell">
-    <Shell.FlyoutHeader>
-        <local:HeaderNavigationBar/>
-    </Shell.FlyoutHeader>
-    
+
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">

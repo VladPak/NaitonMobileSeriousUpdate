@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:NaitonGPS.ViewModels"  
              xmlns:model="clr-namespace:NaitonGPS.Models"  
              xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib">
-
-
+    
     <RefreshView x:DataType="local:PickListViewModel" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}" >
         <!--<ScrollView VerticalScrollBarVisibility="Never">-->
             <CollectionView 
