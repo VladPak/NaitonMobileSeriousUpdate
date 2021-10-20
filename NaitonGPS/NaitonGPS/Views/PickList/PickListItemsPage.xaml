@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaitonGPS.Views.PickList.PickListItemsPage"
+             xmlns:local="clr-namespace:NaitonGPS.ViewModels"  
+             xmlns:model="clr-namespace:NaitonGPS.Models">
+    <ContentPage.Content>
+        <Grid x:DataType="local:PickListItemsViewModel">
+            <RefreshView x:DataType="local:PickListItemsViewModel" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}" >
+            <CollectionView ItemsSource="{Binding PicklistItems}" VerticalOptions="Fill" VerticalScrollBarVisibility="Never" HeightRequest="100">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <StackLayout x:DataType="model:PickListItem">
+                            <Frame HasShadow="False" BackgroundColor="{StaticResource colorGrayBackground}" CornerRadius="10" Margin="0,10,0,0">
+                                <Grid RowDefinitions="*, *" ColumnDefinitions="2*, 6*, *" ColumnSpacing="0" RowSpacing="0">
+                                    <Label x:Name="lblOne" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding ProductName}" TextColor="Black" FontSize="17" FontAttributes="None" HorizontalOptions="Start"/>
+
+                                    <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,0" Spacing="18">
+                                            <Label x:Name="lblSubname" FontAttributes="None" Text="{Binding RackName}" FontSize="15" TextColor="#69717E"/>
+                                            <Label x:Name="lblItemSize" FontAttributes="None" Text="{Binding Sizes}" FontSize="14" TextColor="#69717E"/>
+                                    </StackLayout>
+
+                                        <Label x:Name="lblItemQuantity" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TextColor="#69717E" Grid.ColumnSpan="1" Grid.RowSpan="1" WidthRequest="100" HorizontalTextAlignment="End" VerticalOptions="Center" Text="{Binding Quantity, StringFormat='{0:0}'}" FontSize="16" HorizontalOptions="End" FontAttributes="None"/>
+
+                                </Grid>                                
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <Frame IsVisible="{Binding IsEditable}" VerticalOptions="End" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#187CBC" CornerRadius="10" BorderColor="#187CBC" HasShadow="False">
+            <Label x:Name="lblButtonStartPicking" Text="Start Picking" FontSize="17" TextColor="Wheat" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer 
+                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:PickListItemsViewModel}}, Path=StartEditCommand}"
+                    NumberOfTapsRequired="1"></TapGestureRecognizer>
+            </Frame.GestureRecognizers>
+        </Frame>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

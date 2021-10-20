@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaitonGPS.Views.TermsAndServices"             
+             NavigationPage.HasNavigationBar="False"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="False"
+             iOS:Page.PrefersStatusBarHidden="True"
+             iOS:Page.PreferredStatusBarUpdateAnimation="Fade"
+             >
+    <ContentPage.Content>
+        <Grid x:Name="mainGrid" RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition x:Name="rowToChange" Height="*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="imgArrowLeft" Grid.Row="0" Grid.Column="0" Source="leftarrow.png" HorizontalOptions="Start" HeightRequest="30" WidthRequest="30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image x:Name="imgQuestion" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="65" HeightRequest="65" Source="acceptance.png"></Image>
+            <Label x:Name="lblNeedHelp" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="Terms And Service" HorizontalOptions="Center" FontSize="22" FontAttributes="Bold" Margin="0,0,0,0" TextColor="Black"></Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage> 

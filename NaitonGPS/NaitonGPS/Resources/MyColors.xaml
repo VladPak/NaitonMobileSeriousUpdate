@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <!-- Color -->
+    <Color x:Key="colorBlue">#2196F3</Color>
+    <Color x:Key="colorGreen">#66a103</Color>
+    <Color x:Key="colorGrey">#2C2C2C</Color>
+    <Color x:Key="colorWhite">#ffffff</Color>
+    <Color x:Key="colorBlack">#000000</Color>
+    <Color x:Key="colorTransparent">#00000000</Color>
+    <Color x:Key="colorRed">#ff0000</Color>
+
+    <Color x:Key="colorGrayStatic">#69717E</Color>
+    <Color x:Key="colorGrayBackground">#F2F3F4</Color>
+</ResourceDictionary>

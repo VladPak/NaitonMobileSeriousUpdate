@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ResourceDictionary.MergedDictionaries Source="MyColors.xaml"/>
+    <Style x:Key="bottomBarColors" TargetType="TabBar">
+        <Setter Property="Shell.TabBarBackgroundColor"
+            Value="CornflowerBlue" />
+        <Setter Property="Shell.TabBarTitleColor"
+            Value="Black" />
+        <Setter Property="Shell.TabBarUnselectedColor"
+            Value="AntiqueWhite" />
+    </Style>
+    
+    <!--Color options: L:Black, D:White-->
+    <Style x:Key="adaptiveTextColor" TargetType="Label">
+        <Setter Property="TextColor">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="Binding">
+                    <On Platform="Android" Value="{AppThemeBinding Light={DynamicResource colorBlack}, Dark={DynamicResource colorWhite}}"/>
+                    <On Platform="iOS" Value="{AppThemeBinding Light={DynamicResource colorBlack}, Dark={DynamicResource colorWhite}}"/>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="iconSizesBottomMenu" TargetType="Image"></Style>
+</ResourceDictionary>
