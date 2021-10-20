@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage HeightRequest="250" BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaitonGPS.Views.PicklistSearchItemBottomPopup"             
+             xmlns:local="clr-namespace:NaitonGPS.Controls"
+            xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             >
+   
+
+    <Frame CornerRadius="15" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="False">
+        <Grid RowDefinitions="0.04*, 0.1*, 0.1*, 0.6*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,0" Padding="0" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+
+            <Image x:Name="imgCloseP" Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
+                    <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label x:Name="lblRacSelect" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Select Rack" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
+
+            <Grid RowDefinitions="*" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Transparent" VerticalOptions="Start">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>    
+                    <ColumnDefinition Width="*"></ColumnDefinition>    
+                    <ColumnDefinition Width="*"></ColumnDefinition>    
+                    <ColumnDefinition Width="*"></ColumnDefinition>    
+                    <ColumnDefinition x:Name="columnToAlter" Width="1*"></ColumnDefinition>    
+                </Grid.ColumnDefinitions>
+                
+                <local:BorderedEntry Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" Placeholder="Search" FontSize="20" ReturnType="Done" x:Name="entSearch">
+                    <local:BorderedEntry.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS" Value="#E7E8E7"/>
+                            <On Platform="Android" Value="Transparent"/>
+                        </OnPlatform>
+                    </local:BorderedEntry.BackgroundColor>
+                </local:BorderedEntry>
+                <ImageButton VerticalOptions="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1"
+                            Padding="0"
+                            Margin="0,0,15,0"
+                            HeightRequest="20"
+                            HorizontalOptions="End"
+                            Source="search.png">
+                </ImageButton>
+
+                <Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
+                    <StackLayout x:Name="slChange" Margin="-5,0,-5,0" Padding="0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image x:Name="imgScan" Source="scan.png" HeightRequest="20" WidthRequest="20"></Image>
+                        <Label x:Name="lblScanToHIde" Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ClosePopup" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+
+            <RefreshView IsRefreshing="{Binding IsRefreshing}" x:Name="rv" Command="{Binding RefreshCommand}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
+                <ScrollView VerticalScrollBarVisibility="Never" IsEnabled="True">
+                    <CollectionView ItemsSource="{Binding Racks}" VerticalScrollBarVisibility="Never" BackgroundColor="Transparent" VerticalOptions="Fill" HeightRequest="100">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnSpacing="0" RowSpacing="0" Margin="0,15,0,10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition x:Name="columnToCHange" Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                                        <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label x:Name="lblRackName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding RackName}" TextColor="#1B222B" FontSize="22" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding Path=QuantityInStock, StringFormat='Qty: {0:0}'}" TextColor="#69717E" FontSize="19" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                                    <Image Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Source="rightarrow.png" phantomExtensions:Images.ImageColor="#D1D6D8" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center"></Image>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </ScrollView>
+            </RefreshView>
+        </Grid>
+        </Frame>
+</ContentPage>

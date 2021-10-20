@@ -19,10 +19,5 @@ namespace NaitonGPS.Views.PickList
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
-
-        private void TapGestureRecognizer_Tapped_1(object sender, System.EventArgs e)
-        {
-            DisplayAlert("", "Scanner button is clicked","Ok");
-        }
     }
 }

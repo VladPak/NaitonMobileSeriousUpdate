@@ -25,6 +25,2520 @@ namespace NaitonGPS.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PhantomLib.Droid.Resource.Animation.abc_fade_in = global::NaitonGPS.Droid.Resource.Animation.abc_fade_in;
+			global::PhantomLib.Droid.Resource.Animation.abc_fade_out = global::NaitonGPS.Droid.Resource.Animation.abc_fade_out;
+			global::PhantomLib.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::NaitonGPS.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::PhantomLib.Droid.Resource.Animation.abc_popup_enter = global::NaitonGPS.Droid.Resource.Animation.abc_popup_enter;
+			global::PhantomLib.Droid.Resource.Animation.abc_popup_exit = global::NaitonGPS.Droid.Resource.Animation.abc_popup_exit;
+			global::PhantomLib.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::NaitonGPS.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::PhantomLib.Droid.Resource.Animation.abc_slide_in_bottom = global::NaitonGPS.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::PhantomLib.Droid.Resource.Animation.abc_slide_in_top = global::NaitonGPS.Droid.Resource.Animation.abc_slide_in_top;
+			global::PhantomLib.Droid.Resource.Animation.abc_slide_out_bottom = global::NaitonGPS.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::PhantomLib.Droid.Resource.Animation.abc_slide_out_top = global::NaitonGPS.Droid.Resource.Animation.abc_slide_out_top;
+			global::PhantomLib.Droid.Resource.Animation.abc_tooltip_enter = global::NaitonGPS.Droid.Resource.Animation.abc_tooltip_enter;
+			global::PhantomLib.Droid.Resource.Animation.abc_tooltip_exit = global::NaitonGPS.Droid.Resource.Animation.abc_tooltip_exit;
+			global::PhantomLib.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::NaitonGPS.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::PhantomLib.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::NaitonGPS.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::PhantomLib.Droid.Resource.Animation.design_snackbar_in = global::NaitonGPS.Droid.Resource.Animation.design_snackbar_in;
+			global::PhantomLib.Droid.Resource.Animation.design_snackbar_out = global::NaitonGPS.Droid.Resource.Animation.design_snackbar_out;
+			global::PhantomLib.Droid.Resource.Animation.EnterFromLeft = global::NaitonGPS.Droid.Resource.Animation.EnterFromLeft;
+			global::PhantomLib.Droid.Resource.Animation.EnterFromRight = global::NaitonGPS.Droid.Resource.Animation.EnterFromRight;
+			global::PhantomLib.Droid.Resource.Animation.ExitToLeft = global::NaitonGPS.Droid.Resource.Animation.ExitToLeft;
+			global::PhantomLib.Droid.Resource.Animation.ExitToRight = global::NaitonGPS.Droid.Resource.Animation.ExitToRight;
+			global::PhantomLib.Droid.Resource.Animator.design_appbar_state_list_animator = global::NaitonGPS.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::PhantomLib.Droid.Resource.Animator.design_fab_hide_motion_spec = global::NaitonGPS.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::PhantomLib.Droid.Resource.Animator.design_fab_show_motion_spec = global::NaitonGPS.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_btn_state_list_anim = global::NaitonGPS.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::NaitonGPS.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_chip_state_list_anim = global::NaitonGPS.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_fab_hide_motion_spec = global::NaitonGPS.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_fab_show_motion_spec = global::NaitonGPS.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::NaitonGPS.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::PhantomLib.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::NaitonGPS.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarDivider = global::NaitonGPS.Droid.Resource.Attribute.actionBarDivider;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarItemBackground = global::NaitonGPS.Droid.Resource.Attribute.actionBarItemBackground;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarPopupTheme = global::NaitonGPS.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarSize = global::NaitonGPS.Droid.Resource.Attribute.actionBarSize;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarSplitStyle = global::NaitonGPS.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarStyle = global::NaitonGPS.Droid.Resource.Attribute.actionBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarTabBarStyle = global::NaitonGPS.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarTabStyle = global::NaitonGPS.Droid.Resource.Attribute.actionBarTabStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarTabTextStyle = global::NaitonGPS.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarTheme = global::NaitonGPS.Droid.Resource.Attribute.actionBarTheme;
+			global::PhantomLib.Droid.Resource.Attribute.actionBarWidgetTheme = global::NaitonGPS.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::PhantomLib.Droid.Resource.Attribute.actionButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.actionButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionDropDownStyle = global::NaitonGPS.Droid.Resource.Attribute.actionDropDownStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionLayout = global::NaitonGPS.Droid.Resource.Attribute.actionLayout;
+			global::PhantomLib.Droid.Resource.Attribute.actionMenuTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.actionMenuTextColor = global::NaitonGPS.Droid.Resource.Attribute.actionMenuTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeBackground = global::NaitonGPS.Droid.Resource.Attribute.actionModeBackground;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeCloseDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeCopyDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeCutDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeFindDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModePasteDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModePopupWindowStyle = global::NaitonGPS.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeShareDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeSplitBackground = global::NaitonGPS.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeStyle = global::NaitonGPS.Droid.Resource.Attribute.actionModeStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::NaitonGPS.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.actionOverflowButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionOverflowMenuStyle = global::NaitonGPS.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::PhantomLib.Droid.Resource.Attribute.actionProviderClass = global::NaitonGPS.Droid.Resource.Attribute.actionProviderClass;
+			global::PhantomLib.Droid.Resource.Attribute.actionViewClass = global::NaitonGPS.Droid.Resource.Attribute.actionViewClass;
+			global::PhantomLib.Droid.Resource.Attribute.activityChooserViewStyle = global::NaitonGPS.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::NaitonGPS.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::PhantomLib.Droid.Resource.Attribute.alertDialogCenterButtons = global::NaitonGPS.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::PhantomLib.Droid.Resource.Attribute.alertDialogStyle = global::NaitonGPS.Droid.Resource.Attribute.alertDialogStyle;
+			global::PhantomLib.Droid.Resource.Attribute.alertDialogTheme = global::NaitonGPS.Droid.Resource.Attribute.alertDialogTheme;
+			global::PhantomLib.Droid.Resource.Attribute.allowStacking = global::NaitonGPS.Droid.Resource.Attribute.allowStacking;
+			global::PhantomLib.Droid.Resource.Attribute.alpha = global::NaitonGPS.Droid.Resource.Attribute.alpha;
+			global::PhantomLib.Droid.Resource.Attribute.alphabeticModifiers = global::NaitonGPS.Droid.Resource.Attribute.alphabeticModifiers;
+			global::PhantomLib.Droid.Resource.Attribute.arrowHeadLength = global::NaitonGPS.Droid.Resource.Attribute.arrowHeadLength;
+			global::PhantomLib.Droid.Resource.Attribute.arrowShaftLength = global::NaitonGPS.Droid.Resource.Attribute.arrowShaftLength;
+			global::PhantomLib.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::NaitonGPS.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.autoSizeMaxTextSize = global::NaitonGPS.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::PhantomLib.Droid.Resource.Attribute.autoSizeMinTextSize = global::NaitonGPS.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::PhantomLib.Droid.Resource.Attribute.autoSizePresetSizes = global::NaitonGPS.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::PhantomLib.Droid.Resource.Attribute.autoSizeStepGranularity = global::NaitonGPS.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::PhantomLib.Droid.Resource.Attribute.autoSizeTextType = global::NaitonGPS.Droid.Resource.Attribute.autoSizeTextType;
+			global::PhantomLib.Droid.Resource.Attribute.background = global::NaitonGPS.Droid.Resource.Attribute.background;
+			global::PhantomLib.Droid.Resource.Attribute.backgroundSplit = global::NaitonGPS.Droid.Resource.Attribute.backgroundSplit;
+			global::PhantomLib.Droid.Resource.Attribute.backgroundStacked = global::NaitonGPS.Droid.Resource.Attribute.backgroundStacked;
+			global::PhantomLib.Droid.Resource.Attribute.backgroundTint = global::NaitonGPS.Droid.Resource.Attribute.backgroundTint;
+			global::PhantomLib.Droid.Resource.Attribute.backgroundTintMode = global::NaitonGPS.Droid.Resource.Attribute.backgroundTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.barLength = global::NaitonGPS.Droid.Resource.Attribute.barLength;
+			global::PhantomLib.Droid.Resource.Attribute.behavior_autoHide = global::NaitonGPS.Droid.Resource.Attribute.behavior_autoHide;
+			global::PhantomLib.Droid.Resource.Attribute.behavior_fitToContents = global::NaitonGPS.Droid.Resource.Attribute.behavior_fitToContents;
+			global::PhantomLib.Droid.Resource.Attribute.behavior_hideable = global::NaitonGPS.Droid.Resource.Attribute.behavior_hideable;
+			global::PhantomLib.Droid.Resource.Attribute.behavior_overlapTop = global::NaitonGPS.Droid.Resource.Attribute.behavior_overlapTop;
+			global::PhantomLib.Droid.Resource.Attribute.behavior_peekHeight = global::NaitonGPS.Droid.Resource.Attribute.behavior_peekHeight;
+			global::PhantomLib.Droid.Resource.Attribute.behavior_skipCollapsed = global::NaitonGPS.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::PhantomLib.Droid.Resource.Attribute.borderlessButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.borderWidth = global::NaitonGPS.Droid.Resource.Attribute.borderWidth;
+			global::PhantomLib.Droid.Resource.Attribute.bottomAppBarStyle = global::NaitonGPS.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.bottomNavigationStyle = global::NaitonGPS.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::PhantomLib.Droid.Resource.Attribute.bottomSheetDialogTheme = global::NaitonGPS.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::PhantomLib.Droid.Resource.Attribute.bottomSheetStyle = global::NaitonGPS.Droid.Resource.Attribute.bottomSheetStyle;
+			global::PhantomLib.Droid.Resource.Attribute.boxBackgroundColor = global::NaitonGPS.Droid.Resource.Attribute.boxBackgroundColor;
+			global::PhantomLib.Droid.Resource.Attribute.boxBackgroundMode = global::NaitonGPS.Droid.Resource.Attribute.boxBackgroundMode;
+			global::PhantomLib.Droid.Resource.Attribute.boxCollapsedPaddingTop = global::NaitonGPS.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::PhantomLib.Droid.Resource.Attribute.boxCornerRadiusBottomEnd = global::NaitonGPS.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::PhantomLib.Droid.Resource.Attribute.boxCornerRadiusBottomStart = global::NaitonGPS.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::PhantomLib.Droid.Resource.Attribute.boxCornerRadiusTopEnd = global::NaitonGPS.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::PhantomLib.Droid.Resource.Attribute.boxCornerRadiusTopStart = global::NaitonGPS.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::PhantomLib.Droid.Resource.Attribute.boxStrokeColor = global::NaitonGPS.Droid.Resource.Attribute.boxStrokeColor;
+			global::PhantomLib.Droid.Resource.Attribute.boxStrokeWidth = global::NaitonGPS.Droid.Resource.Attribute.boxStrokeWidth;
+			global::PhantomLib.Droid.Resource.Attribute.buttonBarButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.buttonBarStyle = global::NaitonGPS.Droid.Resource.Attribute.buttonBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.buttonGravity = global::NaitonGPS.Droid.Resource.Attribute.buttonGravity;
+			global::PhantomLib.Droid.Resource.Attribute.buttonIconDimen = global::NaitonGPS.Droid.Resource.Attribute.buttonIconDimen;
+			global::PhantomLib.Droid.Resource.Attribute.buttonPanelSideLayout = global::NaitonGPS.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::PhantomLib.Droid.Resource.Attribute.buttonStyle = global::NaitonGPS.Droid.Resource.Attribute.buttonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.buttonStyleSmall = global::NaitonGPS.Droid.Resource.Attribute.buttonStyleSmall;
+			global::PhantomLib.Droid.Resource.Attribute.buttonTint = global::NaitonGPS.Droid.Resource.Attribute.buttonTint;
+			global::PhantomLib.Droid.Resource.Attribute.buttonTintMode = global::NaitonGPS.Droid.Resource.Attribute.buttonTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.cardBackgroundColor = global::NaitonGPS.Droid.Resource.Attribute.cardBackgroundColor;
+			global::PhantomLib.Droid.Resource.Attribute.cardCornerRadius = global::NaitonGPS.Droid.Resource.Attribute.cardCornerRadius;
+			global::PhantomLib.Droid.Resource.Attribute.cardElevation = global::NaitonGPS.Droid.Resource.Attribute.cardElevation;
+			global::PhantomLib.Droid.Resource.Attribute.cardMaxElevation = global::NaitonGPS.Droid.Resource.Attribute.cardMaxElevation;
+			global::PhantomLib.Droid.Resource.Attribute.cardPreventCornerOverlap = global::NaitonGPS.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::PhantomLib.Droid.Resource.Attribute.cardUseCompatPadding = global::NaitonGPS.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::PhantomLib.Droid.Resource.Attribute.cardViewStyle = global::NaitonGPS.Droid.Resource.Attribute.cardViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.checkboxStyle = global::NaitonGPS.Droid.Resource.Attribute.checkboxStyle;
+			global::PhantomLib.Droid.Resource.Attribute.checkedChip = global::NaitonGPS.Droid.Resource.Attribute.checkedChip;
+			global::PhantomLib.Droid.Resource.Attribute.checkedIcon = global::NaitonGPS.Droid.Resource.Attribute.checkedIcon;
+			global::PhantomLib.Droid.Resource.Attribute.checkedIconEnabled = global::NaitonGPS.Droid.Resource.Attribute.checkedIconEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.checkedIconVisible = global::NaitonGPS.Droid.Resource.Attribute.checkedIconVisible;
+			global::PhantomLib.Droid.Resource.Attribute.checkedTextViewStyle = global::NaitonGPS.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.chipBackgroundColor = global::NaitonGPS.Droid.Resource.Attribute.chipBackgroundColor;
+			global::PhantomLib.Droid.Resource.Attribute.chipCornerRadius = global::NaitonGPS.Droid.Resource.Attribute.chipCornerRadius;
+			global::PhantomLib.Droid.Resource.Attribute.chipEndPadding = global::NaitonGPS.Droid.Resource.Attribute.chipEndPadding;
+			global::PhantomLib.Droid.Resource.Attribute.chipGroupStyle = global::NaitonGPS.Droid.Resource.Attribute.chipGroupStyle;
+			global::PhantomLib.Droid.Resource.Attribute.chipIcon = global::NaitonGPS.Droid.Resource.Attribute.chipIcon;
+			global::PhantomLib.Droid.Resource.Attribute.chipIconEnabled = global::NaitonGPS.Droid.Resource.Attribute.chipIconEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.chipIconSize = global::NaitonGPS.Droid.Resource.Attribute.chipIconSize;
+			global::PhantomLib.Droid.Resource.Attribute.chipIconTint = global::NaitonGPS.Droid.Resource.Attribute.chipIconTint;
+			global::PhantomLib.Droid.Resource.Attribute.chipIconVisible = global::NaitonGPS.Droid.Resource.Attribute.chipIconVisible;
+			global::PhantomLib.Droid.Resource.Attribute.chipMinHeight = global::NaitonGPS.Droid.Resource.Attribute.chipMinHeight;
+			global::PhantomLib.Droid.Resource.Attribute.chipSpacing = global::NaitonGPS.Droid.Resource.Attribute.chipSpacing;
+			global::PhantomLib.Droid.Resource.Attribute.chipSpacingHorizontal = global::NaitonGPS.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::PhantomLib.Droid.Resource.Attribute.chipSpacingVertical = global::NaitonGPS.Droid.Resource.Attribute.chipSpacingVertical;
+			global::PhantomLib.Droid.Resource.Attribute.chipStandaloneStyle = global::NaitonGPS.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::PhantomLib.Droid.Resource.Attribute.chipStartPadding = global::NaitonGPS.Droid.Resource.Attribute.chipStartPadding;
+			global::PhantomLib.Droid.Resource.Attribute.chipStrokeColor = global::NaitonGPS.Droid.Resource.Attribute.chipStrokeColor;
+			global::PhantomLib.Droid.Resource.Attribute.chipStrokeWidth = global::NaitonGPS.Droid.Resource.Attribute.chipStrokeWidth;
+			global::PhantomLib.Droid.Resource.Attribute.chipStyle = global::NaitonGPS.Droid.Resource.Attribute.chipStyle;
+			global::PhantomLib.Droid.Resource.Attribute.closeIcon = global::NaitonGPS.Droid.Resource.Attribute.closeIcon;
+			global::PhantomLib.Droid.Resource.Attribute.closeIconEnabled = global::NaitonGPS.Droid.Resource.Attribute.closeIconEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.closeIconEndPadding = global::NaitonGPS.Droid.Resource.Attribute.closeIconEndPadding;
+			global::PhantomLib.Droid.Resource.Attribute.closeIconSize = global::NaitonGPS.Droid.Resource.Attribute.closeIconSize;
+			global::PhantomLib.Droid.Resource.Attribute.closeIconStartPadding = global::NaitonGPS.Droid.Resource.Attribute.closeIconStartPadding;
+			global::PhantomLib.Droid.Resource.Attribute.closeIconTint = global::NaitonGPS.Droid.Resource.Attribute.closeIconTint;
+			global::PhantomLib.Droid.Resource.Attribute.closeIconVisible = global::NaitonGPS.Droid.Resource.Attribute.closeIconVisible;
+			global::PhantomLib.Droid.Resource.Attribute.closeItemLayout = global::NaitonGPS.Droid.Resource.Attribute.closeItemLayout;
+			global::PhantomLib.Droid.Resource.Attribute.collapseContentDescription = global::NaitonGPS.Droid.Resource.Attribute.collapseContentDescription;
+			global::PhantomLib.Droid.Resource.Attribute.collapsedTitleGravity = global::NaitonGPS.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::PhantomLib.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.collapseIcon = global::NaitonGPS.Droid.Resource.Attribute.collapseIcon;
+			global::PhantomLib.Droid.Resource.Attribute.color = global::NaitonGPS.Droid.Resource.Attribute.color;
+			global::PhantomLib.Droid.Resource.Attribute.colorAccent = global::NaitonGPS.Droid.Resource.Attribute.colorAccent;
+			global::PhantomLib.Droid.Resource.Attribute.colorBackgroundFloating = global::NaitonGPS.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::PhantomLib.Droid.Resource.Attribute.colorButtonNormal = global::NaitonGPS.Droid.Resource.Attribute.colorButtonNormal;
+			global::PhantomLib.Droid.Resource.Attribute.colorControlActivated = global::NaitonGPS.Droid.Resource.Attribute.colorControlActivated;
+			global::PhantomLib.Droid.Resource.Attribute.colorControlHighlight = global::NaitonGPS.Droid.Resource.Attribute.colorControlHighlight;
+			global::PhantomLib.Droid.Resource.Attribute.colorControlNormal = global::NaitonGPS.Droid.Resource.Attribute.colorControlNormal;
+			global::PhantomLib.Droid.Resource.Attribute.colorError = global::NaitonGPS.Droid.Resource.Attribute.colorError;
+			global::PhantomLib.Droid.Resource.Attribute.colorPrimary = global::NaitonGPS.Droid.Resource.Attribute.colorPrimary;
+			global::PhantomLib.Droid.Resource.Attribute.colorPrimaryDark = global::NaitonGPS.Droid.Resource.Attribute.colorPrimaryDark;
+			global::PhantomLib.Droid.Resource.Attribute.colorSecondary = global::NaitonGPS.Droid.Resource.Attribute.colorSecondary;
+			global::PhantomLib.Droid.Resource.Attribute.colorSwitchThumbNormal = global::NaitonGPS.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::PhantomLib.Droid.Resource.Attribute.commitIcon = global::NaitonGPS.Droid.Resource.Attribute.commitIcon;
+			global::PhantomLib.Droid.Resource.Attribute.contentDescription = global::NaitonGPS.Droid.Resource.Attribute.contentDescription;
+			global::PhantomLib.Droid.Resource.Attribute.contentInsetEnd = global::NaitonGPS.Droid.Resource.Attribute.contentInsetEnd;
+			global::PhantomLib.Droid.Resource.Attribute.contentInsetEndWithActions = global::NaitonGPS.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::PhantomLib.Droid.Resource.Attribute.contentInsetLeft = global::NaitonGPS.Droid.Resource.Attribute.contentInsetLeft;
+			global::PhantomLib.Droid.Resource.Attribute.contentInsetRight = global::NaitonGPS.Droid.Resource.Attribute.contentInsetRight;
+			global::PhantomLib.Droid.Resource.Attribute.contentInsetStart = global::NaitonGPS.Droid.Resource.Attribute.contentInsetStart;
+			global::PhantomLib.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::NaitonGPS.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::PhantomLib.Droid.Resource.Attribute.contentPadding = global::NaitonGPS.Droid.Resource.Attribute.contentPadding;
+			global::PhantomLib.Droid.Resource.Attribute.contentPaddingBottom = global::NaitonGPS.Droid.Resource.Attribute.contentPaddingBottom;
+			global::PhantomLib.Droid.Resource.Attribute.contentPaddingLeft = global::NaitonGPS.Droid.Resource.Attribute.contentPaddingLeft;
+			global::PhantomLib.Droid.Resource.Attribute.contentPaddingRight = global::NaitonGPS.Droid.Resource.Attribute.contentPaddingRight;
+			global::PhantomLib.Droid.Resource.Attribute.contentPaddingTop = global::NaitonGPS.Droid.Resource.Attribute.contentPaddingTop;
+			global::PhantomLib.Droid.Resource.Attribute.contentScrim = global::NaitonGPS.Droid.Resource.Attribute.contentScrim;
+			global::PhantomLib.Droid.Resource.Attribute.controlBackground = global::NaitonGPS.Droid.Resource.Attribute.controlBackground;
+			global::PhantomLib.Droid.Resource.Attribute.coordinatorLayoutStyle = global::NaitonGPS.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::PhantomLib.Droid.Resource.Attribute.cornerRadius = global::NaitonGPS.Droid.Resource.Attribute.cornerRadius;
+			global::PhantomLib.Droid.Resource.Attribute.counterEnabled = global::NaitonGPS.Droid.Resource.Attribute.counterEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.counterMaxLength = global::NaitonGPS.Droid.Resource.Attribute.counterMaxLength;
+			global::PhantomLib.Droid.Resource.Attribute.counterOverflowTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.counterTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.counterTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.customNavigationLayout = global::NaitonGPS.Droid.Resource.Attribute.customNavigationLayout;
+			global::PhantomLib.Droid.Resource.Attribute.defaultQueryHint = global::NaitonGPS.Droid.Resource.Attribute.defaultQueryHint;
+			global::PhantomLib.Droid.Resource.Attribute.dialogCornerRadius = global::NaitonGPS.Droid.Resource.Attribute.dialogCornerRadius;
+			global::PhantomLib.Droid.Resource.Attribute.dialogPreferredPadding = global::NaitonGPS.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::PhantomLib.Droid.Resource.Attribute.dialogTheme = global::NaitonGPS.Droid.Resource.Attribute.dialogTheme;
+			global::PhantomLib.Droid.Resource.Attribute.displayOptions = global::NaitonGPS.Droid.Resource.Attribute.displayOptions;
+			global::PhantomLib.Droid.Resource.Attribute.divider = global::NaitonGPS.Droid.Resource.Attribute.divider;
+			global::PhantomLib.Droid.Resource.Attribute.dividerHorizontal = global::NaitonGPS.Droid.Resource.Attribute.dividerHorizontal;
+			global::PhantomLib.Droid.Resource.Attribute.dividerPadding = global::NaitonGPS.Droid.Resource.Attribute.dividerPadding;
+			global::PhantomLib.Droid.Resource.Attribute.dividerVertical = global::NaitonGPS.Droid.Resource.Attribute.dividerVertical;
+			global::PhantomLib.Droid.Resource.Attribute.drawableSize = global::NaitonGPS.Droid.Resource.Attribute.drawableSize;
+			global::PhantomLib.Droid.Resource.Attribute.drawerArrowStyle = global::NaitonGPS.Droid.Resource.Attribute.drawerArrowStyle;
+			global::PhantomLib.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::NaitonGPS.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::PhantomLib.Droid.Resource.Attribute.dropDownListViewStyle = global::NaitonGPS.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.editTextBackground = global::NaitonGPS.Droid.Resource.Attribute.editTextBackground;
+			global::PhantomLib.Droid.Resource.Attribute.editTextColor = global::NaitonGPS.Droid.Resource.Attribute.editTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.editTextStyle = global::NaitonGPS.Droid.Resource.Attribute.editTextStyle;
+			global::PhantomLib.Droid.Resource.Attribute.elevation = global::NaitonGPS.Droid.Resource.Attribute.elevation;
+			global::PhantomLib.Droid.Resource.Attribute.enforceMaterialTheme = global::NaitonGPS.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::PhantomLib.Droid.Resource.Attribute.enforceTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.enforceTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.errorEnabled = global::NaitonGPS.Droid.Resource.Attribute.errorEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.errorTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.errorTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::NaitonGPS.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.expanded = global::NaitonGPS.Droid.Resource.Attribute.expanded;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleGravity = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleGravity;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMargin = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleMargin;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginBottom = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginEnd = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginStart = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleMarginTop = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::PhantomLib.Droid.Resource.Attribute.expandedTitleTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.fabAlignmentMode = global::NaitonGPS.Droid.Resource.Attribute.fabAlignmentMode;
+			global::PhantomLib.Droid.Resource.Attribute.fabCradleMargin = global::NaitonGPS.Droid.Resource.Attribute.fabCradleMargin;
+			global::PhantomLib.Droid.Resource.Attribute.fabCradleRoundedCornerRadius = global::NaitonGPS.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::PhantomLib.Droid.Resource.Attribute.fabCradleVerticalOffset = global::NaitonGPS.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::PhantomLib.Droid.Resource.Attribute.fabCustomSize = global::NaitonGPS.Droid.Resource.Attribute.fabCustomSize;
+			global::PhantomLib.Droid.Resource.Attribute.fabSize = global::NaitonGPS.Droid.Resource.Attribute.fabSize;
+			global::PhantomLib.Droid.Resource.Attribute.fastScrollEnabled = global::NaitonGPS.Droid.Resource.Attribute.fastScrollEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::NaitonGPS.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::NaitonGPS.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::NaitonGPS.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::NaitonGPS.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.firstBaselineToTopHeight = global::NaitonGPS.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::PhantomLib.Droid.Resource.Attribute.floatingActionButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.font = global::NaitonGPS.Droid.Resource.Attribute.font;
+			global::PhantomLib.Droid.Resource.Attribute.fontFamily = global::NaitonGPS.Droid.Resource.Attribute.fontFamily;
+			global::PhantomLib.Droid.Resource.Attribute.fontProviderAuthority = global::NaitonGPS.Droid.Resource.Attribute.fontProviderAuthority;
+			global::PhantomLib.Droid.Resource.Attribute.fontProviderCerts = global::NaitonGPS.Droid.Resource.Attribute.fontProviderCerts;
+			global::PhantomLib.Droid.Resource.Attribute.fontProviderFetchStrategy = global::NaitonGPS.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::PhantomLib.Droid.Resource.Attribute.fontProviderFetchTimeout = global::NaitonGPS.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::PhantomLib.Droid.Resource.Attribute.fontProviderPackage = global::NaitonGPS.Droid.Resource.Attribute.fontProviderPackage;
+			global::PhantomLib.Droid.Resource.Attribute.fontProviderQuery = global::NaitonGPS.Droid.Resource.Attribute.fontProviderQuery;
+			global::PhantomLib.Droid.Resource.Attribute.fontStyle = global::NaitonGPS.Droid.Resource.Attribute.fontStyle;
+			global::PhantomLib.Droid.Resource.Attribute.fontVariationSettings = global::NaitonGPS.Droid.Resource.Attribute.fontVariationSettings;
+			global::PhantomLib.Droid.Resource.Attribute.fontWeight = global::NaitonGPS.Droid.Resource.Attribute.fontWeight;
+			global::PhantomLib.Droid.Resource.Attribute.foregroundInsidePadding = global::NaitonGPS.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::PhantomLib.Droid.Resource.Attribute.gapBetweenBars = global::NaitonGPS.Droid.Resource.Attribute.gapBetweenBars;
+			global::PhantomLib.Droid.Resource.Attribute.goIcon = global::NaitonGPS.Droid.Resource.Attribute.goIcon;
+			global::PhantomLib.Droid.Resource.Attribute.headerLayout = global::NaitonGPS.Droid.Resource.Attribute.headerLayout;
+			global::PhantomLib.Droid.Resource.Attribute.height = global::NaitonGPS.Droid.Resource.Attribute.height;
+			global::PhantomLib.Droid.Resource.Attribute.helperText = global::NaitonGPS.Droid.Resource.Attribute.helperText;
+			global::PhantomLib.Droid.Resource.Attribute.helperTextEnabled = global::NaitonGPS.Droid.Resource.Attribute.helperTextEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.helperTextTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.hideMotionSpec = global::NaitonGPS.Droid.Resource.Attribute.hideMotionSpec;
+			global::PhantomLib.Droid.Resource.Attribute.hideOnContentScroll = global::NaitonGPS.Droid.Resource.Attribute.hideOnContentScroll;
+			global::PhantomLib.Droid.Resource.Attribute.hideOnScroll = global::NaitonGPS.Droid.Resource.Attribute.hideOnScroll;
+			global::PhantomLib.Droid.Resource.Attribute.hintAnimationEnabled = global::NaitonGPS.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.hintEnabled = global::NaitonGPS.Droid.Resource.Attribute.hintEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.hintTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.hintTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.homeAsUpIndicator = global::NaitonGPS.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::PhantomLib.Droid.Resource.Attribute.homeLayout = global::NaitonGPS.Droid.Resource.Attribute.homeLayout;
+			global::PhantomLib.Droid.Resource.Attribute.hoveredFocusedTranslationZ = global::NaitonGPS.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::PhantomLib.Droid.Resource.Attribute.icon = global::NaitonGPS.Droid.Resource.Attribute.icon;
+			global::PhantomLib.Droid.Resource.Attribute.iconEndPadding = global::NaitonGPS.Droid.Resource.Attribute.iconEndPadding;
+			global::PhantomLib.Droid.Resource.Attribute.iconGravity = global::NaitonGPS.Droid.Resource.Attribute.iconGravity;
+			global::PhantomLib.Droid.Resource.Attribute.iconifiedByDefault = global::NaitonGPS.Droid.Resource.Attribute.iconifiedByDefault;
+			global::PhantomLib.Droid.Resource.Attribute.iconPadding = global::NaitonGPS.Droid.Resource.Attribute.iconPadding;
+			global::PhantomLib.Droid.Resource.Attribute.iconSize = global::NaitonGPS.Droid.Resource.Attribute.iconSize;
+			global::PhantomLib.Droid.Resource.Attribute.iconStartPadding = global::NaitonGPS.Droid.Resource.Attribute.iconStartPadding;
+			global::PhantomLib.Droid.Resource.Attribute.iconTint = global::NaitonGPS.Droid.Resource.Attribute.iconTint;
+			global::PhantomLib.Droid.Resource.Attribute.iconTintMode = global::NaitonGPS.Droid.Resource.Attribute.iconTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.imageButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.imageButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.indeterminateProgressStyle = global::NaitonGPS.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::PhantomLib.Droid.Resource.Attribute.initialActivityCount = global::NaitonGPS.Droid.Resource.Attribute.initialActivityCount;
+			global::PhantomLib.Droid.Resource.Attribute.insetForeground = global::NaitonGPS.Droid.Resource.Attribute.insetForeground;
+			global::PhantomLib.Droid.Resource.Attribute.isLightTheme = global::NaitonGPS.Droid.Resource.Attribute.isLightTheme;
+			global::PhantomLib.Droid.Resource.Attribute.itemBackground = global::NaitonGPS.Droid.Resource.Attribute.itemBackground;
+			global::PhantomLib.Droid.Resource.Attribute.itemHorizontalPadding = global::NaitonGPS.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::PhantomLib.Droid.Resource.Attribute.itemHorizontalTranslationEnabled = global::NaitonGPS.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.itemIconPadding = global::NaitonGPS.Droid.Resource.Attribute.itemIconPadding;
+			global::PhantomLib.Droid.Resource.Attribute.itemIconSize = global::NaitonGPS.Droid.Resource.Attribute.itemIconSize;
+			global::PhantomLib.Droid.Resource.Attribute.itemIconTint = global::NaitonGPS.Droid.Resource.Attribute.itemIconTint;
+			global::PhantomLib.Droid.Resource.Attribute.itemPadding = global::NaitonGPS.Droid.Resource.Attribute.itemPadding;
+			global::PhantomLib.Droid.Resource.Attribute.itemSpacing = global::NaitonGPS.Droid.Resource.Attribute.itemSpacing;
+			global::PhantomLib.Droid.Resource.Attribute.itemTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.itemTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.itemTextAppearanceActive = global::NaitonGPS.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::PhantomLib.Droid.Resource.Attribute.itemTextAppearanceInactive = global::NaitonGPS.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::PhantomLib.Droid.Resource.Attribute.itemTextColor = global::NaitonGPS.Droid.Resource.Attribute.itemTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.keylines = global::NaitonGPS.Droid.Resource.Attribute.keylines;
+			global::PhantomLib.Droid.Resource.Attribute.labelVisibilityMode = global::NaitonGPS.Droid.Resource.Attribute.labelVisibilityMode;
+			global::PhantomLib.Droid.Resource.Attribute.lastBaselineToBottomHeight = global::NaitonGPS.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::PhantomLib.Droid.Resource.Attribute.layout = global::NaitonGPS.Droid.Resource.Attribute.layout;
+			global::PhantomLib.Droid.Resource.Attribute.layoutManager = global::NaitonGPS.Droid.Resource.Attribute.layoutManager;
+			global::PhantomLib.Droid.Resource.Attribute.layout_anchor = global::NaitonGPS.Droid.Resource.Attribute.layout_anchor;
+			global::PhantomLib.Droid.Resource.Attribute.layout_anchorGravity = global::NaitonGPS.Droid.Resource.Attribute.layout_anchorGravity;
+			global::PhantomLib.Droid.Resource.Attribute.layout_behavior = global::NaitonGPS.Droid.Resource.Attribute.layout_behavior;
+			global::PhantomLib.Droid.Resource.Attribute.layout_collapseMode = global::NaitonGPS.Droid.Resource.Attribute.layout_collapseMode;
+			global::PhantomLib.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::NaitonGPS.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::PhantomLib.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::NaitonGPS.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::PhantomLib.Droid.Resource.Attribute.layout_insetEdge = global::NaitonGPS.Droid.Resource.Attribute.layout_insetEdge;
+			global::PhantomLib.Droid.Resource.Attribute.layout_keyline = global::NaitonGPS.Droid.Resource.Attribute.layout_keyline;
+			global::PhantomLib.Droid.Resource.Attribute.layout_scrollFlags = global::NaitonGPS.Droid.Resource.Attribute.layout_scrollFlags;
+			global::PhantomLib.Droid.Resource.Attribute.layout_scrollInterpolator = global::NaitonGPS.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::PhantomLib.Droid.Resource.Attribute.liftOnScroll = global::NaitonGPS.Droid.Resource.Attribute.liftOnScroll;
+			global::PhantomLib.Droid.Resource.Attribute.lineHeight = global::NaitonGPS.Droid.Resource.Attribute.lineHeight;
+			global::PhantomLib.Droid.Resource.Attribute.lineSpacing = global::NaitonGPS.Droid.Resource.Attribute.lineSpacing;
+			global::PhantomLib.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::NaitonGPS.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::PhantomLib.Droid.Resource.Attribute.listDividerAlertDialog = global::NaitonGPS.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::PhantomLib.Droid.Resource.Attribute.listItemLayout = global::NaitonGPS.Droid.Resource.Attribute.listItemLayout;
+			global::PhantomLib.Droid.Resource.Attribute.listLayout = global::NaitonGPS.Droid.Resource.Attribute.listLayout;
+			global::PhantomLib.Droid.Resource.Attribute.listMenuViewStyle = global::NaitonGPS.Droid.Resource.Attribute.listMenuViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.listPopupWindowStyle = global::NaitonGPS.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemHeight = global::NaitonGPS.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::NaitonGPS.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::NaitonGPS.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::NaitonGPS.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::PhantomLib.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::NaitonGPS.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::PhantomLib.Droid.Resource.Attribute.logo = global::NaitonGPS.Droid.Resource.Attribute.logo;
+			global::PhantomLib.Droid.Resource.Attribute.logoDescription = global::NaitonGPS.Droid.Resource.Attribute.logoDescription;
+			global::PhantomLib.Droid.Resource.Attribute.materialButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.materialButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.materialCardViewStyle = global::NaitonGPS.Droid.Resource.Attribute.materialCardViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.maxActionInlineWidth = global::NaitonGPS.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::PhantomLib.Droid.Resource.Attribute.maxButtonHeight = global::NaitonGPS.Droid.Resource.Attribute.maxButtonHeight;
+			global::PhantomLib.Droid.Resource.Attribute.maxImageSize = global::NaitonGPS.Droid.Resource.Attribute.maxImageSize;
+			global::PhantomLib.Droid.Resource.Attribute.measureWithLargestChild = global::NaitonGPS.Droid.Resource.Attribute.measureWithLargestChild;
+			global::PhantomLib.Droid.Resource.Attribute.menu = global::NaitonGPS.Droid.Resource.Attribute.menu;
+			global::PhantomLib.Droid.Resource.Attribute.multiChoiceItemLayout = global::NaitonGPS.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::PhantomLib.Droid.Resource.Attribute.navigationContentDescription = global::NaitonGPS.Droid.Resource.Attribute.navigationContentDescription;
+			global::PhantomLib.Droid.Resource.Attribute.navigationIcon = global::NaitonGPS.Droid.Resource.Attribute.navigationIcon;
+			global::PhantomLib.Droid.Resource.Attribute.navigationMode = global::NaitonGPS.Droid.Resource.Attribute.navigationMode;
+			global::PhantomLib.Droid.Resource.Attribute.navigationViewStyle = global::NaitonGPS.Droid.Resource.Attribute.navigationViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.numericModifiers = global::NaitonGPS.Droid.Resource.Attribute.numericModifiers;
+			global::PhantomLib.Droid.Resource.Attribute.overlapAnchor = global::NaitonGPS.Droid.Resource.Attribute.overlapAnchor;
+			global::PhantomLib.Droid.Resource.Attribute.paddingBottomNoButtons = global::NaitonGPS.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::PhantomLib.Droid.Resource.Attribute.paddingEnd = global::NaitonGPS.Droid.Resource.Attribute.paddingEnd;
+			global::PhantomLib.Droid.Resource.Attribute.paddingStart = global::NaitonGPS.Droid.Resource.Attribute.paddingStart;
+			global::PhantomLib.Droid.Resource.Attribute.paddingTopNoTitle = global::NaitonGPS.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::PhantomLib.Droid.Resource.Attribute.panelBackground = global::NaitonGPS.Droid.Resource.Attribute.panelBackground;
+			global::PhantomLib.Droid.Resource.Attribute.panelMenuListTheme = global::NaitonGPS.Droid.Resource.Attribute.panelMenuListTheme;
+			global::PhantomLib.Droid.Resource.Attribute.panelMenuListWidth = global::NaitonGPS.Droid.Resource.Attribute.panelMenuListWidth;
+			global::PhantomLib.Droid.Resource.Attribute.passwordToggleContentDescription = global::NaitonGPS.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::PhantomLib.Droid.Resource.Attribute.passwordToggleDrawable = global::NaitonGPS.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::PhantomLib.Droid.Resource.Attribute.passwordToggleEnabled = global::NaitonGPS.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.passwordToggleTint = global::NaitonGPS.Droid.Resource.Attribute.passwordToggleTint;
+			global::PhantomLib.Droid.Resource.Attribute.passwordToggleTintMode = global::NaitonGPS.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.popupMenuStyle = global::NaitonGPS.Droid.Resource.Attribute.popupMenuStyle;
+			global::PhantomLib.Droid.Resource.Attribute.popupTheme = global::NaitonGPS.Droid.Resource.Attribute.popupTheme;
+			global::PhantomLib.Droid.Resource.Attribute.popupWindowStyle = global::NaitonGPS.Droid.Resource.Attribute.popupWindowStyle;
+			global::PhantomLib.Droid.Resource.Attribute.preserveIconSpacing = global::NaitonGPS.Droid.Resource.Attribute.preserveIconSpacing;
+			global::PhantomLib.Droid.Resource.Attribute.pressedTranslationZ = global::NaitonGPS.Droid.Resource.Attribute.pressedTranslationZ;
+			global::PhantomLib.Droid.Resource.Attribute.progressBarPadding = global::NaitonGPS.Droid.Resource.Attribute.progressBarPadding;
+			global::PhantomLib.Droid.Resource.Attribute.progressBarStyle = global::NaitonGPS.Droid.Resource.Attribute.progressBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.queryBackground = global::NaitonGPS.Droid.Resource.Attribute.queryBackground;
+			global::PhantomLib.Droid.Resource.Attribute.queryHint = global::NaitonGPS.Droid.Resource.Attribute.queryHint;
+			global::PhantomLib.Droid.Resource.Attribute.radioButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.radioButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.ratingBarStyle = global::NaitonGPS.Droid.Resource.Attribute.ratingBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.ratingBarStyleIndicator = global::NaitonGPS.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::PhantomLib.Droid.Resource.Attribute.ratingBarStyleSmall = global::NaitonGPS.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::PhantomLib.Droid.Resource.Attribute.reverseLayout = global::NaitonGPS.Droid.Resource.Attribute.reverseLayout;
+			global::PhantomLib.Droid.Resource.Attribute.rippleColor = global::NaitonGPS.Droid.Resource.Attribute.rippleColor;
+			global::PhantomLib.Droid.Resource.Attribute.scrimAnimationDuration = global::NaitonGPS.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::PhantomLib.Droid.Resource.Attribute.scrimBackground = global::NaitonGPS.Droid.Resource.Attribute.scrimBackground;
+			global::PhantomLib.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::NaitonGPS.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::PhantomLib.Droid.Resource.Attribute.searchHintIcon = global::NaitonGPS.Droid.Resource.Attribute.searchHintIcon;
+			global::PhantomLib.Droid.Resource.Attribute.searchIcon = global::NaitonGPS.Droid.Resource.Attribute.searchIcon;
+			global::PhantomLib.Droid.Resource.Attribute.searchViewStyle = global::NaitonGPS.Droid.Resource.Attribute.searchViewStyle;
+			global::PhantomLib.Droid.Resource.Attribute.seekBarStyle = global::NaitonGPS.Droid.Resource.Attribute.seekBarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.selectableItemBackground = global::NaitonGPS.Droid.Resource.Attribute.selectableItemBackground;
+			global::PhantomLib.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::NaitonGPS.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::PhantomLib.Droid.Resource.Attribute.showAsAction = global::NaitonGPS.Droid.Resource.Attribute.showAsAction;
+			global::PhantomLib.Droid.Resource.Attribute.showDividers = global::NaitonGPS.Droid.Resource.Attribute.showDividers;
+			global::PhantomLib.Droid.Resource.Attribute.showMotionSpec = global::NaitonGPS.Droid.Resource.Attribute.showMotionSpec;
+			global::PhantomLib.Droid.Resource.Attribute.showText = global::NaitonGPS.Droid.Resource.Attribute.showText;
+			global::PhantomLib.Droid.Resource.Attribute.showTitle = global::NaitonGPS.Droid.Resource.Attribute.showTitle;
+			global::PhantomLib.Droid.Resource.Attribute.singleChoiceItemLayout = global::NaitonGPS.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::PhantomLib.Droid.Resource.Attribute.singleLine = global::NaitonGPS.Droid.Resource.Attribute.singleLine;
+			global::PhantomLib.Droid.Resource.Attribute.singleSelection = global::NaitonGPS.Droid.Resource.Attribute.singleSelection;
+			global::PhantomLib.Droid.Resource.Attribute.snackbarButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.snackbarStyle = global::NaitonGPS.Droid.Resource.Attribute.snackbarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.spanCount = global::NaitonGPS.Droid.Resource.Attribute.spanCount;
+			global::PhantomLib.Droid.Resource.Attribute.spinBars = global::NaitonGPS.Droid.Resource.Attribute.spinBars;
+			global::PhantomLib.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::NaitonGPS.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::PhantomLib.Droid.Resource.Attribute.spinnerStyle = global::NaitonGPS.Droid.Resource.Attribute.spinnerStyle;
+			global::PhantomLib.Droid.Resource.Attribute.splitTrack = global::NaitonGPS.Droid.Resource.Attribute.splitTrack;
+			global::PhantomLib.Droid.Resource.Attribute.srcCompat = global::NaitonGPS.Droid.Resource.Attribute.srcCompat;
+			global::PhantomLib.Droid.Resource.Attribute.stackFromEnd = global::NaitonGPS.Droid.Resource.Attribute.stackFromEnd;
+			global::PhantomLib.Droid.Resource.Attribute.state_above_anchor = global::NaitonGPS.Droid.Resource.Attribute.state_above_anchor;
+			global::PhantomLib.Droid.Resource.Attribute.state_collapsed = global::NaitonGPS.Droid.Resource.Attribute.state_collapsed;
+			global::PhantomLib.Droid.Resource.Attribute.state_collapsible = global::NaitonGPS.Droid.Resource.Attribute.state_collapsible;
+			global::PhantomLib.Droid.Resource.Attribute.state_liftable = global::NaitonGPS.Droid.Resource.Attribute.state_liftable;
+			global::PhantomLib.Droid.Resource.Attribute.state_lifted = global::NaitonGPS.Droid.Resource.Attribute.state_lifted;
+			global::PhantomLib.Droid.Resource.Attribute.statusBarBackground = global::NaitonGPS.Droid.Resource.Attribute.statusBarBackground;
+			global::PhantomLib.Droid.Resource.Attribute.statusBarScrim = global::NaitonGPS.Droid.Resource.Attribute.statusBarScrim;
+			global::PhantomLib.Droid.Resource.Attribute.strokeColor = global::NaitonGPS.Droid.Resource.Attribute.strokeColor;
+			global::PhantomLib.Droid.Resource.Attribute.strokeWidth = global::NaitonGPS.Droid.Resource.Attribute.strokeWidth;
+			global::PhantomLib.Droid.Resource.Attribute.subMenuArrow = global::NaitonGPS.Droid.Resource.Attribute.subMenuArrow;
+			global::PhantomLib.Droid.Resource.Attribute.submitBackground = global::NaitonGPS.Droid.Resource.Attribute.submitBackground;
+			global::PhantomLib.Droid.Resource.Attribute.subtitle = global::NaitonGPS.Droid.Resource.Attribute.subtitle;
+			global::PhantomLib.Droid.Resource.Attribute.subtitleTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.subtitleTextColor = global::NaitonGPS.Droid.Resource.Attribute.subtitleTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.subtitleTextStyle = global::NaitonGPS.Droid.Resource.Attribute.subtitleTextStyle;
+			global::PhantomLib.Droid.Resource.Attribute.suggestionRowLayout = global::NaitonGPS.Droid.Resource.Attribute.suggestionRowLayout;
+			global::PhantomLib.Droid.Resource.Attribute.switchMinWidth = global::NaitonGPS.Droid.Resource.Attribute.switchMinWidth;
+			global::PhantomLib.Droid.Resource.Attribute.switchPadding = global::NaitonGPS.Droid.Resource.Attribute.switchPadding;
+			global::PhantomLib.Droid.Resource.Attribute.switchStyle = global::NaitonGPS.Droid.Resource.Attribute.switchStyle;
+			global::PhantomLib.Droid.Resource.Attribute.switchTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.switchTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.tabBackground = global::NaitonGPS.Droid.Resource.Attribute.tabBackground;
+			global::PhantomLib.Droid.Resource.Attribute.tabContentStart = global::NaitonGPS.Droid.Resource.Attribute.tabContentStart;
+			global::PhantomLib.Droid.Resource.Attribute.tabGravity = global::NaitonGPS.Droid.Resource.Attribute.tabGravity;
+			global::PhantomLib.Droid.Resource.Attribute.tabIconTint = global::NaitonGPS.Droid.Resource.Attribute.tabIconTint;
+			global::PhantomLib.Droid.Resource.Attribute.tabIconTintMode = global::NaitonGPS.Droid.Resource.Attribute.tabIconTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.tabIndicator = global::NaitonGPS.Droid.Resource.Attribute.tabIndicator;
+			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorAnimationDuration = global::NaitonGPS.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorColor = global::NaitonGPS.Droid.Resource.Attribute.tabIndicatorColor;
+			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorFullWidth = global::NaitonGPS.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorGravity = global::NaitonGPS.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::PhantomLib.Droid.Resource.Attribute.tabIndicatorHeight = global::NaitonGPS.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::PhantomLib.Droid.Resource.Attribute.tabInlineLabel = global::NaitonGPS.Droid.Resource.Attribute.tabInlineLabel;
+			global::PhantomLib.Droid.Resource.Attribute.tabMaxWidth = global::NaitonGPS.Droid.Resource.Attribute.tabMaxWidth;
+			global::PhantomLib.Droid.Resource.Attribute.tabMinWidth = global::NaitonGPS.Droid.Resource.Attribute.tabMinWidth;
+			global::PhantomLib.Droid.Resource.Attribute.tabMode = global::NaitonGPS.Droid.Resource.Attribute.tabMode;
+			global::PhantomLib.Droid.Resource.Attribute.tabPadding = global::NaitonGPS.Droid.Resource.Attribute.tabPadding;
+			global::PhantomLib.Droid.Resource.Attribute.tabPaddingBottom = global::NaitonGPS.Droid.Resource.Attribute.tabPaddingBottom;
+			global::PhantomLib.Droid.Resource.Attribute.tabPaddingEnd = global::NaitonGPS.Droid.Resource.Attribute.tabPaddingEnd;
+			global::PhantomLib.Droid.Resource.Attribute.tabPaddingStart = global::NaitonGPS.Droid.Resource.Attribute.tabPaddingStart;
+			global::PhantomLib.Droid.Resource.Attribute.tabPaddingTop = global::NaitonGPS.Droid.Resource.Attribute.tabPaddingTop;
+			global::PhantomLib.Droid.Resource.Attribute.tabRippleColor = global::NaitonGPS.Droid.Resource.Attribute.tabRippleColor;
+			global::PhantomLib.Droid.Resource.Attribute.tabSelectedTextColor = global::NaitonGPS.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.tabStyle = global::NaitonGPS.Droid.Resource.Attribute.tabStyle;
+			global::PhantomLib.Droid.Resource.Attribute.tabTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.tabTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.tabTextColor = global::NaitonGPS.Droid.Resource.Attribute.tabTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.tabUnboundedRipple = global::NaitonGPS.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::PhantomLib.Droid.Resource.Attribute.textAllCaps = global::NaitonGPS.Droid.Resource.Attribute.textAllCaps;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceBody1 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceBody1;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceBody2 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceBody2;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceButton = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceButton;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceCaption = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceCaption;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceHeadline1 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceHeadline2 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceHeadline3 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceHeadline4 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceHeadline5 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceHeadline6 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceListItem = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceListItem;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceListItemSmall = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceOverline = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceOverline;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::NaitonGPS.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSubtitle1 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::PhantomLib.Droid.Resource.Attribute.textAppearanceSubtitle2 = global::NaitonGPS.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::PhantomLib.Droid.Resource.Attribute.textColorAlertDialogListItem = global::NaitonGPS.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::PhantomLib.Droid.Resource.Attribute.textColorSearchUrl = global::NaitonGPS.Droid.Resource.Attribute.textColorSearchUrl;
+			global::PhantomLib.Droid.Resource.Attribute.textEndPadding = global::NaitonGPS.Droid.Resource.Attribute.textEndPadding;
+			global::PhantomLib.Droid.Resource.Attribute.textInputStyle = global::NaitonGPS.Droid.Resource.Attribute.textInputStyle;
+			global::PhantomLib.Droid.Resource.Attribute.textStartPadding = global::NaitonGPS.Droid.Resource.Attribute.textStartPadding;
+			global::PhantomLib.Droid.Resource.Attribute.theme = global::NaitonGPS.Droid.Resource.Attribute.theme;
+			global::PhantomLib.Droid.Resource.Attribute.thickness = global::NaitonGPS.Droid.Resource.Attribute.thickness;
+			global::PhantomLib.Droid.Resource.Attribute.thumbTextPadding = global::NaitonGPS.Droid.Resource.Attribute.thumbTextPadding;
+			global::PhantomLib.Droid.Resource.Attribute.thumbTint = global::NaitonGPS.Droid.Resource.Attribute.thumbTint;
+			global::PhantomLib.Droid.Resource.Attribute.thumbTintMode = global::NaitonGPS.Droid.Resource.Attribute.thumbTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.tickMark = global::NaitonGPS.Droid.Resource.Attribute.tickMark;
+			global::PhantomLib.Droid.Resource.Attribute.tickMarkTint = global::NaitonGPS.Droid.Resource.Attribute.tickMarkTint;
+			global::PhantomLib.Droid.Resource.Attribute.tickMarkTintMode = global::NaitonGPS.Droid.Resource.Attribute.tickMarkTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.tint = global::NaitonGPS.Droid.Resource.Attribute.tint;
+			global::PhantomLib.Droid.Resource.Attribute.tintMode = global::NaitonGPS.Droid.Resource.Attribute.tintMode;
+			global::PhantomLib.Droid.Resource.Attribute.title = global::NaitonGPS.Droid.Resource.Attribute.title;
+			global::PhantomLib.Droid.Resource.Attribute.titleEnabled = global::NaitonGPS.Droid.Resource.Attribute.titleEnabled;
+			global::PhantomLib.Droid.Resource.Attribute.titleMargin = global::NaitonGPS.Droid.Resource.Attribute.titleMargin;
+			global::PhantomLib.Droid.Resource.Attribute.titleMarginBottom = global::NaitonGPS.Droid.Resource.Attribute.titleMarginBottom;
+			global::PhantomLib.Droid.Resource.Attribute.titleMarginEnd = global::NaitonGPS.Droid.Resource.Attribute.titleMarginEnd;
+			global::PhantomLib.Droid.Resource.Attribute.titleMargins = global::NaitonGPS.Droid.Resource.Attribute.titleMargins;
+			global::PhantomLib.Droid.Resource.Attribute.titleMarginStart = global::NaitonGPS.Droid.Resource.Attribute.titleMarginStart;
+			global::PhantomLib.Droid.Resource.Attribute.titleMarginTop = global::NaitonGPS.Droid.Resource.Attribute.titleMarginTop;
+			global::PhantomLib.Droid.Resource.Attribute.titleTextAppearance = global::NaitonGPS.Droid.Resource.Attribute.titleTextAppearance;
+			global::PhantomLib.Droid.Resource.Attribute.titleTextColor = global::NaitonGPS.Droid.Resource.Attribute.titleTextColor;
+			global::PhantomLib.Droid.Resource.Attribute.titleTextStyle = global::NaitonGPS.Droid.Resource.Attribute.titleTextStyle;
+			global::PhantomLib.Droid.Resource.Attribute.toolbarId = global::NaitonGPS.Droid.Resource.Attribute.toolbarId;
+			global::PhantomLib.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::NaitonGPS.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::PhantomLib.Droid.Resource.Attribute.toolbarStyle = global::NaitonGPS.Droid.Resource.Attribute.toolbarStyle;
+			global::PhantomLib.Droid.Resource.Attribute.tooltipForegroundColor = global::NaitonGPS.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::PhantomLib.Droid.Resource.Attribute.tooltipFrameBackground = global::NaitonGPS.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::PhantomLib.Droid.Resource.Attribute.tooltipText = global::NaitonGPS.Droid.Resource.Attribute.tooltipText;
+			global::PhantomLib.Droid.Resource.Attribute.track = global::NaitonGPS.Droid.Resource.Attribute.track;
+			global::PhantomLib.Droid.Resource.Attribute.trackTint = global::NaitonGPS.Droid.Resource.Attribute.trackTint;
+			global::PhantomLib.Droid.Resource.Attribute.trackTintMode = global::NaitonGPS.Droid.Resource.Attribute.trackTintMode;
+			global::PhantomLib.Droid.Resource.Attribute.ttcIndex = global::NaitonGPS.Droid.Resource.Attribute.ttcIndex;
+			global::PhantomLib.Droid.Resource.Attribute.useCompatPadding = global::NaitonGPS.Droid.Resource.Attribute.useCompatPadding;
+			global::PhantomLib.Droid.Resource.Attribute.viewInflaterClass = global::NaitonGPS.Droid.Resource.Attribute.viewInflaterClass;
+			global::PhantomLib.Droid.Resource.Attribute.voiceIcon = global::NaitonGPS.Droid.Resource.Attribute.voiceIcon;
+			global::PhantomLib.Droid.Resource.Attribute.windowActionBar = global::NaitonGPS.Droid.Resource.Attribute.windowActionBar;
+			global::PhantomLib.Droid.Resource.Attribute.windowActionBarOverlay = global::NaitonGPS.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::PhantomLib.Droid.Resource.Attribute.windowActionModeOverlay = global::NaitonGPS.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::PhantomLib.Droid.Resource.Attribute.windowFixedHeightMajor = global::NaitonGPS.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::PhantomLib.Droid.Resource.Attribute.windowFixedHeightMinor = global::NaitonGPS.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::PhantomLib.Droid.Resource.Attribute.windowFixedWidthMajor = global::NaitonGPS.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::PhantomLib.Droid.Resource.Attribute.windowFixedWidthMinor = global::NaitonGPS.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::PhantomLib.Droid.Resource.Attribute.windowMinWidthMajor = global::NaitonGPS.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::PhantomLib.Droid.Resource.Attribute.windowMinWidthMinor = global::NaitonGPS.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::PhantomLib.Droid.Resource.Attribute.windowNoTitle = global::NaitonGPS.Droid.Resource.Attribute.windowNoTitle;
+			global::PhantomLib.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::NaitonGPS.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::PhantomLib.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::NaitonGPS.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::PhantomLib.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::NaitonGPS.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::PhantomLib.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::NaitonGPS.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::PhantomLib.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::NaitonGPS.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::PhantomLib.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::NaitonGPS.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::PhantomLib.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::NaitonGPS.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::PhantomLib.Droid.Resource.Color.abc_btn_colored_text_material = global::NaitonGPS.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::PhantomLib.Droid.Resource.Color.abc_color_highlight_material = global::NaitonGPS.Droid.Resource.Color.abc_color_highlight_material;
+			global::PhantomLib.Droid.Resource.Color.abc_hint_foreground_material_dark = global::NaitonGPS.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::PhantomLib.Droid.Resource.Color.abc_hint_foreground_material_light = global::NaitonGPS.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::PhantomLib.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::NaitonGPS.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::PhantomLib.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::NaitonGPS.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::PhantomLib.Droid.Resource.Color.abc_primary_text_material_dark = global::NaitonGPS.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::PhantomLib.Droid.Resource.Color.abc_primary_text_material_light = global::NaitonGPS.Droid.Resource.Color.abc_primary_text_material_light;
+			global::PhantomLib.Droid.Resource.Color.abc_search_url_text = global::NaitonGPS.Droid.Resource.Color.abc_search_url_text;
+			global::PhantomLib.Droid.Resource.Color.abc_search_url_text_normal = global::NaitonGPS.Droid.Resource.Color.abc_search_url_text_normal;
+			global::PhantomLib.Droid.Resource.Color.abc_search_url_text_pressed = global::NaitonGPS.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::PhantomLib.Droid.Resource.Color.abc_search_url_text_selected = global::NaitonGPS.Droid.Resource.Color.abc_search_url_text_selected;
+			global::PhantomLib.Droid.Resource.Color.abc_secondary_text_material_dark = global::NaitonGPS.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::PhantomLib.Droid.Resource.Color.abc_secondary_text_material_light = global::NaitonGPS.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::PhantomLib.Droid.Resource.Color.abc_tint_btn_checkable = global::NaitonGPS.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::PhantomLib.Droid.Resource.Color.abc_tint_default = global::NaitonGPS.Droid.Resource.Color.abc_tint_default;
+			global::PhantomLib.Droid.Resource.Color.abc_tint_edittext = global::NaitonGPS.Droid.Resource.Color.abc_tint_edittext;
+			global::PhantomLib.Droid.Resource.Color.abc_tint_seek_thumb = global::NaitonGPS.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::PhantomLib.Droid.Resource.Color.abc_tint_spinner = global::NaitonGPS.Droid.Resource.Color.abc_tint_spinner;
+			global::PhantomLib.Droid.Resource.Color.abc_tint_switch_track = global::NaitonGPS.Droid.Resource.Color.abc_tint_switch_track;
+			global::PhantomLib.Droid.Resource.Color.accent_material_dark = global::NaitonGPS.Droid.Resource.Color.accent_material_dark;
+			global::PhantomLib.Droid.Resource.Color.accent_material_light = global::NaitonGPS.Droid.Resource.Color.accent_material_light;
+			global::PhantomLib.Droid.Resource.Color.background_floating_material_dark = global::NaitonGPS.Droid.Resource.Color.background_floating_material_dark;
+			global::PhantomLib.Droid.Resource.Color.background_floating_material_light = global::NaitonGPS.Droid.Resource.Color.background_floating_material_light;
+			global::PhantomLib.Droid.Resource.Color.background_material_dark = global::NaitonGPS.Droid.Resource.Color.background_material_dark;
+			global::PhantomLib.Droid.Resource.Color.background_material_light = global::NaitonGPS.Droid.Resource.Color.background_material_light;
+			global::PhantomLib.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::NaitonGPS.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::PhantomLib.Droid.Resource.Color.bright_foreground_disabled_material_light = global::NaitonGPS.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::PhantomLib.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::NaitonGPS.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::PhantomLib.Droid.Resource.Color.bright_foreground_inverse_material_light = global::NaitonGPS.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::PhantomLib.Droid.Resource.Color.bright_foreground_material_dark = global::NaitonGPS.Droid.Resource.Color.bright_foreground_material_dark;
+			global::PhantomLib.Droid.Resource.Color.bright_foreground_material_light = global::NaitonGPS.Droid.Resource.Color.bright_foreground_material_light;
+			global::PhantomLib.Droid.Resource.Color.browser_actions_bg_grey = global::NaitonGPS.Droid.Resource.Color.browser_actions_bg_grey;
+			global::PhantomLib.Droid.Resource.Color.browser_actions_divider_color = global::NaitonGPS.Droid.Resource.Color.browser_actions_divider_color;
+			global::PhantomLib.Droid.Resource.Color.browser_actions_text_color = global::NaitonGPS.Droid.Resource.Color.browser_actions_text_color;
+			global::PhantomLib.Droid.Resource.Color.browser_actions_title_color = global::NaitonGPS.Droid.Resource.Color.browser_actions_title_color;
+			global::PhantomLib.Droid.Resource.Color.button_material_dark = global::NaitonGPS.Droid.Resource.Color.button_material_dark;
+			global::PhantomLib.Droid.Resource.Color.button_material_light = global::NaitonGPS.Droid.Resource.Color.button_material_light;
+			global::PhantomLib.Droid.Resource.Color.cardview_dark_background = global::NaitonGPS.Droid.Resource.Color.cardview_dark_background;
+			global::PhantomLib.Droid.Resource.Color.cardview_light_background = global::NaitonGPS.Droid.Resource.Color.cardview_light_background;
+			global::PhantomLib.Droid.Resource.Color.cardview_shadow_end_color = global::NaitonGPS.Droid.Resource.Color.cardview_shadow_end_color;
+			global::PhantomLib.Droid.Resource.Color.cardview_shadow_start_color = global::NaitonGPS.Droid.Resource.Color.cardview_shadow_start_color;
+			global::PhantomLib.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::NaitonGPS.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::PhantomLib.Droid.Resource.Color.design_default_color_primary = global::NaitonGPS.Droid.Resource.Color.design_default_color_primary;
+			global::PhantomLib.Droid.Resource.Color.design_default_color_primary_dark = global::NaitonGPS.Droid.Resource.Color.design_default_color_primary_dark;
+			global::PhantomLib.Droid.Resource.Color.design_error = global::NaitonGPS.Droid.Resource.Color.design_error;
+			global::PhantomLib.Droid.Resource.Color.design_fab_shadow_end_color = global::NaitonGPS.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::PhantomLib.Droid.Resource.Color.design_fab_shadow_mid_color = global::NaitonGPS.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::PhantomLib.Droid.Resource.Color.design_fab_shadow_start_color = global::NaitonGPS.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::NaitonGPS.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::NaitonGPS.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::NaitonGPS.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::PhantomLib.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::NaitonGPS.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::PhantomLib.Droid.Resource.Color.design_snackbar_background_color = global::NaitonGPS.Droid.Resource.Color.design_snackbar_background_color;
+			global::PhantomLib.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::NaitonGPS.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::PhantomLib.Droid.Resource.Color.dim_foreground_disabled_material_light = global::NaitonGPS.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::PhantomLib.Droid.Resource.Color.dim_foreground_material_dark = global::NaitonGPS.Droid.Resource.Color.dim_foreground_material_dark;
+			global::PhantomLib.Droid.Resource.Color.dim_foreground_material_light = global::NaitonGPS.Droid.Resource.Color.dim_foreground_material_light;
+			global::PhantomLib.Droid.Resource.Color.error_color_material_dark = global::NaitonGPS.Droid.Resource.Color.error_color_material_dark;
+			global::PhantomLib.Droid.Resource.Color.error_color_material_light = global::NaitonGPS.Droid.Resource.Color.error_color_material_light;
+			global::PhantomLib.Droid.Resource.Color.foreground_material_dark = global::NaitonGPS.Droid.Resource.Color.foreground_material_dark;
+			global::PhantomLib.Droid.Resource.Color.foreground_material_light = global::NaitonGPS.Droid.Resource.Color.foreground_material_light;
+			global::PhantomLib.Droid.Resource.Color.highlighted_text_material_dark = global::NaitonGPS.Droid.Resource.Color.highlighted_text_material_dark;
+			global::PhantomLib.Droid.Resource.Color.highlighted_text_material_light = global::NaitonGPS.Droid.Resource.Color.highlighted_text_material_light;
+			global::PhantomLib.Droid.Resource.Color.material_blue_grey_800 = global::NaitonGPS.Droid.Resource.Color.material_blue_grey_800;
+			global::PhantomLib.Droid.Resource.Color.material_blue_grey_900 = global::NaitonGPS.Droid.Resource.Color.material_blue_grey_900;
+			global::PhantomLib.Droid.Resource.Color.material_blue_grey_950 = global::NaitonGPS.Droid.Resource.Color.material_blue_grey_950;
+			global::PhantomLib.Droid.Resource.Color.material_deep_teal_200 = global::NaitonGPS.Droid.Resource.Color.material_deep_teal_200;
+			global::PhantomLib.Droid.Resource.Color.material_deep_teal_500 = global::NaitonGPS.Droid.Resource.Color.material_deep_teal_500;
+			global::PhantomLib.Droid.Resource.Color.material_grey_100 = global::NaitonGPS.Droid.Resource.Color.material_grey_100;
+			global::PhantomLib.Droid.Resource.Color.material_grey_300 = global::NaitonGPS.Droid.Resource.Color.material_grey_300;
+			global::PhantomLib.Droid.Resource.Color.material_grey_50 = global::NaitonGPS.Droid.Resource.Color.material_grey_50;
+			global::PhantomLib.Droid.Resource.Color.material_grey_600 = global::NaitonGPS.Droid.Resource.Color.material_grey_600;
+			global::PhantomLib.Droid.Resource.Color.material_grey_800 = global::NaitonGPS.Droid.Resource.Color.material_grey_800;
+			global::PhantomLib.Droid.Resource.Color.material_grey_850 = global::NaitonGPS.Droid.Resource.Color.material_grey_850;
+			global::PhantomLib.Droid.Resource.Color.material_grey_900 = global::NaitonGPS.Droid.Resource.Color.material_grey_900;
+			global::PhantomLib.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::NaitonGPS.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::PhantomLib.Droid.Resource.Color.mtrl_bottom_nav_item_tint = global::NaitonGPS.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_bg_color_selector = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_ripple_color = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_stroke_color_selector = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_text_color_disabled = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_text_color_selector = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::PhantomLib.Droid.Resource.Color.mtrl_btn_transparent_bg_color = global::NaitonGPS.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_chip_background_color = global::NaitonGPS.Droid.Resource.Color.mtrl_chip_background_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_chip_close_icon_tint = global::NaitonGPS.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::PhantomLib.Droid.Resource.Color.mtrl_chip_ripple_color = global::NaitonGPS.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_chip_text_color = global::NaitonGPS.Droid.Resource.Color.mtrl_chip_text_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_fab_ripple_color = global::NaitonGPS.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_scrim_color = global::NaitonGPS.Droid.Resource.Color.mtrl_scrim_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_tabs_colored_ripple_color = global::NaitonGPS.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_tabs_icon_color_selector = global::NaitonGPS.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::PhantomLib.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::NaitonGPS.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::PhantomLib.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::NaitonGPS.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::PhantomLib.Droid.Resource.Color.mtrl_tabs_ripple_color = global::NaitonGPS.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color = global::NaitonGPS.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_textinput_disabled_color = global::NaitonGPS.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::NaitonGPS.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::NaitonGPS.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::PhantomLib.Droid.Resource.Color.mtrl_text_btn_text_color_selector = global::NaitonGPS.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::PhantomLib.Droid.Resource.Color.notification_action_color_filter = global::NaitonGPS.Droid.Resource.Color.notification_action_color_filter;
+			global::PhantomLib.Droid.Resource.Color.notification_icon_bg_color = global::NaitonGPS.Droid.Resource.Color.notification_icon_bg_color;
+			global::PhantomLib.Droid.Resource.Color.notification_material_background_media_default_color = global::NaitonGPS.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::PhantomLib.Droid.Resource.Color.primary_dark_material_dark = global::NaitonGPS.Droid.Resource.Color.primary_dark_material_dark;
+			global::PhantomLib.Droid.Resource.Color.primary_dark_material_light = global::NaitonGPS.Droid.Resource.Color.primary_dark_material_light;
+			global::PhantomLib.Droid.Resource.Color.primary_material_dark = global::NaitonGPS.Droid.Resource.Color.primary_material_dark;
+			global::PhantomLib.Droid.Resource.Color.primary_material_light = global::NaitonGPS.Droid.Resource.Color.primary_material_light;
+			global::PhantomLib.Droid.Resource.Color.primary_text_default_material_dark = global::NaitonGPS.Droid.Resource.Color.primary_text_default_material_dark;
+			global::PhantomLib.Droid.Resource.Color.primary_text_default_material_light = global::NaitonGPS.Droid.Resource.Color.primary_text_default_material_light;
+			global::PhantomLib.Droid.Resource.Color.primary_text_disabled_material_dark = global::NaitonGPS.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::PhantomLib.Droid.Resource.Color.primary_text_disabled_material_light = global::NaitonGPS.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::PhantomLib.Droid.Resource.Color.ripple_material_dark = global::NaitonGPS.Droid.Resource.Color.ripple_material_dark;
+			global::PhantomLib.Droid.Resource.Color.ripple_material_light = global::NaitonGPS.Droid.Resource.Color.ripple_material_light;
+			global::PhantomLib.Droid.Resource.Color.secondary_text_default_material_dark = global::NaitonGPS.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::PhantomLib.Droid.Resource.Color.secondary_text_default_material_light = global::NaitonGPS.Droid.Resource.Color.secondary_text_default_material_light;
+			global::PhantomLib.Droid.Resource.Color.secondary_text_disabled_material_dark = global::NaitonGPS.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::PhantomLib.Droid.Resource.Color.secondary_text_disabled_material_light = global::NaitonGPS.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::PhantomLib.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::NaitonGPS.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::PhantomLib.Droid.Resource.Color.switch_thumb_disabled_material_light = global::NaitonGPS.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::PhantomLib.Droid.Resource.Color.switch_thumb_material_dark = global::NaitonGPS.Droid.Resource.Color.switch_thumb_material_dark;
+			global::PhantomLib.Droid.Resource.Color.switch_thumb_material_light = global::NaitonGPS.Droid.Resource.Color.switch_thumb_material_light;
+			global::PhantomLib.Droid.Resource.Color.switch_thumb_normal_material_dark = global::NaitonGPS.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::PhantomLib.Droid.Resource.Color.switch_thumb_normal_material_light = global::NaitonGPS.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::PhantomLib.Droid.Resource.Color.tooltip_background_dark = global::NaitonGPS.Droid.Resource.Color.tooltip_background_dark;
+			global::PhantomLib.Droid.Resource.Color.tooltip_background_light = global::NaitonGPS.Droid.Resource.Color.tooltip_background_light;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_button_min_height_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_button_min_width_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::NaitonGPS.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::NaitonGPS.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::PhantomLib.Droid.Resource.Dimension.abc_alert_dialog_button_dimen = global::NaitonGPS.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::PhantomLib.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::NaitonGPS.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::NaitonGPS.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::NaitonGPS.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::NaitonGPS.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::NaitonGPS.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::PhantomLib.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::NaitonGPS.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::PhantomLib.Droid.Resource.Dimension.abc_control_corner_material = global::NaitonGPS.Droid.Resource.Dimension.abc_control_corner_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_control_inset_material = global::NaitonGPS.Droid.Resource.Dimension.abc_control_inset_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_control_padding_material = global::NaitonGPS.Droid.Resource.Dimension.abc_control_padding_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_corner_radius_material = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_min_width_major = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_padding_material = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::NaitonGPS.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::NaitonGPS.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::PhantomLib.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::NaitonGPS.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::NaitonGPS.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::NaitonGPS.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::PhantomLib.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::NaitonGPS.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::PhantomLib.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::NaitonGPS.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::NaitonGPS.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::NaitonGPS.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_floating_window_z = global::NaitonGPS.Droid.Resource.Dimension.abc_floating_window_z;
+			global::PhantomLib.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::NaitonGPS.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_panel_menu_list_width = global::NaitonGPS.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::PhantomLib.Droid.Resource.Dimension.abc_progress_bar_height_material = global::NaitonGPS.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_search_view_preferred_height = global::NaitonGPS.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::PhantomLib.Droid.Resource.Dimension.abc_search_view_preferred_width = global::NaitonGPS.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::PhantomLib.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::NaitonGPS.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::NaitonGPS.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::NaitonGPS.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_switch_padding = global::NaitonGPS.Droid.Resource.Dimension.abc_switch_padding;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_body_1_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_body_2_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_button_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_caption_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_1_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_2_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_3_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_display_4_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_headline_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_large_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_medium_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_menu_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_small_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_subhead_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_title_material = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::PhantomLib.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::NaitonGPS.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::PhantomLib.Droid.Resource.Dimension.browser_actions_context_menu_max_width = global::NaitonGPS.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.browser_actions_context_menu_min_padding = global::NaitonGPS.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::PhantomLib.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::NaitonGPS.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::PhantomLib.Droid.Resource.Dimension.cardview_default_elevation = global::NaitonGPS.Droid.Resource.Dimension.cardview_default_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.cardview_default_radius = global::NaitonGPS.Droid.Resource.Dimension.cardview_default_radius;
+			global::PhantomLib.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::NaitonGPS.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::PhantomLib.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::NaitonGPS.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::PhantomLib.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::NaitonGPS.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::PhantomLib.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::NaitonGPS.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::PhantomLib.Droid.Resource.Dimension.compat_control_corner_material = global::NaitonGPS.Droid.Resource.Dimension.compat_control_corner_material;
+			global::PhantomLib.Droid.Resource.Dimension.compat_notification_large_icon_max_height = global::NaitonGPS.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::PhantomLib.Droid.Resource.Dimension.compat_notification_large_icon_max_width = global::NaitonGPS.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_appbar_elevation = global::NaitonGPS.Droid.Resource.Dimension.design_appbar_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_height = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_icon_size = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_margin = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::NaitonGPS.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_border_width = global::NaitonGPS.Droid.Resource.Dimension.design_fab_border_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_elevation = global::NaitonGPS.Droid.Resource.Dimension.design_fab_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_image_size = global::NaitonGPS.Droid.Resource.Dimension.design_fab_image_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_size_mini = global::NaitonGPS.Droid.Resource.Dimension.design_fab_size_mini;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_size_normal = global::NaitonGPS.Droid.Resource.Dimension.design_fab_size_normal;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused = global::NaitonGPS.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::PhantomLib.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::NaitonGPS.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_elevation = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_icon_padding = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_icon_size = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_item_horizontal_padding = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_item_icon_padding = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_max_width = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_padding_bottom = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::PhantomLib.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::NaitonGPS.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_elevation = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_max_width = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_min_width = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::PhantomLib.Droid.Resource.Dimension.design_snackbar_text_size = global::NaitonGPS.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_tab_max_width = global::NaitonGPS.Droid.Resource.Dimension.design_tab_max_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::NaitonGPS.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::PhantomLib.Droid.Resource.Dimension.design_tab_text_size = global::NaitonGPS.Droid.Resource.Dimension.design_tab_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.design_tab_text_size_2line = global::NaitonGPS.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::PhantomLib.Droid.Resource.Dimension.design_textinput_caption_translate_y = global::NaitonGPS.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::PhantomLib.Droid.Resource.Dimension.disabled_alpha_material_dark = global::NaitonGPS.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::PhantomLib.Droid.Resource.Dimension.disabled_alpha_material_light = global::NaitonGPS.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::PhantomLib.Droid.Resource.Dimension.fastscroll_default_thickness = global::NaitonGPS.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::PhantomLib.Droid.Resource.Dimension.fastscroll_margin = global::NaitonGPS.Droid.Resource.Dimension.fastscroll_margin;
+			global::PhantomLib.Droid.Resource.Dimension.fastscroll_minimum_range = global::NaitonGPS.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::PhantomLib.Droid.Resource.Dimension.highlight_alpha_material_colored = global::NaitonGPS.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::PhantomLib.Droid.Resource.Dimension.highlight_alpha_material_dark = global::NaitonGPS.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::PhantomLib.Droid.Resource.Dimension.highlight_alpha_material_light = global::NaitonGPS.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::PhantomLib.Droid.Resource.Dimension.hint_alpha_material_dark = global::NaitonGPS.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::PhantomLib.Droid.Resource.Dimension.hint_alpha_material_light = global::NaitonGPS.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::PhantomLib.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::NaitonGPS.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::PhantomLib.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::NaitonGPS.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::PhantomLib.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::NaitonGPS.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::PhantomLib.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::NaitonGPS.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::PhantomLib.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::NaitonGPS.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::NaitonGPS.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::NaitonGPS.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::NaitonGPS.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::NaitonGPS.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_bottomappbar_height = global::NaitonGPS.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_corner_radius = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_disabled_elevation = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_disabled_z = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_elevation = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_focused_z = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_hovered_z = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_icon_padding = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_inset = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_letter_spacing = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_padding_bottom = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_padding_left = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_padding_right = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_padding_top = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_pressed_z = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_stroke_size = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_text_size = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_btn_z = global::NaitonGPS.Droid.Resource.Dimension.mtrl_btn_z;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_card_elevation = global::NaitonGPS.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_card_spacing = global::NaitonGPS.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z = global::NaitonGPS.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_chip_text_size = global::NaitonGPS.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_fab_elevation = global::NaitonGPS.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::NaitonGPS.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed = global::NaitonGPS.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_navigation_elevation = global::NaitonGPS.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::NaitonGPS.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding = global::NaitonGPS.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::NaitonGPS.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_snackbar_margin = global::NaitonGPS.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::NaitonGPS.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::NaitonGPS.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::NaitonGPS.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::NaitonGPS.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::NaitonGPS.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::NaitonGPS.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::PhantomLib.Droid.Resource.Dimension.mtrl_toolbar_default_height = global::NaitonGPS.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::PhantomLib.Droid.Resource.Dimension.notification_action_icon_size = global::NaitonGPS.Droid.Resource.Dimension.notification_action_icon_size;
+			global::PhantomLib.Droid.Resource.Dimension.notification_action_text_size = global::NaitonGPS.Droid.Resource.Dimension.notification_action_text_size;
+			global::PhantomLib.Droid.Resource.Dimension.notification_big_circle_margin = global::NaitonGPS.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::PhantomLib.Droid.Resource.Dimension.notification_content_margin_start = global::NaitonGPS.Droid.Resource.Dimension.notification_content_margin_start;
+			global::PhantomLib.Droid.Resource.Dimension.notification_large_icon_height = global::NaitonGPS.Droid.Resource.Dimension.notification_large_icon_height;
+			global::PhantomLib.Droid.Resource.Dimension.notification_large_icon_width = global::NaitonGPS.Droid.Resource.Dimension.notification_large_icon_width;
+			global::PhantomLib.Droid.Resource.Dimension.notification_main_column_padding_top = global::NaitonGPS.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::PhantomLib.Droid.Resource.Dimension.notification_media_narrow_margin = global::NaitonGPS.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::PhantomLib.Droid.Resource.Dimension.notification_right_icon_size = global::NaitonGPS.Droid.Resource.Dimension.notification_right_icon_size;
+			global::PhantomLib.Droid.Resource.Dimension.notification_right_side_padding_top = global::NaitonGPS.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::PhantomLib.Droid.Resource.Dimension.notification_small_icon_background_padding = global::NaitonGPS.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::PhantomLib.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::NaitonGPS.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::PhantomLib.Droid.Resource.Dimension.notification_subtext_size = global::NaitonGPS.Droid.Resource.Dimension.notification_subtext_size;
+			global::PhantomLib.Droid.Resource.Dimension.notification_top_pad = global::NaitonGPS.Droid.Resource.Dimension.notification_top_pad;
+			global::PhantomLib.Droid.Resource.Dimension.notification_top_pad_large_text = global::NaitonGPS.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_corner_radius = global::NaitonGPS.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_horizontal_padding = global::NaitonGPS.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_margin = global::NaitonGPS.Droid.Resource.Dimension.tooltip_margin;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::NaitonGPS.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::NaitonGPS.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_vertical_padding = global::NaitonGPS.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::NaitonGPS.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::PhantomLib.Droid.Resource.Dimension.tooltip_y_offset_touch = global::NaitonGPS.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::NaitonGPS.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_borderless_material = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_check_material = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_check_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_colored_material = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_radio_material = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::PhantomLib.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::NaitonGPS.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::PhantomLib.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::NaitonGPS.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::PhantomLib.Droid.Resource.Drawable.abc_cab_background_top_material = global::NaitonGPS.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_control_background_material = global::NaitonGPS.Droid.Resource.Drawable.abc_control_background_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_dialog_material_background = global::NaitonGPS.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::PhantomLib.Droid.Resource.Drawable.abc_edit_text_material = global::NaitonGPS.Droid.Resource.Drawable.abc_edit_text_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_ab_back_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_clear_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_search_api_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_item_background_holo_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_item_background_holo_light = global::NaitonGPS.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_divider_material = global::NaitonGPS.Droid.Resource.Drawable.abc_list_divider_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_focused_holo = global::NaitonGPS.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_longpressed_holo = global::NaitonGPS.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::NaitonGPS.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::NaitonGPS.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::NaitonGPS.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_list_selector_holo_light = global::NaitonGPS.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::NaitonGPS.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::PhantomLib.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::NaitonGPS.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ratingbar_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_ratingbar_small_material = global::NaitonGPS.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::NaitonGPS.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::NaitonGPS.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::NaitonGPS.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::NaitonGPS.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_seekbar_track_material = global::NaitonGPS.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::NaitonGPS.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_switch_thumb_material = global::NaitonGPS.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_tab_indicator_material = global::NaitonGPS.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::NaitonGPS.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::PhantomLib.Droid.Resource.Drawable.abc_textfield_search_material = global::NaitonGPS.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_cursor_material = global::NaitonGPS.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::NaitonGPS.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::NaitonGPS.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::NaitonGPS.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::PhantomLib.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::NaitonGPS.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::PhantomLib.Droid.Resource.Drawable.abc_vector_test = global::NaitonGPS.Droid.Resource.Drawable.abc_vector_test;
+			global::PhantomLib.Droid.Resource.Drawable.avd_hide_password = global::NaitonGPS.Droid.Resource.Drawable.avd_hide_password;
+			global::PhantomLib.Droid.Resource.Drawable.avd_show_password = global::NaitonGPS.Droid.Resource.Drawable.avd_show_password;
+			global::PhantomLib.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::NaitonGPS.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::PhantomLib.Droid.Resource.Drawable.design_fab_background = global::NaitonGPS.Droid.Resource.Drawable.design_fab_background;
+			global::PhantomLib.Droid.Resource.Drawable.design_ic_visibility = global::NaitonGPS.Droid.Resource.Drawable.design_ic_visibility;
+			global::PhantomLib.Droid.Resource.Drawable.design_ic_visibility_off = global::NaitonGPS.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::PhantomLib.Droid.Resource.Drawable.design_password_eye = global::NaitonGPS.Droid.Resource.Drawable.design_password_eye;
+			global::PhantomLib.Droid.Resource.Drawable.design_snackbar_background = global::NaitonGPS.Droid.Resource.Drawable.design_snackbar_background;
+			global::PhantomLib.Droid.Resource.Drawable.ExtEntryShape = global::NaitonGPS.Droid.Resource.Drawable.ExtEntryShape;
+			global::PhantomLib.Droid.Resource.Drawable.ic_mtrl_chip_checked_black = global::NaitonGPS.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::PhantomLib.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle = global::NaitonGPS.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::PhantomLib.Droid.Resource.Drawable.ic_mtrl_chip_close_circle = global::NaitonGPS.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::PhantomLib.Droid.Resource.Drawable.mtrl_tabs_default_indicator = global::NaitonGPS.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::PhantomLib.Droid.Resource.Drawable.navigation_empty_icon = global::NaitonGPS.Droid.Resource.Drawable.navigation_empty_icon;
+			global::PhantomLib.Droid.Resource.Drawable.notification_action_background = global::NaitonGPS.Droid.Resource.Drawable.notification_action_background;
+			global::PhantomLib.Droid.Resource.Drawable.notification_bg = global::NaitonGPS.Droid.Resource.Drawable.notification_bg;
+			global::PhantomLib.Droid.Resource.Drawable.notification_bg_low = global::NaitonGPS.Droid.Resource.Drawable.notification_bg_low;
+			global::PhantomLib.Droid.Resource.Drawable.notification_bg_low_normal = global::NaitonGPS.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::PhantomLib.Droid.Resource.Drawable.notification_bg_low_pressed = global::NaitonGPS.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::PhantomLib.Droid.Resource.Drawable.notification_bg_normal = global::NaitonGPS.Droid.Resource.Drawable.notification_bg_normal;
+			global::PhantomLib.Droid.Resource.Drawable.notification_bg_normal_pressed = global::NaitonGPS.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::PhantomLib.Droid.Resource.Drawable.notification_icon_background = global::NaitonGPS.Droid.Resource.Drawable.notification_icon_background;
+			global::PhantomLib.Droid.Resource.Drawable.notification_template_icon_bg = global::NaitonGPS.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::PhantomLib.Droid.Resource.Drawable.notification_template_icon_low_bg = global::NaitonGPS.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::PhantomLib.Droid.Resource.Drawable.notification_tile_bg = global::NaitonGPS.Droid.Resource.Drawable.notification_tile_bg;
+			global::PhantomLib.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::NaitonGPS.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::PhantomLib.Droid.Resource.Drawable.tooltip_frame_dark = global::NaitonGPS.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::PhantomLib.Droid.Resource.Drawable.tooltip_frame_light = global::NaitonGPS.Droid.Resource.Drawable.tooltip_frame_light;
+			global::PhantomLib.Droid.Resource.Drawable.WhiteLine = global::NaitonGPS.Droid.Resource.Drawable.WhiteLine;
+			global::PhantomLib.Droid.Resource.Id.action0 = global::NaitonGPS.Droid.Resource.Id.action0;
+			global::PhantomLib.Droid.Resource.Id.actions = global::NaitonGPS.Droid.Resource.Id.actions;
+			global::PhantomLib.Droid.Resource.Id.action_bar = global::NaitonGPS.Droid.Resource.Id.action_bar;
+			global::PhantomLib.Droid.Resource.Id.action_bar_activity_content = global::NaitonGPS.Droid.Resource.Id.action_bar_activity_content;
+			global::PhantomLib.Droid.Resource.Id.action_bar_container = global::NaitonGPS.Droid.Resource.Id.action_bar_container;
+			global::PhantomLib.Droid.Resource.Id.action_bar_root = global::NaitonGPS.Droid.Resource.Id.action_bar_root;
+			global::PhantomLib.Droid.Resource.Id.action_bar_spinner = global::NaitonGPS.Droid.Resource.Id.action_bar_spinner;
+			global::PhantomLib.Droid.Resource.Id.action_bar_subtitle = global::NaitonGPS.Droid.Resource.Id.action_bar_subtitle;
+			global::PhantomLib.Droid.Resource.Id.action_bar_title = global::NaitonGPS.Droid.Resource.Id.action_bar_title;
+			global::PhantomLib.Droid.Resource.Id.action_container = global::NaitonGPS.Droid.Resource.Id.action_container;
+			global::PhantomLib.Droid.Resource.Id.action_context_bar = global::NaitonGPS.Droid.Resource.Id.action_context_bar;
+			global::PhantomLib.Droid.Resource.Id.action_divider = global::NaitonGPS.Droid.Resource.Id.action_divider;
+			global::PhantomLib.Droid.Resource.Id.action_image = global::NaitonGPS.Droid.Resource.Id.action_image;
+			global::PhantomLib.Droid.Resource.Id.action_menu_divider = global::NaitonGPS.Droid.Resource.Id.action_menu_divider;
+			global::PhantomLib.Droid.Resource.Id.action_menu_presenter = global::NaitonGPS.Droid.Resource.Id.action_menu_presenter;
+			global::PhantomLib.Droid.Resource.Id.action_mode_bar = global::NaitonGPS.Droid.Resource.Id.action_mode_bar;
+			global::PhantomLib.Droid.Resource.Id.action_mode_bar_stub = global::NaitonGPS.Droid.Resource.Id.action_mode_bar_stub;
+			global::PhantomLib.Droid.Resource.Id.action_mode_close_button = global::NaitonGPS.Droid.Resource.Id.action_mode_close_button;
+			global::PhantomLib.Droid.Resource.Id.action_text = global::NaitonGPS.Droid.Resource.Id.action_text;
+			global::PhantomLib.Droid.Resource.Id.activity_chooser_view_content = global::NaitonGPS.Droid.Resource.Id.activity_chooser_view_content;
+			global::PhantomLib.Droid.Resource.Id.add = global::NaitonGPS.Droid.Resource.Id.add;
+			global::PhantomLib.Droid.Resource.Id.alertTitle = global::NaitonGPS.Droid.Resource.Id.alertTitle;
+			global::PhantomLib.Droid.Resource.Id.all = global::NaitonGPS.Droid.Resource.Id.all;
+			global::PhantomLib.Droid.Resource.Id.ALT = global::NaitonGPS.Droid.Resource.Id.ALT;
+			global::PhantomLib.Droid.Resource.Id.always = global::NaitonGPS.Droid.Resource.Id.always;
+			global::PhantomLib.Droid.Resource.Id.async = global::NaitonGPS.Droid.Resource.Id.async;
+			global::PhantomLib.Droid.Resource.Id.auto = global::NaitonGPS.Droid.Resource.Id.auto;
+			global::PhantomLib.Droid.Resource.Id.beginning = global::NaitonGPS.Droid.Resource.Id.beginning;
+			global::PhantomLib.Droid.Resource.Id.blocking = global::NaitonGPS.Droid.Resource.Id.blocking;
+			global::PhantomLib.Droid.Resource.Id.bottom = global::NaitonGPS.Droid.Resource.Id.bottom;
+			global::PhantomLib.Droid.Resource.Id.bottomtab_navarea = global::NaitonGPS.Droid.Resource.Id.bottomtab_navarea;
+			global::PhantomLib.Droid.Resource.Id.bottomtab_tabbar = global::NaitonGPS.Droid.Resource.Id.bottomtab_tabbar;
+			global::PhantomLib.Droid.Resource.Id.browser_actions_header_text = global::NaitonGPS.Droid.Resource.Id.browser_actions_header_text;
+			global::PhantomLib.Droid.Resource.Id.browser_actions_menu_items = global::NaitonGPS.Droid.Resource.Id.browser_actions_menu_items;
+			global::PhantomLib.Droid.Resource.Id.browser_actions_menu_item_icon = global::NaitonGPS.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::PhantomLib.Droid.Resource.Id.browser_actions_menu_item_text = global::NaitonGPS.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::PhantomLib.Droid.Resource.Id.browser_actions_menu_view = global::NaitonGPS.Droid.Resource.Id.browser_actions_menu_view;
+			global::PhantomLib.Droid.Resource.Id.buttonPanel = global::NaitonGPS.Droid.Resource.Id.buttonPanel;
+			global::PhantomLib.Droid.Resource.Id.cancel_action = global::NaitonGPS.Droid.Resource.Id.cancel_action;
+			global::PhantomLib.Droid.Resource.Id.center = global::NaitonGPS.Droid.Resource.Id.center;
+			global::PhantomLib.Droid.Resource.Id.center_horizontal = global::NaitonGPS.Droid.Resource.Id.center_horizontal;
+			global::PhantomLib.Droid.Resource.Id.center_vertical = global::NaitonGPS.Droid.Resource.Id.center_vertical;
+			global::PhantomLib.Droid.Resource.Id.checkbox = global::NaitonGPS.Droid.Resource.Id.checkbox;
+			global::PhantomLib.Droid.Resource.Id.chronometer = global::NaitonGPS.Droid.Resource.Id.chronometer;
+			global::PhantomLib.Droid.Resource.Id.clip_horizontal = global::NaitonGPS.Droid.Resource.Id.clip_horizontal;
+			global::PhantomLib.Droid.Resource.Id.clip_vertical = global::NaitonGPS.Droid.Resource.Id.clip_vertical;
+			global::PhantomLib.Droid.Resource.Id.collapseActionView = global::NaitonGPS.Droid.Resource.Id.collapseActionView;
+			global::PhantomLib.Droid.Resource.Id.container = global::NaitonGPS.Droid.Resource.Id.container;
+			global::PhantomLib.Droid.Resource.Id.content = global::NaitonGPS.Droid.Resource.Id.content;
+			global::PhantomLib.Droid.Resource.Id.contentPanel = global::NaitonGPS.Droid.Resource.Id.contentPanel;
+			global::PhantomLib.Droid.Resource.Id.coordinator = global::NaitonGPS.Droid.Resource.Id.coordinator;
+			global::PhantomLib.Droid.Resource.Id.CTRL = global::NaitonGPS.Droid.Resource.Id.CTRL;
+			global::PhantomLib.Droid.Resource.Id.custom = global::NaitonGPS.Droid.Resource.Id.custom;
+			global::PhantomLib.Droid.Resource.Id.customPanel = global::NaitonGPS.Droid.Resource.Id.customPanel;
+			global::PhantomLib.Droid.Resource.Id.decor_content_parent = global::NaitonGPS.Droid.Resource.Id.decor_content_parent;
+			global::PhantomLib.Droid.Resource.Id.default_activity_button = global::NaitonGPS.Droid.Resource.Id.default_activity_button;
+			global::PhantomLib.Droid.Resource.Id.design_bottom_sheet = global::NaitonGPS.Droid.Resource.Id.design_bottom_sheet;
+			global::PhantomLib.Droid.Resource.Id.design_menu_item_action_area = global::NaitonGPS.Droid.Resource.Id.design_menu_item_action_area;
+			global::PhantomLib.Droid.Resource.Id.design_menu_item_action_area_stub = global::NaitonGPS.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::PhantomLib.Droid.Resource.Id.design_menu_item_text = global::NaitonGPS.Droid.Resource.Id.design_menu_item_text;
+			global::PhantomLib.Droid.Resource.Id.design_navigation_view = global::NaitonGPS.Droid.Resource.Id.design_navigation_view;
+			global::PhantomLib.Droid.Resource.Id.disableHome = global::NaitonGPS.Droid.Resource.Id.disableHome;
+			global::PhantomLib.Droid.Resource.Id.edit_query = global::NaitonGPS.Droid.Resource.Id.edit_query;
+			global::PhantomLib.Droid.Resource.Id.end = global::NaitonGPS.Droid.Resource.Id.end;
+			global::PhantomLib.Droid.Resource.Id.end_padder = global::NaitonGPS.Droid.Resource.Id.end_padder;
+			global::PhantomLib.Droid.Resource.Id.enterAlways = global::NaitonGPS.Droid.Resource.Id.enterAlways;
+			global::PhantomLib.Droid.Resource.Id.enterAlwaysCollapsed = global::NaitonGPS.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::PhantomLib.Droid.Resource.Id.exitUntilCollapsed = global::NaitonGPS.Droid.Resource.Id.exitUntilCollapsed;
+			global::PhantomLib.Droid.Resource.Id.expanded_menu = global::NaitonGPS.Droid.Resource.Id.expanded_menu;
+			global::PhantomLib.Droid.Resource.Id.expand_activities_button = global::NaitonGPS.Droid.Resource.Id.expand_activities_button;
+			global::PhantomLib.Droid.Resource.Id.fill = global::NaitonGPS.Droid.Resource.Id.fill;
+			global::PhantomLib.Droid.Resource.Id.filled = global::NaitonGPS.Droid.Resource.Id.filled;
+			global::PhantomLib.Droid.Resource.Id.fill_horizontal = global::NaitonGPS.Droid.Resource.Id.fill_horizontal;
+			global::PhantomLib.Droid.Resource.Id.fill_vertical = global::NaitonGPS.Droid.Resource.Id.fill_vertical;
+			global::PhantomLib.Droid.Resource.Id.@fixed = global::NaitonGPS.Droid.Resource.Id.@fixed;
+			global::PhantomLib.Droid.Resource.Id.flyoutcontent_appbar = global::NaitonGPS.Droid.Resource.Id.flyoutcontent_appbar;
+			global::PhantomLib.Droid.Resource.Id.forever = global::NaitonGPS.Droid.Resource.Id.forever;
+			global::PhantomLib.Droid.Resource.Id.FUNCTION = global::NaitonGPS.Droid.Resource.Id.FUNCTION;
+			global::PhantomLib.Droid.Resource.Id.ghost_view = global::NaitonGPS.Droid.Resource.Id.ghost_view;
+			global::PhantomLib.Droid.Resource.Id.group_divider = global::NaitonGPS.Droid.Resource.Id.group_divider;
+			global::PhantomLib.Droid.Resource.Id.home = global::NaitonGPS.Droid.Resource.Id.home;
+			global::PhantomLib.Droid.Resource.Id.homeAsUp = global::NaitonGPS.Droid.Resource.Id.homeAsUp;
+			global::PhantomLib.Droid.Resource.Id.icon = global::NaitonGPS.Droid.Resource.Id.icon;
+			global::PhantomLib.Droid.Resource.Id.icon_group = global::NaitonGPS.Droid.Resource.Id.icon_group;
+			global::PhantomLib.Droid.Resource.Id.ifRoom = global::NaitonGPS.Droid.Resource.Id.ifRoom;
+			global::PhantomLib.Droid.Resource.Id.image = global::NaitonGPS.Droid.Resource.Id.image;
+			global::PhantomLib.Droid.Resource.Id.info = global::NaitonGPS.Droid.Resource.Id.info;
+			global::PhantomLib.Droid.Resource.Id.italic = global::NaitonGPS.Droid.Resource.Id.italic;
+			global::PhantomLib.Droid.Resource.Id.item_touch_helper_previous_elevation = global::NaitonGPS.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::PhantomLib.Droid.Resource.Id.labeled = global::NaitonGPS.Droid.Resource.Id.labeled;
+			global::PhantomLib.Droid.Resource.Id.largeLabel = global::NaitonGPS.Droid.Resource.Id.largeLabel;
+			global::PhantomLib.Droid.Resource.Id.left = global::NaitonGPS.Droid.Resource.Id.left;
+			global::PhantomLib.Droid.Resource.Id.line1 = global::NaitonGPS.Droid.Resource.Id.line1;
+			global::PhantomLib.Droid.Resource.Id.line3 = global::NaitonGPS.Droid.Resource.Id.line3;
+			global::PhantomLib.Droid.Resource.Id.listMode = global::NaitonGPS.Droid.Resource.Id.listMode;
+			global::PhantomLib.Droid.Resource.Id.list_item = global::NaitonGPS.Droid.Resource.Id.list_item;
+			global::PhantomLib.Droid.Resource.Id.main_appbar = global::NaitonGPS.Droid.Resource.Id.main_appbar;
+			global::PhantomLib.Droid.Resource.Id.main_tablayout = global::NaitonGPS.Droid.Resource.Id.main_tablayout;
+			global::PhantomLib.Droid.Resource.Id.main_toolbar = global::NaitonGPS.Droid.Resource.Id.main_toolbar;
+			global::PhantomLib.Droid.Resource.Id.main_viewpager = global::NaitonGPS.Droid.Resource.Id.main_viewpager;
+			global::PhantomLib.Droid.Resource.Id.masked = global::NaitonGPS.Droid.Resource.Id.masked;
+			global::PhantomLib.Droid.Resource.Id.media_actions = global::NaitonGPS.Droid.Resource.Id.media_actions;
+			global::PhantomLib.Droid.Resource.Id.message = global::NaitonGPS.Droid.Resource.Id.message;
+			global::PhantomLib.Droid.Resource.Id.META = global::NaitonGPS.Droid.Resource.Id.META;
+			global::PhantomLib.Droid.Resource.Id.middle = global::NaitonGPS.Droid.Resource.Id.middle;
+			global::PhantomLib.Droid.Resource.Id.mini = global::NaitonGPS.Droid.Resource.Id.mini;
+			global::PhantomLib.Droid.Resource.Id.mtrl_child_content_container = global::NaitonGPS.Droid.Resource.Id.mtrl_child_content_container;
+			global::PhantomLib.Droid.Resource.Id.mtrl_internal_children_alpha_tag = global::NaitonGPS.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::PhantomLib.Droid.Resource.Id.multiply = global::NaitonGPS.Droid.Resource.Id.multiply;
+			global::PhantomLib.Droid.Resource.Id.navigation_header_container = global::NaitonGPS.Droid.Resource.Id.navigation_header_container;
+			global::PhantomLib.Droid.Resource.Id.never = global::NaitonGPS.Droid.Resource.Id.never;
+			global::PhantomLib.Droid.Resource.Id.none = global::NaitonGPS.Droid.Resource.Id.none;
+			global::PhantomLib.Droid.Resource.Id.normal = global::NaitonGPS.Droid.Resource.Id.normal;
+			global::PhantomLib.Droid.Resource.Id.notification_background = global::NaitonGPS.Droid.Resource.Id.notification_background;
+			global::PhantomLib.Droid.Resource.Id.notification_main_column = global::NaitonGPS.Droid.Resource.Id.notification_main_column;
+			global::PhantomLib.Droid.Resource.Id.notification_main_column_container = global::NaitonGPS.Droid.Resource.Id.notification_main_column_container;
+			global::PhantomLib.Droid.Resource.Id.outline = global::NaitonGPS.Droid.Resource.Id.outline;
+			global::PhantomLib.Droid.Resource.Id.parallax = global::NaitonGPS.Droid.Resource.Id.parallax;
+			global::PhantomLib.Droid.Resource.Id.parentPanel = global::NaitonGPS.Droid.Resource.Id.parentPanel;
+			global::PhantomLib.Droid.Resource.Id.parent_matrix = global::NaitonGPS.Droid.Resource.Id.parent_matrix;
+			global::PhantomLib.Droid.Resource.Id.pin = global::NaitonGPS.Droid.Resource.Id.pin;
+			global::PhantomLib.Droid.Resource.Id.progress_circular = global::NaitonGPS.Droid.Resource.Id.progress_circular;
+			global::PhantomLib.Droid.Resource.Id.progress_horizontal = global::NaitonGPS.Droid.Resource.Id.progress_horizontal;
+			global::PhantomLib.Droid.Resource.Id.radio = global::NaitonGPS.Droid.Resource.Id.radio;
+			global::PhantomLib.Droid.Resource.Id.right = global::NaitonGPS.Droid.Resource.Id.right;
+			global::PhantomLib.Droid.Resource.Id.right_icon = global::NaitonGPS.Droid.Resource.Id.right_icon;
+			global::PhantomLib.Droid.Resource.Id.right_side = global::NaitonGPS.Droid.Resource.Id.right_side;
+			global::PhantomLib.Droid.Resource.Id.save_non_transition_alpha = global::NaitonGPS.Droid.Resource.Id.save_non_transition_alpha;
+			global::PhantomLib.Droid.Resource.Id.screen = global::NaitonGPS.Droid.Resource.Id.screen;
+			global::PhantomLib.Droid.Resource.Id.scroll = global::NaitonGPS.Droid.Resource.Id.scroll;
+			global::PhantomLib.Droid.Resource.Id.scrollable = global::NaitonGPS.Droid.Resource.Id.scrollable;
+			global::PhantomLib.Droid.Resource.Id.scrollIndicatorDown = global::NaitonGPS.Droid.Resource.Id.scrollIndicatorDown;
+			global::PhantomLib.Droid.Resource.Id.scrollIndicatorUp = global::NaitonGPS.Droid.Resource.Id.scrollIndicatorUp;
+			global::PhantomLib.Droid.Resource.Id.scrollView = global::NaitonGPS.Droid.Resource.Id.scrollView;
+			global::PhantomLib.Droid.Resource.Id.search_badge = global::NaitonGPS.Droid.Resource.Id.search_badge;
+			global::PhantomLib.Droid.Resource.Id.search_bar = global::NaitonGPS.Droid.Resource.Id.search_bar;
+			global::PhantomLib.Droid.Resource.Id.search_button = global::NaitonGPS.Droid.Resource.Id.search_button;
+			global::PhantomLib.Droid.Resource.Id.search_close_btn = global::NaitonGPS.Droid.Resource.Id.search_close_btn;
+			global::PhantomLib.Droid.Resource.Id.search_edit_frame = global::NaitonGPS.Droid.Resource.Id.search_edit_frame;
+			global::PhantomLib.Droid.Resource.Id.search_go_btn = global::NaitonGPS.Droid.Resource.Id.search_go_btn;
+			global::PhantomLib.Droid.Resource.Id.search_mag_icon = global::NaitonGPS.Droid.Resource.Id.search_mag_icon;
+			global::PhantomLib.Droid.Resource.Id.search_plate = global::NaitonGPS.Droid.Resource.Id.search_plate;
+			global::PhantomLib.Droid.Resource.Id.search_src_text = global::NaitonGPS.Droid.Resource.Id.search_src_text;
+			global::PhantomLib.Droid.Resource.Id.search_voice_btn = global::NaitonGPS.Droid.Resource.Id.search_voice_btn;
+			global::PhantomLib.Droid.Resource.Id.selected = global::NaitonGPS.Droid.Resource.Id.selected;
+			global::PhantomLib.Droid.Resource.Id.select_dialog_listview = global::NaitonGPS.Droid.Resource.Id.select_dialog_listview;
+			global::PhantomLib.Droid.Resource.Id.shellcontent_appbar = global::NaitonGPS.Droid.Resource.Id.shellcontent_appbar;
+			global::PhantomLib.Droid.Resource.Id.shellcontent_toolbar = global::NaitonGPS.Droid.Resource.Id.shellcontent_toolbar;
+			global::PhantomLib.Droid.Resource.Id.SHIFT = global::NaitonGPS.Droid.Resource.Id.SHIFT;
+			global::PhantomLib.Droid.Resource.Id.shortcut = global::NaitonGPS.Droid.Resource.Id.shortcut;
+			global::PhantomLib.Droid.Resource.Id.showCustom = global::NaitonGPS.Droid.Resource.Id.showCustom;
+			global::PhantomLib.Droid.Resource.Id.showHome = global::NaitonGPS.Droid.Resource.Id.showHome;
+			global::PhantomLib.Droid.Resource.Id.showTitle = global::NaitonGPS.Droid.Resource.Id.showTitle;
+			global::PhantomLib.Droid.Resource.Id.smallLabel = global::NaitonGPS.Droid.Resource.Id.smallLabel;
+			global::PhantomLib.Droid.Resource.Id.snackbar_action = global::NaitonGPS.Droid.Resource.Id.snackbar_action;
+			global::PhantomLib.Droid.Resource.Id.snackbar_text = global::NaitonGPS.Droid.Resource.Id.snackbar_text;
+			global::PhantomLib.Droid.Resource.Id.snap = global::NaitonGPS.Droid.Resource.Id.snap;
+			global::PhantomLib.Droid.Resource.Id.snapMargins = global::NaitonGPS.Droid.Resource.Id.snapMargins;
+			global::PhantomLib.Droid.Resource.Id.spacer = global::NaitonGPS.Droid.Resource.Id.spacer;
+			global::PhantomLib.Droid.Resource.Id.split_action_bar = global::NaitonGPS.Droid.Resource.Id.split_action_bar;
+			global::PhantomLib.Droid.Resource.Id.src_atop = global::NaitonGPS.Droid.Resource.Id.src_atop;
+			global::PhantomLib.Droid.Resource.Id.src_in = global::NaitonGPS.Droid.Resource.Id.src_in;
+			global::PhantomLib.Droid.Resource.Id.src_over = global::NaitonGPS.Droid.Resource.Id.src_over;
+			global::PhantomLib.Droid.Resource.Id.start = global::NaitonGPS.Droid.Resource.Id.start;
+			global::PhantomLib.Droid.Resource.Id.status_bar_latest_event_content = global::NaitonGPS.Droid.Resource.Id.status_bar_latest_event_content;
+			global::PhantomLib.Droid.Resource.Id.stretch = global::NaitonGPS.Droid.Resource.Id.stretch;
+			global::PhantomLib.Droid.Resource.Id.submenuarrow = global::NaitonGPS.Droid.Resource.Id.submenuarrow;
+			global::PhantomLib.Droid.Resource.Id.submit_area = global::NaitonGPS.Droid.Resource.Id.submit_area;
+			global::PhantomLib.Droid.Resource.Id.SYM = global::NaitonGPS.Droid.Resource.Id.SYM;
+			global::PhantomLib.Droid.Resource.Id.tabMode = global::NaitonGPS.Droid.Resource.Id.tabMode;
+			global::PhantomLib.Droid.Resource.Id.tag_transition_group = global::NaitonGPS.Droid.Resource.Id.tag_transition_group;
+			global::PhantomLib.Droid.Resource.Id.tag_unhandled_key_event_manager = global::NaitonGPS.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::PhantomLib.Droid.Resource.Id.tag_unhandled_key_listeners = global::NaitonGPS.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::PhantomLib.Droid.Resource.Id.text = global::NaitonGPS.Droid.Resource.Id.text;
+			global::PhantomLib.Droid.Resource.Id.text2 = global::NaitonGPS.Droid.Resource.Id.text2;
+			global::PhantomLib.Droid.Resource.Id.textinput_counter = global::NaitonGPS.Droid.Resource.Id.textinput_counter;
+			global::PhantomLib.Droid.Resource.Id.textinput_error = global::NaitonGPS.Droid.Resource.Id.textinput_error;
+			global::PhantomLib.Droid.Resource.Id.textinput_helper_text = global::NaitonGPS.Droid.Resource.Id.textinput_helper_text;
+			global::PhantomLib.Droid.Resource.Id.textSpacerNoButtons = global::NaitonGPS.Droid.Resource.Id.textSpacerNoButtons;
+			global::PhantomLib.Droid.Resource.Id.textSpacerNoTitle = global::NaitonGPS.Droid.Resource.Id.textSpacerNoTitle;
+			global::PhantomLib.Droid.Resource.Id.textStart = global::NaitonGPS.Droid.Resource.Id.textStart;
+			global::PhantomLib.Droid.Resource.Id.time = global::NaitonGPS.Droid.Resource.Id.time;
+			global::PhantomLib.Droid.Resource.Id.title = global::NaitonGPS.Droid.Resource.Id.title;
+			global::PhantomLib.Droid.Resource.Id.titleDividerNoCustom = global::NaitonGPS.Droid.Resource.Id.titleDividerNoCustom;
+			global::PhantomLib.Droid.Resource.Id.title_template = global::NaitonGPS.Droid.Resource.Id.title_template;
+			global::PhantomLib.Droid.Resource.Id.top = global::NaitonGPS.Droid.Resource.Id.top;
+			global::PhantomLib.Droid.Resource.Id.topPanel = global::NaitonGPS.Droid.Resource.Id.topPanel;
+			global::PhantomLib.Droid.Resource.Id.touch_outside = global::NaitonGPS.Droid.Resource.Id.touch_outside;
+			global::PhantomLib.Droid.Resource.Id.transition_current_scene = global::NaitonGPS.Droid.Resource.Id.transition_current_scene;
+			global::PhantomLib.Droid.Resource.Id.transition_layout_save = global::NaitonGPS.Droid.Resource.Id.transition_layout_save;
+			global::PhantomLib.Droid.Resource.Id.transition_position = global::NaitonGPS.Droid.Resource.Id.transition_position;
+			global::PhantomLib.Droid.Resource.Id.transition_scene_layoutid_cache = global::NaitonGPS.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::PhantomLib.Droid.Resource.Id.transition_transform = global::NaitonGPS.Droid.Resource.Id.transition_transform;
+			global::PhantomLib.Droid.Resource.Id.uniform = global::NaitonGPS.Droid.Resource.Id.uniform;
+			global::PhantomLib.Droid.Resource.Id.unlabeled = global::NaitonGPS.Droid.Resource.Id.unlabeled;
+			global::PhantomLib.Droid.Resource.Id.up = global::NaitonGPS.Droid.Resource.Id.up;
+			global::PhantomLib.Droid.Resource.Id.useLogo = global::NaitonGPS.Droid.Resource.Id.useLogo;
+			global::PhantomLib.Droid.Resource.Id.view_offset_helper = global::NaitonGPS.Droid.Resource.Id.view_offset_helper;
+			global::PhantomLib.Droid.Resource.Id.visible = global::NaitonGPS.Droid.Resource.Id.visible;
+			global::PhantomLib.Droid.Resource.Id.withText = global::NaitonGPS.Droid.Resource.Id.withText;
+			global::PhantomLib.Droid.Resource.Id.wrap_content = global::NaitonGPS.Droid.Resource.Id.wrap_content;
+			global::PhantomLib.Droid.Resource.Integer.abc_config_activityDefaultDur = global::NaitonGPS.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::PhantomLib.Droid.Resource.Integer.abc_config_activityShortDur = global::NaitonGPS.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::PhantomLib.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::NaitonGPS.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::PhantomLib.Droid.Resource.Integer.bottom_sheet_slide_duration = global::NaitonGPS.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::PhantomLib.Droid.Resource.Integer.cancel_button_image_alpha = global::NaitonGPS.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::PhantomLib.Droid.Resource.Integer.config_tooltipAnimTime = global::NaitonGPS.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::PhantomLib.Droid.Resource.Integer.design_snackbar_text_max_lines = global::NaitonGPS.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::PhantomLib.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms = global::NaitonGPS.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::PhantomLib.Droid.Resource.Integer.hide_password_duration = global::NaitonGPS.Droid.Resource.Integer.hide_password_duration;
+			global::PhantomLib.Droid.Resource.Integer.mtrl_btn_anim_delay_ms = global::NaitonGPS.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::PhantomLib.Droid.Resource.Integer.mtrl_btn_anim_duration_ms = global::NaitonGPS.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::PhantomLib.Droid.Resource.Integer.mtrl_chip_anim_duration = global::NaitonGPS.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::PhantomLib.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::NaitonGPS.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::PhantomLib.Droid.Resource.Integer.show_password_duration = global::NaitonGPS.Droid.Resource.Integer.show_password_duration;
+			global::PhantomLib.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::NaitonGPS.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::PhantomLib.Droid.Resource.Interpolator.mtrl_fast_out_linear_in = global::NaitonGPS.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::PhantomLib.Droid.Resource.Interpolator.mtrl_fast_out_slow_in = global::NaitonGPS.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::PhantomLib.Droid.Resource.Interpolator.mtrl_linear = global::NaitonGPS.Droid.Resource.Interpolator.mtrl_linear;
+			global::PhantomLib.Droid.Resource.Interpolator.mtrl_linear_out_slow_in = global::NaitonGPS.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::PhantomLib.Droid.Resource.Layout.abc_action_bar_title_item = global::NaitonGPS.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::PhantomLib.Droid.Resource.Layout.abc_action_bar_up_container = global::NaitonGPS.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::PhantomLib.Droid.Resource.Layout.abc_action_menu_item_layout = global::NaitonGPS.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_action_menu_layout = global::NaitonGPS.Droid.Resource.Layout.abc_action_menu_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_action_mode_bar = global::NaitonGPS.Droid.Resource.Layout.abc_action_mode_bar;
+			global::PhantomLib.Droid.Resource.Layout.abc_action_mode_close_item_material = global::NaitonGPS.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::PhantomLib.Droid.Resource.Layout.abc_activity_chooser_view = global::NaitonGPS.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::PhantomLib.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::NaitonGPS.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::PhantomLib.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::NaitonGPS.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::PhantomLib.Droid.Resource.Layout.abc_alert_dialog_material = global::NaitonGPS.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::PhantomLib.Droid.Resource.Layout.abc_alert_dialog_title_material = global::NaitonGPS.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::PhantomLib.Droid.Resource.Layout.abc_cascading_menu_item_layout = global::NaitonGPS.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_dialog_title_material = global::NaitonGPS.Droid.Resource.Layout.abc_dialog_title_material;
+			global::PhantomLib.Droid.Resource.Layout.abc_expanded_menu_layout = global::NaitonGPS.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::NaitonGPS.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_icon = global::NaitonGPS.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_layout = global::NaitonGPS.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_list_menu_item_radio = global::NaitonGPS.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::PhantomLib.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::NaitonGPS.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_popup_menu_item_layout = global::NaitonGPS.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::PhantomLib.Droid.Resource.Layout.abc_screen_content_include = global::NaitonGPS.Droid.Resource.Layout.abc_screen_content_include;
+			global::PhantomLib.Droid.Resource.Layout.abc_screen_simple = global::NaitonGPS.Droid.Resource.Layout.abc_screen_simple;
+			global::PhantomLib.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::NaitonGPS.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::PhantomLib.Droid.Resource.Layout.abc_screen_toolbar = global::NaitonGPS.Droid.Resource.Layout.abc_screen_toolbar;
+			global::PhantomLib.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::NaitonGPS.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::PhantomLib.Droid.Resource.Layout.abc_search_view = global::NaitonGPS.Droid.Resource.Layout.abc_search_view;
+			global::PhantomLib.Droid.Resource.Layout.abc_select_dialog_material = global::NaitonGPS.Droid.Resource.Layout.abc_select_dialog_material;
+			global::PhantomLib.Droid.Resource.Layout.abc_tooltip = global::NaitonGPS.Droid.Resource.Layout.abc_tooltip;
+			global::PhantomLib.Droid.Resource.Layout.BottomTabLayout = global::NaitonGPS.Droid.Resource.Layout.BottomTabLayout;
+			global::PhantomLib.Droid.Resource.Layout.browser_actions_context_menu_page = global::NaitonGPS.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::PhantomLib.Droid.Resource.Layout.browser_actions_context_menu_row = global::NaitonGPS.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::PhantomLib.Droid.Resource.Layout.design_bottom_navigation_item = global::NaitonGPS.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::PhantomLib.Droid.Resource.Layout.design_bottom_sheet_dialog = global::NaitonGPS.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::PhantomLib.Droid.Resource.Layout.design_layout_snackbar = global::NaitonGPS.Droid.Resource.Layout.design_layout_snackbar;
+			global::PhantomLib.Droid.Resource.Layout.design_layout_snackbar_include = global::NaitonGPS.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::PhantomLib.Droid.Resource.Layout.design_layout_tab_icon = global::NaitonGPS.Droid.Resource.Layout.design_layout_tab_icon;
+			global::PhantomLib.Droid.Resource.Layout.design_layout_tab_text = global::NaitonGPS.Droid.Resource.Layout.design_layout_tab_text;
+			global::PhantomLib.Droid.Resource.Layout.design_menu_item_action_area = global::NaitonGPS.Droid.Resource.Layout.design_menu_item_action_area;
+			global::PhantomLib.Droid.Resource.Layout.design_navigation_item = global::NaitonGPS.Droid.Resource.Layout.design_navigation_item;
+			global::PhantomLib.Droid.Resource.Layout.design_navigation_item_header = global::NaitonGPS.Droid.Resource.Layout.design_navigation_item_header;
+			global::PhantomLib.Droid.Resource.Layout.design_navigation_item_separator = global::NaitonGPS.Droid.Resource.Layout.design_navigation_item_separator;
+			global::PhantomLib.Droid.Resource.Layout.design_navigation_item_subheader = global::NaitonGPS.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::PhantomLib.Droid.Resource.Layout.design_navigation_menu = global::NaitonGPS.Droid.Resource.Layout.design_navigation_menu;
+			global::PhantomLib.Droid.Resource.Layout.design_navigation_menu_item = global::NaitonGPS.Droid.Resource.Layout.design_navigation_menu_item;
+			global::PhantomLib.Droid.Resource.Layout.FlyoutContent = global::NaitonGPS.Droid.Resource.Layout.FlyoutContent;
+			global::PhantomLib.Droid.Resource.Layout.mtrl_layout_snackbar = global::NaitonGPS.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::PhantomLib.Droid.Resource.Layout.mtrl_layout_snackbar_include = global::NaitonGPS.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::PhantomLib.Droid.Resource.Layout.notification_action = global::NaitonGPS.Droid.Resource.Layout.notification_action;
+			global::PhantomLib.Droid.Resource.Layout.notification_action_tombstone = global::NaitonGPS.Droid.Resource.Layout.notification_action_tombstone;
+			global::PhantomLib.Droid.Resource.Layout.notification_media_action = global::NaitonGPS.Droid.Resource.Layout.notification_media_action;
+			global::PhantomLib.Droid.Resource.Layout.notification_media_cancel_action = global::NaitonGPS.Droid.Resource.Layout.notification_media_cancel_action;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media = global::NaitonGPS.Droid.Resource.Layout.notification_template_big_media;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media_custom = global::NaitonGPS.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media_narrow = global::NaitonGPS.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::NaitonGPS.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_custom_big = global::NaitonGPS.Droid.Resource.Layout.notification_template_custom_big;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_icon_group = global::NaitonGPS.Droid.Resource.Layout.notification_template_icon_group;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_lines_media = global::NaitonGPS.Droid.Resource.Layout.notification_template_lines_media;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_media = global::NaitonGPS.Droid.Resource.Layout.notification_template_media;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_media_custom = global::NaitonGPS.Droid.Resource.Layout.notification_template_media_custom;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_part_chronometer = global::NaitonGPS.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::PhantomLib.Droid.Resource.Layout.notification_template_part_time = global::NaitonGPS.Droid.Resource.Layout.notification_template_part_time;
+			global::PhantomLib.Droid.Resource.Layout.RootLayout = global::NaitonGPS.Droid.Resource.Layout.RootLayout;
+			global::PhantomLib.Droid.Resource.Layout.select_dialog_item_material = global::NaitonGPS.Droid.Resource.Layout.select_dialog_item_material;
+			global::PhantomLib.Droid.Resource.Layout.select_dialog_multichoice_material = global::NaitonGPS.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::PhantomLib.Droid.Resource.Layout.select_dialog_singlechoice_material = global::NaitonGPS.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::PhantomLib.Droid.Resource.Layout.ShellContent = global::NaitonGPS.Droid.Resource.Layout.ShellContent;
+			global::PhantomLib.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::NaitonGPS.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::PhantomLib.Droid.Resource.String.abc_action_bar_home_description = global::NaitonGPS.Droid.Resource.String.abc_action_bar_home_description;
+			global::PhantomLib.Droid.Resource.String.abc_action_bar_up_description = global::NaitonGPS.Droid.Resource.String.abc_action_bar_up_description;
+			global::PhantomLib.Droid.Resource.String.abc_action_menu_overflow_description = global::NaitonGPS.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::PhantomLib.Droid.Resource.String.abc_action_mode_done = global::NaitonGPS.Droid.Resource.String.abc_action_mode_done;
+			global::PhantomLib.Droid.Resource.String.abc_activitychooserview_choose_application = global::NaitonGPS.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::PhantomLib.Droid.Resource.String.abc_activity_chooser_view_see_all = global::NaitonGPS.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::PhantomLib.Droid.Resource.String.abc_capital_off = global::NaitonGPS.Droid.Resource.String.abc_capital_off;
+			global::PhantomLib.Droid.Resource.String.abc_capital_on = global::NaitonGPS.Droid.Resource.String.abc_capital_on;
+			global::PhantomLib.Droid.Resource.String.abc_menu_alt_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_ctrl_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_delete_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_enter_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_function_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_meta_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_shift_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_space_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_menu_sym_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_prepend_shortcut_label = global::NaitonGPS.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::PhantomLib.Droid.Resource.String.abc_searchview_description_clear = global::NaitonGPS.Droid.Resource.String.abc_searchview_description_clear;
+			global::PhantomLib.Droid.Resource.String.abc_searchview_description_query = global::NaitonGPS.Droid.Resource.String.abc_searchview_description_query;
+			global::PhantomLib.Droid.Resource.String.abc_searchview_description_search = global::NaitonGPS.Droid.Resource.String.abc_searchview_description_search;
+			global::PhantomLib.Droid.Resource.String.abc_searchview_description_submit = global::NaitonGPS.Droid.Resource.String.abc_searchview_description_submit;
+			global::PhantomLib.Droid.Resource.String.abc_searchview_description_voice = global::NaitonGPS.Droid.Resource.String.abc_searchview_description_voice;
+			global::PhantomLib.Droid.Resource.String.abc_search_hint = global::NaitonGPS.Droid.Resource.String.abc_search_hint;
+			global::PhantomLib.Droid.Resource.String.abc_shareactionprovider_share_with = global::NaitonGPS.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::PhantomLib.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::NaitonGPS.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::PhantomLib.Droid.Resource.String.abc_toolbar_collapse_description = global::NaitonGPS.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::PhantomLib.Droid.Resource.String.appbar_scrolling_view_behavior = global::NaitonGPS.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::PhantomLib.Droid.Resource.String.app_name = global::NaitonGPS.Droid.Resource.String.app_name;
+			global::PhantomLib.Droid.Resource.String.bottom_sheet_behavior = global::NaitonGPS.Droid.Resource.String.bottom_sheet_behavior;
+			global::PhantomLib.Droid.Resource.String.character_counter_content_description = global::NaitonGPS.Droid.Resource.String.character_counter_content_description;
+			global::PhantomLib.Droid.Resource.String.character_counter_pattern = global::NaitonGPS.Droid.Resource.String.character_counter_pattern;
+			global::PhantomLib.Droid.Resource.String.fab_transformation_scrim_behavior = global::NaitonGPS.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::PhantomLib.Droid.Resource.String.fab_transformation_sheet_behavior = global::NaitonGPS.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::PhantomLib.Droid.Resource.String.hello = global::NaitonGPS.Droid.Resource.String.hello;
+			global::PhantomLib.Droid.Resource.String.hide_bottom_view_on_scroll_behavior = global::NaitonGPS.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::PhantomLib.Droid.Resource.String.mtrl_chip_close_icon_content_description = global::NaitonGPS.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::PhantomLib.Droid.Resource.String.password_toggle_content_description = global::NaitonGPS.Droid.Resource.String.password_toggle_content_description;
+			global::PhantomLib.Droid.Resource.String.path_password_eye = global::NaitonGPS.Droid.Resource.String.path_password_eye;
+			global::PhantomLib.Droid.Resource.String.path_password_eye_mask_strike_through = global::NaitonGPS.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::PhantomLib.Droid.Resource.String.path_password_eye_mask_visible = global::NaitonGPS.Droid.Resource.String.path_password_eye_mask_visible;
+			global::PhantomLib.Droid.Resource.String.path_password_strike_through = global::NaitonGPS.Droid.Resource.String.path_password_strike_through;
+			global::PhantomLib.Droid.Resource.String.search_menu_title = global::NaitonGPS.Droid.Resource.String.search_menu_title;
+			global::PhantomLib.Droid.Resource.String.status_bar_notification_info_overflow = global::NaitonGPS.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::PhantomLib.Droid.Resource.Style.AlertDialog_AppCompat = global::NaitonGPS.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Animation_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::NaitonGPS.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::PhantomLib.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::NaitonGPS.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::PhantomLib.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::NaitonGPS.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::PhantomLib.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::NaitonGPS.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::PhantomLib.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::NaitonGPS.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::PhantomLib.Droid.Resource.Style.Base_CardView = global::NaitonGPS.Droid.Resource.Style.Base_CardView;
+			global::PhantomLib.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::NaitonGPS.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::PhantomLib.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::NaitonGPS.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::PhantomLib.Droid.Resource.Style.Base_V28_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::NaitonGPS.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::NaitonGPS.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::PhantomLib.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::NaitonGPS.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::NaitonGPS.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::NaitonGPS.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip = global::NaitonGPS.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::NaitonGPS.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::PhantomLib.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::NaitonGPS.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::PhantomLib.Droid.Resource.Style.CardView = global::NaitonGPS.Droid.Resource.Style.CardView;
+			global::PhantomLib.Droid.Resource.Style.CardView_Dark = global::NaitonGPS.Droid.Resource.Style.CardView_Dark;
+			global::PhantomLib.Droid.Resource.Style.CardView_Light = global::NaitonGPS.Droid.Resource.Style.CardView_Light;
+			global::PhantomLib.Droid.Resource.Style.Platform_AppCompat = global::NaitonGPS.Droid.Resource.Style.Platform_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Platform_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Platform_MaterialComponents = global::NaitonGPS.Droid.Resource.Style.Platform_MaterialComponents;
+			global::PhantomLib.Droid.Resource.Style.Platform_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Platform_MaterialComponents_Light = global::NaitonGPS.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::PhantomLib.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::NaitonGPS.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::NaitonGPS.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::PhantomLib.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Platform_V21_AppCompat = global::NaitonGPS.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Platform_V25_AppCompat = global::NaitonGPS.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::NaitonGPS.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::PhantomLib.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::NaitonGPS.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::PhantomLib.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::NaitonGPS.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::PhantomLib.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::NaitonGPS.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::NaitonGPS.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Counter = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Error = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_HelperText = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Hint = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Design_Tab = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Button = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::NaitonGPS.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::PhantomLib.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::NaitonGPS.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::PhantomLib.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::NaitonGPS.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Dialog = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_Design = global::NaitonGPS.Droid.Resource.Style.Theme_Design;
+			global::PhantomLib.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::NaitonGPS.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_Design_Light = global::NaitonGPS.Droid.Resource.Style.Theme_Design_Light;
+			global::PhantomLib.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::NaitonGPS.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_Design_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Bridge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Dialog = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::PhantomLib.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::NaitonGPS.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_EditText = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SearchView = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::PhantomLib.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::NaitonGPS.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::PhantomLib.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::NaitonGPS.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::PhantomLib.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::NaitonGPS.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_AppBarLayout = global::NaitonGPS.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::NaitonGPS.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::NaitonGPS.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::NaitonGPS.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::NaitonGPS.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_NavigationView = global::NaitonGPS.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::NaitonGPS.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_Snackbar = global::NaitonGPS.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_TabLayout = global::NaitonGPS.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::PhantomLib.Droid.Resource.Style.Widget_Design_TextInputLayout = global::NaitonGPS.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_CardView = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_NavigationView = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Snackbar = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TabLayout = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::PhantomLib.Droid.Resource.Style.Widget_MaterialComponents_Toolbar = global::NaitonGPS.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::PhantomLib.Droid.Resource.Style.Widget_Support_CoordinatorLayout = global::NaitonGPS.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar = global::NaitonGPS.Droid.Resource.Styleable.ActionBar;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBarLayout = global::NaitonGPS.Droid.Resource.Styleable.ActionBarLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::NaitonGPS.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_background = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_background;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_displayOptions = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_divider = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_divider;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_elevation = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_elevation;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_height = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_height;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_homeLayout = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_icon = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_icon;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_itemPadding = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_logo = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_logo;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_navigationMode = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_popupTheme = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_subtitle = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_title = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_title;
+			global::PhantomLib.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::NaitonGPS.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMenuItemView = global::NaitonGPS.Droid.Resource.Styleable.ActionMenuItemView;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::NaitonGPS.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMenuView = global::NaitonGPS.Droid.Resource.Styleable.ActionMenuView;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode = global::NaitonGPS.Droid.Resource.Styleable.ActionMode;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode_background = global::NaitonGPS.Droid.Resource.Styleable.ActionMode_background;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::NaitonGPS.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::NaitonGPS.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode_height = global::NaitonGPS.Droid.Resource.Styleable.ActionMode_height;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::NaitonGPS.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::PhantomLib.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::NaitonGPS.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::PhantomLib.Droid.Resource.Styleable.ActivityChooserView = global::NaitonGPS.Droid.Resource.Styleable.ActivityChooserView;
+			global::PhantomLib.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::NaitonGPS.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::NaitonGPS.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_android_layout = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_buttonIconDimen = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_listLayout = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_showTitle = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::PhantomLib.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::NaitonGPS.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableItem = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableTransition = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::PhantomLib.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::NaitonGPS.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_android_background = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_elevation = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_expanded = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_Layout = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::PhantomLib.Droid.Resource.Styleable.AppBarLayout_liftOnScroll = global::NaitonGPS.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView = global::NaitonGPS.Droid.Resource.Styleable.AppCompatImageView;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_android_src = global::NaitonGPS.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::NaitonGPS.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_tint = global::NaitonGPS.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::NaitonGPS.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar = global::NaitonGPS.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::NaitonGPS.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::NaitonGPS.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::NaitonGPS.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::NaitonGPS.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_lineHeight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorError = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::PhantomLib.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::NaitonGPS.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar_backgroundTint = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::PhantomLib.Droid.Resource.Styleable.BottomAppBar_hideOnScroll = global::NaitonGPS.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_elevation = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemIconSize = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::PhantomLib.Droid.Resource.Styleable.BottomNavigationView_menu = global::NaitonGPS.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::NaitonGPS.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::NaitonGPS.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::NaitonGPS.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::NaitonGPS.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::PhantomLib.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::NaitonGPS.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::PhantomLib.Droid.Resource.Styleable.ButtonBarLayout = global::NaitonGPS.Droid.Resource.Styleable.ButtonBarLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::NaitonGPS.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::PhantomLib.Droid.Resource.Styleable.CardView = global::NaitonGPS.Droid.Resource.Styleable.CardView;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_android_minHeight = global::NaitonGPS.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_android_minWidth = global::NaitonGPS.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::NaitonGPS.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_cardCornerRadius = global::NaitonGPS.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_cardElevation = global::NaitonGPS.Droid.Resource.Styleable.CardView_cardElevation;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_cardMaxElevation = global::NaitonGPS.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::NaitonGPS.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::NaitonGPS.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPadding = global::NaitonGPS.Droid.Resource.Styleable.CardView_contentPadding;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::NaitonGPS.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::NaitonGPS.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingRight = global::NaitonGPS.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::PhantomLib.Droid.Resource.Styleable.CardView_contentPaddingTop = global::NaitonGPS.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::PhantomLib.Droid.Resource.Styleable.Chip = global::NaitonGPS.Droid.Resource.Styleable.Chip;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup_checkedChip = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup_chipSpacing = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup_singleLine = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::PhantomLib.Droid.Resource.Styleable.ChipGroup_singleSelection = global::NaitonGPS.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_android_checkable = global::NaitonGPS.Droid.Resource.Styleable.Chip_android_checkable;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_android_ellipsize = global::NaitonGPS.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_android_maxWidth = global::NaitonGPS.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_android_text = global::NaitonGPS.Droid.Resource.Styleable.Chip_android_text;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_android_textAppearance = global::NaitonGPS.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_checkedIcon = global::NaitonGPS.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_checkedIconEnabled = global::NaitonGPS.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_checkedIconVisible = global::NaitonGPS.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipBackgroundColor = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipCornerRadius = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipEndPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipIcon = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipIcon;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipIconEnabled = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipIconSize = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipIconTint = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipIconVisible = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipMinHeight = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipStartPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipStrokeColor = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_chipStrokeWidth = global::NaitonGPS.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIcon = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIcon;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIconEnabled = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIconEndPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIconSize = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIconStartPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIconTint = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_closeIconVisible = global::NaitonGPS.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_hideMotionSpec = global::NaitonGPS.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_iconEndPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_iconStartPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_rippleColor = global::NaitonGPS.Droid.Resource.Styleable.Chip_rippleColor;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_showMotionSpec = global::NaitonGPS.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_textEndPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::PhantomLib.Droid.Resource.Styleable.Chip_textStartPadding = global::NaitonGPS.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::NaitonGPS.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem = global::NaitonGPS.Droid.Resource.Styleable.ColorStateListItem;
+			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem_alpha = global::NaitonGPS.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::NaitonGPS.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::PhantomLib.Droid.Resource.Styleable.ColorStateListItem_android_color = global::NaitonGPS.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::PhantomLib.Droid.Resource.Styleable.CompoundButton = global::NaitonGPS.Droid.Resource.Styleable.CompoundButton;
+			global::PhantomLib.Droid.Resource.Styleable.CompoundButton_android_button = global::NaitonGPS.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::PhantomLib.Droid.Resource.Styleable.CompoundButton_buttonTint = global::NaitonGPS.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::PhantomLib.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::NaitonGPS.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::PhantomLib.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::NaitonGPS.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_color = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::PhantomLib.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::NaitonGPS.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_elevation = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_maxImageSize = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::PhantomLib.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::NaitonGPS.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::PhantomLib.Droid.Resource.Styleable.FlowLayout = global::NaitonGPS.Droid.Resource.Styleable.FlowLayout;
+			global::PhantomLib.Droid.Resource.Styleable.FlowLayout_itemSpacing = global::NaitonGPS.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::PhantomLib.Droid.Resource.Styleable.FlowLayout_lineSpacing = global::NaitonGPS.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily = global::NaitonGPS.Droid.Resource.Styleable.FontFamily;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_font = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_font = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamilyFont_ttcIndex = global::NaitonGPS.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::NaitonGPS.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::NaitonGPS.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::NaitonGPS.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::NaitonGPS.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::NaitonGPS.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::PhantomLib.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::NaitonGPS.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout = global::NaitonGPS.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::NaitonGPS.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::NaitonGPS.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::PhantomLib.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::NaitonGPS.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor = global::NaitonGPS.Droid.Resource.Styleable.GradientColor;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColorItem = global::NaitonGPS.Droid.Resource.Styleable.GradientColorItem;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColorItem_android_color = global::NaitonGPS.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColorItem_android_offset = global::NaitonGPS.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_centerColor = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_centerX = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_centerY = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_endColor = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_endX = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_endY = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_gradientRadius = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_startColor = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_startX = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_startY = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_tileMode = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::PhantomLib.Droid.Resource.Styleable.GradientColor_android_type = global::NaitonGPS.Droid.Resource.Styleable.GradientColor_android_type;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::PhantomLib.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::NaitonGPS.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::PhantomLib.Droid.Resource.Styleable.ListPopupWindow = global::NaitonGPS.Droid.Resource.Styleable.ListPopupWindow;
+			global::PhantomLib.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::NaitonGPS.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::PhantomLib.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::NaitonGPS.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_android_insetBottom = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_android_insetLeft = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_android_insetRight = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_android_insetTop = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_backgroundTint = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_backgroundTintMode = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_cornerRadius = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_icon = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_icon;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_iconGravity = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_iconPadding = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_iconSize = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_iconTint = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_iconTintMode = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_rippleColor = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_strokeColor = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialButton_strokeWidth = global::NaitonGPS.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialCardView = global::NaitonGPS.Droid.Resource.Styleable.MaterialCardView;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialCardView_strokeColor = global::NaitonGPS.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::PhantomLib.Droid.Resource.Styleable.MaterialCardView_strokeWidth = global::NaitonGPS.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_enabled = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_id = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::PhantomLib.Droid.Resource.Styleable.MenuGroup_android_visible = global::NaitonGPS.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem = global::NaitonGPS.Droid.Resource.Styleable.MenuItem;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_actionLayout = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_actionViewClass = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_checkable = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_checked = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_enabled = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_icon = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_id = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_id;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_onClick = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_title = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_title;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_android_visible = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_contentDescription = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_iconTint = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_iconTintMode = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_numericModifiers = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_showAsAction = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::PhantomLib.Droid.Resource.Styleable.MenuItem_tooltipText = global::NaitonGPS.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView = global::NaitonGPS.Droid.Resource.Styleable.MenuView;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_headerBackground = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_itemBackground = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::NaitonGPS.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::NaitonGPS.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::PhantomLib.Droid.Resource.Styleable.MenuView_subMenuArrow = global::NaitonGPS.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView = global::NaitonGPS.Droid.Resource.Styleable.NavigationView;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_android_background = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_android_background;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_elevation = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_elevation;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_headerLayout = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemBackground = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemIconPadding = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemIconTint = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_itemTextColor = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.NavigationView_menu = global::NaitonGPS.Droid.Resource.Styleable.NavigationView_menu;
+			global::PhantomLib.Droid.Resource.Styleable.PopupWindow = global::NaitonGPS.Droid.Resource.Styleable.PopupWindow;
+			global::PhantomLib.Droid.Resource.Styleable.PopupWindowBackgroundState = global::NaitonGPS.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::PhantomLib.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::NaitonGPS.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::PhantomLib.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::NaitonGPS.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::PhantomLib.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::NaitonGPS.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::PhantomLib.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::NaitonGPS.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::PhantomLib.Droid.Resource.Styleable.RecycleListView = global::NaitonGPS.Droid.Resource.Styleable.RecycleListView;
+			global::PhantomLib.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::NaitonGPS.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::PhantomLib.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::NaitonGPS.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_android_orientation = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_layoutManager = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_spanCount = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::PhantomLib.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::NaitonGPS.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::PhantomLib.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::NaitonGPS.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::PhantomLib.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::NaitonGPS.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::PhantomLib.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::NaitonGPS.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::PhantomLib.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::NaitonGPS.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView = global::NaitonGPS.Droid.Resource.Styleable.SearchView;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_focusable = global::NaitonGPS.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_imeOptions = global::NaitonGPS.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_inputType = global::NaitonGPS.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_android_maxWidth = global::NaitonGPS.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_closeIcon = global::NaitonGPS.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_commitIcon = global::NaitonGPS.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::NaitonGPS.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_goIcon = global::NaitonGPS.Droid.Resource.Styleable.SearchView_goIcon;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::NaitonGPS.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_layout = global::NaitonGPS.Droid.Resource.Styleable.SearchView_layout;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_queryBackground = global::NaitonGPS.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_queryHint = global::NaitonGPS.Droid.Resource.Styleable.SearchView_queryHint;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_searchHintIcon = global::NaitonGPS.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_searchIcon = global::NaitonGPS.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_submitBackground = global::NaitonGPS.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::NaitonGPS.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::PhantomLib.Droid.Resource.Styleable.SearchView_voiceIcon = global::NaitonGPS.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::PhantomLib.Droid.Resource.Styleable.Snackbar = global::NaitonGPS.Droid.Resource.Styleable.Snackbar;
+			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout = global::NaitonGPS.Droid.Resource.Styleable.SnackbarLayout;
+			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::NaitonGPS.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout_elevation = global::NaitonGPS.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::PhantomLib.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::NaitonGPS.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::PhantomLib.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle = global::NaitonGPS.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::PhantomLib.Droid.Resource.Styleable.Snackbar_snackbarStyle = global::NaitonGPS.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::PhantomLib.Droid.Resource.Styleable.Spinner = global::NaitonGPS.Droid.Resource.Styleable.Spinner;
+			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::NaitonGPS.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_entries = global::NaitonGPS.Droid.Resource.Styleable.Spinner_android_entries;
+			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_popupBackground = global::NaitonGPS.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::PhantomLib.Droid.Resource.Styleable.Spinner_android_prompt = global::NaitonGPS.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::PhantomLib.Droid.Resource.Styleable.Spinner_popupTheme = global::NaitonGPS.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawableItem = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawableItem;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawableItem_android_drawable = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable_android_constantSize = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable_android_dither = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable_android_variablePadding = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::PhantomLib.Droid.Resource.Styleable.StateListDrawable_android_visible = global::NaitonGPS.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_showText = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_track = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_track;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_trackTint = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::PhantomLib.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::NaitonGPS.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.TabItem = global::NaitonGPS.Droid.Resource.Styleable.TabItem;
+			global::PhantomLib.Droid.Resource.Styleable.TabItem_android_icon = global::NaitonGPS.Droid.Resource.Styleable.TabItem_android_icon;
+			global::PhantomLib.Droid.Resource.Styleable.TabItem_android_layout = global::NaitonGPS.Droid.Resource.Styleable.TabItem_android_layout;
+			global::PhantomLib.Droid.Resource.Styleable.TabItem_android_text = global::NaitonGPS.Droid.Resource.Styleable.TabItem_android_text;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout = global::NaitonGPS.Droid.Resource.Styleable.TabLayout;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabBackground = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabContentStart = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabGravity = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIconTint = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIconTintMode = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicator = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabInlineLabel = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabMode = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPadding = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabRippleColor = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabTextColor = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple = global::NaitonGPS.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textColor = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textSize = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_android_typeface = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_fontFamily = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::PhantomLib.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::NaitonGPS.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_android_hint = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_helperText = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::PhantomLib.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::NaitonGPS.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.ThemeEnforcement = global::NaitonGPS.Droid.Resource.Styleable.ThemeEnforcement;
+			global::PhantomLib.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::NaitonGPS.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::NaitonGPS.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::PhantomLib.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar = global::NaitonGPS.Droid.Resource.Styleable.Toolbar;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_android_gravity = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_android_minHeight = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_buttonGravity = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_collapseIcon = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_logo = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_logo;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_logoDescription = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_navigationIcon = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_popupTheme = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_subtitle = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_title = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_title;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMargin = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMargins = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::PhantomLib.Droid.Resource.Styleable.Toolbar_titleTextColor = global::NaitonGPS.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::PhantomLib.Droid.Resource.Styleable.View = global::NaitonGPS.Droid.Resource.Styleable.View;
+			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper = global::NaitonGPS.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::NaitonGPS.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::NaitonGPS.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::PhantomLib.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::NaitonGPS.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat = global::NaitonGPS.Droid.Resource.Styleable.ViewStubCompat;
+			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat_android_id = global::NaitonGPS.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::NaitonGPS.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::PhantomLib.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::NaitonGPS.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::PhantomLib.Droid.Resource.Styleable.View_android_focusable = global::NaitonGPS.Droid.Resource.Styleable.View_android_focusable;
+			global::PhantomLib.Droid.Resource.Styleable.View_android_theme = global::NaitonGPS.Droid.Resource.Styleable.View_android_theme;
+			global::PhantomLib.Droid.Resource.Styleable.View_paddingEnd = global::NaitonGPS.Droid.Resource.Styleable.View_paddingEnd;
+			global::PhantomLib.Droid.Resource.Styleable.View_paddingStart = global::NaitonGPS.Droid.Resource.Styleable.View_paddingStart;
+			global::PhantomLib.Droid.Resource.Styleable.View_theme = global::NaitonGPS.Droid.Resource.Styleable.View_theme;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_in = global::NaitonGPS.Droid.Resource.Animation.abc_fade_in;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_fade_out = global::NaitonGPS.Droid.Resource.Animation.abc_fade_out;
 			global::Xamarin.CommunityToolkit.Resource.Animation.abc_grow_fade_in_from_bottom = global::NaitonGPS.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -17861,235 +20375,235 @@ namespace NaitonGPS.Droid
 			public const int dispatch = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int home = 2131165311;
+			public const int ExtEntryShape = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int home2x = 2131165312;
+			public const int home = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int homeGreen = 2131165313;
+			public const int home2x = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int homeWhite = 2131165314;
-			
-			// aapt resource value: 0x7F070089
-			public const int icon_about = 2131165321;
-			
-			// aapt resource value: 0x7F07008A
-			public const int icon_feed = 2131165322;
+			public const int homeGreen = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int ic_eye = 2131165315;
+			public const int homeWhite = 2131165315;
 			
-			// aapt resource value: 0x7F070084
-			public const int ic_eye_hide = 2131165316;
-			
-			// aapt resource value: 0x7F070085
-			public const int ic_mtrl_checked_circle = 2131165317;
-			
-			// aapt resource value: 0x7F070086
-			public const int ic_mtrl_chip_checked_black = 2131165318;
-			
-			// aapt resource value: 0x7F070087
-			public const int ic_mtrl_chip_checked_circle = 2131165319;
-			
-			// aapt resource value: 0x7F070088
-			public const int ic_mtrl_chip_close_circle = 2131165320;
+			// aapt resource value: 0x7F07008A
+			public const int icon_about = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int lblPrint = 2131165323;
+			public const int icon_feed = 2131165323;
+			
+			// aapt resource value: 0x7F070084
+			public const int ic_eye = 2131165316;
+			
+			// aapt resource value: 0x7F070085
+			public const int ic_eye_hide = 2131165317;
+			
+			// aapt resource value: 0x7F070086
+			public const int ic_mtrl_checked_circle = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int ic_mtrl_chip_checked_black = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int ic_mtrl_chip_checked_circle = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int ic_mtrl_chip_close_circle = 2131165321;
 			
 			// aapt resource value: 0x7F07008C
-			public const int leftarrow = 2131165324;
+			public const int lblPrint = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int leftarrowWhite = 2131165325;
+			public const int leftarrow = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int logoMain = 2131165326;
+			public const int leftarrowWhite = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int logoNaiton = 2131165327;
+			public const int logoMain = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int logoNaitonNavbar = 2131165328;
+			public const int logoNaiton = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int logoNavbar = 2131165329;
+			public const int logoNaitonNavbar = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int lorry = 2131165330;
+			public const int logoNavbar = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int material_ic_calendar_black_24dp = 2131165331;
+			public const int lorry = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int material_ic_clear_black_24dp = 2131165332;
+			public const int material_ic_calendar_black_24dp = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int material_ic_edit_black_24dp = 2131165333;
+			public const int material_ic_clear_black_24dp = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165334;
+			public const int material_ic_edit_black_24dp = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165335;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165336;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165337;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int minus = 2131165338;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int more = 2131165339;
+			public const int minus = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int more2x = 2131165340;
+			public const int more = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int moreoptions = 2131165341;
+			public const int more2x = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int mtrl_dialog_background = 2131165342;
+			public const int moreoptions = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int mtrl_dropdown_arrow = 2131165343;
+			public const int mtrl_dialog_background = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int mtrl_ic_arrow_drop_down = 2131165344;
+			public const int mtrl_dropdown_arrow = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int mtrl_ic_arrow_drop_up = 2131165345;
+			public const int mtrl_ic_arrow_drop_down = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int mtrl_ic_cancel = 2131165346;
+			public const int mtrl_ic_arrow_drop_up = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int mtrl_ic_error = 2131165347;
+			public const int mtrl_ic_cancel = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int mtrl_popupmenu_background = 2131165348;
+			public const int mtrl_ic_error = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int mtrl_popupmenu_background_dark = 2131165349;
+			public const int mtrl_popupmenu_background = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int mtrl_tabs_default_indicator = 2131165350;
+			public const int mtrl_popupmenu_background_dark = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int navigation_empty_icon = 2131165351;
+			public const int mtrl_tabs_default_indicator = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int nonLogo = 2131165352;
+			public const int navigation_empty_icon = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int notFound = 2131165353;
+			public const int nonLogo = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int notFoundGreen = 2131165354;
+			public const int notFound = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int notFoundWhite = 2131165355;
+			public const int notFoundGreen = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int notification = 2131165356;
-			
-			// aapt resource value: 0x7F0700B8
-			public const int notificationWhite = 2131165368;
+			public const int notFoundWhite = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int notification_action_background = 2131165357;
-			
-			// aapt resource value: 0x7F0700AE
-			public const int notification_bg = 2131165358;
-			
-			// aapt resource value: 0x7F0700AF
-			public const int notification_bg_low = 2131165359;
-			
-			// aapt resource value: 0x7F0700B0
-			public const int notification_bg_low_normal = 2131165360;
-			
-			// aapt resource value: 0x7F0700B1
-			public const int notification_bg_low_pressed = 2131165361;
-			
-			// aapt resource value: 0x7F0700B2
-			public const int notification_bg_normal = 2131165362;
-			
-			// aapt resource value: 0x7F0700B3
-			public const int notification_bg_normal_pressed = 2131165363;
-			
-			// aapt resource value: 0x7F0700B4
-			public const int notification_icon_background = 2131165364;
-			
-			// aapt resource value: 0x7F0700B5
-			public const int notification_template_icon_bg = 2131165365;
-			
-			// aapt resource value: 0x7F0700B6
-			public const int notification_template_icon_low_bg = 2131165366;
-			
-			// aapt resource value: 0x7F0700B7
-			public const int notification_tile_bg = 2131165367;
+			public const int notification = 2131165357;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int notify_panel_notification_icon_bg = 2131165369;
+			public const int notificationWhite = 2131165369;
+			
+			// aapt resource value: 0x7F0700AE
+			public const int notification_action_background = 2131165358;
+			
+			// aapt resource value: 0x7F0700AF
+			public const int notification_bg = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int notification_bg_low = 2131165360;
+			
+			// aapt resource value: 0x7F0700B1
+			public const int notification_bg_low_normal = 2131165361;
+			
+			// aapt resource value: 0x7F0700B2
+			public const int notification_bg_low_pressed = 2131165362;
+			
+			// aapt resource value: 0x7F0700B3
+			public const int notification_bg_normal = 2131165363;
+			
+			// aapt resource value: 0x7F0700B4
+			public const int notification_bg_normal_pressed = 2131165364;
+			
+			// aapt resource value: 0x7F0700B5
+			public const int notification_icon_background = 2131165365;
+			
+			// aapt resource value: 0x7F0700B6
+			public const int notification_template_icon_bg = 2131165366;
+			
+			// aapt resource value: 0x7F0700B7
+			public const int notification_template_icon_low_bg = 2131165367;
+			
+			// aapt resource value: 0x7F0700B8
+			public const int notification_tile_bg = 2131165368;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int packageGreen = 2131165370;
+			public const int notify_panel_notification_icon_bg = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int picklist = 2131165371;
+			public const int packageGreen = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int plus = 2131165372;
+			public const int picklist = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int question = 2131165373;
+			public const int plus = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int reform = 2131165374;
+			public const int question = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int rightarrow = 2131165375;
+			public const int reform = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int rightarrowWhite = 2131165376;
+			public const int rightarrow = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int scan = 2131165377;
+			public const int rightarrowWhite = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int search = 2131165378;
+			public const int scan = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int settings = 2131165379;
+			public const int search = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int settingsWhite = 2131165380;
+			public const int settings = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int statusBar = 2131165381;
+			public const int settingsWhite = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int technology = 2131165382;
+			public const int statusBar = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int test_custom_background = 2131165383;
+			public const int technology = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int tooltip_frame_dark = 2131165384;
+			public const int test_custom_background = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int tooltip_frame_light = 2131165385;
+			public const int tooltip_frame_dark = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int userInformation = 2131165386;
+			public const int tooltip_frame_light = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int userWhite = 2131165387;
+			public const int userInformation = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
 			public const int validation = 2131165388;
@@ -18104,7 +20618,10 @@ namespace NaitonGPS.Droid
 			public const int vehicleWhite = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int xamarin_logo = 2131165392;
+			public const int WhiteLine = 2131165392;
+			
+			// aapt resource value: 0x7F0700D1
+			public const int xamarin_logo = 2131165393;
 			
 			static Drawable()
 			{
@@ -19688,194 +22205,200 @@ namespace NaitonGPS.Droid
 			// aapt resource value: 0x7F0E001A
 			public const int abc_toolbar_collapse_description = 2131623962;
 			
-			// aapt resource value: 0x7F0E001B
-			public const int appbar_scrolling_view_behavior = 2131623963;
-			
 			// aapt resource value: 0x7F0E001C
-			public const int bottom_sheet_behavior = 2131623964;
+			public const int appbar_scrolling_view_behavior = 2131623964;
+			
+			// aapt resource value: 0x7F0E001B
+			public const int app_name = 2131623963;
 			
 			// aapt resource value: 0x7F0E001D
-			public const int character_counter_content_description = 2131623965;
+			public const int bottom_sheet_behavior = 2131623965;
 			
 			// aapt resource value: 0x7F0E001E
-			public const int character_counter_overflowed_content_description = 2131623966;
+			public const int character_counter_content_description = 2131623966;
 			
 			// aapt resource value: 0x7F0E001F
-			public const int character_counter_pattern = 2131623967;
+			public const int character_counter_overflowed_content_description = 2131623967;
 			
 			// aapt resource value: 0x7F0E0020
-			public const int chip_text = 2131623968;
+			public const int character_counter_pattern = 2131623968;
 			
 			// aapt resource value: 0x7F0E0021
-			public const int clear_text_end_icon_content_description = 2131623969;
+			public const int chip_text = 2131623969;
 			
 			// aapt resource value: 0x7F0E0022
-			public const int copy_toast_msg = 2131623970;
+			public const int clear_text_end_icon_content_description = 2131623970;
 			
 			// aapt resource value: 0x7F0E0023
-			public const int error_icon_content_description = 2131623971;
+			public const int copy_toast_msg = 2131623971;
 			
 			// aapt resource value: 0x7F0E0024
-			public const int exposed_dropdown_menu_content_description = 2131623972;
+			public const int error_icon_content_description = 2131623972;
 			
 			// aapt resource value: 0x7F0E0025
-			public const int fab_transformation_scrim_behavior = 2131623973;
+			public const int exposed_dropdown_menu_content_description = 2131623973;
 			
 			// aapt resource value: 0x7F0E0026
-			public const int fab_transformation_sheet_behavior = 2131623974;
+			public const int fab_transformation_scrim_behavior = 2131623974;
 			
 			// aapt resource value: 0x7F0E0027
-			public const int fallback_menu_item_copy_link = 2131623975;
+			public const int fab_transformation_sheet_behavior = 2131623975;
 			
 			// aapt resource value: 0x7F0E0028
-			public const int fallback_menu_item_open_in_browser = 2131623976;
+			public const int fallback_menu_item_copy_link = 2131623976;
 			
 			// aapt resource value: 0x7F0E0029
-			public const int fallback_menu_item_share_link = 2131623977;
+			public const int fallback_menu_item_open_in_browser = 2131623977;
 			
 			// aapt resource value: 0x7F0E002A
-			public const int hide_bottom_view_on_scroll_behavior = 2131623978;
+			public const int fallback_menu_item_share_link = 2131623978;
 			
 			// aapt resource value: 0x7F0E002B
-			public const int icon_content_description = 2131623979;
+			public const int hello = 2131623979;
 			
 			// aapt resource value: 0x7F0E002C
-			public const int item_view_role_description = 2131623980;
+			public const int hide_bottom_view_on_scroll_behavior = 2131623980;
 			
 			// aapt resource value: 0x7F0E002D
-			public const int material_slider_range_end = 2131623981;
+			public const int icon_content_description = 2131623981;
 			
 			// aapt resource value: 0x7F0E002E
-			public const int material_slider_range_start = 2131623982;
+			public const int item_view_role_description = 2131623982;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int mtrl_badge_numberless_content_description = 2131623983;
+			public const int material_slider_range_end = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int mtrl_chip_close_icon_content_description = 2131623984;
+			public const int material_slider_range_start = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int mtrl_exceed_max_badge_number_content_description = 2131623985;
+			public const int mtrl_badge_numberless_content_description = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int mtrl_exceed_max_badge_number_suffix = 2131623986;
+			public const int mtrl_chip_close_icon_content_description = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int mtrl_picker_a11y_next_month = 2131623987;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int mtrl_picker_a11y_prev_month = 2131623988;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int mtrl_picker_announce_current_selection = 2131623989;
+			public const int mtrl_picker_a11y_next_month = 2131623989;
 			
 			// aapt resource value: 0x7F0E0036
-			public const int mtrl_picker_cancel = 2131623990;
+			public const int mtrl_picker_a11y_prev_month = 2131623990;
 			
 			// aapt resource value: 0x7F0E0037
-			public const int mtrl_picker_confirm = 2131623991;
+			public const int mtrl_picker_announce_current_selection = 2131623991;
 			
 			// aapt resource value: 0x7F0E0038
-			public const int mtrl_picker_date_header_selected = 2131623992;
+			public const int mtrl_picker_cancel = 2131623992;
 			
 			// aapt resource value: 0x7F0E0039
-			public const int mtrl_picker_date_header_title = 2131623993;
+			public const int mtrl_picker_confirm = 2131623993;
 			
 			// aapt resource value: 0x7F0E003A
-			public const int mtrl_picker_date_header_unselected = 2131623994;
+			public const int mtrl_picker_date_header_selected = 2131623994;
 			
 			// aapt resource value: 0x7F0E003B
-			public const int mtrl_picker_day_of_week_column_header = 2131623995;
+			public const int mtrl_picker_date_header_title = 2131623995;
 			
 			// aapt resource value: 0x7F0E003C
-			public const int mtrl_picker_invalid_format = 2131623996;
+			public const int mtrl_picker_date_header_unselected = 2131623996;
 			
 			// aapt resource value: 0x7F0E003D
-			public const int mtrl_picker_invalid_format_example = 2131623997;
+			public const int mtrl_picker_day_of_week_column_header = 2131623997;
 			
 			// aapt resource value: 0x7F0E003E
-			public const int mtrl_picker_invalid_format_use = 2131623998;
+			public const int mtrl_picker_invalid_format = 2131623998;
 			
 			// aapt resource value: 0x7F0E003F
-			public const int mtrl_picker_invalid_range = 2131623999;
+			public const int mtrl_picker_invalid_format_example = 2131623999;
 			
 			// aapt resource value: 0x7F0E0040
-			public const int mtrl_picker_navigate_to_year_description = 2131624000;
+			public const int mtrl_picker_invalid_format_use = 2131624000;
 			
 			// aapt resource value: 0x7F0E0041
-			public const int mtrl_picker_out_of_range = 2131624001;
+			public const int mtrl_picker_invalid_range = 2131624001;
 			
 			// aapt resource value: 0x7F0E0042
-			public const int mtrl_picker_range_header_only_end_selected = 2131624002;
+			public const int mtrl_picker_navigate_to_year_description = 2131624002;
 			
 			// aapt resource value: 0x7F0E0043
-			public const int mtrl_picker_range_header_only_start_selected = 2131624003;
+			public const int mtrl_picker_out_of_range = 2131624003;
 			
 			// aapt resource value: 0x7F0E0044
-			public const int mtrl_picker_range_header_selected = 2131624004;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624004;
 			
 			// aapt resource value: 0x7F0E0045
-			public const int mtrl_picker_range_header_title = 2131624005;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624005;
 			
 			// aapt resource value: 0x7F0E0046
-			public const int mtrl_picker_range_header_unselected = 2131624006;
+			public const int mtrl_picker_range_header_selected = 2131624006;
 			
 			// aapt resource value: 0x7F0E0047
-			public const int mtrl_picker_save = 2131624007;
+			public const int mtrl_picker_range_header_title = 2131624007;
 			
 			// aapt resource value: 0x7F0E0048
-			public const int mtrl_picker_text_input_date_hint = 2131624008;
+			public const int mtrl_picker_range_header_unselected = 2131624008;
 			
 			// aapt resource value: 0x7F0E0049
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624009;
+			public const int mtrl_picker_save = 2131624009;
 			
 			// aapt resource value: 0x7F0E004A
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624010;
+			public const int mtrl_picker_text_input_date_hint = 2131624010;
 			
 			// aapt resource value: 0x7F0E004B
-			public const int mtrl_picker_text_input_day_abbr = 2131624011;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624011;
 			
 			// aapt resource value: 0x7F0E004C
-			public const int mtrl_picker_text_input_month_abbr = 2131624012;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624012;
 			
 			// aapt resource value: 0x7F0E004D
-			public const int mtrl_picker_text_input_year_abbr = 2131624013;
+			public const int mtrl_picker_text_input_day_abbr = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624014;
+			public const int mtrl_picker_text_input_month_abbr = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int mtrl_picker_toggle_to_day_selection = 2131624015;
+			public const int mtrl_picker_text_input_year_abbr = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624016;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int mtrl_picker_toggle_to_year_selection = 2131624017;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int overflow_tab_title = 2131624018;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int password_toggle_content_description = 2131624019;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int path_password_eye = 2131624020;
+			public const int overflow_tab_title = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int path_password_eye_mask_strike_through = 2131624021;
+			public const int password_toggle_content_description = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int path_password_eye_mask_visible = 2131624022;
+			public const int path_password_eye = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int path_password_strike_through = 2131624023;
+			public const int path_password_eye_mask_strike_through = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int search_menu_title = 2131624024;
+			public const int path_password_eye_mask_visible = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int status_bar_notification_info_overflow = 2131624025;
+			public const int path_password_strike_through = 2131624025;
+			
+			// aapt resource value: 0x7F0E005A
+			public const int search_menu_title = 2131624026;
+			
+			// aapt resource value: 0x7F0E005B
+			public const int status_bar_notification_info_overflow = 2131624027;
 			
 			static String()
 			{

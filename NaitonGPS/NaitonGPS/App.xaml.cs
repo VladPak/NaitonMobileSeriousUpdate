@@ -7,10 +7,9 @@ using Xamarin.Forms.Xaml;
 namespace NaitonGPS
 {
     public partial class App : Application
-    {
-
+    {        
         public App()
-        {
+        {            
             InitializeComponent();
         }
 

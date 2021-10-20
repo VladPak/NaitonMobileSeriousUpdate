@@ -4,14 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
     x:Class="NaitonGPS.AppShell"
     xmlns:local="clr-namespace:NaitonGPS.Views"  
-    x:Name="appShell" 
-    >
-
+    x:Name="appShell">
+    <Shell.FlyoutHeader>
+        <local:HeaderNavigationBar/>
+    </Shell.FlyoutHeader>
     
     <Shell.Resources>
         <ResourceDictionary>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="green" />
+                <Setter Property="Shell.BackgroundColor" Value="Green" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />

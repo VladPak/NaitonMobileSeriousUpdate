@@ -27,8 +27,6 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>Apple Development: Roderick de Wit (V6X2XPDD23)</CodesignKey>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -336,8 +334,5 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\vehicleWhite.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\userWhite.png" />
   </ItemGroup>
 </Project>

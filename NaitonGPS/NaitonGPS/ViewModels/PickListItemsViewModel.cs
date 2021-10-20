@@ -1,5 +1,6 @@
 ﻿using NaitonGPS.Helpers;
 using NaitonGPS.Models;
+using NaitonGPS.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -18,8 +19,11 @@ namespace NaitonGPS.ViewModels
         public Command StartEditCommand { get; }
 
         public Command<PickListItem> ItemTapped { get; }
+        public Command<PickListItem> ChangeQuantityCommand { get; }
+        public Command<PickListItem> ChangeRackCommand { get; }
 
         public bool IsEditable { get; set; }
+        public bool IsViewable { get; set; }
 
         public PickListItemsViewModel(int pickListId)
         {
@@ -28,12 +32,14 @@ namespace NaitonGPS.ViewModels
             PicklistItems = new ObservableCollection<PickListItem>();
             LoadItemsCommand = new Command(async () => await LoadItems());
             ItemTapped = new Command<PickListItem>(OnItemSelected);
+            ChangeQuantityCommand = new Command<PickListItem>(ChangeQuantity);
+            ChangeRackCommand = new Command<PickListItem>(ChangeRack);
             StartEditCommand = new Command(StartEdit);
 
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
-
+            IsViewable = true;            
             SelectedItem = null;
         }
 
@@ -79,9 +85,24 @@ namespace NaitonGPS.ViewModels
             //await Shell.Current.GoToAsync($"{nameof(PickListItems)}?{nameof(.ItemId)}={item}");            
         }
 
-        void StartEdit()
+        async void ChangeQuantity(PickListItem item)
         {
-            IsEditable = false;
+            if (item == null) return;
+            await Shell.Current.Navigation.PushModalAsync(new PicklistQuantityBottomPopup(), true);
+        }
+
+        async void ChangeRack(PickListItem item)
+        {
+            if (item == null) return;
+            await Shell.Current.Navigation.PushModalAsync(new PicklistSearchItemBottomPopup(), true);
+        }
+
+        void StartEdit()
+        {            
+            IsEditable = true;
+            IsViewable = false;
+            OnPropertyChanged(nameof(IsViewable));
+            OnPropertyChanged(nameof(IsEditable));            
         }
     }
 }

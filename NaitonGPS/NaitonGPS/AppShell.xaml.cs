@@ -25,16 +25,7 @@ namespace NaitonGPS
 
         public async Task SetMenuItems()
         {
-            bool isLoggedIn = App.Current.Properties.ContainsKey("IsLoggedIn") && Convert.ToBoolean(App.Current.Properties["IsLoggedIn"]);
-
-            if (!isLoggedIn)
-            {
-                await DisplayAlert("", "Oops access denied.", "Ok");
-                App.Current.Quit();
-            }
-            else
-            {
-
+            
                 try
                 {
                     UserLoginDetails userData = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
@@ -61,16 +52,17 @@ namespace NaitonGPS
                         var tabBar = new TabBar();
                         foreach (var item in res)
                         {
+                            item.Title = "Picklist";
                             tabBar.Items.Add(item);
                         }
-                        ShellContent shi = new ShellContent() { Title = "Test", Icon = "chat.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
+                        ShellContent shi = new ShellContent() { Title = "Test", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
                         tabBar.Items.Add(shi);
                         appShell.Items.Add(tabBar);
                     }
                     else
                     {
                         TabBar tb = new TabBar();
-                        ShellContent shi = new ShellContent() { Title = "Login", Icon = "chat.png", Route = "LoginPage", ContentTemplate = new DataTemplate(typeof(LoginPage)) };
+                        ShellContent shi = new ShellContent() { Title = "Login", Icon = "picklist.png", Route = "LoginPage", ContentTemplate = new DataTemplate(typeof(LoginPage)) };
                         tb.Items.Add(shi);
                         appShell.Items.Add(tb);
                     }
@@ -86,8 +78,7 @@ namespace NaitonGPS
                 catch (Exception ex)
                 {
                     await DisplayAlert("", ex.Message, "Haha");
-                }
-            }
+                }            
         }
     }
 }
