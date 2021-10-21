@@ -4,9 +4,15 @@
              x:Class="NaitonGPS.Views.PickList.PickListItemsPage"
              xmlns:local="clr-namespace:NaitonGPS.ViewModels"  
              xmlns:model="clr-namespace:NaitonGPS.Models"
-             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib">
+             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="true"
+             iOS:Page.PrefersStatusBarHidden="Default"
+             iOS:Page.PreferredStatusBarUpdateAnimation="Fade"
+             Shell.NavBarIsVisible="True"
+             >
     <ContentPage.Content>
-        <StackLayout x:DataType="local:PickListItemsViewModel">
+        <StackLayout x:DataType="local:PickListItemsViewModel" Margin="15">
             <RefreshView IsVisible="{Binding IsViewable, Mode=TwoWay}" x:DataType="local:PickListItemsViewModel" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}" >
             <CollectionView 
                 ItemsSource="{Binding PicklistItems}" 
@@ -89,8 +95,8 @@
                 </CollectionView>
             </RefreshView>
 
-            <Frame IsVisible="{Binding IsViewable, Mode=TwoWay}" VerticalOptions="End" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#187CBC" CornerRadius="10" BorderColor="#187CBC" HasShadow="False">
-                <Label x:Name="lblButtonStartPicking" Text="Start Picking" FontSize="17" TextColor="Wheat" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            <Frame IsVisible="{Binding IsViewable, Mode=TwoWay}" VerticalOptions="End" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Green" CornerRadius="10" BorderColor="Transparent" HasShadow="False">
+                <Label x:Name="lblButtonStartPicking" Text="Start Picking" FontSize="17" TextColor="#ffffff" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer 
                         Command="{Binding Source={RelativeSource AncestorType={x:Type local:PickListItemsViewModel}}, Path=StartEditCommand}"

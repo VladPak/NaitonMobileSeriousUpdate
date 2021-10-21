@@ -5,9 +5,9 @@
              xmlns:local="clr-namespace:NaitonGPS.Controls"
             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
              >
-   
 
-    <Frame CornerRadius="15" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="False">
+
+    <Frame CornerRadius="15" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" BorderColor="#e3e3e3" HasShadow="False">
         <Grid RowDefinitions="0.04*, 0.1*, 0.1*, 0.6*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,0" Padding="0" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
 
             <Image x:Name="imgCloseP" Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
@@ -16,7 +16,7 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Label x:Name="lblRacSelect" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Select Rack" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label x:Name="lblRacSelect" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Select Rack" FontSize="28" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
 
             <Grid RowDefinitions="*" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Transparent" VerticalOptions="Start">
                 <Grid.ColumnDefinitions>
