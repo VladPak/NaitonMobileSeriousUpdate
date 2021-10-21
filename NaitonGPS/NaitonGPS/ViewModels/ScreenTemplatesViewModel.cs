@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Views.PickList;
+﻿using NaitonGPS.Models;
+using NaitonGPS.Views.PickList;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
@@ -7,15 +8,15 @@ namespace NaitonGPS.ViewModels
 {
     public class ScreenTemplatesViewModel
     {
-        public List<ShellContent> Screens { get; set; }
+        public List<ShellContentModel> Screens { get; set; }
 
         public ScreenTemplatesViewModel()
         {
-            Screens = new List<ShellContent>
+            Screens = new List<ShellContentModel>
             {
-                new ShellContent
+                new ShellContentModel
                 {
-                    Title = "WMS_Picklist", Icon = "picklist.png", Route="PickList", ContentTemplate = new DataTemplate(typeof(PickListPage))
+                    RoleRight="WMS_Picklist",Title = "Picklist", Icon = "picklist.png", Route="PickList", ContentTemplate = new DataTemplate(typeof(PickListPage))
                 }//,                                
                 //new Screens
                 //{

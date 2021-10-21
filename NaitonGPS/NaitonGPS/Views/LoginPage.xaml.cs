@@ -32,7 +32,8 @@ namespace NaitonGPS.Views
 
             scrollToActivate.IsEnabled = false;
             imgLogo.TranslationY = 100;
-            frameLogin.TranslationY = 450;
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            frameLogin.TranslationY = mainDisplayInfo.Height;
         }
 
         private async void PopUpLoginFrame(object sender, EventArgs e)
@@ -84,9 +85,7 @@ namespace NaitonGPS.Views
                                 entEmail.Focus();
                             }
                             else
-                            {
-                                while (true)
-                                {
+                            {                                
                                     try
                                     {
                                         string currentAppVersion = VersionTracking.CurrentVersion;
@@ -112,8 +111,7 @@ namespace NaitonGPS.Views
                                     {
                                         if (exRes.Code == "MI008")
                                         {
-                                            await SessionContext.Refresh();
-                                            continue;
+                                            await SessionContext.Refresh();                                            
                                         }
                                         else
                                         {
@@ -132,8 +130,6 @@ namespace NaitonGPS.Views
                                         entEmail.Focus();                                        
                                     }
                                 }
-                            }
-
                         }
                         else
                         {

@@ -44,8 +44,7 @@ namespace NaitonGPS
                     var allRoles = DataManager.GetRoles(roleId);
                     var screens = new ScreenTemplatesViewModel().Screens;
 
-
-                    var res = screens.Where(screen => allRoles.Any(title => title.Object.Equals(screen.Title))).ToList();
+                    var res = screens.Where(screen => allRoles.Any(title => title.Object.Equals(screen.RoleRight))).ToList();
 
                     if (res.Count() > 0)
                     {
