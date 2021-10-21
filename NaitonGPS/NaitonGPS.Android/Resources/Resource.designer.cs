@@ -20606,22 +20606,25 @@ namespace NaitonGPS.Droid
 			public const int userInformation = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int validation = 2131165388;
+			public const int userWhite = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int vehicle = 2131165389;
+			public const int validation = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int vehicleGreen = 2131165390;
+			public const int vehicle = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int vehicleWhite = 2131165391;
+			public const int vehicleGreen = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int WhiteLine = 2131165392;
+			public const int vehicleWhite = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int xamarin_logo = 2131165393;
+			public const int WhiteLine = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int xamarin_logo = 2131165394;
 			
 			static Drawable()
 			{
@@ -22086,14 +22089,17 @@ namespace NaitonGPS.Droid
 		public partial class Mipmap
 		{
 			
-			// aapt resource value: 0x7F0C0000
-			public const int icon = 2131492864;
-			
 			// aapt resource value: 0x7F0C0001
-			public const int icon_round = 2131492865;
+			public const int icon = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int launcher_foreground = 2131492866;
+			public const int icon_round = 2131492866;
+			
+			// aapt resource value: 0x7F0C0000
+			public const int ic_launcher = 2131492864;
+			
+			// aapt resource value: 0x7F0C0003
+			public const int launcherIcon = 2131492867;
 			
 			static Mipmap()
 			{
