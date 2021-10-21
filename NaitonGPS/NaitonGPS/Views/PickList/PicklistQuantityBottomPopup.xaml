@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage HeightRequest="200" BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:DataType="viewModel:PickListQuantityViewModel" HeightRequest="200" BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
             xmlns:local="clr-namespace:NaitonGPS.Controls"
-            x:Class="NaitonGPS.Views.PicklistQuantityBottomPopup">    
-    
-        <Frame CornerRadius="15" VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="False">
+             xmlns:viewModel="clr-namespace:NaitonGPS.ViewModels"
+             xmlns:model="clr-namespace:NaitonGPS.Models"
+            x:Class="NaitonGPS.Views.PicklistQuantityBottomPopup">
 
-            <Grid x:Name="gridMain" BindingContext="{Binding PickListItem}" RowDefinitions="0.2*, 0.5*, 0.4*, 0.7*" ColumnDefinitions="*,*,*" RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,15" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="White">
+    <Frame CornerRadius="15" VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="False">
+
+        <Grid  x:Name="gridMain" RowDefinitions="0.2*, 0.5*, 0.4*, 0.7*" ColumnDefinitions="*,*,*" RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,15" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="White">
                 <Image x:Name="imgCloseP" Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
@@ -15,7 +17,7 @@
 
                 <Label x:Name="lblQunaitty" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Quantity" FontSize="28" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-                <local:BorderedEntry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,-20,0,0" Placeholder="Enter quantity" Keyboard="Numeric" ReturnType="Done" x:Name="entQuantity" Text="{Binding Path=Quantity}">
+                <local:BorderedEntry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,-20,0,0" Placeholder="Enter quantity" Keyboard="Numeric" ReturnType="Done" x:Name="entQuantity" Text="{Binding NewItem.Quantity }">
                     <local:BorderedEntry.BackgroundColor>
                         <OnPlatform x:TypeArguments="Color">
                             <On Platform="iOS" Value="#F2F3F4"/>
@@ -27,8 +29,11 @@
                 <Frame x:Name="frameToChange" VerticalOptions="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#187CBC" CornerRadius="9" BorderColor="#187CBC" HasShadow="False" WidthRequest="100" HeightRequest="30">
                     <Label x:Name="lblApply" Text="Apply" FontSize="18" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ClosePopup" NumberOfTapsRequired="1"></TapGestureRecognizer>
-                    </Frame.GestureRecognizers>
+                    <TapGestureRecognizer 
+                        NumberOfTapsRequired="1"
+                        Command="{Binding SetQuantityCommand}">
+                    </TapGestureRecognizer>
+                </Frame.GestureRecognizers>
                 </Frame>
             </Grid>
         </Frame>    

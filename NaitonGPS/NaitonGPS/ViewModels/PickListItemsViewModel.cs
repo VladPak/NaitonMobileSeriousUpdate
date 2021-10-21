@@ -21,9 +21,10 @@ namespace NaitonGPS.ViewModels
         public Command<PickListItem> ItemTapped { get; }
         public Command<PickListItem> ChangeQuantityCommand { get; }
         public Command<PickListItem> ChangeRackCommand { get; }
-
+        
         public bool IsEditable { get; set; }
         public bool IsViewable { get; set; }
+        public bool IsChanged { get; set; }
 
         public PickListItemsViewModel(int pickListId)
         {
@@ -35,7 +36,7 @@ namespace NaitonGPS.ViewModels
             ChangeQuantityCommand = new Command<PickListItem>(ChangeQuantity);
             ChangeRackCommand = new Command<PickListItem>(ChangeRack);
             StartEditCommand = new Command(StartEdit);
-
+            
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
@@ -49,13 +50,16 @@ namespace NaitonGPS.ViewModels
             IsBusy = true;
 
             try
-            {
-                var pickListItems = await Task.Run(()=> DataManager.GetPickListItems(_pickListId));
-                PicklistItems.Clear();
-                foreach (var item in pickListItems)
+            {                
+                if (!IsChanged)
                 {
-                    PicklistItems.Add(item);
-                }
+                    var pickListItems = await Task.Run(() => DataManager.GetPickListItems(_pickListId));                    
+                    foreach (var item in pickListItems)
+                    {
+                        PicklistItems.Add(item);
+                    }
+                }              
+
             }
             catch (Exception ex)
             {
@@ -88,13 +92,43 @@ namespace NaitonGPS.ViewModels
         async void ChangeQuantity(PickListItem item)
         {
             if (item == null) return;
-            await Shell.Current.Navigation.PushModalAsync(new PicklistQuantityBottomPopup(), true);
+            SelectedItem = item;            
+            await Shell.Current.Navigation.PushModalAsync(new PicklistQuantityBottomPopup(SelectedItem, SetQuantity), true);
         }
 
         async void ChangeRack(PickListItem item)
         {
             if (item == null) return;
             await Shell.Current.Navigation.PushModalAsync(new PicklistSearchItemBottomPopup(), true);
+        }
+
+        async void SetQuantity(Object sender,PickListItem item)
+        {
+            await Shell.Current.Navigation.PopModalAsync();
+            if (item == null) return;
+            var oldItem = new PickListItem();
+            int index = 0;
+            int insertIndex = 0;
+            foreach (var pli in PicklistItems)
+            {
+                if (item.PickListOrderDetailsId == pli.PickListOrderDetailsId)
+                {
+                    oldItem = pli;
+                    insertIndex = index;
+                }
+                index++;
+            }
+            if (oldItem.PickListOrderDetailsId != 0)
+            {
+                PicklistItems.Remove(oldItem);
+                PicklistItems.Insert(insertIndex,item);
+            }
+            IsChanged = true;            
+        }
+
+        void SetRack(PickListItem item)
+        {
+            if (item == null) return;            
         }
 
         void StartEdit()
