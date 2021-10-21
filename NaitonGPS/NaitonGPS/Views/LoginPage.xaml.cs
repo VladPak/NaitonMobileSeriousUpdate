@@ -105,7 +105,7 @@ namespace NaitonGPS.Views
                                         await Application.Current.SavePropertiesAsync();
                                         App.Current.Properties["IsLoggedIn"] = bool.TrueString;
 
-                                        await App.Current.MainPage.Navigation.PushAsync(new AppShell());
+                                        App.Current.MainPage = new AppShell();
                                     }
                                     catch (RestServiceException exRes)
                                     {
