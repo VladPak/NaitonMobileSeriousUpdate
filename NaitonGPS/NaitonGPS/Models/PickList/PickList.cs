@@ -15,19 +15,22 @@ namespace NaitonGPS.Models
                 
         public int[] StatusIds { get; set; }
 
-        public string ColorStatus
+        public string ColorStatus { get; set; }
+        
+
+        public string GetColor()
         {
-            get
-            {
-                return listColors.ContainsKey(StatusIds?.FirstOrDefault() ?? -1) ? listColors[StatusIds?.FirstOrDefault() ?? -1] : listColors[-1];
-            }
+            if (StatusIds != null && StatusIds.Count() > 0 && listColors.ContainsKey(StatusIds[0]))
+                return listColors[StatusIds[0]];
+            return listColors[-1];
         }
 
         readonly Dictionary<int, string> listColors = new Dictionary<int, string>
         {
             {-1,"Gray" },
             { 0,"White"},
-            { 2,"Orange"}
+            { 2,"Orange"},
+            { 9,"#66a103"}
         };
     }
 }

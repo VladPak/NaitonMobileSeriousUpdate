@@ -53,6 +53,7 @@ namespace NaitonGPS.ViewModels
                 Picklists.Clear();
                 foreach (var item in pickList)
                 {
+                    item.ColorStatus = item.GetColor();
                     Picklists.Add(item);
                 }
             }
