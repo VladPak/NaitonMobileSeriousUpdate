@@ -24,6 +24,7 @@ namespace NaitonGPS.ViewModels
         public Command<PickListItem> ItemTapped { get; }
         public Command<PickListItem> ChangeQuantityCommand { get; }
         public Command<PickListItem> ChangeRackCommand { get; }
+        public Command<PickListItem> ChangeStatusCommand { get; }
         public Command SaveToBaseCommand { get; set; }
         
         public bool IsEditable { get; set; }
@@ -39,6 +40,7 @@ namespace NaitonGPS.ViewModels
             ItemTapped = new Command<PickListItem>(OnItemSelected);
             ChangeQuantityCommand = new Command<PickListItem>(ChangeQuantity);
             ChangeRackCommand = new Command<PickListItem>(ChangeRack);
+            ChangeStatusCommand = new Command<PickListItem>(ChangeStatus);
             StartEditCommand = new Command(StartEdit);
             SaveToBaseCommand = new Command(SaveToBase);
             
@@ -109,6 +111,32 @@ namespace NaitonGPS.ViewModels
             await Shell.Current.Navigation.PushModalAsync(new PicklistSearchItemBottomPopup(item, SetRack), true);
         }
 
+        void ChangeStatus(PickListItem item)
+        {
+            if (item == null) return;
+
+            var oldItem = item;
+            int index = 0;
+            int insertIndex = 0;
+            foreach (var pli in PicklistItems)
+            {
+                if (item.PickListOrderDetailsId == pli.PickListOrderDetailsId)
+                {                    
+                    insertIndex = index;
+                }
+                index++;
+            }
+            
+            PicklistItems.Remove(oldItem);
+            if (item.StatusId != 9)
+                item.StatusId = 9;
+            else
+                item.StatusId = 3;
+            PicklistItems.Insert(insertIndex, item);
+            
+            IsChanged = true;
+        }
+
         async void SetQuantity(object sender,PickListItem item)
         {
             await Shell.Current.Navigation.PopModalAsync();
@@ -116,12 +144,24 @@ namespace NaitonGPS.ViewModels
             var oldItem = new PickListItem();
             int index = 0;
             int insertIndex = 0;
+            var newItem = new PickListItem();
             foreach (var pli in PicklistItems)
             {
                 if (item.PickListOrderDetailsId == pli.PickListOrderDetailsId)
                 {
                     oldItem = pli;
                     insertIndex = index;
+                    if (oldItem.Quantity > item.Quantity)
+                    {
+                        newItem.DeliveryOrderDetailsId = item.DeliveryOrderDetailsId;
+                        newItem.Quantity = oldItem.Quantity - item.Quantity;
+                        newItem.RackName = item.RackName;
+                        newItem.PickListId = item.PickListId;
+                        newItem.ProductId = item.ProductId;
+                        newItem.Sizes = item.Sizes;
+                        newItem.StatusId = 3;
+                        newItem.StockRackId = item.StockRackId;
+                    }
                 }
                 index++;
             }
@@ -130,6 +170,11 @@ namespace NaitonGPS.ViewModels
                 PicklistItems.Remove(oldItem);
                 PicklistItems.Insert(insertIndex,item);
             }
+            if(newItem.Quantity > 0)
+            {
+                PicklistItems.Add(newItem);
+                await App.Current.MainPage.DisplayAlert("Information", "Added a new row due to lack of quantity of products.", "Ok");
+            }            
             IsChanged = true;
         }
 
@@ -188,7 +233,9 @@ namespace NaitonGPS.ViewModels
             if (save)
             {
                 int result = DataManager.SavePickListItems(list);
+                IsChanged = false;                
                 App.Current.MainPage.DisplayAlert("Success", "The data has been saved!", "Ok");
+                IsBusy = true;
             }
             else
             {
