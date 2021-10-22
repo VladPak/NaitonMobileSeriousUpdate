@@ -15,6 +15,8 @@ namespace NaitonGPS.Views
         public static bool IsSmallScreen { get; } = ScreenWidth <= 480;
         public static bool IsBigScreen { get; } = ScreenWidth >= 480;
 
+
+
         public PicklistSearchItemBottomPopup()
         {
             InitializeComponent();
@@ -28,7 +30,6 @@ namespace NaitonGPS.Views
                 imgCloseP.HeightRequest = 25;
                 imgCloseP.WidthRequest = 25;
                 lblRacSelect.FontSize = 22;
-                entSearch.FontSize = 15;
                 lblScanToHIde.IsVisible = false;
                 columnToAlter.Width = new GridLength(1, GridUnitType.Star);
             }
@@ -41,18 +42,42 @@ namespace NaitonGPS.Views
                 imgCloseP.HeightRequest = 30;
                 imgCloseP.WidthRequest = 30;
                 lblRacSelect.FontSize = 28;
-                entSearch.FontSize = 20;
                 lblScanToHIde.IsVisible = true;
                 columnToAlter.Width = new GridLength(1.5, GridUnitType.Star);
             }
-
-            var rackList = DataManager.GetPickRacks(0,0);
+            var rackList = DataManager.GetPickRacks(0, 0);
             BindingContext = new RacksViewModel(rackList);
         }
 
         private async void ClosePopup(object sender, EventArgs e)
         {
             await Shell.Current.Navigation.PopModalAsync();
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //var searchTerm = e.NewTextValue;
+
+            //if (string.IsNullOrWhiteSpace(searchTerm))
+            //{
+            //    searchTerm = string.Empty;
+            //}
+
+            //searchTerm = searchTerm.ToLowerInvariant();
+
+            //var filteredItems = rackList.Where(value => value.ToLowerInvariant().Contains(searchTerm)).ToList();
+
+            //foreach (var value in rackList)
+            //{
+            //    if (!filteredItems.Contains(value))
+            //    {
+            //        BindingContext.Remove(value);
+            //    }
+            //    else if (!BindingContext.Contains(value))
+            //    {
+            //        BindingContext.Add(value);
+            //    }
+            //}
         }
     }
 }
