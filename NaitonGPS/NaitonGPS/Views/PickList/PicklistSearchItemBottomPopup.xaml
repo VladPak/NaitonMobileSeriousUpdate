@@ -28,8 +28,11 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>    
                     <ColumnDefinition x:Name="columnToAlter" Width="1*"></ColumnDefinition>    
                 </Grid.ColumnDefinitions>
-                
-                <local:BorderedEntry Text="{Binding SearchText}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" Placeholder="Search" FontSize="20" ReturnType="Done">
+
+                <local:BorderedSearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" TextChanged="SearchBar_TextChanged" />
+
+                <!--
+                                <local:BorderedEntry Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" Placeholder="Search" FontSize="20" ReturnType="Done" x:Name="entSearch">
                     <local:BorderedEntry.BackgroundColor>
                         <OnPlatform x:TypeArguments="Color">
                             <On Platform="iOS" Value="#E7E8E7"/>
@@ -44,8 +47,9 @@
                             HorizontalOptions="End"
                             Source="search.png">
                 </ImageButton>
+                -->
 
-                <Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
+                    <Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
                     <StackLayout x:Name="slChange" Margin="-5,0,-5,0" Padding="0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
                         <Image x:Name="imgScan" Source="scan.png" HeightRequest="20" WidthRequest="20"></Image>
                         <Label x:Name="lblScanToHIde" Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>

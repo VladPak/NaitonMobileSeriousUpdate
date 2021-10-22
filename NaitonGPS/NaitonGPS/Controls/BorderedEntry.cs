@@ -2,7 +2,5 @@
 
 namespace NaitonGPS.Controls
 {
-    public class BorderedEntry : Entry
-    {
-    }
+    public class BorderedEntry : Entry {}
 }
