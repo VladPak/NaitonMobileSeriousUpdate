@@ -41,11 +41,12 @@ namespace NaitonGPS.Helpers
 
         }
 
-        public static List<PickList> GetPickLists()
+        public static List<PickList> GetPickLists(int? pickListId = null)
         {
             try
             {
                 SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_getpicklists");
+                command.Parameters.Add("_picklistid", PgsqlDbType.Integer, pickListId != null ? pickListId : (object)DBNull.Value);
                 //command.Parameters.Add("_statusid", PgsqlDbType.Integer, 3);
                 command.Parameters.Add("_pickerid", PgsqlDbType.Integer, _user.PersonId);
                 command.WriteSchema = WriteSchema.TRUE;
@@ -88,6 +89,38 @@ namespace NaitonGPS.Helpers
             {
                 throw new Exception(ex.Message, ex);
             }
+        }
+
+        public static int SavePickListItems(List<PickListItem> items)
+        {
+            try
+            {
+                int result = 0;
+                foreach (var item in items.GroupBy(x=>x.DeliveryOrderDetailsId))
+                {
+                    SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_addupdateracks");
+                    command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, item.Key);
+                    command.Parameters.Add("_picklistorderdetailsids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.PickListOrderDetailsId).ToArray());
+                    command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StockRackId ?? 0).ToArray());
+                    command.Parameters.Add("_quantities", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.Quantity).ToArray());
+                    
+                    command.WriteSchema = WriteSchema.TRUE;
+                    string xmlResult = SimpleWSA.Command.Execute(command,
+                                                        RoutineType.Scalar,
+                                                        httpMethod: SimpleWSA.HttpMethod.GET,
+                                                        responseFormat: ResponseFormat.JSON);
+
+                    var dict = JsonConvert.DeserializeObject<Dictionary<string, ReturnScaler>>(xmlResult);
+                    
+                }
+                
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }            
         }
 
         #endregion Pick list
@@ -170,5 +203,10 @@ namespace NaitonGPS.Helpers
         }
 
         #endregion Account
+    }
+
+    public class ReturnScaler
+    {
+        public int ReturnValue { get; set; }
     }
 }

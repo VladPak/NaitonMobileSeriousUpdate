@@ -103,6 +103,28 @@
                         NumberOfTapsRequired="1"></TapGestureRecognizer>
                 </Frame.GestureRecognizers>
             </Frame>
+
+            <Grid IsVisible="{Binding IsEditable, Mode=TwoWay}"  RowDefinitions="*" ColumnDefinitions="*, *, *, *" x:Name="gridToHide" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
+
+                <Frame VerticalOptions="End" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" BackgroundColor="White" CornerRadius="10" BorderColor="#69717E" HasShadow="False">
+                    <Image Source="lblPrint.png" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="25" HeightRequest="25"></Image>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer 
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:PickListItemsViewModel}}, Path=SaveToBaseCommand}"
+                        NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+                <Frame VerticalOptions="End" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" BackgroundColor="#2196F3" CornerRadius="10" BorderColor="#2196F3" HasShadow="False">
+                    <Label x:Name="lblChange" Text="Save &amp; Print" FontSize="18" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer 
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:PickListItemsViewModel}}, Path=SaveToBaseCommand}"
+                        NumberOfTapsRequired="1"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+            
         </StackLayout>
 
     </ContentPage.Content>
