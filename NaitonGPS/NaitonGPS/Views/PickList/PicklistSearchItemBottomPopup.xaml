@@ -1,83 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage HeightRequest="250" BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NaitonGPS.Views.PicklistSearchItemBottomPopup"             
              xmlns:local="clr-namespace:NaitonGPS.Controls"
              xmlns:viewModel="clr-namespace:NaitonGPS.ViewModels"  
-            xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
              xmlns:model="clr-namespace:NaitonGPS.Models">
+    <ContentPage.Content x:DataType="viewModel:RacksViewModel">
+        <Frame HeightRequest="430" CornerRadius="20" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="white" BorderColor="#cecece" HasShadow="False">
 
-
-    <ContentPage.Content x:DataType="viewModel:RacksViewModel" CornerRadius="15" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" BorderColor="#e3e3e3" HasShadow="False">
-        <Grid RowDefinitions="0.04*, 0.1*, 0.1*, 0.6*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,0" Padding="0" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" 
-              BackgroundColor="White">
-
-            <Image Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
+            <Grid RowDefinitions="0.08*, 0.1*, 0.2*, 0.7*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                <Image Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
                     <Image.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
+                        <TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Label x:Name="lblRacSelect" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Select Rack" FontSize="28" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label x:Name="lblRacSelect" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Select Rack" FontSize="24" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-            <Grid RowDefinitions="*" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Transparent" VerticalOptions="Start">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>    
-                    <ColumnDefinition Width="*"></ColumnDefinition>    
-                    <ColumnDefinition Width="*"></ColumnDefinition>    
-                    <ColumnDefinition Width="*"></ColumnDefinition>    
-                    <ColumnDefinition x:Name="columnToAlter" Width="1*"></ColumnDefinition>    
-                </Grid.ColumnDefinitions>
+                <Grid RowDefinitions="*" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Transparent" VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition x:Name="columnToAlter" Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
-                <local:BorderedSearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" Text="{Binding SearchText}"  />
+                    <local:BorderedSearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" Text="{Binding SearchText}"  />
 
-                    <Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
-                    <StackLayout x:Name="slChange" Margin="-5,0,-5,0" Padding="0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
-                        <Image x:Name="imgScan" Source="scan.png" HeightRequest="20" WidthRequest="20"></Image>
-                        <Label x:Name="lblScanToHIde" Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-                    </StackLayout>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="ClosePopup" NumberOfTapsRequired="1"></TapGestureRecognizer>
-                    </Frame.GestureRecognizers>
-                </Frame>
-            </Grid>
+                    <Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
+                        <StackLayout x:Name="slChange" Margin="-5,0,-5,0" Padding="0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
+                            <Image x:Name="imgScan" Source="scan.png" HeightRequest="20" WidthRequest="20"></Image>
+                            <Label x:Name="lblScanToHide" Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ClosePopup" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
 
-            <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
+                <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Margin="0,0,0,0" x:Name="rv" Command="{Binding LoadItemsCommand}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
                     <CollectionView ItemsSource="{Binding Racks}" 
                                     VerticalScrollBarVisibility="Never" 
                                     BackgroundColor="Transparent" 
-                                    VerticalOptions="Fill" HeightRequest="100">
+                                    VerticalOptions="FillAndExpand" HeightRequest="100">
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                            <Frame x:DataType="model:Rack" HasShadow="False" BackgroundColor="#F2F3F4" CornerRadius="10" Margin="0,10,0,0">
-                                <Grid ColumnSpacing="0" RowSpacing="0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition x:Name="columnToCHange" Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                                        <ColumnDefinition Width="0.2*"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
+                                <Frame x:DataType="model:Rack" HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="10" Margin="0,0,0,0">
+                                    <Grid ColumnSpacing="0" RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition x:Name="columnToCHange" Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                                            <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Label x:Name="lblRackName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding RackName}" TextColor="#1B222B" FontSize="22" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding QuantityInStock, StringFormat='Qty: {0:0}'}" TextColor="#69717E" FontSize="19" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        <Label x:Name="lblRackName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding RackName}" TextColor="#1B222B" FontSize="22" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding QuantityInStock, StringFormat='Qty: {0:0}'}" TextColor="#69717E" FontSize="19" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
 
-                                    <Image Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Source="rightarrow.png" phantomExtensions:Images.ImageColor="#D1D6D8" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center"></Image>
-                                </Grid>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer 
+                                        <Image Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Source="rightarrow.png" phantomExtensions:Images.ImageColor="#D1D6D8" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center"></Image>
+                                    </Grid>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer 
                                                         NumberOfTapsRequired="1"
                                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:RacksViewModel}}, Path=TappedItemCommand}"
                                                         CommandParameter="{Binding .}">
-                                    </TapGestureRecognizer>
-                                </Frame.GestureRecognizers>
-                            </Frame>
-                        </DataTemplate>
+                                        </TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </DataTemplate>
                         </CollectionView.ItemTemplate>
-                    </CollectionView>                
-            </RefreshView>
-        </Grid>
+                    </CollectionView>
+                </RefreshView>
+            </Grid>
+
+        </Frame>
         </ContentPage.Content>
 </ContentPage>
