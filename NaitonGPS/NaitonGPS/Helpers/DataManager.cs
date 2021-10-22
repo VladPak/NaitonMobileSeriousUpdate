@@ -65,12 +65,12 @@ namespace NaitonGPS.Helpers
             }
         }
 
-        public static List<Rack> GetPickRacks(int deliveryOrderDetailsId, decimal quantity)
+        public static List<Rack> GetPickRacks(int deliveryOrderDetailsId)
         {
             try
             {
                 SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_getpickracksformobile");
-                //command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, deliveryOrderDetailsId);
+                command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, deliveryOrderDetailsId);
 
                 command.WriteSchema = WriteSchema.TRUE;
                 string xmlResult = SimpleWSA.Command.Execute(command,
@@ -82,7 +82,7 @@ namespace NaitonGPS.Helpers
 
                 var rackList = dict.First().Value.ToList();
 
-                return rackList/*.Where(x => x.QuantityInStock >= quantity)*/.ToList();
+                return rackList.ToList();
             }
             catch (Exception ex)
             {

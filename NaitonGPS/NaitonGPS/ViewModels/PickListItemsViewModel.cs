@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace NaitonGPS.ViewModels
-{    
+{
     public class PickListItemsViewModel : BaseViewModel
     {
         private readonly int _pickListId;
@@ -50,10 +50,11 @@ namespace NaitonGPS.ViewModels
             IsBusy = true;
 
             try
-            {                
+            {
                 if (!IsChanged)
                 {
-                    var pickListItems = await Task.Run(() => DataManager.GetPickListItems(_pickListId));                    
+                    var pickListItems = await Task.Run(() => DataManager.GetPickListItems(_pickListId));
+                    PicklistItems.Clear();
                     foreach (var item in pickListItems)
                     {
                         PicklistItems.Add(item);
@@ -99,10 +100,10 @@ namespace NaitonGPS.ViewModels
         async void ChangeRack(PickListItem item)
         {
             if (item == null) return;
-            await Shell.Current.Navigation.PushModalAsync(new PicklistSearchItemBottomPopup(), true);
+            await Shell.Current.Navigation.PushModalAsync(new PicklistSearchItemBottomPopup(item, SetRack), true);
         }
 
-        async void SetQuantity(Object sender,PickListItem item)
+        async void SetQuantity(object sender,PickListItem item)
         {
             await Shell.Current.Navigation.PopModalAsync();
             if (item == null) return;
@@ -123,16 +124,38 @@ namespace NaitonGPS.ViewModels
                 PicklistItems.Remove(oldItem);
                 PicklistItems.Insert(insertIndex,item);
             }
-            IsChanged = true;            
+            IsChanged = true;
         }
 
-        void SetRack(PickListItem item)
+        async void SetRack(object sender,Rack item)
         {
-            if (item == null) return;            
+            await Shell.Current.Navigation.PopModalAsync();
+            if (item == null) return;
+            var oldItem = new PickListItem();
+            int index = 0;
+            int insertIndex = 0;
+            foreach (var pli in PicklistItems)
+            {
+                if (item.PickListItemId == pli.PickListOrderDetailsId)
+                {
+                    oldItem = pli;
+                    insertIndex = index;
+                }
+                index++;
+            }
+            if (oldItem.PickListOrderDetailsId != 0)
+            {
+                var newItem = oldItem;
+                PicklistItems.Remove(oldItem);
+                newItem.RackName = item.RackName;
+                newItem.StockRackId = item.StockRackId;
+                PicklistItems.Insert(insertIndex, newItem);
+            }
+            IsChanged = true;
         }
 
         void StartEdit()
-        {            
+        {
             IsEditable = true;
             IsViewable = false;
             OnPropertyChanged(nameof(IsViewable));

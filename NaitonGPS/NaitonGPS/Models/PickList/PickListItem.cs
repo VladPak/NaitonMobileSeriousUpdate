@@ -9,6 +9,7 @@
         public string ProductName { get; set; }
         public decimal Quantity { get; set; }        
         public string RackName { get; set; }
-        public string Sizes { get; set; }        
+        public string Sizes { get; set; }
+        public int? StockRackId { get; set; }
     }
 }
