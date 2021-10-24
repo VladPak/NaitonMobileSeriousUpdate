@@ -53,8 +53,6 @@ namespace NaitonGPS.ViewModels
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
-            
-
         }
 
         async Task LoadItems()
