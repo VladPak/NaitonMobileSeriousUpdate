@@ -57,6 +57,10 @@ namespace NaitonGPS.ViewModels
             SdkHandler.DeviceConnected += OnDeviceConnectedEventHandler;
             SdkHandler.EnableBluetoothScannerDiscovery();
             SdkHandler.SetSTCEnabledState(true);
+            SdkHandler.SetOperationModeOnAppSetting(OpMode.OPMODE_SSI);
+            
+
+
         }
 
         async Task LoadItems()
