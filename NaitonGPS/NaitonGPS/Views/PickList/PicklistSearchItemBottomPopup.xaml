@@ -35,7 +35,11 @@
                             <Label x:Name="lblScanToHide" Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                         </StackLayout>
                         <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="ClosePopup" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:RacksViewModel}}, Path=ScanningCommand}"
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
                         </Frame.GestureRecognizers>
                     </Frame>
                 </Grid>
