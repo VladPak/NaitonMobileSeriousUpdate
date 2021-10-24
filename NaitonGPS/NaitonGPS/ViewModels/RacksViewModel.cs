@@ -105,6 +105,7 @@ namespace NaitonGPS.ViewModels
         {
             //start scanner
             var scanner = new MobileBarcodeScanner();
+            scanner.CancelButtonText = "Cancel";
             scanner.TopText = "Hold the camera up to the barcode\nAbout 6 inches away";
             scanner.BottomText = "Wait for the barcode to automatically scan!";
 
