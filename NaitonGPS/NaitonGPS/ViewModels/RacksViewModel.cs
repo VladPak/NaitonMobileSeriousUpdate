@@ -53,8 +53,9 @@ namespace NaitonGPS.ViewModels
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
-            
-
+            SdkHandler.DeviceConnected += OnDeviceConnectedEventHandler;
+            SdkHandler.EnableBluetoothScannerDiscovery();
+            SdkHandler.SetSTCEnabledState(true);
         }
 
         async Task LoadItems()
