@@ -121,14 +121,15 @@ namespace NaitonGPS.ViewModels
             BarcodeDataReceivedEvent(result);
         }
 
-        private static void BarcodeDataReceivedEvent(ZXing.Result result)
-        {
-            var msg = "No Barcode!";
+        private void BarcodeDataReceivedEvent(ZXing.Result result)
+        {            
             if (result != null)
             {
-                msg = "Barcode: " + result.Text + " (" + result.BarcodeFormat + ")";
+                var item = Racks.FirstOrDefault(x=>x.RackName== result.Text);
+                if (item != null)
+                    TappedItem(item);
             }
-            App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
+            //App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
         }
     }
 }

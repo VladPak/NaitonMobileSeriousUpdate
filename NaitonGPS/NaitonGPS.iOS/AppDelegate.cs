@@ -5,6 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
+
 namespace NaitonGPS.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -24,8 +25,7 @@ namespace NaitonGPS.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            PhantomLib.iOS.Effects.Effects.Init();
-            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+            PhantomLib.iOS.Effects.Effects.Init();                       
             return base.FinishedLaunching(app, options);
         }
     }
