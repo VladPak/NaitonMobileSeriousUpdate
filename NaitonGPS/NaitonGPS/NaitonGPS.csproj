@@ -20,6 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="ZebraBarcodeScannerSDK">
+      <HintPath>ZebraBarcodeScannerSDK.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\PickList\PickListItemsPage.xaml.cs">
       <DependentUpon>PickListItemsPage.xaml</DependentUpon>
     </Compile>

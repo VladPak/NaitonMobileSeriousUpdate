@@ -7,6 +7,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using ZebraBarcodeScannerSDK;
+using NaitonGPS.API;
 
 namespace NaitonGPS.ViewModels
 {
@@ -18,12 +20,14 @@ namespace NaitonGPS.ViewModels
 
         private List<Rack> _searchRacks { get; set; }
         private bool IsSearch { get; set; }
+        
 
         public ObservableCollection<Rack> Racks { get; set; }
-        
+        public bool IsScanerConnected { get; set; }
 
         public Command LoadItemsCommand { get; }
         public Command<Rack> TappedItemCommand { get; set; }
+        public Command ScanningCommand { get; set; }
 
         public string SearchText
         {
@@ -46,9 +50,13 @@ namespace NaitonGPS.ViewModels
             Racks = new ObservableCollection<Rack>();
             LoadItemsCommand = new Command(async () => await LoadItems());
             TappedItemCommand = new Command<Rack>(TappedItem);
+            ScanningCommand = new Command(Scanning);
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
+            SdkHandler.DeviceConnected += OnDeviceConnectedEventHandler;
+            SdkHandler.EnableBluetoothScannerDiscovery();
+            SdkHandler.SetSTCEnabledState(true);
         }
 
         async Task LoadItems()
@@ -95,6 +103,27 @@ namespace NaitonGPS.ViewModels
         void TappedItem(Rack rack)
         {
             CallBackMethod.Invoke(this,rack);
+        }
+
+        void Scanning()
+        {
+            SdkHandler.BarcodeDataEvent += BarcodeDataReceivedEvent;
+        }
+
+        private static void BarcodeDataReceivedEvent(BarcodeData barcodeData, int scannerID)
+        {
+            App.Current.MainPage.DisplayAlert("Scanner", barcodeData.ToString(), "Ok");
+        }
+
+        private void OnDeviceConnectedEventHandler(object scannerobject, EventArgs argument)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                Scanner scanner = (Scanner)scannerobject;
+                Globals.ConnectedScanner = scanner;
+                Globals.ConnectedId = scanner.Id.ToString();
+                IsScanerConnected = true;
+            });
         }
     }
 }
