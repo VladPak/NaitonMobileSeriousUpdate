@@ -6,7 +6,7 @@
              xmlns:model="clr-namespace:NaitonGPS.Models"
             x:Class="NaitonGPS.Views.PicklistQuantityBottomPopup">
 
-    <Frame CornerRadius="15" VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="False">
+    <Frame CornerRadius="15" VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="White" HasShadow="False" BorderColor="Gray">
 
         <Grid  x:Name="gridMain" RowDefinitions="0.2*, 0.5*, 0.4*, 0.7*" ColumnDefinitions="*,*,*" RowSpacing="0" ColumnSpacing="0" Margin="0,0,0,15" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="White">
                 <Image x:Name="imgCloseP" Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
@@ -26,7 +26,7 @@
                     </local:BorderedEntry.BackgroundColor>
                 </local:BorderedEntry>
 
-                <Frame x:Name="frameToChange" VerticalOptions="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="#187CBC" CornerRadius="9" BorderColor="#187CBC" HasShadow="False" WidthRequest="100" HeightRequest="30">
+                <Frame x:Name="frameToChange" VerticalOptions="Center" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="{StaticResource colorGreen}" CornerRadius="9" BorderColor="Transparent" HasShadow="False" WidthRequest="100" HeightRequest="30">
                     <Label x:Name="lblApply" Text="Apply" FontSize="18" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                     <Frame.GestureRecognizers>
                     <TapGestureRecognizer 

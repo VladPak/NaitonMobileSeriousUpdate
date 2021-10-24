@@ -26,6 +26,7 @@ namespace NaitonGPS.Views
             else if (IsBigScreen)
             {
                 lblScanToHide.IsVisible = true;
+
             }
 
         }

@@ -26,7 +26,8 @@ namespace NaitonGPS.Views.PickList
 
         public PickListItemsPage()
         {
-            InitializeComponent();            
+            InitializeComponent();      
+            
         }
 
         void LoadItems(int pickListId)
