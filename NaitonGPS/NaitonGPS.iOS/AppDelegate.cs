@@ -25,7 +25,8 @@ namespace NaitonGPS.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            PhantomLib.iOS.Effects.Effects.Init();                       
+            PhantomLib.iOS.Effects.Effects.Init();
+            ZXing.Net.Mobile.Forms.iOS.Platform.Init();
             return base.FinishedLaunching(app, options);
         }
     }

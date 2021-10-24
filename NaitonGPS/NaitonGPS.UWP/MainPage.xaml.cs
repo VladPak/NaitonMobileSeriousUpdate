@@ -19,7 +19,8 @@ namespace NaitonGPS.UWP
     {
         public MainPage()
         {            
-            this.InitializeComponent();            
+            this.InitializeComponent();
+            //ZXing.Net.Mobile.Forms.WindowsUniversal.Platform.Init();
             LoadApplication(new NaitonGPS.App());
         }
     }
