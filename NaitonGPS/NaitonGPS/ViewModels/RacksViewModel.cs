@@ -105,6 +105,11 @@ namespace NaitonGPS.ViewModels
 
         async void Scanning()
         {
+            #if __ANDROID__
+            // Initialize the scanner first so it can track the current context
+            MobileBarcodeScanner.Initialize (Application);
+            #endif
+
             //start scanner
             var scanner = new MobileBarcodeScanner();
             scanner.CancelButtonText = "Cancel";
