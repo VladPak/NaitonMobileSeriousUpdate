@@ -43,24 +43,26 @@
                 <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Margin="0,0,0,0" x:Name="rv" Command="{Binding LoadItemsCommand}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
                     <CollectionView ItemsSource="{Binding Racks}" 
                                     VerticalScrollBarVisibility="Never" 
-                                    BackgroundColor="Transparent" 
-                                    VerticalOptions="FillAndExpand" HeightRequest="100">
+                                    VerticalOptions="Start">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                        </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame x:DataType="model:Rack" HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="10" Margin="0,0,0,0">
+                                <Frame x:DataType="model:Rack" HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="10">
                                     <Grid ColumnSpacing="0" RowSpacing="0">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*"></RowDefinition>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
-                                            <ColumnDefinition x:Name="columnToCHange" Width="*"></ColumnDefinition>
+                                            <ColumnDefinition x:Name="columnToChange" Width="0.9*"></ColumnDefinition>
                                             <ColumnDefinition Width="0.7*"></ColumnDefinition>
                                             <ColumnDefinition Width="0.2*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label x:Name="lblRackName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding RackName}" TextColor="#1B222B" FontSize="22" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
-                                        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding QuantityInStock, StringFormat='Qty: {0:0}'}" TextColor="#69717E" FontSize="19" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        <Label x:Name="lblRackName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding RackName}" TextColor="#1B222B" FontSize="18" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding QuantityInStock, StringFormat='Qty: {0:0}'}" TextColor="#69717E" FontSize="17" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
 
                                         <Image Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="1" Source="rightarrow.png" phantomExtensions:Images.ImageColor="#D1D6D8" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center"></Image>
                                     </Grid>
