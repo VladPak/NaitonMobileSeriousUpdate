@@ -7,8 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using ZebraBarcodeScannerSDK;
-using NaitonGPS.API;
+using ZXing.Mobile;
 
 namespace NaitonGPS.ViewModels
 {
@@ -54,9 +53,8 @@ namespace NaitonGPS.ViewModels
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
-            SdkHandler.DeviceConnected += OnDeviceConnectedEventHandler;
-            SdkHandler.EnableBluetoothScannerDiscovery();
-            SdkHandler.SetSTCEnabledState(true);
+            
+
         }
 
         async Task LoadItems()
@@ -105,25 +103,28 @@ namespace NaitonGPS.ViewModels
             CallBackMethod.Invoke(this,rack);
         }
 
-        void Scanning()
+        async void Scanning()
         {
-            SdkHandler.BarcodeDataEvent += BarcodeDataReceivedEvent;
+            //start scanner
+            var scanner = new MobileBarcodeScanner();
+            scanner.TopText = "Hold the camera up to the barcode\nAbout 6 inches away";
+            scanner.BottomText = "Wait for the barcode to automatically scan!";
+
+            //This will start scanning
+            ZXing.Result result = await scanner.Scan();
+
+            //Show the result returned.
+            BarcodeDataReceivedEvent(result);
         }
 
-        private static void BarcodeDataReceivedEvent(BarcodeData barcodeData, int scannerID)
+        private static void BarcodeDataReceivedEvent(ZXing.Result result)
         {
-            App.Current.MainPage.DisplayAlert("Scanner", barcodeData.ToString(), "Ok");
-        }
-
-        private void OnDeviceConnectedEventHandler(object scannerobject, EventArgs argument)
-        {
-            Device.BeginInvokeOnMainThread(() =>
+            var msg = "No Barcode!";
+            if (result != null)
             {
-                Scanner scanner = (Scanner)scannerobject;
-                Globals.ConnectedScanner = scanner;
-                Globals.ConnectedId = scanner.Id.ToString();
-                IsScanerConnected = true;
-            });
+                msg = "Barcode: " + result.Text + " (" + result.BarcodeFormat + ")";
+            }
+            App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
         }
     }
 }

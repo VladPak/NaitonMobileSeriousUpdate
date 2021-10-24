@@ -35,12 +35,12 @@ namespace NaitonGPS.Views
 			}
 		}
 
-        private async void UserInfo(object sender, EventArgs e)
+        private void UserInfo(object sender, EventArgs e)
         {
 			//await Navigation.PushPopupAsync(new UserInformationPage());
 		}
 
-		private async void Notifications(object sender, EventArgs e)
+		private void Notifications(object sender, EventArgs e)
         {
 			//await Navigation.PushPopupAsync(new NotificationsPage());
 		}
