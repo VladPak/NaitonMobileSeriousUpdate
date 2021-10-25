@@ -13,7 +13,8 @@ namespace NaitonGPS.ViewModels
 {
     public class RacksViewModel : BaseViewModel
     {
-        private event EventHandler<Rack> CallBackMethod;        
+        private event EventHandler<Rack> CallBackMethod;
+        private event EventHandler<bool> AfterLoadData;
         private readonly PickListItem _pickListItem;
         private string _searchText; 
 
@@ -42,23 +43,11 @@ namespace NaitonGPS.ViewModels
             }
         }
 
-        public string ScanText
-        {
-            get
-            {
-                return null;
-            }
-            set
-            {                
-                SearchText = value;
-                OnPropertyChanged(nameof(SearchText));
-            }
-        }
-
-        public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack)
+        public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack, EventHandler<bool> afterLoadData)
         {
             _pickListItem = pickListItem;
-            CallBackMethod = callBack;            
+            CallBackMethod = callBack;
+            AfterLoadData = afterLoadData;
             Racks = new ObservableCollection<Rack>();
             LoadItemsCommand = new Command(async () => await LoadItems());
             TappedItemCommand = new Command<Rack>(TappedItem);
@@ -108,6 +97,7 @@ namespace NaitonGPS.ViewModels
             finally
             {
                 IsBusy = false;
+                AfterLoadData.Invoke(this, true);
             }
         }
 
@@ -146,16 +136,5 @@ namespace NaitonGPS.ViewModels
             }
             //App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
         }
-
-        //private void Scaning(string rackName)
-        //{
-        //    if (!string.IsNullOrEmpty(rackName))
-        //    {
-        //        //for scan
-        //        var item = Racks.FirstOrDefault(x => x.RackName == rackName);
-        //        if (item != null)
-        //            TappedItem(item);
-        //    }            
-        //}
     }
 }

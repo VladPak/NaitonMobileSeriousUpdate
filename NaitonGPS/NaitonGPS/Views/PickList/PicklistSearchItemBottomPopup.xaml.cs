@@ -3,7 +3,6 @@ using NaitonGPS.ViewModels;
 using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace NaitonGPS.Views
@@ -18,7 +17,7 @@ namespace NaitonGPS.Views
         public PicklistSearchItemBottomPopup(PickListItem pickListItem, EventHandler<Rack> callBack)
         {
             InitializeComponent();
-            BindingContext = new RacksViewModel(pickListItem,callBack);
+            BindingContext = new RacksViewModel(pickListItem,callBack, ChangeInput);
 
             //if (IsSmallScreen)
             //{
@@ -30,15 +29,14 @@ namespace NaitonGPS.Views
             //}
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            searchText.Focus();
-        }
-
         private async void ClosePopup(object sender, EventArgs e)
         {
             await Shell.Current.Navigation.PopModalAsync();
+        }
+
+        void ChangeInput(object sender, bool load)
+        {
+            searchText.Focus();
         }
     }
 }
