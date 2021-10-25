@@ -39,7 +39,8 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     SessionContext.Refresh().GetAwaiter();
-                    return GetPickListItems(pickListId);
+                    count = count + 1;
+                    return GetPickListItems(pickListId);                    
                 }
                 else
                 {
@@ -75,6 +76,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     SessionContext.Refresh().GetAwaiter();
+                    count = count + 1;
                     return GetPickLists(pickListId);
                 }
                 else
@@ -109,6 +111,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     SessionContext.Refresh().GetAwaiter();
+                    count = count + 1;
                     return GetPickRacks(deliveryOrderDetailsId);
                 }
                 else
@@ -151,6 +154,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     SessionContext.Refresh().GetAwaiter();
+                    count = count + 1;
                     return SavePickListItems(items);
                 }
                 else
