@@ -1,5 +1,6 @@
 ﻿using NaitonGPS.Services;
 using NaitonGPS.Views;
+using SimpleWSA;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +12,7 @@ namespace NaitonGPS
         public App()
         {            
             InitializeComponent();
+            
         }
 
         protected override void OnStart()
@@ -22,6 +24,7 @@ namespace NaitonGPS
                 MainPage = new AppShell();
             else
                 MainPage = new NavigationPage(new LoginPage());
+            
         }
 
         protected override void OnSleep()
