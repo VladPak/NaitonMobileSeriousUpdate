@@ -19,8 +19,13 @@ namespace NaitonGPS.Views
 
         private async void Logout(object sender, EventArgs e)
         {
+			await Shell.Current.Navigation.PopModalAsync();
 			Xamarin.Forms.Application.Current.Properties["IsLoggedIn"] = false;
-			App.Current.MainPage = new NavigationPage(new LoginPage());
+			Shell.Current.Items.Clear();
+			var tabbar = new TabBar();
+			var shellContent = new ShellContent() { ContentTemplate = new DataTemplate(typeof(LoginPage)) };
+			tabbar.Items.Add(shellContent);
+			Shell.Current.Items.Add(tabbar);
 		}
 
 		private async void CloseMe(object sender, EventArgs e)
