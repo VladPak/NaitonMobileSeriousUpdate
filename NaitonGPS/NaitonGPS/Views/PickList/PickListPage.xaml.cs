@@ -44,5 +44,10 @@ namespace NaitonGPS.Views.PickList
         {
             await DisplayAlert("", "Scanner button is clicked", "Ok");
         }
+
+        private async void UserInformationPopUp(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new UserInformation());
+        }
     }
 }

@@ -48,5 +48,11 @@ namespace NaitonGPS.Views
             base.OnAppearing();
             _viewModel.OnAppearing();
         }
+
+        private async void UserInformationPopUp(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserInformation());
+
+        }
     }
 }

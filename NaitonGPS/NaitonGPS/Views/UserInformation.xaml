@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaitonGPS.Views.UserInformation"
+             xmlns:local="clr-namespace:NaitonGPS.ViewModels"  
+             xmlns:model="clr-namespace:NaitonGPS.Models"  
+             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="true"
+             iOS:Page.PrefersStatusBarHidden="Default"
+             iOS:Page.PreferredStatusBarUpdateAnimation="Fade"
+             Shell.NavBarIsVisible="True"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="User Information"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+
+            <Frame HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#000000" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
+                <StackLayout  Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Logout" FontSize="17" TextColor="#ffffff" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Logout" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <Frame HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Orange" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
+                <StackLayout Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Close" FontSize="17" TextColor="#000" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="CloseMe" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
