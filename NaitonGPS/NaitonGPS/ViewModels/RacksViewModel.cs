@@ -70,7 +70,7 @@ namespace NaitonGPS.ViewModels
                     {
                         rackItems = _searchRacks.Where(x => x.RackName.ToLower().Contains(_searchText.ToLower())).ToList();
                         if (rackItems.Count == 1)
-                            Scanning();
+                            TappedItem(rackItems.First());
                     }
                     else
                     {
