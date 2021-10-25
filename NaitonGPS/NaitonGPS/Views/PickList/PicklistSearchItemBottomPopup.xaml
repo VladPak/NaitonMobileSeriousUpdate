@@ -27,8 +27,8 @@
                         <ColumnDefinition x:Name="columnToAlter" Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <local:BorderedSearchBar  x:Name="searchText" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,0,0,0" Text="{Binding SearchText}"  />
-                    <Entry IsVisible="false" x:Name="hideInput" Text="{Binding ScanText}"/>
+                    <local:BorderedSearchBar  x:Name="searchText" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,0,0,0" Text="{Binding SearchText, Mode=TwoWay}"  />
+                    <!--<Entry x:Name="hideInput" Text="{Binding ScanText, Mode=TwoWay}"/>-->
                     
                     <!--<Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
                         <StackLayout x:Name="slChange" Margin="-5,0,-5,0" Padding="0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">

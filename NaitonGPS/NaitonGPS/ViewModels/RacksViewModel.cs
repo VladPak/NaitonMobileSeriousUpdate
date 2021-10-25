@@ -13,7 +13,7 @@ namespace NaitonGPS.ViewModels
 {
     public class RacksViewModel : BaseViewModel
     {
-        private event EventHandler<Rack> CallBackMethod;
+        private event EventHandler<Rack> CallBackMethod;        
         private readonly PickListItem _pickListItem;
         private string _searchText; 
 
@@ -49,15 +49,16 @@ namespace NaitonGPS.ViewModels
                 return null;
             }
             set
-            {
+            {                
                 SearchText = value;
+                OnPropertyChanged(nameof(SearchText));
             }
         }
 
         public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack)
         {
             _pickListItem = pickListItem;
-            CallBackMethod = callBack;
+            CallBackMethod = callBack;            
             Racks = new ObservableCollection<Rack>();
             LoadItemsCommand = new Command(async () => await LoadItems());
             TappedItemCommand = new Command<Rack>(TappedItem);

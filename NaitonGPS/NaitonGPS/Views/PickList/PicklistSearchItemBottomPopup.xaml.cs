@@ -3,6 +3,7 @@ using NaitonGPS.ViewModels;
 using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace NaitonGPS.Views
@@ -27,8 +28,12 @@ namespace NaitonGPS.Views
             //{
             //    lblScanToHide.IsVisible = true;
             //}
-            //hideInput.Focus();
-            hideInput.Focus();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            searchText.Focus();
         }
 
         private async void ClosePopup(object sender, EventArgs e)
