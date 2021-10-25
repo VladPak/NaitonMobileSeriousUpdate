@@ -19,7 +19,7 @@ namespace NaitonGPS.Views
 
         private async void Logout(object sender, EventArgs e)
         {
-			Xamarin.Forms.Application.Current.Properties["IsLoggedIn"] = bool.FalseString;
+			Xamarin.Forms.Application.Current.Properties["IsLoggedIn"] = false;
 			App.Current.MainPage = new NavigationPage(new LoginPage());
 		}
 

@@ -41,7 +41,7 @@ namespace NaitonGPS.Views.PickList
         }
 
         private async void TapGestureRecognizer_Tapped_1(object sender, System.EventArgs e)
-        {
+        {            
             await DisplayAlert("", "Scanner button is clicked", "Ok");
         }
 
