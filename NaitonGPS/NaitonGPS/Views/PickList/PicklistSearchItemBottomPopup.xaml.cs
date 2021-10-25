@@ -26,9 +26,8 @@ namespace NaitonGPS.Views
             else if (IsBigScreen)
             {
                 lblScanToHide.IsVisible = true;
-
             }
-
+            hideInput.Focus();
         }
 
         private async void ClosePopup(object sender, EventArgs e)

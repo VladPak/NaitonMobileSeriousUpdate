@@ -41,6 +41,18 @@ namespace NaitonGPS.ViewModels
                 IsBusy = true;
             }
         }
+
+        public string ScanText
+        {
+            get
+            {
+                return null;
+            }
+            set
+            {
+                Scaning(value);
+            }
+        }
         
         public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack)
         {
@@ -52,7 +64,7 @@ namespace NaitonGPS.ViewModels
             ScanningCommand = new Command(Scanning);
             IsBusy = true;
             LoadItems().GetAwaiter();
-            IsBusy = false;
+            IsBusy = false;                     
         }
 
         async Task LoadItems()
@@ -122,7 +134,7 @@ namespace NaitonGPS.ViewModels
         }
 
         private void BarcodeDataReceivedEvent(ZXing.Result result)
-        {            
+        {
             if (result != null)
             {
                 var item = Racks.FirstOrDefault(x=>x.RackName== result.Text);
@@ -130,6 +142,16 @@ namespace NaitonGPS.ViewModels
                     TappedItem(item);
             }
             //App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
+        }
+
+        private void Scaning(string rackName)
+        {
+            if (!string.IsNullOrEmpty(rackName))
+            {
+                var item = Racks.FirstOrDefault(x => x.RackName == rackName);
+                if (item != null)
+                    TappedItem(item);
+            }            
         }
     }
 }
