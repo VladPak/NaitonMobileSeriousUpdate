@@ -27,10 +27,10 @@
                         <ColumnDefinition x:Name="columnToAlter" Width="1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <local:BorderedSearchBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0" Text="{Binding SearchText}"  />
-                    <Entry IsVisible="false" x:Name="hideInput" Text="{Binding ScanText}"/>
+                    <local:BorderedSearchBar  x:Name="searchText" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" Margin="0,0,0,0" Text="{Binding SearchText}"  />
+                    <!--<Entry IsVisible="false" x:Name="hideInput" Text="{Binding ScanText}"/>-->
                     
-                    <Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
+                    <!--<Frame Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="1" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" CornerRadius="5" BorderColor="#69717E" HasShadow="False">
                         <StackLayout x:Name="slChange" Margin="-5,0,-5,0" Padding="0" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
                             <Image x:Name="imgScan" Source="scan.png" HeightRequest="20" WidthRequest="20"></Image>
                             <Label x:Name="lblScanToHide" Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
@@ -42,7 +42,7 @@
                                 CommandParameter="{Binding .}">
                             </TapGestureRecognizer>
                         </Frame.GestureRecognizers>
-                    </Frame>
+                    </Frame>-->
                 </Grid>
 
                 <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Margin="0,0,0,0" x:Name="rv" Command="{Binding LoadItemsCommand}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">

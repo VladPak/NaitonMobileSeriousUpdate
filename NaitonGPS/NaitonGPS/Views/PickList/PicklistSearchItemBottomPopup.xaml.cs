@@ -19,15 +19,16 @@ namespace NaitonGPS.Views
             InitializeComponent();
             BindingContext = new RacksViewModel(pickListItem,callBack);
 
-            if (IsSmallScreen)
-            {
-                lblScanToHide.IsVisible = false;
-            }
-            else if (IsBigScreen)
-            {
-                lblScanToHide.IsVisible = true;
-            }
-            hideInput.Focus();
+            //if (IsSmallScreen)
+            //{
+            //    lblScanToHide.IsVisible = false;
+            //}
+            //else if (IsBigScreen)
+            //{
+            //    lblScanToHide.IsVisible = true;
+            //}
+            //hideInput.Focus();
+            searchText.Focus();
         }
 
         private async void ClosePopup(object sender, EventArgs e)
