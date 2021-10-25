@@ -42,18 +42,18 @@ namespace NaitonGPS.ViewModels
             }
         }
 
-        //public string ScanText
-        //{
-        //    get
-        //    {
-        //        return null;
-        //    }
-        //    set
-        //    {
-        //        Scaning(value);
-        //    }
-        //}
-        
+        public string ScanText
+        {
+            get
+            {
+                return null;
+            }
+            set
+            {
+                SearchText = value;
+            }
+        }
+
         public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack)
         {
             _pickListItem = pickListItem;

@@ -28,7 +28,7 @@ namespace NaitonGPS.Views
             //    lblScanToHide.IsVisible = true;
             //}
             //hideInput.Focus();
-            searchText.Focus();
+            hideInput.Focus();
         }
 
         private async void ClosePopup(object sender, EventArgs e)
