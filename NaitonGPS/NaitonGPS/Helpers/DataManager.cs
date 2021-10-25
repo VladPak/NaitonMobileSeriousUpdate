@@ -12,7 +12,7 @@ namespace NaitonGPS.Helpers
     public static class DataManager
     {
         private static UserLoginDetails _user;
-
+        static int count = 0;
         #region Pick list
 
         public static List<PickListItem> GetPickListItems(int pickListId)
@@ -36,7 +36,17 @@ namespace NaitonGPS.Helpers
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
+                if (count < 3)
+                {
+                    SessionContext.Refresh().GetAwaiter();
+                    return GetPickListItems(pickListId);
+                }
+                else
+                {
+                    count = 0;
+                    throw new Exception(ex.Message, ex);
+                }
+
             }
 
         }
@@ -62,7 +72,16 @@ namespace NaitonGPS.Helpers
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
+                if (count < 3)
+                {
+                    SessionContext.Refresh().GetAwaiter();
+                    return GetPickLists(pickListId);
+                }
+                else
+                {
+                    count = 0;
+                    throw new Exception(ex.Message, ex);
+                }
             }
         }
 
@@ -87,7 +106,16 @@ namespace NaitonGPS.Helpers
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
+                if (count < 3)
+                {
+                    SessionContext.Refresh().GetAwaiter();
+                    return GetPickRacks(deliveryOrderDetailsId);
+                }
+                else
+                {
+                    count = 0;
+                    throw new Exception(ex.Message, ex);
+                }
             }
         }
 
@@ -120,7 +148,16 @@ namespace NaitonGPS.Helpers
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message, ex);
+                if (count < 3)
+                {
+                    SessionContext.Refresh().GetAwaiter();
+                    return SavePickListItems(items);
+                }
+                else
+                {
+                    count = 0;
+                    throw new Exception(ex.Message, ex);
+                }
             }            
         }
 
