@@ -7,7 +7,7 @@
              xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
              xmlns:model="clr-namespace:NaitonGPS.Models">
     <ContentPage.Content x:DataType="viewModel:RacksViewModel">
-        <Frame HeightRequest="430" CornerRadius="20" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="white" BorderColor="#cecece" HasShadow="False">
+        <Frame HeightRequest="450" CornerRadius="20" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="white" BorderColor="#cecece" HasShadow="False">
 
             <Grid RowDefinitions="0.08*, 0.1*, 0.2*, 0.7*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
                 <Image Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
