@@ -20,6 +20,8 @@ namespace NaitonGPS
             bool isLoggedIn = Current.Properties.ContainsKey("IsLoggedIn") && Convert.ToBoolean(Current.Properties["IsLoggedIn"]);
 
             DependencyService.Register<MockDataStore>();
+            DependencyService.Register<DataManager>();
+
             if (isLoggedIn)
                 MainPage = new AppShell();
             else

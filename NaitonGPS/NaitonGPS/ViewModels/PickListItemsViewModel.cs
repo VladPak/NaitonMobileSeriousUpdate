@@ -1,5 +1,4 @@
-﻿using NaitonGPS.Helpers;
-using NaitonGPS.Models;
+﻿using NaitonGPS.Models;
 using NaitonGPS.Views;
 using NaitonGPS.Views.PickList;
 using System;
@@ -65,7 +64,7 @@ namespace NaitonGPS.ViewModels
             {
                 if (!IsChanged)
                 {
-                    var pickListItems = await Task.Run(() => DataManager.GetPickListItems(_pickListId));
+                    var pickListItems = await DataManager.GetPickListItems(_pickListId);
                     _oldPickListItems = pickListItems;
                     PicklistItems.Clear();
                     foreach (var item in pickListItems.OrderBy(x=>x.StatusId).ThenBy(x=>x.Sequence))
@@ -217,7 +216,7 @@ namespace NaitonGPS.ViewModels
             OnPropertyChanged(nameof(IsEditable));            
         }
 
-        void SaveToBase() 
+        async void SaveToBase() 
         {
             bool save = true;
             var list = new List<PickListItem>();
@@ -236,14 +235,14 @@ namespace NaitonGPS.ViewModels
 
             if (save)
             {
-                int result = DataManager.SavePickListItems(list);
+                int result = await DataManager.SavePickListItems(list);
                 IsChanged = false;                
-                App.Current.MainPage.DisplayAlert("Success", "The data has been saved!", "Ok");
+                await App.Current.MainPage.DisplayAlert("Success", "The data has been saved!", "Ok");
                 IsBusy = true;
             }
             else
             {
-                App.Current.MainPage.DisplayAlert("Sorry", "The number of products in the deliveries does not match. Please reconsider the number of products.", "Ok");                
+                await App.Current.MainPage.DisplayAlert("Sorry", "The number of products in the deliveries does not match. Please reconsider the number of products.", "Ok");                
 
             }
         }

@@ -1,5 +1,4 @@
-﻿using NaitonGPS.Helpers;
-using NaitonGPS.Models;
+﻿using NaitonGPS.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -80,7 +79,7 @@ namespace NaitonGPS.ViewModels
                 }
                 else
                 {
-                    rackItems = await Task.Run(() => DataManager.GetPickRacks(_pickListItem.DeliveryOrderDetailsId));
+                    rackItems = await DataManager.GetPickRacks(_pickListItem.DeliveryOrderDetailsId);
                     SearchRacks = rackItems;
                 }
                     

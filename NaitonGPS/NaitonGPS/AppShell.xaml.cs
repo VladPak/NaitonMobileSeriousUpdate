@@ -1,5 +1,5 @@
-﻿using NaitonGPS.Helpers;
-using NaitonGPS.Models;
+﻿using NaitonGPS.Models;
+using NaitonGPS.Services;
 using NaitonGPS.ViewModels;
 using NaitonGPS.Views;
 using NaitonGPS.Views.PickList;
@@ -13,7 +13,9 @@ using Xamarin.Forms;
 namespace NaitonGPS
 {
     public partial class AppShell : Xamarin.Forms.Shell
-    {        
+    {
+        public IDataManager DataManager => DependencyService.Get<IDataManager>();
+
         public AppShell()
         {            
             InitializeComponent();

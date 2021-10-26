@@ -5,17 +5,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
-namespace NaitonGPS.Helpers
+namespace NaitonGPS.Services
 {
-    public static class DataManager
+    public class DataManager : IDataManager
     {
         private static UserLoginDetails _user;
         static int count = 0;
+
         #region Pick list
 
-        public static List<PickListItem> GetPickListItems(int pickListId)
+        public async Task<List<PickListItem>> GetPickListItems(int pickListId)
         {
             try
             {
@@ -38,9 +40,9 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    ContinueSession();
+                    await SessionContext.Refresh();
                     count++;
-                    return GetPickListItems(pickListId);                    
+                    return await GetPickListItems(pickListId);
                 }
                 else
                 {
@@ -52,7 +54,7 @@ namespace NaitonGPS.Helpers
 
         }
 
-        public static List<PickList> GetPickLists(int? pickListId = null)
+        public async Task<List<PickList>> GetPickLists(int? pickListId = null)
         {
             try
             {
@@ -75,9 +77,9 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    ContinueSession();
+                    await SessionContext.Refresh();
                     count++;
-                    return GetPickLists(pickListId);
+                    return await GetPickLists(pickListId);
                 }
                 else
                 {
@@ -87,7 +89,7 @@ namespace NaitonGPS.Helpers
             }
         }
 
-        public static List<Rack> GetPickRacks(int deliveryOrderDetailsId)
+        public async Task<List<Rack>> GetPickRacks(int deliveryOrderDetailsId)
         {
             try
             {
@@ -110,9 +112,9 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    ContinueSession();
+                    await SessionContext.Refresh();
                     count++;
-                    return GetPickRacks(deliveryOrderDetailsId);
+                    return await GetPickRacks(deliveryOrderDetailsId);
                 }
                 else
                 {
@@ -122,12 +124,12 @@ namespace NaitonGPS.Helpers
             }
         }
 
-        public static int SavePickListItems(List<PickListItem> items)
+        public async Task<int> SavePickListItems(List<PickListItem> items)
         {
             try
             {
                 int result = 0;
-                foreach (var item in items.GroupBy(x=>x.DeliveryOrderDetailsId))
+                foreach (var item in items.GroupBy(x => x.DeliveryOrderDetailsId))
                 {
                     SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_addupdateracks");
                     command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, item.Key);
@@ -135,7 +137,7 @@ namespace NaitonGPS.Helpers
                     command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StockRackId ?? 0).ToArray());
                     command.Parameters.Add("_statusids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StatusId).ToArray());
                     command.Parameters.Add("_quantities", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.Quantity).ToArray());
-                    
+
                     command.WriteSchema = WriteSchema.TRUE;
                     string xmlResult = SimpleWSA.Command.Execute(command,
                                                         RoutineType.Scalar,
@@ -143,9 +145,9 @@ namespace NaitonGPS.Helpers
                                                         responseFormat: ResponseFormat.JSON);
 
                     var dict = JsonConvert.DeserializeObject<Dictionary<string, ReturnScaler>>(xmlResult);
-                    
+
                 }
-                
+
 
                 return result;
             }
@@ -153,23 +155,24 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    ContinueSession();
+                    await SessionContext.Refresh();
                     count++;
-                    return SavePickListItems(items);
+                    return await SavePickListItems(items);
                 }
                 else
                 {
                     count = 0;
                     throw new Exception(ex.Message, ex);
                 }
-            }            
+            }
         }
 
         #endregion Pick list
 
+
         #region Account 
 
-        public static UserLoginDetails RegistrationServiceSession()
+        public UserLoginDetails RegistrationServiceSession()
         {
             try
             {
@@ -196,7 +199,7 @@ namespace NaitonGPS.Helpers
             }
         }
 
-        public static void SetUserData(out int roleId)
+        public void SetUserData(out int roleId)
         {
             roleId = 0;
             UserLoginDetails dataFinalizeUserEP = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
@@ -223,12 +226,12 @@ namespace NaitonGPS.Helpers
             roleId = dataFinalize["userlogin_checklogin5"].Select(x => x.RoleRightId).First();
         }
 
-        public static UserLoginDetails GetCurrentUser()
+        public UserLoginDetails GetCurrentUser()
         {
             return _user;
         }
 
-        public static Roles[] GetRoles(int roleId)
+        public Roles[] GetRoles(int roleId)
         {
             SimpleWSA.Command command = new SimpleWSA.Command("rolemanager_getcheckroleobjects");
             command.Parameters.Add("_roleid", PgsqlDbType.Integer).Value = roleId;
@@ -245,11 +248,6 @@ namespace NaitonGPS.Helpers
         }
 
         #endregion Account
-
-        public static void ContinueSession()
-        {
-            SessionContext.RefreshStatic();
-        }
     }
 
     public class ReturnScaler

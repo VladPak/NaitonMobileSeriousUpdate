@@ -1,4 +1,4 @@
-﻿using NaitonGPS.Helpers;
+﻿using NaitonGPS.Services;
 using NaitonGPS.ViewModels;
 using System.Linq;
 using Xamarin.Forms;
@@ -11,6 +11,7 @@ namespace NaitonGPS.Views.PickList
     public partial class PickListItemsPage : ContentPage
     {
         private int _pickListId;
+        private IDataManager DataManager => DependencyService.Get<IDataManager>();
 
         public int PickListId
         {
@@ -31,9 +32,9 @@ namespace NaitonGPS.Views.PickList
             
         }
 
-        void LoadItems(int pickListId)
+        async void LoadItems(int pickListId)
         {
-            var item = DataManager.GetPickLists(pickListId);
+            var item = await DataManager.GetPickLists(pickListId);
             BindingContext = new PickListItemsViewModel(item.FirstOrDefault());
         }
     }

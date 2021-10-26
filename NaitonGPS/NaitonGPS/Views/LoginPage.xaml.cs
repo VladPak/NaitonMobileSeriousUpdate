@@ -1,5 +1,4 @@
-﻿using NaitonGPS.Helpers;
-using NaitonGPS.Services;
+﻿using NaitonGPS.Services;
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 using SimpleWSA;
@@ -15,6 +14,9 @@ namespace NaitonGPS.Views
     public partial class LoginPage : ContentPage
     {
         int taps = 0;
+
+        public IDataManager DataManager => DependencyService.Get<IDataManager>();
+
         public LoginPage()
         {
             InitializeComponent();

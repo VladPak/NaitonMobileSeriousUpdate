@@ -11,6 +11,7 @@ namespace NaitonGPS.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataManager DataManager => DependencyService.Get<IDataManager>();
 
         bool isBusy = false;
         public bool IsBusy

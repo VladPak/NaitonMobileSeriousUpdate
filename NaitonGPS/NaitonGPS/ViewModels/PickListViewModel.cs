@@ -1,5 +1,4 @@
-﻿using NaitonGPS.Helpers;
-using NaitonGPS.Models;
+﻿using NaitonGPS.Models;
 using NaitonGPS.Views.PickList;
 using System;
 using System.Collections.Generic;
@@ -88,7 +87,7 @@ namespace NaitonGPS.ViewModels
                 }
                 else
                 {
-                    pickList = await Task.Run(() => DataManager.GetPickLists());
+                    pickList = await DataManager.GetPickLists();
                     _searchPicks = pickList;
                 }
 
