@@ -9,6 +9,7 @@
              iOS:Page.UseSafeArea="true"
              iOS:Page.PrefersStatusBarHidden="Default"
              iOS:Page.PreferredStatusBarUpdateAnimation="Fade"
+             xmlns:control="clr-namespace:NaitonGPS.Controls"
              Shell.NavBarIsVisible="True"
              >
     <Shell.TitleView>
@@ -33,8 +34,9 @@
     <StackLayout Margin="15">
         <Grid RowDefinitions="*" ColumnDefinitions="*,*">
             <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="28" FontAttributes="Bold" TextColor="#5c5c5c"/>
-
-            <Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
+            
+            <control:BorderedSearchBar  Grid.Row="0" Grid.Column="1" Margin="0,0,0,0" Text="{Binding SearchText, Mode=TwoWay}"  />
+            <!--<Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
                 <StackLayout x:Name="gridWithScannerIcon" Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="scan.png" HeightRequest="20"></Image>
                     <Label Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
@@ -42,7 +44,7 @@
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
                 </Frame.GestureRecognizers>
-            </Frame>
+            </Frame>-->
         </Grid>
 
 

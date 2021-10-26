@@ -74,6 +74,7 @@ namespace NaitonGPS.ViewModels
                     }
                     else
                     {
+                        IsSearch = false;
                         rackItems = _searchRacks;
                     }
                 }
