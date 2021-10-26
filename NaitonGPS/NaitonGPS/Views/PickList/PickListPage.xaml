@@ -34,9 +34,8 @@
     <StackLayout Margin="15">
         <Grid RowDefinitions="*" ColumnDefinitions="*,*">
             <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="28" FontAttributes="Bold" TextColor="#5c5c5c"/>
-            
-            <control:BorderedSearchBar  Grid.Row="0" Grid.Column="1" Margin="0,0,0,0" Text="{Binding SearchText, Mode=TwoWay}"  />
-            <!--<Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
+
+            <Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
                 <StackLayout x:Name="gridWithScannerIcon" Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="scan.png" HeightRequest="20"></Image>
                     <Label Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
@@ -59,20 +58,19 @@
                     <DataTemplate>
                         <StackLayout x:DataType="model:PickList">
                             <Frame HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="15" Margin="0, 12, 0, 0">
-                                <Grid RowDefinitions="0.2*, 0.2*, 0.2*" ColumnDefinitions="0.1*, 2*, 6*, 0.1*" ColumnSpacing="0" RowSpacing="0">
-                                <Image Margin="-20, 0, 0, 0" phantomExtensions:Images.ImageColor="{Binding ColorStatus}" Source="statusBar.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="Start" VerticalOptions="Center"></Image>
+                                <Grid RowDefinitions="0.2*, 0.2*, 0.2*" ColumnDefinitions="0.1*, 2*, 6*, 0.8*" ColumnSpacing="0" RowSpacing="0">
+                                <Image Margin="-20, 0, 0, 0" phantomExtensions:Images.ImageColor="{Binding ColorStatus}" Source="statusBar.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalOptions="Start" VerticalOptions="Center"></Image>
 
-                                    <Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Path=PickListId, StringFormat='ID {0}'}" FontSize="17" FontAttributes="None" HorizontalOptions="Start"/>
-
-                                    <Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TextColor="#5c5c5c" Grid.ColumnSpan="2" Grid.RowSpan="2" WidthRequest="100" HorizontalTextAlignment="End" VerticalOptions="Center" Text="{Binding PickerName}" FontSize="14" HorizontalOptions="End" FontAttributes="None"/>
-                                    <Image BackgroundColor="Transparent" Source="rightarrow.png" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>
+                                    <Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=PickListId, StringFormat='ID {0}'}" FontSize="17" FontAttributes="None" HorizontalOptions="Start"/>
+                                    <Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TextColor="#5c5c5c" Grid.ColumnSpan="2" Grid.RowSpan="3" WidthRequest="100" HorizontalTextAlignment="End" VerticalOptions="Center" Text="{Binding PickerName}" FontSize="14" HorizontalOptions="End" FontAttributes="None"/>
+                                    <Image BackgroundColor="Transparent" Source="rightarrow.png" Margin="0,0,-10,0" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>
                                     
                                     <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
                                         <Label FontAttributes="Bold" Text="{Binding Path=Products, StringFormat='Qty {0} &#x2022;'}" FontSize="15" TextColor="Black"/>
                                         <Label FontAttributes="Bold" Text="{Binding Path=Weight, StringFormat='{0:0.0} kg'}" FontSize="15" TextColor="#000000"/>                                                                                
                                     </StackLayout>
-                                    <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1">
-                                        <Label LineBreakMode="TailTruncation" WidthRequest="100" Text="{Binding Remark}" FontSize="12" TextColor="Black">
+                                    <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,7,0,0">
+                                        <Label LineBreakMode="TailTruncation" WidthRequest="100" Text="{Binding Remark}" FontSize="15" TextColor="Blue" TextDecorations="Underline">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer 
                                                     NumberOfTapsRequired="1"
