@@ -14,5 +14,7 @@ namespace NaitonGPS.Services
         UserLoginDetails RegistrationServiceSession();
         Task<int> SavePickListItems(List<PickListItem> items);
         void SetUserData(out int roleId);
+
+        Task NewSession();
     }
 }

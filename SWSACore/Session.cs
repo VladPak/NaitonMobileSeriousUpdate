@@ -105,7 +105,7 @@ namespace SimpleWSA
           {
             return await httpResponseMessage.Content.ReadAsStringAsync();
           }
-          throw new HttpException((int)HttpStatusCode.NotFound, $"BaseAddress: {connectionProviderAddress}, apiUrl: {apiUrl}");
+                    throw new Exception();//HttpException((int)HttpStatusCode.NotFound, $"BaseAddress: {connectionProviderAddress}, apiUrl: {apiUrl}");
         }
       }
     }

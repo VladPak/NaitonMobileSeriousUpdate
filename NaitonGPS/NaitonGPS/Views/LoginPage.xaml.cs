@@ -87,18 +87,10 @@ namespace NaitonGPS.Views
                                 entEmail.Focus();
                             }
                             else
-                            {                                
+                            {
                                     try
                                     {
-                                        string currentAppVersion = VersionTracking.CurrentVersion;
-                                        Session session = new Session(userEmail,
-                                                                        entPassword.Text,
-                                                                        false,
-                                                                        6,
-                                                                        currentAppVersion,
-                                                                        Preferences.Get("loginCompany", string.Empty),
-                                                                        null);
-                                        await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
+                                         await DataManager.NewSession();
 
                                         var user = DataManager.RegistrationServiceSession();
 
@@ -113,7 +105,7 @@ namespace NaitonGPS.Views
                                     {
                                         if (exRes.Code == "MI008")
                                         {
-                                            await SessionContext.Refresh();                                            
+                                            SessionContext.Refresh();                                            
                                         }
                                         else
                                         {

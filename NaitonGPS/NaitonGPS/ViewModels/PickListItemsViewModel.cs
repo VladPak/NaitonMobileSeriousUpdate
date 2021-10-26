@@ -17,6 +17,7 @@ namespace NaitonGPS.ViewModels
         private PickListItem _selectedItem;
         private List<PickListItem> _oldPickListItems;
 
+
         public ObservableCollection<PickListItem> PicklistItems { get; set; }
         public Command LoadItemsCommand { get; }
         public Command StartEditCommand { get; }
@@ -35,6 +36,7 @@ namespace NaitonGPS.ViewModels
 
         public PickListItemsViewModel(PickList pickList)
         {
+            _oldPickListItems = new List<PickListItem>();
             _pickListId = pickList.PickListId;
             PickList = pickList;
             Title = "Picklist";
@@ -65,11 +67,16 @@ namespace NaitonGPS.ViewModels
                 if (!IsChanged)
                 {
                     var pickListItems = await DataManager.GetPickListItems(_pickListId);
-                    _oldPickListItems = pickListItems;
-                    PicklistItems.Clear();
-                    foreach (var item in pickListItems.OrderBy(x=>x.StatusId).ThenBy(x=>x.Sequence))
+                    if (_oldPickListItems.Count > 0)
+                        pickListItems = _oldPickListItems;
+                    else
                     {
-                        PicklistItems.Add(item);
+                        _oldPickListItems = pickListItems;
+                        PicklistItems.Clear();
+                        foreach (var item in pickListItems.OrderBy(x => x.StatusId).ThenBy(x => x.Sequence))
+                        {
+                            PicklistItems.Add(item);
+                        }
                     }
                 }              
 

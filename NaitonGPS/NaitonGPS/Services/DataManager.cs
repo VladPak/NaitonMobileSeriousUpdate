@@ -40,14 +40,14 @@ namespace NaitonGPS.Services
             {
                 if (count < 3)
                 {
-                    await SessionContext.Refresh();
+                    await RefreshSession();
                     count++;
                     return await GetPickListItems(pickListId);
                 }
                 else
                 {
                     count = 0;
-                    throw new Exception(ex.Message, ex);
+                    return new List<PickListItem>();
                 }
 
             }
@@ -77,14 +77,14 @@ namespace NaitonGPS.Services
             {
                 if (count < 3)
                 {
-                    await SessionContext.Refresh();
+                    await RefreshSession();
                     count++;
                     return await GetPickLists(pickListId);
                 }
                 else
                 {
                     count = 0;
-                    throw new Exception(ex.Message, ex);
+                    return new List<PickList>();
                 }
             }
         }
@@ -112,14 +112,14 @@ namespace NaitonGPS.Services
             {
                 if (count < 3)
                 {
-                    await SessionContext.Refresh();
+                    await RefreshSession();
                     count++;
                     return await GetPickRacks(deliveryOrderDetailsId);
                 }
                 else
                 {
                     count = 0;
-                    throw new Exception(ex.Message, ex);
+                    return new List<Rack>();
                 }
             }
         }
@@ -155,14 +155,14 @@ namespace NaitonGPS.Services
             {
                 if (count < 3)
                 {
-                    await SessionContext.Refresh();
+                    await RefreshSession();
                     count++;
                     return await SavePickListItems(items);
                 }
                 else
                 {
                     count = 0;
-                    throw new Exception(ex.Message, ex);
+                    return 0;
                 }
             }
         }
@@ -175,7 +175,8 @@ namespace NaitonGPS.Services
         public UserLoginDetails RegistrationServiceSession()
         {
             try
-            {
+            {                
+                                
                 Preferences.Set("token", SessionContext.Token);
 
                 UserLoginDetails userLoginDetails = new UserLoginDetails
@@ -250,9 +251,32 @@ namespace NaitonGPS.Services
         #endregion Account
 
 
-        private void NewSession()
+        public async Task NewSession()
         {
+            string currentAppVersion = VersionTracking.CurrentVersion;
+            Session session = new Session(_user.UserEmail,
+                                            _user.UserPassword,
+                                            false,
+                                            6,
+                                            currentAppVersion,
+                                            Preferences.Get("loginCompany", string.Empty),
+                                            null);
+            await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
+        }
 
+        private async Task RefreshSession()
+        {
+            UserLoginDetails userData = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
+
+            Session session = new Session(userData.UserEmail,
+                                            userData.UserPassword,
+                                            userData.IsEncrypted,
+                                            userData.AppId,
+                                            userData.AppVersion,
+                                            userData.Domain,
+                                            null);
+
+            await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
         }
     }
 
