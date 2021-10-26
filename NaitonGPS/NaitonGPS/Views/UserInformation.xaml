@@ -17,18 +17,18 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" FontSize="18" FontAttributes="Bold"/>
 
-            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Green" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="100">
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="orange" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="100">
                 <StackLayout  Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Logout" FontSize="17" TextColor="#ffffff" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    <Label Text="Logout" FontSize="17" TextColor="#000" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                 </StackLayout>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="Logout" NumberOfTapsRequired="1"></TapGestureRecognizer>
                 </Frame.GestureRecognizers>
             </Frame>
 
-            <Frame Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Black" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="100">
+            <Frame Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#e3e3e3" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="100">
                 <StackLayout Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="Close" FontSize="17" TextColor="#ffffff" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                    <Label Text="Close" FontSize="17" TextColor="#000" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
                 </StackLayout>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="CloseMe" NumberOfTapsRequired="1"></TapGestureRecognizer>
