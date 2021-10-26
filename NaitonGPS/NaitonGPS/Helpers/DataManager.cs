@@ -39,7 +39,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     ContinueSession();
-                    count = count + 1;
+                    count++;
                     return GetPickListItems(pickListId);                    
                 }
                 else
@@ -76,7 +76,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     ContinueSession();
-                    count = count + 1;
+                    count++;
                     return GetPickLists(pickListId);
                 }
                 else
@@ -111,7 +111,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     ContinueSession();
-                    count = count + 1;
+                    count++;
                     return GetPickRacks(deliveryOrderDetailsId);
                 }
                 else
@@ -154,7 +154,7 @@ namespace NaitonGPS.Helpers
                 if (count < 3)
                 {
                     ContinueSession();
-                    count = count + 1;
+                    count++;
                     return SavePickListItems(items);
                 }
                 else

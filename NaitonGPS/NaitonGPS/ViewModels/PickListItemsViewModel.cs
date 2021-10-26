@@ -95,7 +95,7 @@ namespace NaitonGPS.ViewModels
             }
         }
 
-        async void OnItemSelected(PickListItem item)
+        /*async*/ void OnItemSelected(PickListItem item)
         {
             if (item == null)
                 return;
@@ -122,12 +122,11 @@ namespace NaitonGPS.ViewModels
 
             var oldItem = item;
             int index = 0;
-            int insertIndex = 0;
             foreach (var pli in PicklistItems)
             {
                 if (item.PickListOrderDetailsId == pli.PickListOrderDetailsId)
-                {                    
-                    insertIndex = index;
+                {
+                    int insertIndex = index;
                 }
                 index++;
             }
