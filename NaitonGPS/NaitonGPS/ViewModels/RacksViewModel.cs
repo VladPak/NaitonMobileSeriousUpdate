@@ -18,7 +18,7 @@ namespace NaitonGPS.ViewModels
         private readonly PickListItem _pickListItem;
         private string _searchText; 
 
-        private List<Rack> _searchRacks { get; set; }
+        private List<Rack> SearchRacks { get; set; }
         private bool IsSearch { get; set; }
         
 
@@ -68,20 +68,20 @@ namespace NaitonGPS.ViewModels
                 {
                     if (!string.IsNullOrEmpty(_searchText))
                     {
-                        rackItems = _searchRacks.Where(x => x.RackName.ToLower().Contains(_searchText.ToLower())).ToList();
+                        rackItems = SearchRacks.Where(x => x.RackName.ToLower().Contains(_searchText.ToLower())).ToList();
                         if (rackItems.Count == 1)
                             TappedItem(rackItems.First());
                     }
                     else
                     {
                         IsSearch = false;
-                        rackItems = _searchRacks;
+                        rackItems = SearchRacks;
                     }
                 }
                 else
                 {
                     rackItems = await Task.Run(() => DataManager.GetPickRacks(_pickListItem.DeliveryOrderDetailsId));
-                    _searchRacks = rackItems;
+                    SearchRacks = rackItems;
                 }
                     
                 Racks.Clear();
@@ -109,16 +109,18 @@ namespace NaitonGPS.ViewModels
 
         async void Scanning()
         {
-            #if __ANDROID__
+#if __ANDROID__
             // Initialize the scanner first so it can track the current context
             MobileBarcodeScanner.Initialize (Application);
-            #endif
+#endif
 
             //start scanner
-            var scanner = new MobileBarcodeScanner();
-            scanner.CancelButtonText = "Cancel";
-            scanner.TopText = "Hold the camera up to the barcode\nAbout 6 inches away";
-            scanner.BottomText = "Wait for the barcode to automatically scan!";
+            var scanner = new MobileBarcodeScanner
+            {
+                CancelButtonText = "Cancel",
+                TopText = "Hold the camera up to the barcode\nAbout 6 inches away",
+                BottomText = "Wait for the barcode to automatically scan!"
+            };
 
             //This will start scanning
             ZXing.Result result = await scanner.Scan();
