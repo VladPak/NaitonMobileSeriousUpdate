@@ -12,7 +12,7 @@
              Shell.NavBarIsVisible="True"
              >
     <ContentPage.Content>
-        <Grid RowDefinitions="0.3*,*">
+        <Grid RowDefinitions="80">
             <StackLayout Grid.Row="0" x:DataType="local:PickListItemsViewModel" Margin="15,5,15,0">
                 <Label BackgroundColor="Transparent" TextColor="{StaticResource colorGrayStatic}" HorizontalTextAlignment="Start" Text="{Binding PickList.Client, StringFormat='{0}' }" FontSize="16" HorizontalOptions="Start" FontAttributes="None"/>
                 <Label BackgroundColor="Transparent" TextColor="{StaticResource colorGrayStatic}" HorizontalTextAlignment="Start" Text="{Binding PickList.Order, StringFormat='{0}'}" FontSize="16" HorizontalOptions="StartAndExpand" FontAttributes="None"/>
