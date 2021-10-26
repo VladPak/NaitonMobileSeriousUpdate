@@ -24,7 +24,7 @@ namespace NaitonGPS.Models
         {
             get
             {
-                return DeliveryRemark!=null?string.Join(" ", DeliveryRemark):"";
+                return DeliveryRemark!=null?string.Join(" ", DeliveryRemark):"No delivery remark";
             }
         }
 
@@ -32,7 +32,7 @@ namespace NaitonGPS.Models
         {
             get
             {
-                return OrderIds!=null?string.Join(",", OrderIds):"";
+                return OrderIds!=null?string.Join(",", OrderIds):"No order id";
             }
         }
         
