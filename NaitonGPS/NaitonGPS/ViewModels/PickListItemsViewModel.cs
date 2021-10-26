@@ -1,6 +1,7 @@
 ﻿using NaitonGPS.Helpers;
 using NaitonGPS.Models;
 using NaitonGPS.Views;
+using NaitonGPS.Views.PickList;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,14 +27,17 @@ namespace NaitonGPS.ViewModels
         public Command<PickListItem> ChangeRackCommand { get; }
         public Command<PickListItem> ChangeStatusCommand { get; }
         public Command SaveToBaseCommand { get; set; }
-        
+        public Command<PickList> ShowDeliveryRemarkCommand { get; set; }
+
         public bool IsEditable { get; set; }
         public bool IsViewable { get; set; }
         public bool IsChanged { get; set; }
+        public PickList PickList { get; set; }
 
-        public PickListItemsViewModel(int pickListId)
+        public PickListItemsViewModel(PickList pickList)
         {
-            _pickListId = pickListId;
+            _pickListId = pickList.PickListId;
+            PickList = pickList;
             Title = "Picklist";
             PicklistItems = new ObservableCollection<PickListItem>();
             LoadItemsCommand = new Command(async () => await LoadItems());
@@ -43,7 +47,8 @@ namespace NaitonGPS.ViewModels
             ChangeStatusCommand = new Command<PickListItem>(ChangeStatus);
             StartEditCommand = new Command(StartEdit);
             SaveToBaseCommand = new Command(SaveToBase);
-            
+            ShowDeliveryRemarkCommand = new Command<PickList>(ShowDeliveryRemark);
+
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
@@ -63,7 +68,7 @@ namespace NaitonGPS.ViewModels
                     var pickListItems = await Task.Run(() => DataManager.GetPickListItems(_pickListId));
                     _oldPickListItems = pickListItems;
                     PicklistItems.Clear();
-                    foreach (var item in pickListItems)
+                    foreach (var item in pickListItems.OrderBy(x=>x.StatusId).ThenBy(x=>x.Sequence))
                     {
                         PicklistItems.Add(item);
                     }
@@ -132,7 +137,7 @@ namespace NaitonGPS.ViewModels
                 item.StatusId = 9;
             else
                 item.StatusId = 3;
-            PicklistItems.Insert(insertIndex, item);
+            PicklistItems.Add(item);
             
             IsChanged = true;
         }
@@ -242,6 +247,13 @@ namespace NaitonGPS.ViewModels
                 App.Current.MainPage.DisplayAlert("Sorry", "The number of products in the deliveries does not match. Please reconsider the number of products.", "Ok");                
 
             }
+        }
+
+        async void ShowDeliveryRemark(PickList item)
+        {
+            if (item == null)
+                return;
+            await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
         }
     }
 }

@@ -38,7 +38,7 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    SessionContext.Refresh().GetAwaiter();
+                    ContinueSession();
                     count = count + 1;
                     return GetPickListItems(pickListId);                    
                 }
@@ -75,7 +75,7 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    SessionContext.Refresh().GetAwaiter();
+                    ContinueSession();
                     count = count + 1;
                     return GetPickLists(pickListId);
                 }
@@ -110,7 +110,7 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    SessionContext.Refresh().GetAwaiter();
+                    ContinueSession();
                     count = count + 1;
                     return GetPickRacks(deliveryOrderDetailsId);
                 }
@@ -153,7 +153,7 @@ namespace NaitonGPS.Helpers
             {
                 if (count < 3)
                 {
-                    SessionContext.Refresh().GetAwaiter();
+                    ContinueSession();
                     count = count + 1;
                     return SavePickListItems(items);
                 }
@@ -245,6 +245,11 @@ namespace NaitonGPS.Helpers
         }
 
         #endregion Account
+
+        public static void ContinueSession()
+        {
+            SessionContext.RefreshStatic();
+        }
     }
 
     public class ReturnScaler

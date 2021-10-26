@@ -28,19 +28,19 @@ namespace NaitonGPS
             
                 try
                 {
-                    UserLoginDetails userData = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
+                UserLoginDetails userData = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
 
-                    Session session = new Session(userData.UserEmail,
-                                                    userData.UserPassword,
-                                                    userData.IsEncrypted,
-                                                    userData.AppId,
-                                                    userData.AppVersion,
-                                                    userData.Domain,
-                                                    null);
+                Session session = new Session(userData.UserEmail,
+                                                userData.UserPassword,
+                                                userData.IsEncrypted,
+                                                userData.AppId,
+                                                userData.AppVersion,
+                                                userData.Domain,
+                                                null);
 
-                    await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
+                await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
 
-                    DataManager.SetUserData(out int roleId);
+                DataManager.SetUserData(out int roleId);
                     var allRoles = DataManager.GetRoles(roleId);
                     var screens = new ScreenTemplatesViewModel().Screens;
 

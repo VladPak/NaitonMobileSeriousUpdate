@@ -16,8 +16,26 @@ namespace NaitonGPS.Models
         public int[] StatusIds { get; set; }
 
         public string ColorStatus { get; set; }
-        
+        public string Client { get; set; }
+        public string[] DeliveryRemark { get; set; }
+        public int[] OrderIds { get; set; }
 
+        public string Remark
+        {
+            get
+            {
+                return DeliveryRemark!=null?string.Join(" ", DeliveryRemark):"";
+            }
+        }
+
+        public string Order
+        {
+            get
+            {
+                return OrderIds!=null?string.Join(",", OrderIds):"";
+            }
+        }
+        
         public string GetColor()
         {
             if (StatusIds != null && StatusIds.Count() > 0 && listColors.ContainsKey(StatusIds[0]))

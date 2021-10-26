@@ -1,5 +1,6 @@
 ﻿using NaitonGPS.Helpers;
 using NaitonGPS.ViewModels;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,7 +20,7 @@ namespace NaitonGPS.Views.PickList
             }
             set
             {
-                _pickListId = value;
+                _pickListId = value;                
                 LoadItems(value);
             }
         }
@@ -31,8 +32,9 @@ namespace NaitonGPS.Views.PickList
         }
 
         void LoadItems(int pickListId)
-        {            
-            BindingContext = new PickListItemsViewModel(pickListId);
+        {
+            var item = DataManager.GetPickLists(pickListId);
+            BindingContext = new PickListItemsViewModel(item.FirstOrDefault());
         }
     }
 }

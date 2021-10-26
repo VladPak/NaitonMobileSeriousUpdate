@@ -53,5 +53,21 @@ namespace SimpleWSA
                                                          WebProxy);
       Token = await sessionService.SendAsync(HttpMethod.GET);
     }
-  }
+
+        public static void RefreshStatic()
+        {
+            string requestUri = $"{SessionContext.Route}{Constants.WS_INITIALIZE_SESSION}";
+            SessionService sessionService = new SessionService(RestServiceAddress,
+                                                               requestUri,
+                                                               Login,
+                                                               Password,
+                                                               IsEncrypted,
+                                                               AppId,
+                                                               AppVersion,
+                                                               Domain,
+                                                               ErrorCodes.Collection,
+                                                               WebProxy);
+            Token = sessionService.SendAsync(HttpMethod.GET).GetAwaiter().GetResult();
+        }
+    }
 }

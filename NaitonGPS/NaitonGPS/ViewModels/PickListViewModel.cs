@@ -17,14 +17,16 @@ namespace NaitonGPS.ViewModels
         public Command LoadItemsCommand { get; }
 
         public Command<PickList> ItemTapped { get; }
-            
-        
+        public Command<PickList> ShowDeliveryRemarkCommand { get; set; }
+
+
         public PickListViewModel()
         {
             Title = "Picklist";
             Picklists = new ObservableCollection<PickList>();
             LoadItemsCommand = new Command(async () => await LoadItems());
-            ItemTapped = new Command<PickList>(OnItemSelected);            
+            ItemTapped = new Command<PickList>(OnItemSelected);
+            ShowDeliveryRemarkCommand = new Command<PickList>(ShowDeliveryRemark);
         }
 
         public PickList SelectedItem
@@ -72,6 +74,13 @@ namespace NaitonGPS.ViewModels
             if (item == null)
                 return;
             await Shell.Current.GoToAsync($"{nameof(PickListItemsPage)}?{nameof(PickList.PickListId)}={item.PickListId}");            
+        }
+
+        async void ShowDeliveryRemark(PickList item)
+        {
+            if (item == null)
+                return;
+            await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
         }
     }
 }

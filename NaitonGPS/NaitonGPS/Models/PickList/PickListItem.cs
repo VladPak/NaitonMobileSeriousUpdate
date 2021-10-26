@@ -12,6 +12,7 @@
         public string Sizes { get; set; }
         public int? StockRackId { get; set; }
         public int StatusId { get; set; }
+        public int Sequence { get; set; }
         public string StatusColor 
         {
             get
