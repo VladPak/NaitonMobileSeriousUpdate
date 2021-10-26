@@ -20,7 +20,7 @@ namespace SimpleWSA
   {
     protected readonly string serviceAddress;
     protected readonly string route;
-    protected readonly string token;
+    protected string token;
     protected readonly Command command;
     protected Dictionary<string, string> errorCodes;
     protected readonly IConvertingService convertingService;
@@ -55,7 +55,12 @@ namespace SimpleWSA
       this.webProxy = webProxy;
     }
 
-    private XmlWriterSettings XmlWriterSettings => new XmlWriterSettings()
+    public void SetToken(string token)
+    {
+      this.token = token;
+    }
+
+    private XmlWriterSettings xmlWriterSettings => new XmlWriterSettings()
     {
       CheckCharacters = true,
       ConformanceLevel = ConformanceLevel.Auto,
@@ -312,7 +317,7 @@ namespace SimpleWSA
     {
       string result = string.Empty;
       StringBuilder sb = new StringBuilder();
-      using (XmlWriter xmlWriter = XmlWriter.Create(sb, this.XmlWriterSettings))
+      using (XmlWriter xmlWriter = XmlWriter.Create(sb, this.xmlWriterSettings))
       {
         xmlWriter.WriteStartElement(Constants.WS_XML_REQUEST_NODE_ROUTINES);
 
@@ -344,7 +349,7 @@ namespace SimpleWSA
     {
       string result = string.Empty;
       StringBuilder sb = new StringBuilder();
-      using (XmlWriter xmlWriter = XmlWriter.Create(sb, this.XmlWriterSettings))
+      using (XmlWriter xmlWriter = XmlWriter.Create(sb, this.xmlWriterSettings))
       {
         this.WriteRoutine(xmlWriter, this.command, this.convertingService);
         xmlWriter.Flush();
@@ -358,7 +363,7 @@ namespace SimpleWSA
     {
       string result = string.Empty;
       StringBuilder sb = new StringBuilder();
-      using (XmlWriter xmlWriter = XmlWriter.Create(sb, this.XmlWriterSettings))
+      using (XmlWriter xmlWriter = XmlWriter.Create(sb, this.xmlWriterSettings))
       {
         this.WriteRoutine(xmlWriter, this.command, this.convertingService, routineType);
         xmlWriter.Flush();
@@ -369,10 +374,7 @@ namespace SimpleWSA
     }
 
     public static string postFormat = null;
-    //protected virtual object Post(string xmlRequest)
-    //{
-    //  return null;
-    //}
+    
     protected virtual object Post(string requestString)
     {
       string query = string.Format(postFormat, this.serviceAddress, this.route, this.token, (int)this.command.OutgoingCompressionType);
@@ -403,10 +405,10 @@ namespace SimpleWSA
         }
       }
       catch (WebException ex)
-            {
-                if (ex.Response is HttpWebResponse response)
-                {
-          this.CreateAndThrowIfRestServiceException(response);
+      {
+        if (ex.Response is HttpWebResponse)
+        {
+          this.CreateAndThrowIfRestServiceException((HttpWebResponse)ex.Response);
         }
         throw;
       }
@@ -446,19 +448,15 @@ namespace SimpleWSA
       }
       catch (WebException ex)
       {
-        if (ex.Response is HttpWebResponse response)
+        if (ex.Response is HttpWebResponse)
         {
-          this.CreateAndThrowIfRestServiceException(response);
+          this.CreateAndThrowIfRestServiceException((HttpWebResponse)ex.Response);
         }
         throw;
       }
       return null;
     }
 
-    //protected virtual Task<object> PostAsync(string xmlRequest)
-    //{
-    //  return null;
-    //}
     protected virtual async Task<object> PostAsync(string requestString)
     {
       HttpClientHandler httpClientHandler = new HttpClientHandler
@@ -499,10 +497,6 @@ namespace SimpleWSA
       return null;
     }
 
-    //protected virtual Task<object> GetAsync(string xmlRequest)
-    //{
-    //  return null;
-    //}
     protected virtual async Task<object> GetAsync(string requestString)
     {
       HttpClientHandler httpClientHandler = new HttpClientHandler
@@ -572,11 +566,12 @@ namespace SimpleWSA
         ErrorReply errorReply = JsonConvert.DeserializeObject<ErrorReply>(source);
         if (errorReply != null)
         {
-                    if (this.errorCodes.TryGetValue(errorReply.Error.ErrorCode, out string wsaMessage) == false)
-                    {
-                        wsaMessage = errorReply.Error.Message;
-                    }
-                    throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
+          string wsaMessage = null;
+          if (this.errorCodes.TryGetValue(errorReply.Error.ErrorCode, out wsaMessage) == false)
+          {
+            wsaMessage = errorReply.Error.Message;
+          }
+          throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
         }
       }
     }
@@ -621,19 +616,21 @@ namespace SimpleWSA
       }
       catch (WebException ex)
       {
-                if (ex.Response is HttpWebResponse httpWebResponse)
-                {
-                    ErrorReply errorReply = JsonConvert.DeserializeObject<ErrorReply>(httpWebResponse.StatusDescription);
-                    if (errorReply != null)
-                    {
-                        if (errorCodes.TryGetValue(errorReply.Error.ErrorCode, out string wsaMessage) == false)
-                        {
-                            wsaMessage = errorReply.Error.Message;
-                        }
-                        throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
-                    }
-                }
-                throw;
+        if (ex.Response is HttpWebResponse)
+        {
+          HttpWebResponse httpWebResponse = (HttpWebResponse)ex.Response;
+          ErrorReply errorReply = JsonConvert.DeserializeObject<ErrorReply>(httpWebResponse.StatusDescription);
+          if (errorReply != null)
+          {
+            string wsaMessage = null;
+            if (errorCodes.TryGetValue(errorReply.Error.ErrorCode, out wsaMessage) == false)
+            {
+              wsaMessage = errorReply.Error.Message;
+            }
+            throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
+          }
+        }
+        throw;
       }
 
       return null;
