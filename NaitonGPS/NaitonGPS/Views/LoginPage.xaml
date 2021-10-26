@@ -5,6 +5,7 @@
              xmlns:customFrame="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:triggers="clr-namespace:NaitonGPS.Triggers"
              x:Class="NaitonGPS.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
              NavigationPage.HasNavigationBar="False"
              xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              iOS:Page.UseSafeArea="False"
