@@ -229,7 +229,6 @@ namespace SimpleWSA
             return result;
         }
 
-
         private string ConvertToBase64String(object value)
         {
             string result = String.Empty;
