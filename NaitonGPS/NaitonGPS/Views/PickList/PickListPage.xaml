@@ -32,10 +32,11 @@
     </Shell.TitleView>
     
     <StackLayout Margin="15">
-        <Grid RowDefinitions="*" ColumnDefinitions="*,*">
-            <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="28" FontAttributes="Bold" TextColor="#5c5c5c"/>
+        <Grid RowDefinitions="*" ColumnDefinitions="0.5*,*">
+            <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="25" FontAttributes="Bold" TextColor="#5c5c5c"/>
 
-            <Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
+            <control:BorderedSearchBar Grid.Row="0" Grid.Column="1" Margin="0,0,0,0" Text="{Binding SearchText, Mode=TwoWay}" Placeholder="Name or Id" />
+            <!--<Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
                 <StackLayout x:Name="gridWithScannerIcon" Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="scan.png" HeightRequest="20"></Image>
                     <Label Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
@@ -66,7 +67,7 @@
                                     <Image BackgroundColor="Transparent" Source="rightarrow.png" Margin="0,0,-10,0" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>
                                     
                                     <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
-                                        <Label FontAttributes="Bold" Text="{Binding Path=Products, StringFormat='Qty {0} &#x2022;'}" FontSize="15" TextColor="Black"/>
+                                        <Label FontAttributes="Bold" Text="{Binding Path=Products, StringFormat='Qty {0:0}  &#x2022;'}" FontSize="15" TextColor="Black"/>
                                         <Label FontAttributes="Bold" Text="{Binding Path=Weight, StringFormat='{0:0.0} kg'}" FontSize="15" TextColor="#000000"/>                                                                                
                                     </StackLayout>
                                     <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,7,0,0">
