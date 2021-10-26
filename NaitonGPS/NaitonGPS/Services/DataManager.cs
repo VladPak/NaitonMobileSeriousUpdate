@@ -248,6 +248,12 @@ namespace NaitonGPS.Services
         }
 
         #endregion Account
+
+
+        private void NewSession()
+        {
+
+        }
     }
 
     public class ReturnScaler
