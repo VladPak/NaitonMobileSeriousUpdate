@@ -4,6 +4,7 @@ using SimpleWSA;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -14,6 +15,36 @@ namespace NaitonGPS.Services
     {
         private static UserLoginDetails _user;
         static int count = 0;
+
+        public async Task<bool> GetWebService(string webserviceLink)
+        {
+            string webservice = String.Format("https://connectionprovider.naiton.com/DataAccess/{0}/restservice/address", webserviceLink);
+
+            try
+            {
+                var httpClient = new HttpClient();
+                var response = await httpClient.GetAsync(webservice);
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var rsToString = responseContent.ToString();
+
+                Preferences.Set("webservicelink", rsToString);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+            return false;
+        }
 
         #region Pick list
 
@@ -38,18 +69,7 @@ namespace NaitonGPS.Services
             }
             catch (Exception ex)
             {
-                if (count < 3)
-                {
-                    await RefreshSession();
-                    count++;
-                    return await GetPickListItems(pickListId);
-                }
-                else
-                {
-                    count = 0;
-                    return new List<PickListItem>();
-                }
-
+                return new List<PickListItem>();
             }
 
         }
@@ -74,18 +94,8 @@ namespace NaitonGPS.Services
                 return pickList;
             }
             catch (Exception ex)
-            {
-                if (count < 3)
-                {
-                    await RefreshSession();
-                    count++;
-                    return await GetPickLists(pickListId);
-                }
-                else
-                {
-                    count = 0;
-                    return new List<PickList>();
-                }
+            {                
+                return new List<PickList>();                
             }
         }
 
@@ -109,18 +119,8 @@ namespace NaitonGPS.Services
                 return rackList.ToList();
             }
             catch (Exception ex)
-            {
-                if (count < 3)
-                {
-                    await RefreshSession();
-                    count++;
-                    return await GetPickRacks(deliveryOrderDetailsId);
-                }
-                else
-                {
-                    count = 0;
-                    return new List<Rack>();
-                }
+            {                
+                return new List<Rack>();                
             }
         }
 
@@ -152,18 +152,8 @@ namespace NaitonGPS.Services
                 return result;
             }
             catch (Exception ex)
-            {
-                if (count < 3)
-                {
-                    await RefreshSession();
-                    count++;
-                    return await SavePickListItems(items);
-                }
-                else
-                {
-                    count = 0;
-                    return 0;
-                }
+            {               
+                return 0;                
             }
         }
 

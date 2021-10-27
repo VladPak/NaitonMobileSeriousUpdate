@@ -6,6 +6,7 @@ namespace NaitonGPS.Services
 {
     public interface IDataManager
     {
+        Task<bool> GetWebService(string webserviceLink);
         UserLoginDetails GetCurrentUser();
         Task<List<PickListItem>> GetPickListItems(int pickListId);
         Task<List<PickList>> GetPickLists(int? pickListId = null);

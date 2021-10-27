@@ -73,7 +73,7 @@ namespace NaitonGPS
                     if (ex.Code == "MI008")
                     {
                         await DisplayAlert("", "The session is refreshed", "Ok");
-                        SessionContext.Refresh();
+                        await SessionContext.Refresh();
                     }
                 }
                 catch (Exception ex)

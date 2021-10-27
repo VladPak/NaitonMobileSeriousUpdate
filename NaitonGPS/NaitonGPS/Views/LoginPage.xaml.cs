@@ -53,7 +53,8 @@ namespace NaitonGPS.Views
 
                 //Call Web service
                 taps++;
-                var response = await ApiService.GetWebService(entCompany.Text);
+
+                var response = await DataManager.GetWebService(entCompany.Text);
 
                 if (response)
                 {
@@ -105,7 +106,7 @@ namespace NaitonGPS.Views
                                     {
                                         if (exRes.Code == "MI008")
                                         {
-                                            SessionContext.Refresh();                                            
+                                            await SessionContext.Refresh();                                            
                                         }
                                         else
                                         {

@@ -5,37 +5,9 @@ using Xamarin.Essentials;
 
 namespace NaitonGPS.Services
 {
-    public static class ApiService
+    public  class ApiService
     {
-        public static async Task<bool> GetWebService(string webserviceLink)
-        {
-            string webservice = String.Format("https://connectionprovider.naiton.com/DataAccess/{0}/restservice/address", webserviceLink);
-
-            try
-            {
-                var httpClient = new HttpClient();
-                var response = await httpClient.GetAsync(webservice);
-                var responseContent = await response.Content.ReadAsStringAsync();
-                var rsToString = responseContent.ToString();
-            
-                Preferences.Set("webservicelink", rsToString);
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-
-            return false;
-        }
+        
 
         public class WebServiceSuccessResponse<TSuccess, TError>
         {
