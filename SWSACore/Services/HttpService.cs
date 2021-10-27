@@ -47,9 +47,9 @@ namespace SimpleWSA.Services
       }
       catch (WebException ex)
       {
-        if (ex.Response is HttpWebResponse)
+                if (ex.Response is HttpWebResponse response)
         {
-          this.CreateAndThrowIfRestServiceException((HttpWebResponse)ex.Response);
+          this.CreateAndThrowIfRestServiceException(response);
         }
         throw;
       }
@@ -86,9 +86,9 @@ namespace SimpleWSA.Services
       }
       catch (WebException ex)
       {
-        if (ex.Response is HttpWebResponse)
+                if (ex.Response is HttpWebResponse response)
         {
-          this.CreateAndThrowIfRestServiceException((HttpWebResponse)ex.Response);
+          this.CreateAndThrowIfRestServiceException(response);
         }
         throw;
       }
@@ -182,12 +182,11 @@ namespace SimpleWSA.Services
         ErrorReply errorReply = JsonConvert.DeserializeObject<ErrorReply>(source);
         if (errorReply != null)
         {
-          string wsaMessage = null;
-          if (ErrorCodes.Collection.TryGetValue(errorReply.Error.ErrorCode, out wsaMessage) == false)
-          {
-            wsaMessage = errorReply.Error.Message;
-          }
-          throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
+                    if (ErrorCodes.Collection.TryGetValue(errorReply.Error.ErrorCode, out string wsaMessage) == false)
+                    {
+                        wsaMessage = errorReply.Error.Message;
+                    }
+                    throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
         }
       }
     }

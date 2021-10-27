@@ -181,9 +181,8 @@ namespace SimpleWSA
       command.ResponseFormat = responseFormat;
       command.OutgoingCompressionType = outgoingCompressType;
       command.ReturnCompressionType = returnCompressionType;
-
-      ICompressionService compressionService = new CompressionService();
-      IConvertingService convertingService = new ConvertingService();
+            _ = new CompressionService();
+            IConvertingService convertingService = new ConvertingService();
 
       if (routineType == RoutineType.Scalar)
       {

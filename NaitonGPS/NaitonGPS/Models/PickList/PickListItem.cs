@@ -13,11 +13,17 @@
         public int? StockRackId { get; set; }
         public int StatusId { get; set; }
         public int? Sequence { get; set; }
+
+        private string statusColor;
         public string StatusColor 
         {
             get
             {
                 return StatusId == 9 ? "#66a103" : "#F2F3F4";
+            }
+            set
+            {
+                statusColor = value;
             }
         }
     }

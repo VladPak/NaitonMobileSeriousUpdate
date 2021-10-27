@@ -15,9 +15,7 @@ namespace NaitonGPS.ViewModels
     {
         private readonly int _pickListId;
         private PickListItem _selectedItem;
-        private List<PickListItem> _oldPickListItems;
-
-
+        
         public ObservableCollection<PickListItem> PicklistItems { get; set; }
         public Command LoadItemsCommand { get; }
         public Command StartEditCommand { get; }
@@ -35,8 +33,7 @@ namespace NaitonGPS.ViewModels
         public PickList PickList { get; set; }
 
         public PickListItemsViewModel(PickList pickList)
-        {
-            _oldPickListItems = new List<PickListItem>();
+        {            
             _pickListId = pickList.PickListId;
             PickList = pickList;
             Title = "Picklist";
@@ -133,12 +130,20 @@ namespace NaitonGPS.ViewModels
             
             PicklistItems.Remove(oldItem);
             if (item.StatusId != 9)
+            {
                 item.StatusId = 9;
+                item.StatusColor = "#66a103";
+                PicklistItems.Add(item);
+            }
             else
+            {
                 item.StatusId = 3;
-            PicklistItems.Add(item);
+                item.StatusColor="#F2F3F4";
+                PicklistItems.Insert(0, item);
+            }
             
             IsChanged = true;
+            IsBusy = true;
         }
 
         async void SetQuantity(object sender,PickListItem item)
@@ -224,7 +229,7 @@ namespace NaitonGPS.ViewModels
             bool save = true;
             var list = new List<PickListItem>();
 
-            foreach (var dod in _oldPickListItems.GroupBy(x=>x.DeliveryOrderDetailsId))
+            foreach (var dod in PicklistItems.GroupBy(x=>x.DeliveryOrderDetailsId))
             {
                 decimal countProducts = 0;
                 foreach (var pli in PicklistItems.Where(x=>x.DeliveryOrderDetailsId==dod.Key))
@@ -232,7 +237,7 @@ namespace NaitonGPS.ViewModels
                     list.Add(pli);
                     countProducts += pli.Quantity;
                 }
-                if (countProducts != _oldPickListItems.Where(x=>x.DeliveryOrderDetailsId==dod.Key).Sum(x => x.Quantity))
+                if (countProducts != PicklistItems.Where(x=>x.DeliveryOrderDetailsId==dod.Key).Sum(x => x.Quantity))
                     save = false;
             }
 

@@ -40,7 +40,7 @@ namespace NaitonGPS.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
             }
 
             return false;
@@ -79,6 +79,7 @@ namespace NaitonGPS.Services
                 else
                 {
                     count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
                     return new List<PickListItem>();
                 }
             }
@@ -115,6 +116,7 @@ namespace NaitonGPS.Services
                 else
                 {
                     count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
                     return new List<PickList>();
                 }
             }
@@ -150,6 +152,7 @@ namespace NaitonGPS.Services
                 else
                 {
                     count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
                     return new List<Rack>();
                 }
             }
@@ -193,6 +196,7 @@ namespace NaitonGPS.Services
                 else
                 {
                     count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
                     return 0;
                 }
             }
@@ -292,21 +296,6 @@ namespace NaitonGPS.Services
                                             currentAppVersion,
                                             Preferences.Get("loginCompany", string.Empty),
                                             null);
-            await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
-        }
-
-        private async Task RefreshSession()
-        {
-            UserLoginDetails userData = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
-
-            Session session = new Session(userData.UserEmail,
-                                            userData.UserPassword,
-                                            userData.IsEncrypted,
-                                            userData.AppId,
-                                            userData.AppVersion,
-                                            userData.Domain,
-                                            null);
-
             await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
         }
     }
