@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Plugin.Connectivity;
 using SimpleWSA;
+using SimpleWSA.Exceptions;
 using System;
 using System.Text.RegularExpressions;
 using Xamarin.Essentials;
