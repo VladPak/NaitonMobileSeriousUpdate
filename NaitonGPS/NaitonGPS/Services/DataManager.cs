@@ -94,8 +94,16 @@ namespace NaitonGPS.Services
                 return pickList;
             }
             catch (Exception ex)
-            {                
-                return new List<PickList>();                
+            {
+                
+                count++;
+                if (count == 1)
+                {
+                    await SessionContext.RefreshAsync();
+                    return await GetPickLists(pickListId);                    
+                }
+                else
+                    return new List<PickList>();
             }
         }
 

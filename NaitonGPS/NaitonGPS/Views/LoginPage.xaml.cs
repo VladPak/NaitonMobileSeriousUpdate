@@ -106,7 +106,7 @@ namespace NaitonGPS.Views
                                     {
                                         if (exRes.Code == "MI008")
                                         {
-                                            await SessionContext.Refresh();                                            
+                                            await SessionContext.RefreshAsync();                                            
                                         }
                                         else
                                         {
