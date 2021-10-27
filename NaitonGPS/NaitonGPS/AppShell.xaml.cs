@@ -22,6 +22,7 @@ namespace NaitonGPS
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
             Routing.RegisterRoute(nameof(PickListItemsPage), typeof(PickListItemsPage));
+            Routing.RegisterRoute(nameof(PickListItemsEditPage), typeof(PickListItemsEditPage));
             SetMenuItems().GetAwaiter();
         }
 

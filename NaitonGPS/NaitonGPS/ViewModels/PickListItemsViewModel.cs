@@ -66,18 +66,12 @@ namespace NaitonGPS.ViewModels
             {
                 if (!IsChanged)
                 {
-                    var pickListItems = await DataManager.GetPickListItems(_pickListId);
-                    if (_oldPickListItems.Count > 0)
-                        pickListItems = _oldPickListItems;
-                    else
+                    var pickListItems = await DataManager.GetPickListItems(_pickListId);                                        
+                    PicklistItems.Clear();
+                    foreach (var item in pickListItems.OrderBy(x => x.StatusId).ThenBy(x => x.Sequence))
                     {
-                        _oldPickListItems = pickListItems;
-                        PicklistItems.Clear();
-                        foreach (var item in pickListItems.OrderBy(x => x.StatusId).ThenBy(x => x.Sequence))
-                        {
-                            PicklistItems.Add(item);
-                        }
-                    }
+                        PicklistItems.Add(item);
+                    }                    
                 }              
 
             }
@@ -215,12 +209,14 @@ namespace NaitonGPS.ViewModels
             IsChanged = true;
         }
 
-        void StartEdit()
+        async void StartEdit()
         {
             IsEditable = true;
             IsViewable = false;
             OnPropertyChanged(nameof(IsViewable));
-            OnPropertyChanged(nameof(IsEditable));            
+            OnPropertyChanged(nameof(IsEditable));
+            
+            await Shell.Current.GoToAsync($"{nameof(PickListItemsEditPage)}?{nameof(PickList.PickListId)}={PickList.PickListId}");
         }
 
         async void SaveToBase() 

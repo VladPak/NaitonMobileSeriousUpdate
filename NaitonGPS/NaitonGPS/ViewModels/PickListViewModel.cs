@@ -81,7 +81,7 @@ namespace NaitonGPS.ViewModels
                     }
                     else
                     {
-                        //IsSearch = false;
+                        IsSearch = false;
                         pickList = _searchPicks;
                     }
                 }

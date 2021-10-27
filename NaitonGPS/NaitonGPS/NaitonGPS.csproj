@@ -44,6 +44,9 @@
     <EmbeddedResource Update="Views\PickList\DeliveryRemarkPopup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\PickList\PickListItemsEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\PickList\PickListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
