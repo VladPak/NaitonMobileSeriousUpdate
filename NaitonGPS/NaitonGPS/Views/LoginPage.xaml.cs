@@ -91,7 +91,7 @@ namespace NaitonGPS.Views
                             {
                                     try
                                     {
-                                         await DataManager.NewSession();
+                                         await DataManager.NewSession(entEmail.Text,entPassword.Text);
 
                                         var user = DataManager.RegistrationServiceSession();
 

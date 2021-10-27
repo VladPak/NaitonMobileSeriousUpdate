@@ -99,7 +99,7 @@ namespace NaitonGPS.Services
                 count++;
                 if (count == 1)
                 {
-                    await SessionContext.RefreshAsync();
+                    await NewSession(_user.UserEmail, _user.UserPassword);
                     return await GetPickLists(pickListId);                    
                 }
                 else
@@ -249,11 +249,11 @@ namespace NaitonGPS.Services
         #endregion Account
 
 
-        public async Task NewSession()
+        public async Task NewSession(string email, string password)
         {
             string currentAppVersion = VersionTracking.CurrentVersion;
-            Session session = new Session(_user.UserEmail,
-                                            _user.UserPassword,
+            Session session = new Session(email,
+                                            password,
                                             false,
                                             6,
                                             currentAppVersion,
