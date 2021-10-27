@@ -137,14 +137,14 @@ namespace NaitonGPS.Services
             try
             {
                 int result = 0;
-                foreach (var item in items.GroupBy(x => x.DeliveryOrderDetailsId))
-                {
-                    SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_addupdateracks");
-                    command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, item.Key);
-                    command.Parameters.Add("_picklistorderdetailsids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.PickListOrderDetailsId).ToArray());
-                    command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StockRackId ?? 0).ToArray());
-                    command.Parameters.Add("_statusids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StatusId).ToArray());
-                    command.Parameters.Add("_quantities", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.Quantity).ToArray());
+                //foreach (var item in items.GroupBy(x => x.DeliveryOrderDetailsId))
+                //{
+                SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_addupdateracks");
+                command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, items.First().DeliveryOrderDetailsId/*item.Key*/);
+                command.Parameters.Add("_picklistorderdetailsids", PgsqlDbType.Integer | PgsqlDbType.Array, new int[] { items.First().PickListOrderDetailsId }/*items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.PickListOrderDetailsId).ToArray()*/);
+                command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, new int[]{items.First().StockRackId??0 } /*items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StockRackId ?? 0).ToArray()*/);
+                    command.Parameters.Add("_statusids", PgsqlDbType.Integer | PgsqlDbType.Array, new int[] { 9}/*items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StatusId).ToArray()*/);
+                    command.Parameters.Add("_quantities", PgsqlDbType.Integer | PgsqlDbType.Array, new int[] { 1}/*items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.Quantity).ToArray()*/);
 
                     command.WriteSchema = WriteSchema.TRUE;
                     string xmlResult = SimpleWSA.Command.Execute(command,
@@ -154,7 +154,7 @@ namespace NaitonGPS.Services
 
                     var dict = JsonConvert.DeserializeObject<Dictionary<string, ReturnScaler>>(xmlResult);
 
-                }
+                //}
 
 
                 return result;

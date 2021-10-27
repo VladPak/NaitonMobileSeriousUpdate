@@ -21,7 +21,10 @@ namespace SimpleWSA
                                                     convertingService,
                                                     //compressionService,
                                                     webProxy)
-    { }
+    {
+            getFormat = "{0}{1}executereturnset?token={2}&value={3}";
+            postFormat = "{0}{1}executereturnsetpost?token={2}&compression={3}";
+        }
 
     static DataSetRequest()
     {

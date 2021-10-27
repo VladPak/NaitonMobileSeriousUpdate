@@ -28,7 +28,10 @@ namespace SimpleWSA
                                                      convertingService,
                                                      //compressionService,
                                                      webProxy)
-    { }
+    {
+            getFormat = "{0}{1}executenonquery?token={2}&value={3}";
+            postFormat = "{0}{1}executenonquerypost?token={2}&compression={3}";
+        }
 
     static NonQueryRequest()
     {
