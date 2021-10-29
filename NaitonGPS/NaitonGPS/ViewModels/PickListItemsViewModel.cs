@@ -133,11 +133,13 @@ namespace NaitonGPS.ViewModels
             {
                 item.StatusId = 9;                
                 PicklistItems.Add(item);
+                LoadItems().GetAwaiter();
             }
             else
             {
                 item.StatusId = 3;                
                 PicklistItems.Insert(0, item);
+                LoadItems().GetAwaiter();
             }
             
             IsChanged = true;            
@@ -238,6 +240,10 @@ namespace NaitonGPS.ViewModels
                 if (PickList.Products != countProducts)
                 {
                     save = false;
+                }
+                else if (PickList.Products == countProducts)
+                {
+                    save = true;
                 }
             }
 
