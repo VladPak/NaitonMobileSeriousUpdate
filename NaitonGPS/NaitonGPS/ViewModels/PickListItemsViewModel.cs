@@ -134,14 +134,16 @@ namespace NaitonGPS.ViewModels
                 item.StatusId = 9;
                 item.StatusColor = "#66a103";
                 PicklistItems.Add(item);
+                LoadItems().GetAwaiter();
             }
             else
             {
                 item.StatusId = 3;
                 item.StatusColor="#F2F3F4";
                 PicklistItems.Insert(0, item);
+                LoadItems().GetAwaiter();
             }
-            
+
             IsChanged = true;
             IsBusy = true;
         }
@@ -241,6 +243,10 @@ namespace NaitonGPS.ViewModels
                 if (PickList.Products != countProducts)
                 {
                     save = false;
+                }
+                else if (PickList.Products == countProducts)
+                {
+                    save = true;
                 }
             }
 
