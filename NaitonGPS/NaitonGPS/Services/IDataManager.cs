@@ -13,7 +13,7 @@ namespace NaitonGPS.Services
         Task<List<Rack>> GetPickRacks(int deliveryOrderDetailsId);
         Roles[] GetRoles(int roleId);
         UserLoginDetails RegistrationServiceSession();
-        Task<int> SavePickListItems(List<PickListItem> items);
+        Task<string> SavePickListItems(List<PickListItem> items);
         void SetUserData(out int roleId);
 
         Task NewSession(string email,string password);

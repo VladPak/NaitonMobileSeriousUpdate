@@ -131,14 +131,12 @@ namespace NaitonGPS.ViewModels
             PicklistItems.Remove(oldItem);
             if (item.StatusId != 9)
             {
-                item.StatusId = 9;
-                item.StatusColor = "#66a103";
+                item.StatusId = 9;                
                 PicklistItems.Add(item);
             }
             else
             {
-                item.StatusId = 3;
-                item.StatusColor="#F2F3F4";
+                item.StatusId = 3;                
                 PicklistItems.Insert(0, item);
             }
             
@@ -243,9 +241,9 @@ namespace NaitonGPS.ViewModels
 
             if (save)
             {
-                int result = await DataManager.SavePickListItems(list);
+                string result = await DataManager.SavePickListItems(list);
                 IsChanged = false;                
-                await App.Current.MainPage.DisplayAlert("Success", "The data has been saved!", "Ok");
+                await App.Current.MainPage.DisplayAlert("Message", result, "Ok");
                 IsBusy = true;
             }
             else

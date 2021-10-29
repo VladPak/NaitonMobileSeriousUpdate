@@ -29,7 +29,7 @@ namespace NaitonGPS.Views
 #if DEBUG
             entCompany.Text = "upstairstest";
             entEmail.Text = "m.aerts@upstairs.com";
-            entPassword.Text = "Gromit12";
+            entPassword.Text = "Welkom2021";
 #endif
 
             scrollToActivate.IsEnabled = false;
