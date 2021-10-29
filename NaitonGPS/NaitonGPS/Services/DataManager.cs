@@ -158,31 +158,39 @@ namespace NaitonGPS.Services
             }
         }
 
-        public async Task<int> SavePickListItems(List<PickListItem> items)
+        public async Task<string> SavePickListItems(List<PickListItem> items)
         {
             try
             {
-                int result = 0;
+                string result = "";
                 foreach (var item in items.GroupBy(x => x.DeliveryOrderDetailsId))
                 {
                     SimpleWSA.Command command = new SimpleWSA.Command("picklistmanager_addupdateracks");
-                command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, item.Key);
-                command.Parameters.Add("_picklistorderdetailsids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.PickListOrderDetailsId).ToArray());
-                command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StockRackId ?? 0).ToArray());
+                    command.Parameters.Add("_deliveryorderdetailsid", PgsqlDbType.Integer, item.Key);
+                    command.Parameters.Add("_picklistorderdetailsids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.PickListOrderDetailsId).ToArray());
+                    command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StockRackId ?? 0).ToArray());
                     command.Parameters.Add("_statusids", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.StatusId).ToArray());
                     command.Parameters.Add("_quantities", PgsqlDbType.Integer | PgsqlDbType.Array, items.Where(i => i.DeliveryOrderDetailsId == item.Key).Select(x => x.Quantity).ToArray());
 
                     command.WriteSchema = WriteSchema.TRUE;
                     string xmlResult = SimpleWSA.Command.Execute(command,
-                                                        RoutineType.Scalar,
+                                                        RoutineType.NonQuery,
                                                         httpMethod: SimpleWSA.HttpMethod.GET,
                                                         responseFormat: ResponseFormat.JSON);
 
                     var dict = JsonConvert.DeserializeObject<Dictionary<string, ReturnScaler>>(xmlResult);
-
+                    int r = dict.FirstOrDefault().Value.Value;
+                    switch (r)
+                    {
+                        case -2: result += $"The number of products in the deliveries does not match. Please reconsider the number of products. For delivery {item.FirstOrDefault().DeliveryOrderDetailsId}";
+                            break;
+                        case -3:result += $"Not enough products on the rack {item.FirstOrDefault().RackName}";
+                            break;
+                    }
                 }
 
-
+                if (string.IsNullOrEmpty(result))
+                    result = "Successfully saved in database.";
                 return result;
             }
             catch (Exception ex)
@@ -197,7 +205,7 @@ namespace NaitonGPS.Services
                 {
                     count = 0;
                     await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
-                    return 0;
+                    return "Error on function database or server service";
                 }
             }
         }
@@ -303,5 +311,8 @@ namespace NaitonGPS.Services
     public class ReturnScaler
     {
         public int ReturnValue { get; set; }
+
+        [JsonProperty("arguments._returnvalue")]
+        public int Value { get; set; }
     }
 }
