@@ -228,18 +228,22 @@ namespace NaitonGPS.ViewModels
         {
             bool save = true;
             var list = new List<PickListItem>();
+            decimal countProducts = 0;
 
             foreach (var dod in PicklistItems.GroupBy(x=>x.DeliveryOrderDetailsId))
             {
-                decimal countProducts = 0;
                 foreach (var pli in PicklistItems.Where(x=>x.DeliveryOrderDetailsId==dod.Key))
                 {
                     list.Add(pli);
                     countProducts += pli.Quantity;
                 }
-                if (countProducts != PicklistItems.Where(x=>x.DeliveryOrderDetailsId==dod.Key).Sum(x => x.Quantity))
+                //if (countProducts != PicklistItems.Where(x=>x.DeliveryOrderDetailsId==dod.Key).Sum(x => x.Quantity))
+                if (PickList.Products != countProducts)
+                {
                     save = false;
+                }
             }
+
 
             if (save)
             {
