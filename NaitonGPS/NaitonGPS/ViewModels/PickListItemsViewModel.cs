@@ -140,8 +140,7 @@ namespace NaitonGPS.ViewModels
                 PicklistItems.Insert(0, item);
             }
             
-            IsChanged = true;
-            IsBusy = true;
+            IsChanged = true;            
         }
 
         async void SetQuantity(object sender,PickListItem item)
