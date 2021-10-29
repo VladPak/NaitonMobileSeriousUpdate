@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Text;
 using System.Threading.Tasks;
+using SimpleWSA.Exceptions;
 using SimpleWSA.Internal;
 using SimpleWSA.Services;
 
@@ -181,8 +182,9 @@ namespace SimpleWSA
       command.ResponseFormat = responseFormat;
       command.OutgoingCompressionType = outgoingCompressType;
       command.ReturnCompressionType = returnCompressionType;
-            _ = new CompressionService();
-            IConvertingService convertingService = new ConvertingService();
+
+      ICompressionService compressionService = new CompressionService();
+      IConvertingService convertingService = new ConvertingService();
 
       if (routineType == RoutineType.Scalar)
       {
@@ -198,7 +200,7 @@ namespace SimpleWSA
           object result = await scalarRequest.SendAsync();
           return Convert.ToString(result);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
           if (ex is RestServiceException rex)
           {
@@ -227,7 +229,7 @@ namespace SimpleWSA
           object result = await nonqueryRequest.SendAsync();
           return Convert.ToString(result);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
           if (ex is RestServiceException rex)
           {
@@ -256,7 +258,7 @@ namespace SimpleWSA
           object result = await dataSetRequest.SendAsync();
           return Convert.ToString(result);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
           if (ex is RestServiceException rex)
           {

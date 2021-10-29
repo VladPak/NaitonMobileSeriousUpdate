@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
+using SimpleWSA.Exceptions;
 using SimpleWSA.Extensions;
 using SimpleWSA.Internal;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -47,9 +46,9 @@ namespace SimpleWSA.Services
       }
       catch (WebException ex)
       {
-                if (ex.Response is HttpWebResponse response)
+        if (ex.Response is HttpWebResponse)
         {
-          this.CreateAndThrowIfRestServiceException(response);
+          this.CreateAndThrowIfRestServiceException((HttpWebResponse)ex.Response);
         }
         throw;
       }
@@ -86,9 +85,9 @@ namespace SimpleWSA.Services
       }
       catch (WebException ex)
       {
-                if (ex.Response is HttpWebResponse response)
+        if (ex.Response is HttpWebResponse)
         {
-          this.CreateAndThrowIfRestServiceException(response);
+          this.CreateAndThrowIfRestServiceException((HttpWebResponse)ex.Response);
         }
         throw;
       }
@@ -182,11 +181,12 @@ namespace SimpleWSA.Services
         ErrorReply errorReply = JsonConvert.DeserializeObject<ErrorReply>(source);
         if (errorReply != null)
         {
-                    if (ErrorCodes.Collection.TryGetValue(errorReply.Error.ErrorCode, out string wsaMessage) == false)
-                    {
-                        wsaMessage = errorReply.Error.Message;
-                    }
-                    throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
+          string wsaMessage = null;
+          if (ErrorCodes.Collection.TryGetValue(errorReply.Error.ErrorCode, out wsaMessage) == false)
+          {
+            wsaMessage = errorReply.Error.Message;
+          }
+          throw new RestServiceException(wsaMessage, errorReply.Error.ErrorCode, errorReply.Error.Message);
         }
       }
     }

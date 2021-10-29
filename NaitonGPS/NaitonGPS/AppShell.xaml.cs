@@ -5,6 +5,7 @@ using NaitonGPS.Views;
 using NaitonGPS.Views.PickList;
 using Newtonsoft.Json;
 using SimpleWSA;
+using SimpleWSA.Exceptions;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
