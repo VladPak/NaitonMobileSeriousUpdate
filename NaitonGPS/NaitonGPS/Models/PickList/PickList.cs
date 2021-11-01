@@ -5,6 +5,8 @@ namespace NaitonGPS.Models
 {
     public class PickList
     {        
+
+
         public int PickListId { get; set; }             
 
         public string PickerName { get; set; }        
