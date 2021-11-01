@@ -306,6 +306,203 @@ namespace NaitonGPS.Services
                                             null);
             await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
         }
+
+        #region Order
+        public async Task<List<Order>> GetOrders(int[] orderIds = null)
+        {
+            try
+            {
+                SimpleWSA.Command command = new SimpleWSA.Command("ordermanager_getfilteredorders_iod");
+                command.Parameters.Add("_orderid", PgsqlDbType.Integer | PgsqlDbType.Array).Value = orderIds ?? (object)DBNull.Value;
+                command.Parameters.Add("_clientid", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_clientorcompany", PgsqlDbType.Varchar).Value = string.Empty;
+                command.Parameters.Add("_sourceid", PgsqlDbType.Integer | PgsqlDbType.Array).Value = new int[] { 0, 1, 2, 3, 4 };
+                command.Parameters.Add("_orderstatusid", PgsqlDbType.Integer | PgsqlDbType.Array).Value = new int[] { 0, 1, 3 };
+                command.Parameters.Add("_businessid", PgsqlDbType.Integer | PgsqlDbType.Array).Value = new int[] { 943 };
+                command.Parameters.Add("_deliveryid", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_availabilityid", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_paymentstatusid", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_invoicestatusid", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_productid", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_productname", PgsqlDbType.Varchar).Value = string.Empty;
+                command.Parameters.Add("_datefrom", PgsqlDbType.Timestamp).Value = DBNull.Value;
+                command.Parameters.Add("_dateto", PgsqlDbType.Timestamp).Value = DBNull.Value;
+                command.Parameters.Add("_clientreference", PgsqlDbType.Varchar).Value = string.Empty;
+                command.Parameters.Add("_clientremark", PgsqlDbType.Varchar).Value = string.Empty;
+                command.Parameters.Add("_internalremark", PgsqlDbType.Varchar).Value = string.Empty;
+                command.Parameters.Add("_deliveryremark", PgsqlDbType.Varchar).Value = string.Empty;
+                command.Parameters.Add("_taskstatusid", PgsqlDbType.Integer).Value = -2;
+                command.Parameters.Add("_billable", PgsqlDbType.Integer).Value = 0;
+                command.Parameters.Add("_deliverydate", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_validationstatusid", PgsqlDbType.Integer, 0);
+                command.Parameters.Add("_schedulestart", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_scheduleend", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_coursevalue", PgsqlDbType.Numeric, 1);
+                command.Parameters.Add("_salesmanagerd", PgsqlDbType.Integer, 0);
+                command.Parameters.Add("_ordertypeid", PgsqlDbType.Integer, DBNull.Value);
+                command.Parameters.Add("_deliveryperiodstart", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_deliveryperiodend", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_shipmentstart", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_shipmentend", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_searchshipmentdateequalnull", PgsqlDbType.Boolean, false);
+                command.Parameters.Add("_dpistart", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_dpiend", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_invstart", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_invend", PgsqlDbType.Timestamp, DBNull.Value);
+                command.Parameters.Add("_deliveryaddresses", PgsqlDbType.Text, string.Empty);
+                command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer, 0);
+                command.Parameters.Add("_subscriptionid", PgsqlDbType.Integer, 0);
+                command.Parameters.Add("_approved", PgsqlDbType.Integer, 0);
+
+                command.Parameters.Add("_company", PgsqlDbType.Text, string.Empty);
+                command.Parameters.Add("_limit", PgsqlDbType.Integer, 100);
+                command.CommandTimeout = 1800;
+
+                command.WriteSchema = WriteSchema.TRUE;
+                string xmlResult = SimpleWSA.Command.Execute(command,
+                                                    RoutineType.DataSet,
+                                                    httpMethod: SimpleWSA.HttpMethod.GET,
+                                                    responseFormat: ResponseFormat.JSON);
+
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, Order[]>>(xmlResult);
+
+                return dict.First().Value.ToList();
+            }
+            catch (Exception ex)
+            {
+                count++;
+                if (count == 1)
+                {
+                    await NewSession(_user.UserEmail, _user.UserPassword);
+                    return await GetOrders();
+                }
+                else
+                {
+                    count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+                    return new List<Order>();
+                }
+            }
+        }
+        public async Task<Tuple<Address, Address>> GetOrderAddress(int orderId, int clientId)
+        {
+            try
+            {
+                SimpleWSA.Command command = new SimpleWSA.Command("ordermanager_getclientaddressdata");
+                command.Parameters.Add("_clientid", PgsqlDbType.Integer).Value = clientId;
+                command.Parameters.Add("_orderid", PgsqlDbType.Integer).Value = orderId;
+
+                command.WriteSchema = WriteSchema.TRUE;
+                string xmlResult = SimpleWSA.Command.Execute(command,
+                                                    RoutineType.DataSet,
+                                                    httpMethod: SimpleWSA.HttpMethod.GET,
+                                                    responseFormat: ResponseFormat.JSON);
+
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, Address[]>>(xmlResult);
+
+                return new Tuple<Address, Address>(new Address(), new Address());
+                //return dict.First().Value.ToList();
+            }
+            catch (Exception ex)
+            {
+                count++;
+                if (count == 1)
+                {
+                    await NewSession(_user.UserEmail, _user.UserPassword);
+                    return await GetOrderAddress(orderId, clientId);
+                }
+                else
+                {
+                    count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+                    return new Tuple<Address, Address>(new Address(), new Address());
+                }
+            }
+        }
+        public async Task<List<OrderDetails>> GetOrderDetails(int orderId)
+        {
+            try
+            {
+                SimpleWSA.Command command = new SimpleWSA.Command("ordermanager_getorderdetailsbyid");
+                command.Parameters.Add("_orderid", PgsqlDbType.Integer).Value = orderId;
+                command.Parameters.Add("_coursevalue", PgsqlDbType.Numeric).Value = 0;
+
+                command.WriteSchema = WriteSchema.TRUE;
+                string xmlResult = SimpleWSA.Command.Execute(command,
+                                                    RoutineType.DataSet,
+                                                    httpMethod: SimpleWSA.HttpMethod.GET,
+                                                    responseFormat: ResponseFormat.JSON);
+
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, OrderDetails[]>>(xmlResult);
+
+                return dict.First().Value.ToList();
+            }
+            catch (Exception ex)
+            {
+                count++;
+                if (count == 1)
+                {
+                    await NewSession(_user.UserEmail, _user.UserPassword);
+                    return await GetOrderDetails(orderId);
+                }
+                else
+                {
+                    count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+                    return new List<OrderDetails>();
+                }
+            }
+        }
+        #endregion
+
+        #region Invoice		
+        public async Task<List<Invoice>> GetInvoices(string companyName, int[] paymentStatuses, int limit, int? clientId, int? orderId = null, int[] invoiceIds = null, int[] businessIds = null)
+        {
+            try
+            {
+                SimpleWSA.Command command = new SimpleWSA.Command("invoicemanager_getfilteredinvoices3_iod");
+                command.Parameters.Add("_invoiceid", PgsqlDbType.Integer | PgsqlDbType.Array).Value = invoiceIds ?? (object)DBNull.Value;
+                command.Parameters.Add("_orderid", PgsqlDbType.Integer).Value = orderId ?? (object)DBNull.Value;
+                command.Parameters.Add("_clientid", PgsqlDbType.Integer, clientId ?? (object)DBNull.Value);
+                command.Parameters.Add("_businessid", PgsqlDbType.Integer | PgsqlDbType.Array, businessIds ?? (object)DBNull.Value);
+                command.Parameters.Add("_clientname", PgsqlDbType.Varchar).Value = DBNull.Value;
+                command.Parameters.Add("_companyname", PgsqlDbType.Varchar).Value = string.IsNullOrEmpty(companyName) ? (object)DBNull.Value : companyName;
+                command.Parameters.Add("_datefrom", PgsqlDbType.Timestamp, DateTime.MinValue);
+                command.Parameters.Add("_dateto", PgsqlDbType.Timestamp, DateTime.MaxValue);
+                command.Parameters.Add("_invoicenumber", PgsqlDbType.Varchar).Value = DBNull.Value;
+                command.Parameters.Add("_countryid", PgsqlDbType.Integer, 0);
+                command.Parameters.Add("_discountgroupid", PgsqlDbType.Integer, 0);
+                command.Parameters.Add("_udffilter", PgsqlDbType.Text).Value = DBNull.Value;
+                command.Parameters.Add("_payments", PgsqlDbType.Integer | PgsqlDbType.Array, paymentStatuses);
+                command.Parameters.Add("_limit", PgsqlDbType.Integer, limit);
+
+                command.WriteSchema = WriteSchema.TRUE;
+                string xmlResult = SimpleWSA.Command.Execute(command,
+                                                    RoutineType.DataSet,
+                                                    httpMethod: SimpleWSA.HttpMethod.GET,
+                                                    responseFormat: ResponseFormat.JSON);
+
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, Invoice[]>>(xmlResult);
+
+                return dict.First().Value.ToList();
+            }
+            catch (Exception ex)
+            {
+                count++;
+                if (count == 1)
+                {
+                    await NewSession(_user.UserEmail, _user.UserPassword);
+                    return await GetInvoices(companyName, paymentStatuses, limit, clientId, orderId, invoiceIds, businessIds);
+                }
+                else
+                {
+                    count = 0;
+                    await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+                    return new List<Invoice>();
+                }
+            }
+        }
+        #endregion
     }
 
     public class ReturnScaler
