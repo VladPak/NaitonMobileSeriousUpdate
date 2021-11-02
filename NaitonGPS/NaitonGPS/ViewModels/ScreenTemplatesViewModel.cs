@@ -1,4 +1,5 @@
 ﻿using NaitonGPS.Models;
+using NaitonGPS.Views;
 using NaitonGPS.Views.PickList;
 using System.Collections.Generic;
 using System.Text;
@@ -6,18 +7,22 @@ using Xamarin.Forms;
 
 namespace NaitonGPS.ViewModels
 {
-    public class ScreenTemplatesViewModel
-    {
-        public List<ShellContentModel> Screens { get; set; }
+	public class ScreenTemplatesViewModel
+	{
+		public List<ShellContentModel> Screens { get; set; }
 
-        public ScreenTemplatesViewModel()
-        {
-            Screens = new List<ShellContentModel>
-            {
-                new ShellContentModel
-                {
-                    RoleRight="WMS_Picklist",Title = "Picklist", Icon = "picklist.png", Route="PickList", ContentTemplate = new DataTemplate(typeof(PickListPage))
-                }//,                                
+		public ScreenTemplatesViewModel()
+		{
+			Screens = new List<ShellContentModel>
+			{
+				new ShellContentModel
+				{
+					RoleRight="WMS_Picklist",Title = "Picklist", Icon = "picklist.png", Route="PickList", ContentTemplate = new DataTemplate(typeof(PickListPage))
+				},
+				 new ShellContentModel
+				{
+					RoleRight="WMS_Picklist",Title = "Orders", Icon = "picklist.png", Route="OrderList", ContentTemplate = new DataTemplate(typeof(OrderListPage))
+				}//, 
                 //new Screens
                 //{
                 //    screenNumber = 2, ScreenTitle = "WMS_Validation", ScreenImage = "validation.png", ScreenLink = new ControlTemplate(typeof(ManagerSecondPage))
@@ -155,6 +160,6 @@ namespace NaitonGPS.ViewModels
                 //    screenNumber = 35, ScreenTitle = "Driver_Dashboard", ScreenImage = "notification.png", ScreenLink = new ControlTemplate(typeof(DefaultTemplate))
                 //}
             };
-        }
-    }
+		}
+	}
 }

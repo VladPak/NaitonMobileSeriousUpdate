@@ -17,7 +17,7 @@ namespace NaitonGPS.ViewModels
 		private string _searchText;
 		private List<Order> _searchOrder;
 
-		public ObservableCollection<Order> List { get; set; }
+		public ObservableCollection<Order> Orders { get; set; }
 
 		public Command LoadItemsCommand { get; }
 
@@ -43,9 +43,10 @@ namespace NaitonGPS.ViewModels
 		public OrderListViewModel()
 		{
 			Title = "Order";
-			List = new ObservableCollection<Order>();
+			Orders = new ObservableCollection<Order>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<Order>(OnItemSelected);
+			ShowDeliveryRemarkCommand = new Command<Order>(ShowDeliveryRemark);
 		}
 
 		public Order SelectedItem
@@ -71,26 +72,27 @@ namespace NaitonGPS.ViewModels
 			try
 			{
 
-				var Order = new List<Order>();
+				var orderList = new List<Order>();
 				if (IsSearch)
 				{
 					if (!string.IsNullOrEmpty(_searchText))
 					{
-						Order = _searchOrder.Where(x => x.OrderId.ToString().ToLower().Contains(_searchText.ToLower()) || x.ClientName.ToLower().Contains(_searchText.ToLower())).ToList();
+						orderList = _searchOrder.Where(x => x.OrderId.ToString().ToLower().Contains(_searchText.ToLower()) || x.ClientName.ToLower().Contains(_searchText.ToLower())).ToList();
 					}
 					else
 					{
 						IsSearch = false;
-						Order = _searchOrder;
+						orderList = _searchOrder;
 					}
 				}
 				else
 				{
-					_searchOrder = Order = await DataManager.GetOrders();
+					_searchOrder = orderList = await DataManager.GetOrders();
 				}
 
 
-				List.Clear();
+				Orders.Clear();
+				orderList.ForEach(item => Orders.Add(item));
 			}
 			catch (Exception ex)
 			{
@@ -107,6 +109,12 @@ namespace NaitonGPS.ViewModels
 			if (item == null)
 				return;
 			await Shell.Current.GoToAsync($"{nameof(OrderDetailsPage)}?{nameof(Order.OrderId)}={item.OrderId}");
+		}
+		async void ShowDeliveryRemark(Order item)
+		{
+			if (item == null)
+				return;
+			//await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
 		}
 	}
 }
