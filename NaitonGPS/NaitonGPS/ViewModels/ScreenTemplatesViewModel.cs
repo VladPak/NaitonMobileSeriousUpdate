@@ -19,10 +19,10 @@ namespace NaitonGPS.ViewModels
 				{
 					RoleRight="WMS_Picklist",Title = "Picklist", Icon = "picklist.png", Route="PickList", ContentTemplate = new DataTemplate(typeof(PickListPage))
 				},
-				 new ShellContentModel
-				{
-					RoleRight="WMS_Picklist",Title = "Orders", Icon = "picklist.png", Route="OrderList", ContentTemplate = new DataTemplate(typeof(OrderListPage))
-				}//, 
+				// new ShellContentModel
+				//{
+				//	RoleRight="WMS_Picklist",Title = "Orders", Icon = "picklist.png", Route="OrderList", ContentTemplate = new DataTemplate(typeof(OrderListPage))
+				//}//, 
                 //new Screens
                 //{
                 //    screenNumber = 2, ScreenTitle = "WMS_Validation", ScreenImage = "validation.png", ScreenLink = new ControlTemplate(typeof(ManagerSecondPage))
