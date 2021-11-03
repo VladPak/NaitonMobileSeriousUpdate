@@ -44,8 +44,10 @@ namespace NaitonGPS.Droid
 
         public override bool OnKeyUp([GeneratedEnum] Keycode keyCode, KeyEvent e)
         {
-         
-                if (keyCode == Keycode.Enter)
+            App.Current.MainPage.DisplayAlert("Info 1", $"1 {(e.Characters ?? "").ToString()}", "Ok");
+            App.Current.MainPage.DisplayAlert("Info 2", $"1 {keyCode.ToString()}", "Ok");
+
+            if (keyCode == Keycode.Enter)
                 {
                 //SearchBar searchBar = FindViewById<SearchBar>(Resource.Id.searchT);
                 //if (e.Characters.Length > 5)
