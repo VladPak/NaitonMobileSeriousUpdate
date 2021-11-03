@@ -138,5 +138,6 @@ namespace NaitonGPS.ViewModels
             }
             //App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
         }
+
     }
 }

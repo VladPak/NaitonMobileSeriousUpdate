@@ -29,6 +29,7 @@ namespace NaitonGPS.Views
             //}
         }
 
+        
         private async void ClosePopup(object sender, EventArgs e)
         {
             await Shell.Current.Navigation.PopModalAsync();

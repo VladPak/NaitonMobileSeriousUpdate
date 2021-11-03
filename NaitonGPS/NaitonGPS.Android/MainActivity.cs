@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Android.Views;
+using Xamarin.Forms;
 
 namespace NaitonGPS.Droid
 {
@@ -34,6 +35,29 @@ namespace NaitonGPS.Droid
             global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        public override bool OnKeyMultiple([GeneratedEnum] Keycode keyCode, int repeatCount, KeyEvent e)
+        {
+            return base.OnKeyMultiple(keyCode, repeatCount, e);
+        }
+
+        public override bool OnKeyUp([GeneratedEnum] Keycode keyCode, KeyEvent e)
+        {
+         
+                if (keyCode == Keycode.Enter)
+                {
+                //SearchBar searchBar = FindViewById<SearchBar>(Resource.Id.searchT);
+                //if (e.Characters.Length > 5)
+                //    {
+                //        m_barcodeValue = new string(m_barcode.ToArray());
+                //        m_barcode.Clear();
+                //        CCDScanned(m_barcodeValue);
+                //    }
+                App.Current.MainPage.DisplayAlert("Info",$"1 {(e.Characters??"").ToString()}","Ok");
+                }
+                
+                return base.OnKeyUp(keyCode, e);
         }
     }
 }
