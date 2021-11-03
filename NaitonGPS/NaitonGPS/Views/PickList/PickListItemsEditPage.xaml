@@ -38,7 +38,7 @@
                             <DataTemplate>
                                 <StackLayout>
                                     <Frame x:DataType="model:PickListItem" HasShadow="False" BackgroundColor="{Binding StatusColor}" CornerRadius="10" Margin="0,10,0,0">
-                                        <Grid x:Name="gridByChildredn" RowDefinitions="0.2*, 0.2*, 0.2*, 0.45*" ColumnDefinitions="*, 0.1*, *" ColumnSpacing="0" RowSpacing="0">
+                                        <Grid x:Name="gridByChildredn" RowDefinitions="0.3*, 0.2*, 0.2*, 0.45*" ColumnDefinitions="*, 0.1*, *" ColumnSpacing="0" RowSpacing="0">
 
                                             <Label x:Name="lbl1" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding ProductName}" TextColor="Black" FontSize="17" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Start"/>
                                             <Label x:Name="lbl2" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="{Binding RackName}" TextColor="Black" FontSize="13" FontAttributes="None" HorizontalOptions="Start" VerticalOptions="Center"/>
