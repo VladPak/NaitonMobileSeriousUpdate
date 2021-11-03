@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.OS;
 using Android.Views;
 using Xamarin.Forms;
+using Newtonsoft.Json;
 
 namespace NaitonGPS.Droid
 {
@@ -42,13 +43,14 @@ namespace NaitonGPS.Droid
             return base.OnKeyMultiple(keyCode, repeatCount, e);
         }
 
+
         public override bool OnKeyUp([GeneratedEnum] Keycode keyCode, KeyEvent e)
         {
-            App.Current.MainPage.DisplayAlert("Info 1", $"1 {(e.Characters ?? "").ToString()}", "Ok");
-            App.Current.MainPage.DisplayAlert("Info 2", $"1 {keyCode.ToString()}", "Ok");
+            App.Current.MainPage.DisplayAlert("Info 1", $"{(JsonConvert.SerializeObject(e))}", "Ok");
+            App.Current.MainPage.DisplayAlert("Info 2", $"{keyCode.ToString()}", "Ok");
 
-            if (keyCode == Keycode.Enter)
-                {
+            if ((int)keyCode == 10036 || keyCode==Keycode.Enter)
+            {
                 //SearchBar searchBar = FindViewById<SearchBar>(Resource.Id.searchT);
                 //if (e.Characters.Length > 5)
                 //    {
@@ -56,10 +58,10 @@ namespace NaitonGPS.Droid
                 //        m_barcode.Clear();
                 //        CCDScanned(m_barcodeValue);
                 //    }
-                App.Current.MainPage.DisplayAlert("Info",$"1 {(e.Characters??"").ToString()}","Ok");
-                }
-                
-                return base.OnKeyUp(keyCode, e);
+                App.Current.MainPage.DisplayAlert("Info 3", $"{(e.Characters ?? "").ToString()}", "Ok");
+            }
+
+            return base.OnKeyUp(keyCode, e);
         }
     }
 }
