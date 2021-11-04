@@ -505,7 +505,59 @@ namespace NaitonGPS.Services
 				}
 			}
 		}
+
+
 		#endregion
+
+		#region Inventory count
+		public async Task<List<InventoryCount>> GetInventoryCount()
+		{
+			try
+			{
+				SimpleWSA.Command command = new SimpleWSA.Command("stockproductinvertorymanager_get");
+
+				command.Parameters.Add("_productid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_businessid", PgsqlDbType.Integer).Value = 1;
+				command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_stockrackid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_stockid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_batchnumber", PgsqlDbType.Text).Value = string.Empty;
+				command.Parameters.Add("_categoryid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_brandid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_statusids", PgsqlDbType.Integer | PgsqlDbType.Array).Value = new int[] { -1, 0, 1, 2 };
+				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = DBNull.Value;
+				command.Parameters.Add("_createddate", PgsqlDbType.Timestamp).Value = DBNull.Value;
+				command.Parameters.Add("_counteddate", PgsqlDbType.Timestamp).Value = DBNull.Value;
+
+				command.WriteSchema = WriteSchema.TRUE;
+				string xmlResult = SimpleWSA.Command.Execute(command,
+													RoutineType.DataSet,
+													httpMethod: SimpleWSA.HttpMethod.GET,
+													responseFormat: ResponseFormat.JSON);
+
+				var dict = JsonConvert.DeserializeObject<Dictionary<string, InventoryCount[]>>(xmlResult);
+
+				return dict.First().Value.ToList();
+			}
+			catch (Exception ex)
+			{
+				count++;
+				if (count == 1)
+				{
+					await NewSession(_user.UserEmail, _user.UserPassword);
+					return await GetInventoryCount();
+				}
+				else
+				{
+					count = 0;
+					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+					return new List<InventoryCount>();
+				}
+			}
+		}
+		#endregion
+
+
 	}
 
 	public class ReturnScaler

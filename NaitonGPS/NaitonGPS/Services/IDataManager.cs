@@ -22,5 +22,10 @@ namespace NaitonGPS.Services
 		Task<Tuple<Address, Address>> GetOrderAddress(int orderId, int clientId);
 		Task<List<OrderDetails>> GetOrderDetails(int orderId);
 		Task<List<Invoice>> GetInvoices(string companyName, int[] paymentStatuses, int limit, int? clientId, int? orderId = null, int[] invoiceIds = null, int[] businessIds = null);
+
+
+		#region InventoryCount
+		Task<List<InventoryCount>> GetInventoryCount();
+		#endregion
 	}
 }

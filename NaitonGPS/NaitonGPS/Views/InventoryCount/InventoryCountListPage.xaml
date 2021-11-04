@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NaitonGPS.Views.InventoryCountListPage"			 
+             xmlns:local="clr-namespace:NaitonGPS.ViewModels"  
+             xmlns:model="clr-namespace:NaitonGPS.Models"  
+             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="true"
+             iOS:Page.PrefersStatusBarHidden="Default"
+             iOS:Page.PreferredStatusBarUpdateAnimation="Fade"
+             xmlns:control="clr-namespace:NaitonGPS.Controls"
+             Shell.NavBarIsVisible="True">
+	<Shell.TitleView>
+		<Grid RowDefinitions="*" ColumnDefinitions="*,*,*">
+			<Image x:Name="imgUser" Grid.Row="0" Grid.Column="0" WidthRequest="30" HeightRequest="30" Source="userInformation.png" HorizontalOptions="Start" VerticalOptions="Center">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="UserInformationPopUp" NumberOfTapsRequired="1"></TapGestureRecognizer>
+				</Image.GestureRecognizers>
+			</Image>
+			<Image Grid.Row="0" Grid.Column="1" Source="logoNaiton.png" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center"/>
+			<Image x:Name="imgNotification" Grid.Row="0" Grid.Column="2" WidthRequest="30" HeightRequest="30" Source="notification.png" HorizontalOptions="End" VerticalOptions="Center">
+				<Image.Margin>
+					<OnPlatform x:TypeArguments="Thickness">
+						<On Platform="Android" Value="0,0,10,0"/>
+						<On Platform="iOS" Value="0,0,25,0"/>
+					</OnPlatform>
+				</Image.Margin>
+			</Image>
+		</Grid>
+	</Shell.TitleView>
+
+	<StackLayout Margin="15">
+		<Grid RowDefinitions="*" ColumnDefinitions="0.5*,*,0.5*">
+			<Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="25" FontAttributes="Bold" TextColor="#5c5c5c"/>
+
+			<control:BorderedSearchBar Grid.Row="0" Grid.Column="1" Margin="0,5,0,0" Text="{Binding SearchText, Mode=TwoWay}" Placeholder="rack" />
+
+			<Button Grid.Row="0" Grid.Column="2" Text="+"></Button>
+			<!--<Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
+                <StackLayout x:Name="gridWithScannerIcon" Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="scan.png" HeightRequest="20"></Image>
+                    <Label Text="Scan" FontSize="17" TextColor="#1B222B" FontAttributes="none" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+            </Frame>-->
+		</Grid>
+
+
+		<RefreshView x:DataType="local:InventoryCountListViewModel" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}" >
+			<CollectionView 
+                ItemsSource="{Binding List}"                 
+                BackgroundColor="Transparent" 
+                VerticalOptions="Fill" 
+                VerticalScrollBarVisibility="Never" 
+                HeightRequest="100">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<StackLayout x:DataType="model:InventoryCount">
+							<Frame HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="15" Margin="0, 12, 0, 0">
+								<Grid RowDefinitions="0.2*, 0.2*, 0.2*" ColumnDefinitions="0.1*, 2*, 6*, 0.8*" ColumnSpacing="0" RowSpacing="0">
+									<Image Margin="-20, 0, 0, 0" phantomExtensions:Images.ImageColor="Black" Source="statusBar.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalOptions="Start" VerticalOptions="Center"></Image>
+
+									<Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=ProductCountId, StringFormat='ID {0}'}" FontSize="17" FontAttributes="None" HorizontalOptions="Start"/>
+									<Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="2" TextColor="#5c5c5c" Grid.ColumnSpan="2" Grid.RowSpan="3" WidthRequest="100" HorizontalTextAlignment="End" VerticalOptions="Center" Text="{Binding ProductName}" FontSize="14" HorizontalOptions="End" FontAttributes="None"/>
+									<Image BackgroundColor="Transparent" Source="rightarrow.png" Margin="0,0,-10,0" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>
+
+									<StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+										<Label FontAttributes="Bold" Text="{Binding Path=ProductName, StringFormat='Qty {0:0}  &#x2022;'}" FontSize="15" TextColor="Black"/>
+										<!--<Label FontAttributes="Bold" Text="{Binding Path=Weight, StringFormat='{0:0.0} kg'}" FontSize="15" TextColor="#000000"/>-->
+									</StackLayout>
+									<StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,7,0,0">
+										<Label LineBreakMode="TailTruncation" WidthRequest="100" Text="{Binding ProductName}" FontSize="15" TextColor="Blue" TextDecorations="Underline">
+											<Label.GestureRecognizers>
+												<TapGestureRecognizer 
+                                                    NumberOfTapsRequired="1"
+                                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:InventoryCountListViewModel}}, Path=ShowDeliveryRemarkCommand}"		
+                                                    CommandParameter="{Binding .}">
+												</TapGestureRecognizer>
+											</Label.GestureRecognizers>
+										</Label>
+									</StackLayout>
+
+								</Grid>
+								<Frame.GestureRecognizers>
+									<TapGestureRecognizer 
+                                        NumberOfTapsRequired="1"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type local:InventoryCountListViewModel}}, Path=ItemTapped}"		
+                                        CommandParameter="{Binding .}">
+									</TapGestureRecognizer>
+								</Frame.GestureRecognizers>
+							</Frame>
+						</StackLayout>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</RefreshView>
+
+	</StackLayout>
+</ContentPage>

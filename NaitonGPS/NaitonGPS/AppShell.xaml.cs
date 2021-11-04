@@ -27,6 +27,10 @@ namespace NaitonGPS
 
 			Routing.RegisterRoute(nameof(OrderListPage), typeof(OrderListPage));
 			Routing.RegisterRoute(nameof(OrderDetailsPage), typeof(OrderDetailsPage));
+
+			Routing.RegisterRoute(nameof(InventoryCountListPage), typeof(InventoryCountListPage));
+			Routing.RegisterRoute(nameof(InventoryCountDetailsPage), typeof(InventoryCountDetailsPage));
+
 			SetMenuItems().GetAwaiter();
 		}
 
@@ -51,7 +55,7 @@ namespace NaitonGPS
 				var allRoles = DataManager.GetRoles(roleId);
 				var screens = new ScreenTemplatesViewModel().Screens;
 
-				var res = screens.Where(screen => allRoles.Any(title => title.Object.Equals(screen.RoleRight))).ToList();
+				var res = screens;//.Where(screen => allRoles.Any(title => title.Object.Equals(screen.RoleRight))).ToList();
 
 				if (res.Count() > 0)
 				{
@@ -61,8 +65,8 @@ namespace NaitonGPS
 						//item.Title = "Picklist";
 						tabBar.Items.Add(item);
 					}
-					ShellContent shi = new ShellContent() { Title = "Test", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
-					tabBar.Items.Add(shi);
+					//ShellContent shi = new ShellContent() { Title = "Test", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
+					//tabBar.Items.Add(shi);
 					appShell.Items.Add(tabBar);
 				}
 				else
