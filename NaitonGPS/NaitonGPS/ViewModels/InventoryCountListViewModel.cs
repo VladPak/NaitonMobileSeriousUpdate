@@ -46,7 +46,6 @@ namespace NaitonGPS.ViewModels
 			List = new ObservableCollection<InventoryCount>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<InventoryCount>(OnItemSelected);
-			ShowDeliveryRemarkCommand = new Command<InventoryCount>(ShowDeliveryRemark);
 		}
 
 		public InventoryCount SelectedItem
@@ -108,14 +107,7 @@ namespace NaitonGPS.ViewModels
 		{
 			if (item == null)
 				return;
-			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(), true);
-			//await Shell.Current.GoToAsync($"{nameof(InventoryCountDetailsPage)}?{nameof(InventoryCount.ProductCountId)}={item.ProductCountId}");
-		}
-		async void ShowDeliveryRemark(InventoryCount item)
-		{
-			if (item == null)
-				return;
-			//await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
+			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item), true);
 		}
 	}
 }
