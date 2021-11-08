@@ -16,7 +16,6 @@ namespace NaitonGPS.Droid
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		List<char> barCode = new List<char>();
-		List<int> unicode = new List<int>();
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
@@ -74,9 +73,7 @@ namespace NaitonGPS.Droid
 				{
 					string barCodeString = new string(barCode.ToArray());
 					App.Current.MainPage.DisplayAlert("Scan code", $"{barCodeString}", "Ok");
-					App.Current.MainPage.DisplayAlert("Scan code", $"{string.Join(',', unicode)}", "Ok");
 					barCode.Clear();
-					unicode.Clear();
 				}
 			}
 			catch (Exception ex)
@@ -89,14 +86,13 @@ namespace NaitonGPS.Droid
 		private DateTime m_lastKeystroke = new DateTime(0);
 		public override bool OnKeyDown([GeneratedEnum] Keycode keyCode, KeyEvent? e)
 		{
-			unicode.Add(e.UnicodeChar);
 			var unicodeChar = (char)e.UnicodeChar;
 
-			//TimeSpan elapsed = (DateTime.Now - m_lastKeystroke);
-			//if (elapsed.TotalMilliseconds > 100)
-			//{
-			//	//barCode.Clear();
-			//}
+			TimeSpan elapsed = (DateTime.Now - m_lastKeystroke);
+			if (elapsed.TotalMilliseconds > 100)
+			{
+				//barCode.Clear();
+			}
 			barCode.Add(unicodeChar);
 			m_lastKeystroke = DateTime.Now;
 
