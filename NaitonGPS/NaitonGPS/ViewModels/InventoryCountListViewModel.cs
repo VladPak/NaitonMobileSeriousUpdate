@@ -103,11 +103,15 @@ namespace NaitonGPS.ViewModels
 			}
 		}
 
-		async void OnItemSelected(InventoryCount item)
+		private async void OnItemSelected(InventoryCount item)
 		{
 			if (item == null)
 				return;
-			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item), true);
+			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item, SetCount), true);
+		}
+		private async void SetCount(object sender, InventoryCount item)
+		{
+
 		}
 	}
 }

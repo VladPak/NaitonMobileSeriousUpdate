@@ -14,11 +14,12 @@ namespace NaitonGPS.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InventoryCountDetailsPage : ContentPage
 	{
-		public InventoryCountDetailsPage(InventoryCount inventoryCount)
+		public InventoryCountDetailsPage(InventoryCount inventoryCount, EventHandler<InventoryCount> item)
 		{
 			InitializeComponent();
-			BindingContext = new InventoryCountDetailsViewModel(inventoryCount);
+			BindingContext = new InventoryCountDetailsViewModel(inventoryCount, item);
 		}
+
 
 		private async void ClosePopup(object sender, EventArgs e)
 		{
