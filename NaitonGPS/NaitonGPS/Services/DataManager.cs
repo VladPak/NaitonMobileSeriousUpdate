@@ -560,7 +560,7 @@ namespace NaitonGPS.Services
 				}
 			}
 		}
-		public async Task<int> SetCount(int businessId, int stockId, int rackId, int[] productIds, int[] batchIds, decimal[] quantities, int[] productCountIds)
+		public async Task<int> SetCount(int businessId, int? stockId, int? rackId, int[] productIds, int[] batchIds, float[] quantities, int[] productCountIds)
 		{
 			try
 			{

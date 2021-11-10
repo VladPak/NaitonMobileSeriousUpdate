@@ -111,7 +111,17 @@ namespace NaitonGPS.ViewModels
 		}
 		private async void SetCount(object sender, InventoryCount item)
 		{
+			var result = await DataManager.SetCount(item.BusinessId,
+													item.StockId,
+													item.StockRackId,
+													item.ProductId != null ? new[] { item.ProductId.Value } : null,
+													item.BatchId != null ? new[] { item.BatchId.Value } : null,
+													new[] { item.CountedStock },
+													new[] { item.ProductCountId });
+			if (result < 0)
+			{
 
+			}
 		}
 	}
 }

@@ -10,14 +10,14 @@
 		<Frame HeightRequest="300" CornerRadius="20" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="white" BorderColor="#cecece" HasShadow="False">
 			<Grid RowDefinitions="0.6*, 0.6*, 0.6*, 0.7*, 0.7*, 0.7*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
 
-				<Label Text="{Binding ProductName}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+				<Label Text="{Binding StockRackName}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
 				<Image Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
 					<Image.GestureRecognizers>
 						<TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
 					</Image.GestureRecognizers>
 				</Image>
 
-				<Label Text="{Binding ProductNameFormat}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
+				<Label Text="{Binding ProductName}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
 				<Label Text="{Binding ProductNameFormat}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
 
 				<Label Text="Stock" Grid.Column="0" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" ></Label>

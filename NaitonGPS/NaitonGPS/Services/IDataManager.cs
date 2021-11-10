@@ -26,7 +26,7 @@ namespace NaitonGPS.Services
 
 		#region InventoryCount
 		Task<List<InventoryCount>> GetInventoryCount();
-		Task<int> SetCount(int businessId, int stockId, int rackId, int[] productIds, int[] batchIds, decimal[] quantities, int[] productCountIds);
+		Task<int> SetCount(int businessId, int? stockId, int? rackId, int[] productIds, int[] batchIds, float[] quantities, int[] productCountIds);
 		#endregion
 	}
 }

@@ -41,28 +41,55 @@ namespace NaitonGPS.ViewModels
 			}
 		}
 
-		void Save(InventoryCount item)
+		async void Save(InventoryCount item)
 		{
+			await Shell.Current.Navigation.PopModalAsync();
 			_callback?.Invoke(this, _inventoryCount);
 		}
 
 		public string ProductName { get { return _inventoryCount.ProductName; } }
 		public string ProductNameFormat { get { return _inventoryCount.ProductNameFormat; } }
-		public string Stock { get { return $"{_inventoryCount.ShouldBeCount}"; } }
+		public string Stock
+		{
+			get
+			{
+				if (_inventoryCount.ShouldBeCount <= 0)
+					return string.Empty;
+
+				return $"{_inventoryCount.ShouldBeCount}";
+			}
+		}
 		public string Count
 		{
-			get { return $"{_inventoryCount.CountedStock}"; }
+			get
+			{
+				if (_inventoryCount.CountedStock <= 0)
+					return string.Empty;
+				return $"{_inventoryCount.CountedStock}";
+			}
 			set
 			{
 				if (!string.IsNullOrWhiteSpace(value) && float.TryParse(value, out var count))
 				{
+					if (_inventoryCount.ShouldBeCount < count)
+					{
+						App.Current.MainPage.DisplayAlert("Sorry", "The value of count not to be more then Stock.", "Ok");
+						return;
+					}
+
 					_inventoryCount.CountedStock = count;
+					OnPropertyChanged(nameof(InventoryCount.CountedStock));
 				}
 			}
 		}
 		public string Damaged
 		{
-			get { return $"{_inventoryCount.Delta}"; }
+			get
+			{
+				if (_inventoryCount.Delta <= 0)
+					return string.Empty;
+				return $"{_inventoryCount.Delta}";
+			}
 			set
 			{
 				if (!string.IsNullOrWhiteSpace(value) && float.TryParse(value, out var delta))
