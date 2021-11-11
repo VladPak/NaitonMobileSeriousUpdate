@@ -1,39 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage BackgroundColor="Transparent" xmlns="http://xamarin.com/schemas/2014/forms" HeightRequest="200"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NaitonGPS.Views.InventoryCountDetailsPage"
+			 x:DataType="viewModel:InventoryCountDetailsViewModel"
 			 xmlns:local="clr-namespace:NaitonGPS.Controls"
              xmlns:viewModel="clr-namespace:NaitonGPS.ViewModels"  
-             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"			 
+             xmlns:phantomExtensions="clr-namespace:PhantomLib.Extensions;assembly=PhantomLib"
              xmlns:model="clr-namespace:NaitonGPS.Models">
-	<ContentPage.Content x:DataType="viewModel:InventoryCountDetailsViewModel">
-		<Frame HeightRequest="300" CornerRadius="20" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="white" BorderColor="#cecece" HasShadow="False">
-			<Grid RowDefinitions="0.6*, 0.6*, 0.6*, 0.7*, 0.7*, 0.7*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+	<Frame CornerRadius="20" VerticalOptions="Center" HorizontalOptions="FillAndExpand" BackgroundColor="white" BorderColor="#cecece" HasShadow="False">
+		<Grid RowDefinitions="0.6*, 0.6*, 0.6*, 0.7*, 0.7*, 0.7*" ColumnDefinitions="*, *, *" RowSpacing="0" ColumnSpacing="0" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
 
-				<Label Text="{Binding StockRackName}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
-				<Image Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
-					<Image.GestureRecognizers>
-						<TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
-					</Image.GestureRecognizers>
-				</Image>
+			<Label Text="{Binding StockRackName}" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+			<Image Source="closePopup.png" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="ClosePopup"></TapGestureRecognizer>
+				</Image.GestureRecognizers>
+			</Image>
 
-				<Label Text="{Binding ProductName}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
-				<Label Text="{Binding ProductNameFormat}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
+			<Label Text="{Binding ProductName}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
+			<Label Text="{Binding ProductNameFormat}" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2" FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" Margin="0,0,0,5"></Label>
 
-				<Label Text="Stock" Grid.Column="0" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" ></Label>
-				<Label Text="Count" Grid.Column="1" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
-				<Label Text="Damaged" Grid.Column="2" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" ></Label>
+			<Label Text="Stock" Grid.Column="0" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" ></Label>
+			<Label Text="Count" Grid.Column="1" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+			<Label Text="Damaged" Grid.Column="2" Grid.Row="3"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start" ></Label>
 
-				<Label Text="{Binding Stock}" Grid.Column="0" Grid.Row="4"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
-				<local:FloatingLabelInput Text="{Binding Count}" ReturnType="Next" Grid.Column="1" Grid.Row="4" Margin="0,0,5,5" x:Name="entCount"/>
-				<local:FloatingLabelInput Text="{Binding Damaged}" ReturnType="Next" Grid.Column="2" Grid.Row="4" Margin="0,0,5,5" x:Name="entDamaged"/>
+			<Label Text="{Binding Stock}" Grid.Column="0" Grid.Row="4"  FontSize="20" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"></Label>
 
-				<!--<Entry Text="{Binding Count, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" Placeholder="Count" Margin="0,0,5,0" ></Entry>
+
+			<local:FloatingLabelInput Text="{Binding Count}" ReturnType="Next" Grid.Column="1" Grid.Row="4" Margin="0,0,5,5" x:Name="entCount" Keyboard="Numeric" />
+			<local:FloatingLabelInput Text="{Binding Damaged}" ReturnType="Next" Grid.Column="2" Grid.Row="4" Margin="0,0,5,5" x:Name="entDamaged" Keyboard="Numeric"/>
+
+			<!--<Entry Text="{Binding Count, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" Placeholder="Count" Margin="0,0,5,0" ></Entry>
 				<Entry Text="{Binding Damaged, Mode=TwoWay}" Grid.Column="2" Grid.Row="4" Placeholder="Damaged" Margin="0,0,5,0"  ></Entry>-->
 
-				<Button Text="Add product" Grid.Row="5" Margin="0,0,5,5" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="5" IsEnabled="False" BorderColor="DimGray" TextColor="DimGray"></Button>
-				<Button Text="Save" Grid.Row="5" Grid.Column="2" Margin="0,0,5,5" CornerRadius="5" FontAttributes="Bold"  TextColor="White" Command="{Binding SaveCommand}" ></Button>
-			</Grid>
-		</Frame>
-	</ContentPage.Content>
+			<Button Text="Add product" Grid.Row="5" Margin="0,0,5,5" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="5" IsEnabled="False" BorderColor="DimGray" TextColor="DimGray"></Button>
+			<Button Text="Save" Grid.Row="5" Grid.Column="2" Margin="0,0,5,5" CornerRadius="5" FontAttributes="Bold"  TextColor="White" Command="{Binding SaveCommand}" ></Button>
+		</Grid>
+	</Frame>
 </ContentPage>

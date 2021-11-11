@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace NaitonGPS.Droid
 {
-	[Activity(Label = "Naiton", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
+	[Activity(Label = "Naiton", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, WindowSoftInputMode = SoftInput.StateVisible | SoftInput.AdjustResize, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
 		List<char> barCode = new List<char>();
