@@ -28,16 +28,16 @@ namespace NaitonGPS.Views
             entPassword.Text = string.Empty;
 
 #if DEBUG
-            //entCompany.Text = "upstairstest";
-            //entEmail.Text = "m.aerts@upstairs.com";
-            //entPassword.Text = "Welkom2021";
+			entCompany.Text = "upstairstest";
+			entEmail.Text = "m.aerts@upstairs.com";
+			entPassword.Text = "Welkom2021";
 
-            entCompany.Text = "hwtest";
-            entEmail.Text = "sadmin@hw.nl";
-            entPassword.Text = "Gromit12";
+			//entCompany.Text = "hwtest";
+			//entEmail.Text = "sadmin@hw.nl";
+			//entPassword.Text = "Gromit12";
 #endif
 
-            scrollToActivate.IsEnabled = false;
+			scrollToActivate.IsEnabled = false;
             imgLogo.TranslationY = 100;
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
             frameLogin.TranslationY = mainDisplayInfo.Height;

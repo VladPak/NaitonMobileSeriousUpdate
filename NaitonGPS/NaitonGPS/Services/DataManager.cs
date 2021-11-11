@@ -518,16 +518,21 @@ namespace NaitonGPS.Services
 
 				command.Parameters.Add("_productid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_businessid", PgsqlDbType.Integer).Value = 1;
-				command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_assignedtoemployeeid", PgsqlDbType.Integer).Value = _user.PersonId;
 				command.Parameters.Add("_stockrackid", PgsqlDbType.Integer).Value = DBNull.Value;
-				command.Parameters.Add("_stockid", PgsqlDbType.Integer).Value = DBNull.Value;
+				command.Parameters.Add("_stockid", PgsqlDbType.Integer).Value = 1;
 				command.Parameters.Add("_batchnumber", PgsqlDbType.Text).Value = string.Empty;
 				command.Parameters.Add("_categoryid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_brandid", PgsqlDbType.Integer).Value = DBNull.Value;
-				command.Parameters.Add("_statusids", PgsqlDbType.Integer | PgsqlDbType.Array).Value = new int[] { -1, 0, 1, 2 };
-				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = DBNull.Value;
-				command.Parameters.Add("_createddate", PgsqlDbType.Timestamp).Value = DBNull.Value;
-				command.Parameters.Add("_counteddate", PgsqlDbType.Timestamp).Value = DBNull.Value;
+				command.Parameters.Add("_statusid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = true;
+				command.Parameters.Add("_createddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
+				command.Parameters.Add("_createddateend", PgsqlDbType.Timestamp).Value = DBNull.Value;
+				command.Parameters.Add("_counteddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
+				command.Parameters.Add("_counteddateend", PgsqlDbType.Timestamp).Value = DBNull.Value;
+				command.Parameters.Add("_delta", PgsqlDbType.Numeric).Value = DBNull.Value;
+				command.Parameters.Add("_productcountid", PgsqlDbType.Integer).Value = 0;
 
 				command.WriteSchema = WriteSchema.TRUE;
 				string xmlResult = SimpleWSA.Command.Execute(command,
@@ -552,6 +557,48 @@ namespace NaitonGPS.Services
 					count = 0;
 					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
 					return new List<InventoryCount>();
+				}
+			}
+		}
+		public async Task<int> SetCount(int businessId, int? stockId, int? rackId, int[] productIds, int[] batchIds, float[] quantities, int[] productCountIds)
+		{
+			try
+			{
+
+				SimpleWSA.Command command = new SimpleWSA.Command("stockproductinvertorymanager_setcount");
+				command.Parameters.Add("_businessid", PgsqlDbType.Integer, businessId);
+				command.Parameters.Add("_stockid", PgsqlDbType.Integer, stockId);
+				command.Parameters.Add("_stockrackid", PgsqlDbType.Integer, rackId);
+				command.Parameters.Add("_productids", PgsqlDbType.Integer | PgsqlDbType.Array, productIds);
+				command.Parameters.Add("_batchids", PgsqlDbType.Integer | PgsqlDbType.Array, batchIds);
+				command.Parameters.Add("_quantities", PgsqlDbType.Numeric | PgsqlDbType.Array, quantities);
+				command.Parameters.Add("_productcountids", PgsqlDbType.Integer | PgsqlDbType.Array, productCountIds);
+				command.Parameters.Add("_userid", PgsqlDbType.Integer, _user.PersonId);
+				command.WriteSchema = WriteSchema.TRUE;
+				string xmlResult = SimpleWSA.Command.Execute(command,
+													RoutineType.NonQuery,
+													httpMethod: SimpleWSA.HttpMethod.GET,
+													responseFormat: ResponseFormat.JSON);
+
+				var dictionary = JsonConvert.DeserializeObject<Dictionary<string, ReturnScaler>>(xmlResult);
+				if (dictionary == null && !dictionary.Any())
+					return -100;
+
+				return dictionary.First().Value.Value;
+			}
+			catch (Exception ex)
+			{
+				count++;
+				if (count == 1)
+				{
+					await NewSession(_user.UserEmail, _user.UserPassword);
+					return await SetCount(businessId, stockId, rackId, productIds, batchIds, quantities, productCountIds);
+				}
+				else
+				{
+					count = 0;
+					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+					return -100;
 				}
 			}
 		}

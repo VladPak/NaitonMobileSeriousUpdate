@@ -96,6 +96,8 @@ namespace NaitonGPS.Droid
 			barCode.Add(unicodeChar);
 			m_lastKeystroke = DateTime.Now;
 
+			App.Current.MainPage.DisplayAlert("Key code ", $"{e.KeyCode}", "Ok");
+
 			return base.OnKeyDown(keyCode, e);
 		}
 	}

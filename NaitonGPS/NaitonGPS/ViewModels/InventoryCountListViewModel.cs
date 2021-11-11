@@ -46,7 +46,6 @@ namespace NaitonGPS.ViewModels
 			List = new ObservableCollection<InventoryCount>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<InventoryCount>(OnItemSelected);
-			ShowDeliveryRemarkCommand = new Command<InventoryCount>(ShowDeliveryRemark);
 		}
 
 		public InventoryCount SelectedItem
@@ -104,18 +103,25 @@ namespace NaitonGPS.ViewModels
 			}
 		}
 
-		async void OnItemSelected(InventoryCount item)
+		private async void OnItemSelected(InventoryCount item)
 		{
 			if (item == null)
 				return;
-			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(), true);
-			//await Shell.Current.GoToAsync($"{nameof(InventoryCountDetailsPage)}?{nameof(InventoryCount.ProductCountId)}={item.ProductCountId}");
+			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item, SetCount), true);
 		}
-		async void ShowDeliveryRemark(InventoryCount item)
+		private async void SetCount(object sender, InventoryCount item)
 		{
-			if (item == null)
-				return;
-			//await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
+			var result = await DataManager.SetCount(item.BusinessId,
+													item.StockId,
+													item.StockRackId,
+													item.ProductId != null ? new[] { item.ProductId.Value } : null,
+													item.BatchId != null ? new[] { item.BatchId.Value } : null,
+													new[] { item.CountedStock },
+													new[] { item.ProductCountId });
+			if (result < 0)
+			{
+
+			}
 		}
 	}
 }
