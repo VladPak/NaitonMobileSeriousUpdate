@@ -91,7 +91,7 @@ namespace NaitonGPS.Droid
 			TimeSpan elapsed = (DateTime.Now - m_lastKeystroke);
 			if (elapsed.TotalMilliseconds > 100)
 			{
-				//barCode.Clear();
+				barCode.Clear();
 			}
 			barCode.Add(unicodeChar);
 			m_lastKeystroke = DateTime.Now;
