@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FreshMvvm" Version="4.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PhantomLib" Version="2.0.7" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
