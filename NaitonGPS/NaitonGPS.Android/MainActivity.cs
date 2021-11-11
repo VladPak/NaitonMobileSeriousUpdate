@@ -9,12 +9,15 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
+using FreshMvvm;
 
 namespace NaitonGPS.Droid
 {
 	[Activity(Label = "Naiton", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
 	{
+		private IScanner _scanner = null;
+
 		List<char> barCode = new List<char>();
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -29,6 +32,8 @@ namespace NaitonGPS.Droid
 			ZXing.Net.Mobile.Forms.Android.Platform.Init();
 			ZXing.Mobile.MobileBarcodeScanner.Initialize(Application);
 
+			_scanner = new ScannerAndroid();
+			FreshIOC.Container.Register(_scanner);
 
 			LoadApplication(new App());
 		}

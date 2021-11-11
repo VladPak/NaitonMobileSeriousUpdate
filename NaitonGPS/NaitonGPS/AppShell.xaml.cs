@@ -65,9 +65,9 @@ namespace NaitonGPS
 						//item.Title = "Picklist";
 						tabBar.Items.Add(item);
 					}
-					//ShellContent shi = new ShellContent() { Title = "Test", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
-					//tabBar.Items.Add(shi);
-					appShell.Items.Add(tabBar);
+                    ShellContent shi = new ShellContent() { Title = "Zebra", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
+                    tabBar.Items.Add(shi);
+                    appShell.Items.Add(tabBar);
 				}
 				else
 				{

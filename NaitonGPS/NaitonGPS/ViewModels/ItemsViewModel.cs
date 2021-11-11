@@ -1,6 +1,8 @@
-﻿using NaitonGPS.Models;
+﻿using FreshMvvm;
+using NaitonGPS.Models;
 using NaitonGPS.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -11,7 +13,7 @@ namespace NaitonGPS.ViewModels
     public class ItemsViewModel : BaseViewModel
     {
         private Item _selectedItem;
-
+        
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
@@ -55,6 +57,18 @@ namespace NaitonGPS.ViewModels
         {
             IsBusy = true;
             SelectedItem = null;
+
+            var scanner = FreshIOC.Container.Resolve<IScanner>();
+
+            scanner.Enable();
+            scanner.OnScanDataCollected += ScannedDataCollected;
+            scanner.OnStatusChanged += ScannedStatusChanged;
+
+            var config = new ZebraScannerConfig();
+            config.IsUPCE0 = false;
+            config.IsUPCE1 = false;
+
+            scanner.SetConfig(config);
         }
 
         public Item SelectedItem
@@ -79,6 +93,22 @@ namespace NaitonGPS.ViewModels
 
             // This will push the ItemDetailPage onto the navigation stack
             await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
+        }
+
+        private void ScannedDataCollected(object sender, StatusEventArgs a_status)
+        {
+            Item item = new Item
+            {
+                Id = Guid.NewGuid().ToString(),
+                Text = a_status.Data,
+                Description = a_status.BarcodeType
+            };
+            Items.Add(item);
+        }
+
+        private void ScannedStatusChanged(object sender, string a_message)
+        {
+            string status = a_message;
         }
     }
 }
