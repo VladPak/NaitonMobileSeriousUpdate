@@ -28,6 +28,18 @@ namespace NaitonGPS.ViewModels
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
+
+            var scanner = FreshIOC.Container.Resolve<IScanner>();
+
+            scanner.Enable();
+            scanner.OnScanDataCollected += ScannedDataCollected;
+            scanner.OnStatusChanged += ScannedStatusChanged;
+
+            var config = new ZebraScannerConfig();
+            config.IsUPCE0 = false;
+            config.IsUPCE1 = false;
+
+            scanner.SetConfig(config);
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -57,18 +69,6 @@ namespace NaitonGPS.ViewModels
         {
             IsBusy = true;
             SelectedItem = null;
-
-            var scanner = FreshIOC.Container.Resolve<IScanner>();
-
-            scanner.Enable();
-            scanner.OnScanDataCollected += ScannedDataCollected;
-            scanner.OnStatusChanged += ScannedStatusChanged;
-
-            var config = new ZebraScannerConfig();
-            config.IsUPCE0 = false;
-            config.IsUPCE1 = false;
-
-            scanner.SetConfig(config);
         }
 
         public Item SelectedItem

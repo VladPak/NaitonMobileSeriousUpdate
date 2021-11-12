@@ -49,41 +49,17 @@ namespace NaitonGPS.Droid
 		public override bool OnKeyUp([GeneratedEnum] Keycode keyCode, KeyEvent e)
 		{
 			try
-			{
-
-				//if (e.Device != null)
-				//	App.Current.MainPage.DisplayAlert("Device info", $"{e.Device}", "Ok");
-
-				//App.Current.MainPage.DisplayAlert("Device Id", $"{e.DeviceId}", "Ok");
-				//App.Current.MainPage.DisplayAlert("Event time", $"{e.EventTime}", "Ok");
-				//App.Current.MainPage.DisplayAlert("Scan code", $"{e.ScanCode}", "Ok");
-				//App.Current.MainPage.DisplayAlert("Source", $"{e.Source}", "Ok");
-				//App.Current.MainPage.DisplayAlert("Info 2", $"{keyCode}", "Ok");
-
-				////e.Device.KeyCharacterMap
-
-				//if ((int)keyCode == 10036 || keyCode == Keycode.Enter)
-				//{
-				//	//SearchBar searchBar = FindViewById<SearchBar>(Resource.Id.searchT);
-				//	//if (e.Characters.Length > 5)
-				//	//    {
-				//	//        m_barcodeValue = new string(m_barcode.ToArray());
-				//	//        m_barcode.Clear();
-				//	//        CCDScanned(m_barcodeValue);
-				//	//    }
-				//	App.Current.MainPage.DisplayAlert("Info 3", $"I'm in", "Ok");
-				//}
-				//App.Current.MainPage.DisplayAlert("Scan code", $"{keyCode}", "Ok");
+			{	
 				if (e.KeyCode == Keycode.Enter || (int)keyCode == 10036)
 				{
 					string barCodeString = new string(barCode.ToArray());
-					App.Current.MainPage.DisplayAlert("Scan code", $"{barCodeString}", "Ok");
+					//App.Current.MainPage.DisplayAlert("Scan code", $"{barCodeString}", "Ok");
 					barCode.Clear();
 				}
 			}
 			catch (Exception ex)
 			{
-				App.Current.MainPage.DisplayAlert("Error", $"{ex.Message}", "Ok");
+				//App.Current.MainPage.DisplayAlert("Error", $"{ex.Message}", "Ok");
 			}
 			return base.OnKeyUp(keyCode, e);
 		}
@@ -101,7 +77,7 @@ namespace NaitonGPS.Droid
 			barCode.Add(unicodeChar);
 			m_lastKeystroke = DateTime.Now;
 
-			App.Current.MainPage.DisplayAlert("Key code ", $"{e.KeyCode}", "Ok");
+			//App.Current.MainPage.DisplayAlert("Key code ", $"{e.KeyCode}", "Ok");
 
 			return base.OnKeyDown(keyCode, e);
 		}

@@ -18,15 +18,6 @@ namespace NaitonGPS.Views
         {
             InitializeComponent();
             BindingContext = new RacksViewModel(pickListItem,callBack, ChangeInput);
-
-            //if (IsSmallScreen)
-            //{
-            //    lblScanToHide.IsVisible = false;
-            //}
-            //else if (IsBigScreen)
-            //{
-            //    lblScanToHide.IsVisible = true;
-            //}
         }
 
         
@@ -37,7 +28,7 @@ namespace NaitonGPS.Views
 
         void ChangeInput(object sender, bool load)
         {
-            searchText.Focus();
+            //searchText.Focus();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Models;
+﻿using FreshMvvm;
+using NaitonGPS.Models;
 using NaitonGPS.Views;
 using NaitonGPS.Views.PickList;
 using System;

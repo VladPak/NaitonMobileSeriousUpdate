@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Models;
+﻿using FreshMvvm;
+using NaitonGPS.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -53,7 +54,19 @@ namespace NaitonGPS.ViewModels
             ScanningCommand = new Command(Scanning);
             IsBusy = true;
             LoadItems().GetAwaiter();
-            IsBusy = false;                     
+            IsBusy = false;
+
+            var scanner = FreshIOC.Container.Resolve<IScanner>();
+
+            scanner.Enable();
+            scanner.OnScanDataCollected += ScannedDataCollected;
+            scanner.OnStatusChanged += ScannedStatusChanged;
+
+            var config = new ZebraScannerConfig();
+            config.IsUPCE0 = false;
+            config.IsUPCE1 = false;
+
+            scanner.SetConfig(config);
         }
 
         async Task LoadItems()
@@ -137,6 +150,16 @@ namespace NaitonGPS.ViewModels
                     TappedItem(item);
             }
             //App.Current.MainPage.DisplayAlert("Scanner", msg, "Ok");
+        }
+
+        private void ScannedDataCollected(object sender, StatusEventArgs a_status)
+        {
+            SearchText = a_status.Data;
+        }
+
+        private void ScannedStatusChanged(object sender, string a_message)
+        {
+            string status = a_message;
         }
 
     }
