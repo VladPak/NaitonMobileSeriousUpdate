@@ -14,7 +14,7 @@ namespace NaitonGPS.ViewModels
     public class RacksViewModel : BaseViewModel
     {
         private event EventHandler<Rack> CallBackMethod;
-        private event EventHandler<bool> AfterLoadData;
+        private event EventHandler<string> AfterLoadData;
         private readonly PickListItem _pickListItem;
         private string _searchText; 
 
@@ -43,7 +43,7 @@ namespace NaitonGPS.ViewModels
             }
         }
 
-        public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack, EventHandler<bool> afterLoadData)
+        public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack, EventHandler<string> afterLoadData)
         {
             _pickListItem = pickListItem;
             CallBackMethod = callBack;
@@ -109,8 +109,7 @@ namespace NaitonGPS.ViewModels
             }
             finally
             {
-                IsBusy = false;
-                AfterLoadData.Invoke(this, true);
+                IsBusy = false;                
             }
         }
 
@@ -153,14 +152,13 @@ namespace NaitonGPS.ViewModels
         }
 
         private void ScannedDataCollected(object sender, StatusEventArgs a_status)
-        {
-            SearchText = a_status.Data;
+        {            
+            AfterLoadData.Invoke(this, a_status.Data);
         }
 
         private void ScannedStatusChanged(object sender, string a_message)
         {
             string status = a_message;
         }
-
     }
 }

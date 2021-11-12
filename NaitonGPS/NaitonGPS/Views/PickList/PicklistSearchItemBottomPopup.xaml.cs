@@ -26,9 +26,9 @@ namespace NaitonGPS.Views
             await Shell.Current.Navigation.PopModalAsync();
         }
 
-        void ChangeInput(object sender, bool load)
+        void ChangeInput(object sender, string scanText)
         {
-            //searchText.Focus();
+            searchText.Text = scanText;
         }
     }
 }
