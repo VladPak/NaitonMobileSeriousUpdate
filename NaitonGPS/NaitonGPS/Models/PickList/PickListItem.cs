@@ -22,6 +22,6 @@
             }            
         }
 
-        
+        public bool IsScanned { get; set; }
     }
 }

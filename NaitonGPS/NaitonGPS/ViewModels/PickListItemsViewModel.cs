@@ -16,6 +16,7 @@ namespace NaitonGPS.ViewModels
     {
         private readonly int _pickListId;
         private PickListItem _selectedItem;
+        private EventHandler<PickListItem> SCrollSelected;
         
         public ObservableCollection<PickListItem> PicklistItems { get; set; }
         public Command LoadItemsCommand { get; }
@@ -34,9 +35,11 @@ namespace NaitonGPS.ViewModels
         public PickList PickList { get; set; }
         public bool IsScanning { get; set; }
 
-        public PickListItemsViewModel(PickList pickList, bool isEditable)
+        public PickListItemsViewModel(PickList pickList, bool isEditable, EventHandler<PickListItem> scrollToSelected)
         {            
             _pickListId = pickList.PickListId;
+            if (scrollToSelected != null)
+                SCrollSelected = scrollToSelected;
             IsEditable = isEditable;
             PickList = pickList;
             Title = "Picklist";
@@ -59,6 +62,8 @@ namespace NaitonGPS.ViewModels
             if (isEditable)
             {
                 var scanner = FreshIOC.Container.Resolve<IScanner>();
+                scanner.OnScanDataCollected -= ScannedDataCollected;
+                scanner.OnStatusChanged -= ScannedStatusChanged;
 
                 scanner.Enable();
                 scanner.OnScanDataCollected += ScannedDataCollected;
@@ -71,7 +76,6 @@ namespace NaitonGPS.ViewModels
                 scanner.SetConfig(config);
             }
         }
-
 
         async Task LoadItems()
         {
@@ -194,10 +198,15 @@ namespace NaitonGPS.ViewModels
                 PicklistItems.Remove(oldItem);
                 if (IsScanning)
                 {
+                    item.IsScanned = true;
                     IsScanning = false;
                     item.StatusId = 9;
+                    PicklistItems.Add(item);
                 }
-                PicklistItems.Insert(insertIndex,item);
+                else
+                {
+                    PicklistItems.Insert(insertIndex, item);
+                }
             }
             if(newItem.Quantity > 0)
             {
@@ -290,8 +299,11 @@ namespace NaitonGPS.ViewModels
             var item = PicklistItems.FirstOrDefault(x => x.RackName == a_status.Data.TrimEnd());
             if (item != null)
             {
+                if (SCrollSelected != null)
+                    SCrollSelected.Invoke(this,item);
                 IsScanning = true;
-                ChangeQuantity(item);
+                if(!item.IsScanned)
+                    ChangeQuantity(item);
             }
             else
             {

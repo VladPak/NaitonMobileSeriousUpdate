@@ -57,6 +57,8 @@ namespace NaitonGPS.ViewModels
             IsBusy = false;
 
             var scanner = FreshIOC.Container.Resolve<IScanner>();
+            scanner.OnScanDataCollected -= ScannedDataCollected;
+            scanner.OnStatusChanged -= ScannedStatusChanged;
 
             scanner.Enable();
             scanner.OnScanDataCollected += ScannedDataCollected;

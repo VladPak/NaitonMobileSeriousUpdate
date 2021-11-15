@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Services;
+﻿using NaitonGPS.Models;
+using NaitonGPS.Services;
 using NaitonGPS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,12 @@ namespace NaitonGPS.Views.PickList
         async void LoadItems(int pickListId)
         {
             var item = await DataManager.GetPickLists(pickListId);
-            BindingContext = new PickListItemsViewModel(item.FirstOrDefault(),true);
+            BindingContext = new PickListItemsViewModel(item.FirstOrDefault(),true, ScroolToSelected);
+        }
+
+        void ScroolToSelected(object sender,PickListItem item)
+        {
+            collectionView.ScrollTo(item);
         }
     }
 }
