@@ -38,7 +38,7 @@ namespace NaitonGPS.Views.PickList
         async void LoadItems(int pickListId)
         {
             var item = await DataManager.GetPickLists(pickListId);
-            BindingContext = new PickListItemsViewModel(item.FirstOrDefault());
+            BindingContext = new PickListItemsViewModel(item.FirstOrDefault(),true);
         }
     }
 }

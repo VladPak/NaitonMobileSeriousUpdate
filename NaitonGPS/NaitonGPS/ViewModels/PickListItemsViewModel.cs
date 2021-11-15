@@ -32,10 +32,12 @@ namespace NaitonGPS.ViewModels
         public bool IsViewable { get; set; }
         public bool IsChanged { get; set; }
         public PickList PickList { get; set; }
+        public bool IsScanning { get; set; }
 
-        public PickListItemsViewModel(PickList pickList)
+        public PickListItemsViewModel(PickList pickList, bool isEditable)
         {            
             _pickListId = pickList.PickListId;
+            IsEditable = isEditable;
             PickList = pickList;
             Title = "Picklist";
             PicklistItems = new ObservableCollection<PickListItem>();
@@ -51,8 +53,23 @@ namespace NaitonGPS.ViewModels
             IsBusy = true;
             LoadItems().GetAwaiter();
             IsBusy = false;
-            IsViewable = true;            
+            IsViewable = !isEditable;
             SelectedItem = null;
+
+            if (isEditable)
+            {
+                var scanner = FreshIOC.Container.Resolve<IScanner>();
+
+                scanner.Enable();
+                scanner.OnScanDataCollected += ScannedDataCollected;
+                scanner.OnStatusChanged += ScannedStatusChanged;
+
+                var config = new ZebraScannerConfig();
+                config.IsUPCE0 = false;
+                config.IsUPCE1 = false;
+
+                scanner.SetConfig(config);
+            }
         }
 
 
@@ -175,13 +192,18 @@ namespace NaitonGPS.ViewModels
             if (oldItem.PickListOrderDetailsId != 0)
             {
                 PicklistItems.Remove(oldItem);
+                if (IsScanning)
+                {
+                    IsScanning = false;
+                    item.StatusId = 9;
+                }
                 PicklistItems.Insert(insertIndex,item);
             }
             if(newItem.Quantity > 0)
             {
                 PicklistItems.Add(newItem);
                 await App.Current.MainPage.DisplayAlert("Information", "Added a new row due to lack of quantity of products.", "Ok");
-            }            
+            }
             IsChanged = true;
         }
 
@@ -213,12 +235,7 @@ namespace NaitonGPS.ViewModels
         }
 
         async void StartEdit()
-        {
-            IsEditable = true;
-            IsViewable = false;
-            OnPropertyChanged(nameof(IsViewable));
-            OnPropertyChanged(nameof(IsEditable));
-            
+        {   
             await Shell.Current.GoToAsync($"{nameof(PickListItemsEditPage)}?{nameof(PickList.PickListId)}={PickList.PickListId}");
         }
 
@@ -266,6 +283,25 @@ namespace NaitonGPS.ViewModels
             if (item == null)
                 return;
             await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
+        }
+
+        private void ScannedDataCollected(object sender, StatusEventArgs a_status)
+        {
+            var item = PicklistItems.FirstOrDefault(x => x.RackName == a_status.Data.TrimEnd());
+            if (item != null)
+            {
+                IsScanning = true;
+                ChangeQuantity(item);
+            }
+            else
+            {
+                App.Current.MainPage.DisplayAlert("Sorry", "This rack does not contain a product on this picklist", "Ok");
+            }
+        }
+
+        private void ScannedStatusChanged(object sender, string a_message)
+        {
+            string status = a_message;
         }
     }
 }

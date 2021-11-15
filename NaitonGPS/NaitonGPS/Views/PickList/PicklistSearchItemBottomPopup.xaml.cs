@@ -28,7 +28,8 @@ namespace NaitonGPS.Views
 
         void ChangeInput(object sender, string scanText)
         {
-            searchText.Text = scanText;
+            searchText.Focus();
+            searchText.Text = scanText.TrimEnd();
         }
     }
 }
