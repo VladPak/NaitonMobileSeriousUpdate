@@ -519,14 +519,14 @@ namespace NaitonGPS.Services
 				command.Parameters.Add("_productid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_businessid", PgsqlDbType.Integer).Value = 1;
 				command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer).Value = 0;
-				command.Parameters.Add("_assignedtoemployeeid", PgsqlDbType.Integer).Value = _user.PersonId;
+				command.Parameters.Add("_assignedtoemployeeid", PgsqlDbType.Integer).Value = 0;// _user.PersonId;
 				command.Parameters.Add("_stockrackid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_stockid", PgsqlDbType.Integer).Value = 1;
 				command.Parameters.Add("_batchnumber", PgsqlDbType.Text).Value = string.Empty;
 				command.Parameters.Add("_categoryid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_brandid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_statusid", PgsqlDbType.Integer).Value = 0;
-				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = true;
+				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = DBNull.Value;
 				command.Parameters.Add("_createddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
 				command.Parameters.Add("_createddateend", PgsqlDbType.Timestamp).Value = DBNull.Value;
 				command.Parameters.Add("_counteddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
