@@ -50,11 +50,13 @@ namespace NaitonGPS.ViewModels
 		public string StockRackName { get { return _inventoryCount.StockRackName; } }
 		public string ProductName { get { return _inventoryCount.ProductName; } }
 		public string ProductNameFormat { get { return _inventoryCount.ProductNameFormat; } }
+		public string Variants { get { return _inventoryCount.Variants?.Trim(); } }
+
 		public string Stock
 		{
 			get
 			{
-				return $"{_inventoryCount.ShouldBeCount}";
+				return $"{_inventoryCount.QuantityInStock}";
 			}
 		}
 		public string Count
@@ -76,7 +78,7 @@ namespace NaitonGPS.ViewModels
 						OnPropertyChanged(nameof(InventoryCountDetailsViewModel.Count));
 						return;
 					}
-					if (_inventoryCount.ShouldBeCount < count)
+					if (_inventoryCount.QuantityInStock < count)
 					{
 						App.Current.MainPage.DisplayAlert("Error", "The value of count can not be more then Stock!", "Ok");
 						OnPropertyChanged(nameof(InventoryCountDetailsViewModel.Count));
@@ -84,10 +86,11 @@ namespace NaitonGPS.ViewModels
 					}
 
 					_inventoryCount.CountedStock = count;
-					OnPropertyChanged(nameof(InventoryCount.CountedStock));
+					//OnPropertyChanged(nameof(InventoryCount.CountedStock));
 				}
 			}
 		}
+
 		public string Damaged
 		{
 			get

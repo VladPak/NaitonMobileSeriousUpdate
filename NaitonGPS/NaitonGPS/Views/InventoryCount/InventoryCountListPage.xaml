@@ -65,7 +65,7 @@
 
 									<Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=StockRackName}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
 									<Label BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=ProductName}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
-									<Label BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=ProductNameFormat}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
+									<Label BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=Variants}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
 									
 									<Image BackgroundColor="Transparent" Source="rightarrow.png" Margin="0,0,-10,0" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>															
 								</Grid>
