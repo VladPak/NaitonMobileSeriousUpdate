@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Models;
+﻿using NaitonGPS.Interfaces;
+using NaitonGPS.Models;
 using NaitonGPS.Services;
 using NaitonGPS.ViewModels;
 using NaitonGPS.Views;
@@ -16,6 +17,7 @@ namespace NaitonGPS
 	public partial class AppShell : Xamarin.Forms.Shell
 	{
 		public IDataManager DataManager => DependencyService.Get<IDataManager>();
+		public IRoleManager RoleManager => DependencyService.Get<IRoleManager>();
 
 		public AppShell()
 		{
@@ -51,11 +53,13 @@ namespace NaitonGPS
 
 				await session.CreateByConnectionProviderAddressAsync("https://connectionprovider.naiton.com/");
 
-				DataManager.SetUserData(out int roleId);
-				var allRoles = DataManager.GetRoles(roleId);
-				var screens = new ScreenTemplatesViewModel().Screens;
+				DataManager.SetUser(out int roleId);
 
-				var res = screens.Where(screen => allRoles.Any(title => title.Object.Equals(screen.RoleRight))).ToList();
+				var roles = DataManager.GetRoles(roleId);
+
+				RoleManager.Set(roles.ToList());
+
+				var res = ScreenTemplatesViewModel.Screens.Where(screen => roles.Any(role => role.Object.Equals(screen.RoleRight) && role.ObjectTypeId == (int)ObjectType.Form)).ToList();
 
 				if (res.Count() > 0)
 				{
@@ -65,9 +69,9 @@ namespace NaitonGPS
 						//item.Title = "Picklist";
 						tabBar.Items.Add(item);
 					}
-                    ShellContent shi = new ShellContent() { Title = "Zebra", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
-                    tabBar.Items.Add(shi);
-                    appShell.Items.Add(tabBar);
+					ShellContent shi = new ShellContent() { Title = "Zebra", Icon = "picklist.png", Route = "ItemsPage", ContentTemplate = new DataTemplate(typeof(ItemsPage)) };
+					tabBar.Items.Add(shi);
+					appShell.Items.Add(tabBar);
 				}
 				else
 				{

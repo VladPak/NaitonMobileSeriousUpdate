@@ -1,4 +1,5 @@
 ﻿using NaitonGPS.Models;
+using NaitonGPS.Services;
 using NaitonGPS.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,15 @@ namespace NaitonGPS.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InventoryCountDetailsPage : ContentPage
 	{
+
+		private readonly InventoryCountDetailsViewModel _viewModel;
 		public InventoryCountDetailsPage(InventoryCount inventoryCount, EventHandler<InventoryCount> item)
 		{
 			InitializeComponent();
-			BindingContext = new InventoryCountDetailsViewModel(inventoryCount, item);
+			BindingContext = _viewModel = new InventoryCountDetailsViewModel(inventoryCount, item);
+
+			var role = _viewModel.RoleManager.Get(RoleManager.SHOW_CURRENT_QUANTITY);
+			this.stockTextLabel.IsVisible = this.stockValueLabel.IsVisible = role != null && role.IsChecked;
 		}
 
 		protected async override void OnAppearing()

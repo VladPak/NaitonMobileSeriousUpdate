@@ -245,7 +245,7 @@ namespace NaitonGPS.Services
 			}
 		}
 
-		public void SetUserData(out int roleId)
+		public void SetUser(out int roleId)
 		{
 			roleId = 0;
 			UserLoginDetails dataFinalizeUserEP = JsonConvert.DeserializeObject<UserLoginDetails>((string)App.Current.Properties["UserDetail"]);
@@ -277,9 +277,24 @@ namespace NaitonGPS.Services
 			return _user;
 		}
 
-		public Roles[] GetRoles(int roleId)
+		//public Roles[] GetRoles(int roleId)
+		//{
+		//	SimpleWSA.Command command = new SimpleWSA.Command("rolemanager_getcheckroleobjects");
+		//	command.Parameters.Add("_roleid", PgsqlDbType.Integer).Value = roleId;
+		//	command.WriteSchema = WriteSchema.TRUE;
+		//	string xmlResult = SimpleWSA.Command.Execute(command,
+		//										RoutineType.DataSet,
+		//										httpMethod: SimpleWSA.HttpMethod.GET,
+		//										responseFormat: ResponseFormat.JSON);
+
+		//	var dataFinalize = JsonConvert.DeserializeObject<Dictionary<string, Roles[]>>(xmlResult);
+		//	var allRoles = dataFinalize.Values.ToList();
+		//	var mobile = allRoles.SelectMany(i => i).Where(x => x.ObjectTypeId == 2 && x.TypeId == 6).ToArray();
+		//	return mobile;
+		//}
+		public IEnumerable<Roles> GetRoles(int roleId)
 		{
-			SimpleWSA.Command command = new SimpleWSA.Command("rolemanager_getcheckroleobjects");
+			SimpleWSA.Command command = new SimpleWSA.Command("rolemanager_getroleobjects");
 			command.Parameters.Add("_roleid", PgsqlDbType.Integer).Value = roleId;
 			command.WriteSchema = WriteSchema.TRUE;
 			string xmlResult = SimpleWSA.Command.Execute(command,
@@ -289,10 +304,9 @@ namespace NaitonGPS.Services
 
 			var dataFinalize = JsonConvert.DeserializeObject<Dictionary<string, Roles[]>>(xmlResult);
 			var allRoles = dataFinalize.Values.ToList();
-			var mobile = allRoles.SelectMany(i => i).Where(x => x.ObjectTypeId == 2 && x.TypeId == 6).ToArray();
+			var mobile = allRoles.SelectMany(i => i).Where(x => x.TypeId == (int)RoleType.Mobile);
 			return mobile;
 		}
-
 		#endregion Account
 
 

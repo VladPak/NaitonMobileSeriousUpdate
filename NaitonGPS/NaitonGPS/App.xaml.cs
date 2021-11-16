@@ -7,34 +7,35 @@ using Xamarin.Forms.Xaml;
 
 namespace NaitonGPS
 {
-    public partial class App : Application
-    {        
-        public App()
-        {            
-            InitializeComponent();
-            
-        }
+	public partial class App : Application
+	{
+		public App()
+		{
+			InitializeComponent();
 
-        protected override void OnStart()
-        {
-            bool isLoggedIn = Current.Properties.ContainsKey("IsLoggedIn") && Convert.ToBoolean(Current.Properties["IsLoggedIn"]);
+		}
 
-            DependencyService.Register<MockDataStore>();
-            DependencyService.Register<DataManager>();
+		protected override void OnStart()
+		{
+			bool isLoggedIn = Current.Properties.ContainsKey("IsLoggedIn") && Convert.ToBoolean(Current.Properties["IsLoggedIn"]);
 
-            if (isLoggedIn)
-                MainPage = new AppShell();
-            else
-                MainPage = new NavigationPage(new LoginPage());
-            
-        }
+			DependencyService.Register<MockDataStore>();
+			DependencyService.Register<DataManager>();
+			DependencyService.Register<RoleManager>();
 
-        protected override void OnSleep()
-        {
-        }
+			if (isLoggedIn)
+				MainPage = new AppShell();
+			else
+				MainPage = new NavigationPage(new LoginPage());
 
-        protected override void OnResume()
-        {
-        }
-    }
+		}
+
+		protected override void OnSleep()
+		{
+		}
+
+		protected override void OnResume()
+		{
+		}
+	}
 }
