@@ -1,6 +1,6 @@
 ﻿using System;
 namespace NaitonGPS
-{    
+{
     public interface IScanner
     {
         event EventHandler<StatusEventArgs> OnScanDataCollected;
