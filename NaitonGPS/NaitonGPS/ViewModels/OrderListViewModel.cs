@@ -114,6 +114,7 @@ namespace NaitonGPS.ViewModels
 		{
 			if (item == null)
 				return;
+			await Task.Run(() => true);
 			//await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
 		}
 	}

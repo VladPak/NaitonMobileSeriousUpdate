@@ -17,7 +17,7 @@
 
                 <Label x:Name="lblQunaitty" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="Quantity" FontSize="28" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Start" VerticalOptions="Center" HorizontalOptions="Start"/>
 
-                <local:BorderedEntry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,-20,0,0" Placeholder="Enter quantity" Keyboard="Numeric" ReturnType="Done" x:Name="entQuantity" Text="{Binding NewItem.Quantity }">
+            <local:BorderedEntry Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,-20,0,0" Placeholder="Enter quantity" Keyboard="Numeric" ReturnType="Done" x:Name="entQuantity" Text="{Binding NewItem.Quantity, StringFormat='{0:0}' }">
                     <local:BorderedEntry.BackgroundColor>
                         <OnPlatform x:TypeArguments="Color">
                             <On Platform="iOS" Value="#F2F3F4"/>

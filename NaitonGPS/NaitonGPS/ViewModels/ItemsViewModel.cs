@@ -35,9 +35,11 @@ namespace NaitonGPS.ViewModels
             scanner.OnScanDataCollected += ScannedDataCollected;
             scanner.OnStatusChanged += ScannedStatusChanged;
 
-            var config = new ZebraScannerConfig();
-            config.IsUPCE0 = false;
-            config.IsUPCE1 = false;
+            var config = new ZebraScannerConfig
+            {
+                IsUPCE0 = false,
+                IsUPCE1 = false
+            };
 
             scanner.SetConfig(config);
         }
@@ -109,6 +111,7 @@ namespace NaitonGPS.ViewModels
         private void ScannedStatusChanged(object sender, string a_message)
         {
             string status = a_message;
+            Console.WriteLine(status);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace NaitonGPS.ViewModels
     {
         private readonly int _pickListId;
         private PickListItem _selectedItem;
-        private EventHandler<PickListItem> SCrollSelected;
+        private readonly EventHandler<PickListItem> SCrollSelected;
         
         public ObservableCollection<PickListItem> PicklistItems { get; set; }
         public Command LoadItemsCommand { get; }
@@ -69,9 +69,11 @@ namespace NaitonGPS.ViewModels
                 scanner.OnScanDataCollected += ScannedDataCollected;
                 scanner.OnStatusChanged += ScannedStatusChanged;
 
-                var config = new ZebraScannerConfig();
-                config.IsUPCE0 = false;
-                config.IsUPCE1 = false;
+                var config = new ZebraScannerConfig
+                {
+                    IsUPCE0 = false,
+                    IsUPCE1 = false
+                };
 
                 scanner.SetConfig(config);
             }
@@ -200,12 +202,13 @@ namespace NaitonGPS.ViewModels
                 {
                     item.IsScanned = true;
                     IsScanning = false;
-                    item.StatusId = 9;
-                    PicklistItems.Add(item);
-                }
-                else
+                    item.StatusId = 9;                    
+                }                
+                PicklistItems.Insert(insertIndex, item);
+                if (PicklistItems.Count > (insertIndex + 1))
                 {
-                    PicklistItems.Insert(insertIndex, item);
+                    var i = PicklistItems[insertIndex + 1];
+                    SCrollSelected?.Invoke(this,i);
                 }
             }
             if(newItem.Quantity > 0)
@@ -314,6 +317,7 @@ namespace NaitonGPS.ViewModels
         private void ScannedStatusChanged(object sender, string a_message)
         {
             string status = a_message;
+            Console.WriteLine(status);
         }
     }
 }

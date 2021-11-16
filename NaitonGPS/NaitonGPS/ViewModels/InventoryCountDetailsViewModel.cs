@@ -11,7 +11,7 @@ namespace NaitonGPS.ViewModels
 	public class InventoryCountDetailsViewModel : BaseViewModel
 	{
 		private readonly InventoryCount _inventoryCount = null;
-		private EventHandler<InventoryCount> _callback = null;
+		private readonly EventHandler<InventoryCount> _callback = null;
 		public InventoryCountDetailsViewModel(InventoryCount inventoryCount, EventHandler<InventoryCount> callback)
 		{
 			_inventoryCount = inventoryCount;
@@ -29,7 +29,7 @@ namespace NaitonGPS.ViewModels
 
 			try
 			{
-
+				await Task.Run(() => true);
 			}
 			catch (Exception ex)
 			{
