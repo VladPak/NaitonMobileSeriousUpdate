@@ -12,10 +12,11 @@ namespace NaitonGPS.Services
 		Task<List<PickListItem>> GetPickListItems(int pickListId);
 		Task<List<PickList>> GetPickLists(int? pickListId = null);
 		Task<List<Rack>> GetPickRacks(int deliveryOrderDetailsId);
-		Roles[] GetRoles(int roleId);
+		//Roles[] GetRoles(int roleId);
+		IEnumerable<Roles> GetRoles(int roleId);
 		UserLoginDetails RegistrationServiceSession();
 		Task<string> SavePickListItems(List<PickListItem> items);
-		void SetUserData(out int roleId);
+		void SetUser(out int roleId);
 
 		Task NewSession(string email, string password);
 		Task<List<Order>> GetOrders(int[] orderIds = null);

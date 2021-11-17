@@ -36,7 +36,7 @@
 
 			<control:BorderedSearchBar Grid.Row="0" Grid.Column="1" Margin="5" Text="{Binding SearchText, Mode=TwoWay}" Placeholder="rack" />
 
-			<Button Grid.Row="0" Grid.Column="2" Text="+" Margin="5" CornerRadius="5"></Button>
+			<Button Grid.Row="0" Grid.Column="2" x:Name="addRandomRackButton" Text="+" Margin="5" CornerRadius="5"></Button>
 			<!--<Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
                 <StackLayout x:Name="gridWithScannerIcon" Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="scan.png" HeightRequest="20"></Image>
@@ -66,8 +66,8 @@
 									<Label BackgroundColor="Transparent" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=StockRackName}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
 									<Label BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=ProductName}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
 									<Label BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" TextColor="#000000" Text="{Binding Path=Variants}" FontSize="17" FontAttributes="None" HorizontalOptions="Fill"/>
-									
-									<Image BackgroundColor="Transparent" Source="rightarrow.png" Margin="0,0,-10,0" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>															
+
+									<Image BackgroundColor="Transparent" Source="rightarrow.png" Margin="0,0,-10,0" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="Center" phantomExtensions:Images.ImageColor="#69717E"></Image>
 								</Grid>
 								<Frame.GestureRecognizers>
 									<TapGestureRecognizer 

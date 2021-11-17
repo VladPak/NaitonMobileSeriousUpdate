@@ -1,4 +1,5 @@
-﻿using NaitonGPS.ViewModels;
+﻿using NaitonGPS.Services;
+using NaitonGPS.ViewModels;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -24,6 +25,9 @@ namespace NaitonGPS.Views
 			InitializeComponent();
 
 			BindingContext = _viewModel = new InventoryCountListViewModel();
+
+			var role = _viewModel.RoleManager.Get(RoleManager.ADD_RANDOM_RACK);
+			this.addRandomRackButton.IsVisible = role != null && role.IsChecked;
 
 			if (IsSmallScreen)
 			{
