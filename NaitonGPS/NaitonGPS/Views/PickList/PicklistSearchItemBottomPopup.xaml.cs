@@ -20,12 +20,6 @@ namespace NaitonGPS.Views
             BindingContext = new RacksViewModel(pickListItem,callBack, ChangeInput);
         }
 
-        
-        private async void ClosePopup(object sender, EventArgs e)
-        {
-            await Shell.Current.Navigation.PopModalAsync();
-        }
-
         void ChangeInput(object sender, string scanText)
         {
             searchText.Focus();

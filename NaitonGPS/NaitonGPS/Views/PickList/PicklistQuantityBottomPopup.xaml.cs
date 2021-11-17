@@ -14,10 +14,5 @@ namespace NaitonGPS.Views
             InitializeComponent();            
             BindingContext = new PickListQuantityViewModel(item, callBack);
         }
-
-        private async void ClosePopup(object sender, EventArgs e)
-        {
-            await Shell.Current.Navigation.PopModalAsync(true);
-        }
     }
 }

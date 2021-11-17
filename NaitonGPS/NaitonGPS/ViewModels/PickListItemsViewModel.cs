@@ -28,6 +28,7 @@ namespace NaitonGPS.ViewModels
         public Command<PickListItem> ChangeStatusCommand { get; }
         public Command SaveToBaseCommand { get; set; }
         public Command<PickList> ShowDeliveryRemarkCommand { get; set; }
+        public Command ClosePopupCommand { get; set; }
 
         public bool IsEditable { get; set; }
         public bool IsViewable { get; set; }
@@ -52,6 +53,7 @@ namespace NaitonGPS.ViewModels
             StartEditCommand = new Command(StartEdit);
             SaveToBaseCommand = new Command(SaveToBase);
             ShowDeliveryRemarkCommand = new Command<PickList>(ShowDeliveryRemark);
+            ClosePopupCommand = new Command(ClosePopup);
 
             IsBusy = true;
             LoadItems().GetAwaiter();
@@ -297,20 +299,53 @@ namespace NaitonGPS.ViewModels
             await Shell.Current.Navigation.PushModalAsync(new DeliveryRemarkPopup(item.Remark));
         }
 
-        private void ScannedDataCollected(object sender, StatusEventArgs a_status)
+        async void ClosePopup()
         {
-            var item = PicklistItems.FirstOrDefault(x => x.RackName == a_status.Data.TrimEnd());
-            if (item != null)
+            IsScanning = false;
+            await Shell.Current.Navigation.PopModalAsync(true);
+        }
+
+        private async void ScannedDataCollected(object sender, StatusEventArgs a_status)
+        {
+            if (!IsScanning)
             {
-                if (SCrollSelected != null)
-                    SCrollSelected.Invoke(this,item);
-                IsScanning = true;
-                if(!item.IsScanned)
-                    ChangeQuantity(item);
-            }
-            else
-            {
-                App.Current.MainPage.DisplayAlert("Sorry", "This rack does not contain a product on this picklist", "Ok");
+                var item = PicklistItems.FirstOrDefault(x => x.RackName == a_status.Data.TrimEnd());
+                if (item != null)
+                {
+                    if (SCrollSelected != null)
+                        SCrollSelected.Invoke(this, item);
+                    IsScanning = true;
+                    if (!item.IsScanned)
+                        ChangeQuantity(item);
+                }
+                else
+                {
+                    List<Rack> rackList = new List<Rack>();
+                    foreach (var dod in PicklistItems.GroupBy(x=>x.DeliveryOrderDetailsId))
+                    {
+                        rackList.AddRange(await DataManager.GetPickRacks(dod.Key));
+                        if (rackList.Any(x => x.RackName == a_status.Data.TrimEnd())
+                            && rackList.Any(x => PicklistItems.Where(d => d.DeliveryOrderDetailsId == dod.Key).Select(d => d.PickListOrderDetailsId).ToArray().Contains(x.StockRackId)))
+                            break;
+                    }
+                    var rack = rackList.FirstOrDefault(x=>x.RackName==a_status.Data.TrimEnd() 
+                        && PicklistItems.Select(d => d.PickListOrderDetailsId).ToArray().Contains(x.StockRackId));
+
+                    item = PicklistItems.FirstOrDefault(x => x.PickListOrderDetailsId == rack.StockRackId);
+
+                    if (item != null && item.Quantity<=rack.QuantityInStock)
+                    {
+                        if (SCrollSelected != null)
+                            SCrollSelected.Invoke(this, item);
+                        item.RackName = rack.RackName;
+                        item.StockRackId = rack.StockRackId;
+                        IsScanning = true;
+                        if (!item.IsScanned)
+                            ChangeQuantity(item);
+                    }
+                    else
+                        await App.Current.MainPage.DisplayAlert("Sorry", "This rack does not contain a product on this picklist", "Ok");
+                }
             }
         }
 

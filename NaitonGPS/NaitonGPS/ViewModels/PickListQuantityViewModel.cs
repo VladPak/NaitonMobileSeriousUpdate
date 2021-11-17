@@ -32,12 +32,12 @@ namespace NaitonGPS.ViewModels
             SetQuantityCommand = new Command(SaveQuantity);
 
             var scanner = FreshIOC.Container.Resolve<IScanner>();
-            scanner.OnScanDataCollected -= ScannedDataCollected;
-            scanner.OnStatusChanged -= ScannedStatusChanged;
+            scanner.OnScanDataCollected -= ScannedQuantity;
+            scanner.OnStatusChanged -= ScannedStatusQuantity;
 
             scanner.Enable();
-            scanner.OnScanDataCollected += ScannedDataCollected;
-            scanner.OnStatusChanged += ScannedStatusChanged;
+            scanner.OnScanDataCollected += ScannedQuantity;
+            scanner.OnStatusChanged += ScannedStatusQuantity;
 
             var config = new ZebraScannerConfig
             {
@@ -53,15 +53,18 @@ namespace NaitonGPS.ViewModels
             SetQuantity.Invoke(this, NewItem);
         }
 
-        private void ScannedDataCollected(object sender, StatusEventArgs a_status)
+        private void ScannedQuantity(object sender, StatusEventArgs a_status)
         {
+            App.Current.MainPage.DisplayAlert("Info 1", a_status.Data.TrimEnd(), "Ok");
+            App.Current.MainPage.DisplayAlert("Info 2", NewItem.RackName, "Ok");
             if (NewItem.RackName == a_status.Data.TrimEnd())
             {
+                App.Current.MainPage.DisplayAlert("Info 3", NewItem.Quantity.ToString(), "Ok");
                 SetQuantity.Invoke(this, NewItem);
             }
         }
 
-        private void ScannedStatusChanged(object sender, string a_message)
+        private void ScannedStatusQuantity(object sender, string a_message)
         {
             string status = a_message;
             Console.WriteLine(status);

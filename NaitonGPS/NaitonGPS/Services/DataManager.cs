@@ -604,7 +604,6 @@ namespace NaitonGPS.Services
 		}
 		#endregion
 
-
 	}
 
 	public class ReturnScaler
