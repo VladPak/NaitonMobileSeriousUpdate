@@ -59,7 +59,7 @@ namespace NaitonGPS
 
 				RoleManager.Set(roles.ToList());
 
-				var res = ScreenTemplatesViewModel.Screens.Where(screen => roles.Any(role => role.Object.Equals(screen.RoleRight) && role.ObjectTypeId == (int)ObjectType.Form)).ToList();
+				var res = ScreenTemplatesViewModel.Screens.Where(screen => roles.Any(role => role.Object.Equals(screen.RoleRight) && role.ObjectTypeId == (int)ObjectType.Form && role.IsChecked)).ToList();
 
 				if (res.Count() > 0)
 				{
