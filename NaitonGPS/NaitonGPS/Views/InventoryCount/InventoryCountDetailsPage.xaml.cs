@@ -2,11 +2,7 @@
 using NaitonGPS.Services;
 using NaitonGPS.ViewModels;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +13,7 @@ namespace NaitonGPS.Views
 	{
 
 		private readonly InventoryCountDetailsViewModel _viewModel;
-		public InventoryCountDetailsPage(InventoryCount inventoryCount, EventHandler<InventoryCount> item)
+		public InventoryCountDetailsPage(Models.InventoryCount inventoryCount, EventHandler<Models.InventoryCount> item)
 		{
 			InitializeComponent();
 			BindingContext = _viewModel = new InventoryCountDetailsViewModel(inventoryCount, item);

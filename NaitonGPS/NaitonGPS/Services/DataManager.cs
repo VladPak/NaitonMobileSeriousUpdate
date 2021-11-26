@@ -616,6 +616,61 @@ namespace NaitonGPS.Services
 				}
 			}
 		}
+
+		public async Task<List<Product>> GetProducts(int[] businessIds)
+		{
+			try
+			{
+				SimpleWSA.Command command = new SimpleWSA.Command("crm_project_getproducts");
+
+				command.Parameters.Add("_productid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_productname", PgsqlDbType.Text).Value = string.Empty;
+				command.Parameters.Add("_serial", PgsqlDbType.Text).Value = string.Empty;
+				command.Parameters.Add("_pricefrom", PgsqlDbType.Numeric).Value = DBNull.Value;
+				command.Parameters.Add("_priceto", PgsqlDbType.Numeric).Value = DBNull.Value;
+				command.Parameters.Add("_ean", PgsqlDbType.Text).Value = string.Empty;
+				command.Parameters.Add("_offer", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_imported", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_obsolete", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_brandid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_categoryid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_types", PgsqlDbType.Integer | PgsqlDbType.Array).Value = new int[] { 1 };
+				command.Parameters.Add("_businessids", PgsqlDbType.Integer | PgsqlDbType.Array).Value = businessIds;
+				command.Parameters.Add("_limit", PgsqlDbType.Integer).Value = 500;
+				command.Parameters.Add("_currencycourse", PgsqlDbType.Numeric).Value = 1;
+				command.Parameters.Add("_searchonlyparents", PgsqlDbType.Boolean).Value = false;
+				command.Parameters.Add("_showparentlabel", PgsqlDbType.Boolean).Value = true;
+				command.Parameters.Add("_getvariantsonly", PgsqlDbType.Boolean).Value = false;
+				command.Parameters.Add("_onlywithproductgroup", PgsqlDbType.Boolean).Value = false;
+				command.Parameters.Add("_supplierid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_sourcebusinessid", PgsqlDbType.Integer).Value = 0;
+
+				command.WriteSchema = WriteSchema.TRUE;
+				string xmlResult = SimpleWSA.Command.Execute(command,
+													RoutineType.DataSet,
+													httpMethod: SimpleWSA.HttpMethod.GET,
+													responseFormat: ResponseFormat.JSON);
+
+				var dict = JsonConvert.DeserializeObject<Dictionary<string, Product[]>>(xmlResult);
+
+				return dict.First().Value.ToList();
+			}
+			catch (Exception ex)
+			{
+				count++;
+				if (count == 1)
+				{
+					await NewSession(_user.UserEmail, _user.UserPassword);
+					return await GetProducts(businessIds);
+				}
+				else
+				{
+					count = 0;
+					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+					return new List<Product>();
+				}
+			}
+		}
 		#endregion
 
 	}

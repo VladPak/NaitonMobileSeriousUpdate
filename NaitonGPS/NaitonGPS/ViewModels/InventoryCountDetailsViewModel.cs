@@ -1,8 +1,7 @@
 ﻿using NaitonGPS.Models;
+using NaitonGPS.Views.InventoryCount;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -18,10 +17,12 @@ namespace NaitonGPS.ViewModels
 			_callback = callback;
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			SaveCommand = new Command<InventoryCount>(Save);
+			AddProductCommand = new Command<InventoryCount>(AddProduct);
 		}
 
 		public Command LoadItemsCommand { get; }
 		public Command<InventoryCount> SaveCommand { get; set; }
+		public Command<InventoryCount> AddProductCommand { get; set; }
 
 		async Task LoadItems()
 		{
@@ -46,7 +47,13 @@ namespace NaitonGPS.ViewModels
 			await Shell.Current.Navigation.PopModalAsync();
 			_callback?.Invoke(this, _inventoryCount);
 		}
-
+		async void AddProduct(InventoryCount item)
+		{
+			if (item == null)
+				return;
+			await Shell.Current.Navigation.PushModalAsync(new AddProductPage(), true);
+		}
+		public InventoryCount InventoryCount => _inventoryCount;
 		public string StockRackName { get { return _inventoryCount.StockRackName; } }
 		public string ProductName { get { return _inventoryCount.ProductName; } }
 		public string ProductNameFormat { get { return _inventoryCount.ProductNameFormat; } }
