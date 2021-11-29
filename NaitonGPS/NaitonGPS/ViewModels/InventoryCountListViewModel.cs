@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Models;
+﻿using FreshMvvm;
+using NaitonGPS.Models;
 using NaitonGPS.Views;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace NaitonGPS.ViewModels
 		private InventoryCount _selectedItem = null;
 		private string _searchText;
 		private List<InventoryCount> _search;
-
+		private InventoryCountListPage _page;
 		public ObservableCollection<InventoryCount> List { get; set; }
 
 		public Command LoadItemsCommand { get; }
@@ -40,12 +41,29 @@ namespace NaitonGPS.ViewModels
 			}
 		}
 
-		public InventoryCountListViewModel()
+		public InventoryCountListViewModel(InventoryCountListPage page)
 		{
+			_page = page;
 			Title = "Count";
 			List = new ObservableCollection<InventoryCount>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<InventoryCount>(OnItemSelected);
+
+
+			var scanner = FreshIOC.Container.Resolve<IScanner>();
+
+			scanner.Enable();
+			scanner.OnScanDataCollected += Scanner_OnScanDataCollected;
+			scanner.SetConfig(new ZebraScannerConfig
+			{
+				IsUPCE0 = false,
+				IsUPCE1 = false
+			});
+		}
+
+		private void Scanner_OnScanDataCollected(object sender, StatusEventArgs e)
+		{
+			this.SearchText = e.Data;
 		}
 
 		public InventoryCount SelectedItem
@@ -76,7 +94,10 @@ namespace NaitonGPS.ViewModels
 				{
 					if (!string.IsNullOrEmpty(_searchText))
 					{
-						inventoryCountList = _search.Where(x => x.ProductId.ToString().ToLower().Contains(_searchText.ToLower()) || x.BrandName.ToLower().Contains(_searchText.ToLower())).ToList();
+						inventoryCountList = _search.Where(x =>
+														   x.ProductId.ToString().ToLower().Contains(_searchText.ToLower()) ||
+														   (!string.IsNullOrWhiteSpace(x.BrandName) && x.BrandName.ToLower().Contains(_searchText.ToLower())) ||
+														   (!string.IsNullOrWhiteSpace(x.StockRackName) && x.StockRackName.ToLower().Contains(_searchText.ToLower()))).ToList();
 					}
 					else
 					{
@@ -92,6 +113,11 @@ namespace NaitonGPS.ViewModels
 
 				List.Clear();
 				inventoryCountList.ForEach(item => List.Add(item));
+				if (IsSearch || string.IsNullOrWhiteSpace(_searchText))
+				{
+					_page.rv.IsVisible = inventoryCountList.Count > 0;
+					_page.NotFoundLabel.IsVisible = inventoryCountList.Count <= 0;
+				}
 			}
 			catch (Exception ex)
 			{

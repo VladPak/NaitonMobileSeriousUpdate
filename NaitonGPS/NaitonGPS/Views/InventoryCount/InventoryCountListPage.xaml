@@ -49,7 +49,7 @@
 		</Grid>
 
 
-		<RefreshView x:DataType="local:InventoryCountListViewModel" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}" >
+		<RefreshView x:DataType="local:InventoryCountListViewModel" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" x:Name="rv" Command="{Binding LoadItemsCommand}">
 			<CollectionView 
                 ItemsSource="{Binding List}"                 
                 BackgroundColor="Transparent" 
@@ -82,6 +82,9 @@
 				</CollectionView.ItemTemplate>
 			</CollectionView>
 		</RefreshView>
+		<StackLayout x:Name="NotFoundLabel">
+			<Label VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Text="This rack is not part of a count job"></Label>
+		</StackLayout>
 
 	</StackLayout>
 </ContentPage>

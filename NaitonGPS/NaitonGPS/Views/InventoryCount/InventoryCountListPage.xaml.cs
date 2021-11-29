@@ -24,11 +24,11 @@ namespace NaitonGPS.Views
 		{
 			InitializeComponent();
 
-			BindingContext = _viewModel = new InventoryCountListViewModel();
+			BindingContext = _viewModel = new InventoryCountListViewModel(this);
 
 			var role = _viewModel.RoleManager.Get(RoleManager.ADD_RANDOM_RACK);
 			this.addRandomRackButton.IsVisible = role != null && role.IsChecked;
-
+			
 			if (IsSmallScreen)
 			{
 				imgNotification.HeightRequest = 25;
