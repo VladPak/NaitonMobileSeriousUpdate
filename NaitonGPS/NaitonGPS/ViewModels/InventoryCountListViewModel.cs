@@ -23,7 +23,7 @@ namespace NaitonGPS.ViewModels
 		public Command LoadItemsCommand { get; }
 
 		public Command<InventoryCount> ItemTapped { get; }
-		public Command<InventoryCount> ShowDeliveryRemarkCommand { get; set; }
+		public Command<InventoryCount> AddRack { get; set; }
 
 		private bool IsSearch { get; set; }
 
@@ -48,7 +48,7 @@ namespace NaitonGPS.ViewModels
 			List = new ObservableCollection<InventoryCount>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<InventoryCount>(OnItemSelected);
-
+			AddRack = new Command<InventoryCount>(OnAddRackButtonClick);
 
 			var scanner = FreshIOC.Container.Resolve<IScanner>();
 
@@ -134,6 +134,15 @@ namespace NaitonGPS.ViewModels
 			if (item == null)
 				return;
 			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item, SetCount), true);
+		}
+		private async void OnAddRackButtonClick(InventoryCount item)
+		{
+			if (string.IsNullOrWhiteSpace(this.SearchText))
+				return;
+
+			if (item == null)
+				return;
+			//await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item, SetCount), true);
 		}
 		private async void SetCount(object sender, InventoryCount item)
 		{

@@ -36,7 +36,7 @@
 
 			<control:BorderedSearchBar Grid.Row="0" Grid.Column="1" Margin="5" Text="{Binding SearchText, Mode=TwoWay}" Placeholder="rack" />
 
-			<Button Grid.Row="0" Grid.Column="2" x:Name="addRandomRackButton" Text="+" Margin="5" CornerRadius="5"></Button>
+			<Button Grid.Row="0" Grid.Column="2" x:Name="addRandomRackButton" Text="+" Margin="5" CornerRadius="5" Command="{Binding AddRack}" CommandParameter="{Binding ite}" ></Button>
 			<!--<Frame Grid.Row="0" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="#ffffff" Margin="0" CornerRadius="5" BorderColor="#69717E" HasShadow="False" WidthRequest="70">
                 <StackLayout x:Name="gridWithScannerIcon" Margin="-5,-10,-5,-10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="scan.png" HeightRequest="20"></Image>
