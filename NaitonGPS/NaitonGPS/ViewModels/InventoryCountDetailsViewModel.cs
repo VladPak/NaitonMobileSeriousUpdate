@@ -85,12 +85,6 @@ namespace NaitonGPS.ViewModels
 						OnPropertyChanged(nameof(InventoryCountDetailsViewModel.Count));
 						return;
 					}
-					if (_inventoryCount.QuantityInStock < count)
-					{
-						App.Current.MainPage.DisplayAlert("Error", "The value of count can not be more then Stock!", "Ok");
-						OnPropertyChanged(nameof(InventoryCountDetailsViewModel.Count));
-						return;
-					}
 
 					_inventoryCount.CountedStock = count;
 					//OnPropertyChanged(nameof(InventoryCount.CountedStock));
