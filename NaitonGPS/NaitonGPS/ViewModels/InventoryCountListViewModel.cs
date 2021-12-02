@@ -148,6 +148,8 @@ namespace NaitonGPS.ViewModels
 			{
 
 			}
+
+			this.LoadItems();
 		}
 	}
 }
