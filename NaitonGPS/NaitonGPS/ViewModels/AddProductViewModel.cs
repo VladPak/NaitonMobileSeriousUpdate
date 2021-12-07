@@ -14,7 +14,7 @@ namespace NaitonGPS.ViewModels
 	{
 		private Product _selectedItem;
 		private string _searchText;
-		private List<Product> _searched;
+		private List<Product> _productList;
 
 		public ObservableCollection<Product> List { get; set; }
 
@@ -74,27 +74,23 @@ namespace NaitonGPS.ViewModels
 				{
 					if (!string.IsNullOrEmpty(_searchText))
 					{
-						list = _searched.Where(x => (!string.IsNullOrWhiteSpace(x.ProductClaim) ? x.ProductClaim.ToLower().Contains(_searchText.ToLower()) : false) ||
-													x.ProductGroup.ToString().Contains(_searchText.ToLower()) ||
-													(!string.IsNullOrWhiteSpace(x.ProductName) ? x.ProductName.ToLower().Contains(_searchText.ToLower()) : false)).ToList();
+						list = _productList.Where(x => x.ProductId.ToString().ToLower().Contains(_searchText.ToLower()) ||
+														(!string.IsNullOrWhiteSpace(x.ProductName) ? x.ProductName.ToLower().Contains(_searchText.ToLower()) : false) ||
+														(!string.IsNullOrWhiteSpace(x.ManufacturerCode) ? x.ManufacturerCode.ToLower().Contains(_searchText.ToLower()) : false) ||
+														(!string.IsNullOrWhiteSpace(x.BarCode) ? x.BarCode.ToLower().Contains(_searchText.ToLower()) : false) ||
+														(!string.IsNullOrWhiteSpace(x.BrandName) ? x.BrandName.ToLower().Contains(_searchText.ToLower()) : false) ||
+														x.ProductGroup.ToString().Contains(_searchText.ToLower())).ToList();
 					}
-					else
+
+					List.Clear();
+					foreach (var item in list)
 					{
-						IsSearch = false;
-						list = _searched;
+						List.Add(item);
 					}
 				}
 				else
 				{
-					list = await DataManager.GetProducts(new[] { 943 });
-					_searched = list;
-				}
-
-
-				List.Clear();
-				foreach (var item in list)
-				{
-					List.Add(item);
+					_productList = await DataManager.GetProducts(new[] { 943 });
 				}
 			}
 			catch (Exception ex)

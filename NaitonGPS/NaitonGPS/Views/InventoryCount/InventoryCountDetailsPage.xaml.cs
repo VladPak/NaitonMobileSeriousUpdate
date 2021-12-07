@@ -11,7 +11,6 @@ namespace NaitonGPS.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class InventoryCountDetailsPage : ContentPage
 	{
-
 		private readonly InventoryCountDetailsViewModel _viewModel;
 		public InventoryCountDetailsPage(Models.InventoryCount inventoryCount, EventHandler<Models.InventoryCount> item)
 		{
@@ -20,15 +19,22 @@ namespace NaitonGPS.Views
 
 			var role = _viewModel.RoleManager.Get(RoleManager.SHOW_CURRENT_QUANTITY);
 			this.stockTextLabel.IsVisible = this.stockValueLabel.IsVisible = role != null && role.IsChecked;
+
+			this.addPoductButton.IsVisible = inventoryCount.ProductId <= 0;
+			this.saveButton.IsVisible = this.entCount.IsVisible = this.entDamaged.IsVisible = inventoryCount.ProductId > 0;
 		}
 
 		protected async override void OnAppearing()
 		{
 			base.OnAppearing();
-			if (entCount.Text.Trim() == "0")
-				entCount.Text = string.Empty;
-			await Task.Delay(600);
-			entCount.Focus();
+
+			if (entCount.IsVisible)
+			{
+				if (entCount.Text.Trim() == "0")
+					entCount.Text = string.Empty;
+				await Task.Delay(600);
+				entCount.Focus();
+			}
 		}
 		private async void ClosePopup(object sender, EventArgs e)
 		{

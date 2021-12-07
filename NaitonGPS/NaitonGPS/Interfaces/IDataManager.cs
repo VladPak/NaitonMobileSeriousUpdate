@@ -29,7 +29,8 @@ namespace NaitonGPS.Services
 		Task<List<InventoryCount>> GetInventoryCount();
 		Task<int> SetCount(int businessId, int? stockId, int? rackId, int[] productIds, int[] batchIds, float[] quantities, int[] productCountIds);
 		Task<List<Product>> GetProducts(int[] businessIds);
-		Task<List<Rack>> GetRacks(int rackId, string rackName, string productName, bool isIntegerProduct = false);
+		Task<List<Rack>> GetStockRacksProducts(int businessId, int stockId, string rack, string product);
+		Task<int> AddRack(int businessId, int[] stockIds, int[] stockRackIds);
 		#endregion
 	}
 }

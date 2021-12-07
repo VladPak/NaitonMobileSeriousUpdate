@@ -16,15 +16,16 @@ namespace NaitonGPS.ViewModels
 	{
 		private InventoryCount _selectedItem = null;
 		private string _searchText;
-		private List<InventoryCount> _search;
-		private InventoryCountListPage _page;
+		private List<InventoryCount> _list;
+		private EventHandler<bool> _callback;
+
 		public ObservableCollection<InventoryCount> List { get; set; }
 		public IList<Rack> RackList { get; set; }
 
 		public Command LoadItemsCommand { get; }
 
 		public Command<InventoryCount> ItemTapped { get; }
-		public Command AddRack { get; set; }
+		public Command AddRackButtonCommand { get; set; }
 
 		private bool IsSearch { get; set; }
 
@@ -42,14 +43,14 @@ namespace NaitonGPS.ViewModels
 			}
 		}
 
-		public InventoryCountListViewModel(InventoryCountListPage page)
+		public InventoryCountListViewModel(EventHandler<bool> callback)
 		{
-			_page = page;
+			_callback = callback;
 			Title = "Count";
 			List = new ObservableCollection<InventoryCount>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<InventoryCount>(OnItemSelected);
-			AddRack = new Command(OnAddRack);
+			AddRackButtonCommand = new Command(OnAddRack);
 
 			var scanner = FreshIOC.Container.Resolve<IScanner>();
 			scanner.Enable();
@@ -94,30 +95,28 @@ namespace NaitonGPS.ViewModels
 				{
 					if (!string.IsNullOrEmpty(_searchText))
 					{
-						inventoryCountList = _search.Where(x =>
+						inventoryCountList = _list.Where(x =>
 														   x.ProductId.ToString().ToLower().Contains(_searchText.ToLower()) ||
 														   (!string.IsNullOrWhiteSpace(x.BrandName) && x.BrandName.ToLower().Contains(_searchText.ToLower())) ||
 														   (!string.IsNullOrWhiteSpace(x.StockRackName) && x.StockRackName.ToLower().Contains(_searchText.ToLower()))).ToList();
+
+						_callback?.Invoke(this, inventoryCountList.Count > 0);
 					}
 					else
 					{
 						IsSearch = false;
-						inventoryCountList = _search;
+						inventoryCountList = _list;
+						_callback?.Invoke(this, inventoryCountList.Count > 0);
 					}
 				}
 				else
 				{
-					_search = inventoryCountList = await DataManager.GetInventoryCount();
+					_list = inventoryCountList = await DataManager.GetInventoryCount();
 				}
 
 
 				List.Clear();
-				inventoryCountList.ForEach(item => List.Add(item));
-				if (IsSearch || string.IsNullOrWhiteSpace(_searchText))
-				{
-					_page.rv.IsVisible = inventoryCountList.Count > 0;
-					_page.NotFoundLabel.IsVisible = inventoryCountList.Count <= 0;
-				}
+				inventoryCountList.ForEach(item => List.Add(item));				
 			}
 			catch (Exception ex)
 			{
@@ -137,7 +136,7 @@ namespace NaitonGPS.ViewModels
 		}
 		private async void OnAddRack()
 		{
-			await Shell.Current.Navigation.PushModalAsync(new AddRackPage(), true);
+			await Shell.Current.Navigation.PushModalAsync(new AddRackPage(this.SelectedRack), true);
 		}
 		private async void SetCount(object sender, InventoryCount item)
 		{
@@ -153,7 +152,12 @@ namespace NaitonGPS.ViewModels
 
 			}
 
-			this.LoadItems();
+			await this.LoadItems();
+		}
+		private async void SelectedRack(object sender, Rack rack)
+		{
+			await DataManager.AddRack(943, new[] { (int)rack.StockId }, new[] { rack.StockRackId });
+			await this.LoadItems();
 		}
 	}
 }

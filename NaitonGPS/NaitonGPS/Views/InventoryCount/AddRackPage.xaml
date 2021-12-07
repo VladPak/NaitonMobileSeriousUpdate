@@ -42,21 +42,18 @@
 											</StackLayout>
 
 										</Grid>
+										<Frame.GestureRecognizers>
+											<TapGestureRecognizer NumberOfTapsRequired="1"
+													Command="{Binding Source={RelativeSource AncestorType={x:Type local:AddRackViewModel}}, Path=ItemTapped}"		
+													CommandParameter="{Binding .}">
+											</TapGestureRecognizer>
+										</Frame.GestureRecognizers>
 									</Frame>
 								</StackLayout>
 							</DataTemplate>
 						</CollectionView.ItemTemplate>
 					</CollectionView>
 				</RefreshView>
-
-				<Frame VerticalOptions="End" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0" BackgroundColor="{StaticResource colorBlue}" CornerRadius="10" BorderColor="Transparent" HasShadow="False">
-					<Label x:Name="lblButtonStartPicking" Text="OK" FontSize="17" TextColor="#ffffff" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-					<Frame.GestureRecognizers>
-						<TapGestureRecognizer 
-								Command="{Binding Source={RelativeSource AncestorType={x:Type local:AddRackViewModel}}, Path=ItemTapped}"
-								NumberOfTapsRequired="1"></TapGestureRecognizer>
-					</Frame.GestureRecognizers>
-				</Frame>
 			</StackLayout>
 		</Grid>
 	</ContentPage.Content>

@@ -24,11 +24,11 @@ namespace NaitonGPS.Views
 		{
 			InitializeComponent();
 
-			BindingContext = _viewModel = new InventoryCountListViewModel(this);
+			BindingContext = _viewModel = new InventoryCountListViewModel(OnSearch);
 
 			var role = _viewModel.RoleManager.Get(RoleManager.ADD_RANDOM_RACK);
 			this.addRandomRackButton.IsVisible = role != null && role.IsChecked;
-			
+
 			if (IsSmallScreen)
 			{
 				imgNotification.HeightRequest = 25;
@@ -43,6 +43,12 @@ namespace NaitonGPS.Views
 				imgUser.HeightRequest = 30;
 				imgUser.WidthRequest = 30;
 			}
+		}
+
+		private void OnSearch(object sender, bool isNotEmpty)
+		{
+			rv.IsVisible = isNotEmpty;
+			NotFoundLabel.IsVisible = !isNotEmpty;
 		}
 
 		async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)

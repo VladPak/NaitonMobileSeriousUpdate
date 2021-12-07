@@ -1,4 +1,5 @@
-﻿using NaitonGPS.ViewModels;
+﻿using NaitonGPS.Models;
+using NaitonGPS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,10 @@ namespace NaitonGPS.Views
 	public partial class AddRackPage : ContentPage
 	{
 		private readonly AddRackViewModel _viewModel;
-		public AddRackPage()
+		public AddRackPage(EventHandler<Rack> callback)
 		{
 			InitializeComponent();
-			BindingContext = _viewModel = new AddRackViewModel();
+			BindingContext = _viewModel = new AddRackViewModel(callback);
 		}
 		protected override void OnAppearing()
 		{

@@ -1,4 +1,5 @@
-﻿using NaitonGPS.Models;
+﻿using FreshMvvm;
+using NaitonGPS.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,7 +15,7 @@ namespace NaitonGPS.ViewModels
 		private Rack _selectedItem;
 		private string _searchText;
 		private List<Rack> _searched;
-
+		private readonly EventHandler<Rack> _callback;
 		public ObservableCollection<Rack> List { get; set; }
 
 		public Command LoadItemsCommand { get; }
@@ -36,12 +37,27 @@ namespace NaitonGPS.ViewModels
 			}
 		}
 
-		public AddRackViewModel()
+		public AddRackViewModel(EventHandler<Rack> callback)
 		{
+			_callback = callback;
 			Title = "Add rack";
 			List = new ObservableCollection<Rack>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<Rack>(OnItemSelected);
+
+			var scanner = FreshIOC.Container.Resolve<IScanner>();
+			scanner.Enable();
+			scanner.OnScanDataCollected += Scanner_OnScanDataCollected;
+			scanner.SetConfig(new ZebraScannerConfig
+			{
+				IsUPCE0 = false,
+				IsUPCE1 = false
+			});
+		}
+
+		private void Scanner_OnScanDataCollected(object sender, StatusEventArgs e)
+		{
+			this.SearchText = e.Data;
 		}
 
 		public Rack SelectedItem
@@ -70,7 +86,7 @@ namespace NaitonGPS.ViewModels
 				var list = new List<Rack>();
 				if (IsSearch && !string.IsNullOrWhiteSpace(_searchText))
 				{
-					var racks = await DataManager.GetRacks(0, _searchText, _searchText);
+					var racks = await DataManager.GetStockRacksProducts(943, 0, _searchText, _searchText);
 					List.Clear();
 					foreach (var item in racks)
 					{
@@ -96,7 +112,8 @@ namespace NaitonGPS.ViewModels
 		{
 			if (item == null)
 				return;
-			//await Shell.Current.GoToAsync($"{nameof(PickListItemsPage)}?{nameof(Product.ProductId)}={item.ProductId}");
+
+			_callback?.Invoke(this, item);
 		}
 	}
 }

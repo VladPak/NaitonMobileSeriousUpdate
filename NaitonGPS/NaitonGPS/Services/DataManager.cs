@@ -540,7 +540,7 @@ namespace NaitonGPS.Services
 				command.Parameters.Add("_categoryid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_brandid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_statusid", PgsqlDbType.Integer).Value = 1;
-				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = true;
+				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = DBNull.Value;// true;
 				command.Parameters.Add("_createddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
 				command.Parameters.Add("_createddateend", PgsqlDbType.Timestamp).Value = DBNull.Value;
 				command.Parameters.Add("_counteddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
@@ -672,15 +672,15 @@ namespace NaitonGPS.Services
 			}
 		}
 
-		public async Task<List<Rack>> GetRacks(int rackId, string rackName, string productName, bool isIntegerProduct = false)
+		public async Task<List<Rack>> GetStockRacksProducts(int businessId, int stockId, string rack, string product)
 		{
 			try
 			{
-				SimpleWSA.Command command = new SimpleWSA.Command("stockmanager_getfilteredracks");
-				command.Parameters.Add("_rackid", PgsqlDbType.Integer).Value = 0;
-				command.Parameters.Add("_rackname", PgsqlDbType.Varchar).Value = 0;
-				command.Parameters.Add("_product", PgsqlDbType.Varchar).Value = 0;
-				command.Parameters.Add("_isintegerproduct", PgsqlDbType.Boolean).Value = isIntegerProduct;
+				SimpleWSA.Command command = new SimpleWSA.Command("stockproductinvertorymanager_getrackproducts");
+				command.Parameters.Add("_product", PgsqlDbType.Integer).Value = product;
+				command.Parameters.Add("_rack", PgsqlDbType.Varchar).Value = rack;
+				command.Parameters.Add("_stockid", PgsqlDbType.Varchar).Value = stockId;
+				command.Parameters.Add("_businessid", PgsqlDbType.Boolean).Value = businessId;
 
 				command.WriteSchema = WriteSchema.TRUE;
 				string xmlResult = SimpleWSA.Command.Execute(command,
@@ -692,19 +692,58 @@ namespace NaitonGPS.Services
 
 				return dict.First().Value.ToList();
 			}
-			catch (Exception ex)
+			catch (Exception ex) 
 			{
 				count++;
 				if (count == 1)
 				{
 					await NewSession(_user.UserEmail, _user.UserPassword);
-					return await GetRacks(rackId, rackName, productName, isIntegerProduct);
+					return await GetStockRacksProducts(businessId, stockId, rack, product);
 				}
 				else
 				{
 					count = 0;
 					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
 					return new List<Rack>();
+				}
+			}
+		}
+
+		public async Task<int> AddRack(int businessId, int[] stockIds, int[] stockRackIds)
+		{
+			try
+			{
+
+				SimpleWSA.Command command = new SimpleWSA.Command("stockproductinvertorymanager_addracks");
+				command.Parameters.Add("_businessid", PgsqlDbType.Integer, businessId);
+				command.Parameters.Add("_stockids", PgsqlDbType.Integer | PgsqlDbType.Array, stockIds ?? new int[] { });
+				command.Parameters.Add("_stockrackids", PgsqlDbType.Integer | PgsqlDbType.Array, stockRackIds ?? new int[] { });
+				command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer, _user.PersonId);
+				command.WriteSchema = WriteSchema.TRUE;
+				string xmlResult = SimpleWSA.Command.Execute(command,
+													RoutineType.NonQuery,
+													httpMethod: SimpleWSA.HttpMethod.GET,
+													responseFormat: ResponseFormat.JSON);
+
+				var dictionary = JsonConvert.DeserializeObject<Dictionary<string, ReturnScaler>>(xmlResult);
+				if (dictionary == null && !dictionary.Any())
+					return -100;
+
+				return dictionary.First().Value.Value;
+			}
+			catch (Exception ex)
+			{
+				count++;
+				if (count == 1)
+				{
+					await NewSession(_user.UserEmail, _user.UserPassword);
+					return await AddRack(businessId, stockIds, stockRackIds);
+				}
+				else
+				{
+					count = 0;
+					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+					return -100;
 				}
 			}
 		}

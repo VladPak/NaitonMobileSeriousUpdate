@@ -31,8 +31,8 @@
 			<!--<Entry Text="{Binding Count, Mode=TwoWay}" Grid.Column="1" Grid.Row="4" Placeholder="Count" Margin="0,0,5,0" ></Entry>
 				<Entry Text="{Binding Damaged, Mode=TwoWay}" Grid.Column="2" Grid.Row="4" Placeholder="Damaged" Margin="0,0,5,0"  ></Entry>-->
 
-			<Button Text="Add product" Grid.Row="5" Margin="0,0,5,5" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="5"  FontAttributes="Bold" TextColor="White" Command="{Binding AddProductCommand}" CommandParameter="{Binding InventoryCount}"></Button>
-			<Button Text="Save" Grid.Row="5" Grid.Column="2" Margin="0,0,5,5" CornerRadius="5" FontAttributes="Bold"  TextColor="White" Command="{Binding SaveCommand}" CommandParameter="{Binding InventoryCount}" ></Button>
+			<Button x:Name="addPoductButton" Text="Add product" Grid.Row="5" Margin="0,0,5,5" Grid.Column="0" Grid.ColumnSpan="2" CornerRadius="5"  FontAttributes="Bold" TextColor="White" Command="{Binding AddProductCommand}" CommandParameter="{Binding InventoryCount}"></Button>
+			<Button x:Name="saveButton" Text="Save" Grid.Row="5" Grid.Column="2" Margin="0,0,5,5" CornerRadius="5" FontAttributes="Bold"  TextColor="White" Command="{Binding SaveCommand}" CommandParameter="{Binding InventoryCount}" ></Button>
 		</Grid>
 	</Frame>
 </ContentPage>
