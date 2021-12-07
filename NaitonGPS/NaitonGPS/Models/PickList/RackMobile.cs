@@ -1,6 +1,6 @@
 ﻿namespace NaitonGPS.Models
 {
-    public class Rack
+    public class RackMobile
     {
         public int StockRackId { get; set; }
         public string RackName { get; set; }

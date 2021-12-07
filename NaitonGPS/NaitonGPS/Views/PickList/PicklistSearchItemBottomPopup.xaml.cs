@@ -14,7 +14,7 @@ namespace NaitonGPS.Views
         public static bool IsSmallScreen { get; } = ScreenWidth <= 480;
         public static bool IsBigScreen { get; } = ScreenWidth >= 480;
 
-        public PicklistSearchItemBottomPopup(PickListItem pickListItem, EventHandler<Rack> callBack)
+        public PicklistSearchItemBottomPopup(PickListItem pickListItem, EventHandler<RackMobile> callBack)
         {
             InitializeComponent();
             BindingContext = new RacksViewModel(pickListItem,callBack, ChangeInput);

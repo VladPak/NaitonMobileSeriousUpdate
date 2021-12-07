@@ -13,20 +13,20 @@ namespace NaitonGPS.ViewModels
 {
     public class RacksViewModel : BaseViewModel
     {
-        private event EventHandler<Rack> CallBackMethod;
+        private event EventHandler<RackMobile> CallBackMethod;
         private event EventHandler<string> AfterLoadData;
         private readonly PickListItem _pickListItem;
         private string _searchText; 
 
-        private List<Rack> SearchRacks { get; set; }
+        private List<RackMobile> SearchRacks { get; set; }
         private bool IsSearch { get; set; }
         
 
-        public ObservableCollection<Rack> Racks { get; set; }
+        public ObservableCollection<RackMobile> Racks { get; set; }
         public bool IsScanerConnected { get; set; }
 
         public Command LoadItemsCommand { get; }
-        public Command<Rack> TappedItemCommand { get; set; }
+        public Command<RackMobile> TappedItemCommand { get; set; }
         public Command ScanningCommand { get; set; }
 
         public string SearchText
@@ -43,14 +43,14 @@ namespace NaitonGPS.ViewModels
             }
         }
 
-        public RacksViewModel(PickListItem pickListItem, EventHandler<Rack> callBack, EventHandler<string> afterLoadData)
+        public RacksViewModel(PickListItem pickListItem, EventHandler<RackMobile> callBack, EventHandler<string> afterLoadData)
         {
             _pickListItem = pickListItem;
             CallBackMethod = callBack;
             AfterLoadData = afterLoadData;
-            Racks = new ObservableCollection<Rack>();
+            Racks = new ObservableCollection<RackMobile>();
             LoadItemsCommand = new Command(async () => await LoadItems());
-            TappedItemCommand = new Command<Rack>(TappedItem);
+            TappedItemCommand = new Command<RackMobile>(TappedItem);
             ScanningCommand = new Command(Scanning);
             IsBusy = true;
             LoadItems().GetAwaiter();
@@ -79,7 +79,7 @@ namespace NaitonGPS.ViewModels
 
             try
             {
-                var rackItems = new List<Rack>();
+                var rackItems = new List<RackMobile>();
                 if (IsSearch)
                 {
                     if (!string.IsNullOrEmpty(_searchText))
@@ -117,7 +117,7 @@ namespace NaitonGPS.ViewModels
             }
         }
 
-        void TappedItem(Rack rack)
+        void TappedItem(RackMobile rack)
         {
             CallBackMethod.Invoke(this,rack);
         }

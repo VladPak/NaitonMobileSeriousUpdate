@@ -11,7 +11,7 @@ namespace NaitonGPS.Services
 		UserLoginDetails GetCurrentUser();
 		Task<List<PickListItem>> GetPickListItems(int pickListId);
 		Task<List<PickList>> GetPickLists(int? pickListId = null);
-		Task<List<Rack>> GetPickRacks(int deliveryOrderDetailsId);
+		Task<List<RackMobile>> GetPickRacks(int deliveryOrderDetailsId);
 		//Roles[] GetRoles(int roleId);
 		IEnumerable<Roles> GetRoles(int roleId);
 		UserLoginDetails RegistrationServiceSession();
@@ -23,12 +23,13 @@ namespace NaitonGPS.Services
 		Task<Tuple<Address, Address>> GetOrderAddress(int orderId, int clientId);
 		Task<List<OrderDetails>> GetOrderDetails(int orderId);
 		Task<List<Invoice>> GetInvoices(string companyName, int[] paymentStatuses, int limit, int? clientId, int? orderId = null, int[] invoiceIds = null, int[] businessIds = null);
-
+		
 
 		#region InventoryCount
 		Task<List<InventoryCount>> GetInventoryCount();
 		Task<int> SetCount(int businessId, int? stockId, int? rackId, int[] productIds, int[] batchIds, float[] quantities, int[] productCountIds);
 		Task<List<Product>> GetProducts(int[] businessIds);
+		Task<List<Rack>> GetRacks(int rackId, string rackName, string productName, bool isIntegerProduct = false);
 		#endregion
 	}
 }

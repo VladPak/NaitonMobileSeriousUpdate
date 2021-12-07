@@ -122,7 +122,7 @@ namespace NaitonGPS.Services
 			}
 		}
 
-		public async Task<List<Rack>> GetPickRacks(int deliveryOrderDetailsId)
+		public async Task<List<RackMobile>> GetPickRacks(int deliveryOrderDetailsId)
 		{
 			try
 			{
@@ -135,7 +135,7 @@ namespace NaitonGPS.Services
 													httpMethod: SimpleWSA.HttpMethod.GET,
 													responseFormat: ResponseFormat.JSON);
 
-				var dict = JsonConvert.DeserializeObject<Dictionary<string, Rack[]>>(xmlResult);
+				var dict = JsonConvert.DeserializeObject<Dictionary<string, RackMobile[]>>(xmlResult);
 
 				var rackList = dict.First().Value.ToList();
 
@@ -153,7 +153,7 @@ namespace NaitonGPS.Services
 				{
 					count = 0;
 					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
-					return new List<Rack>();
+					return new List<RackMobile>();
 				}
 			}
 		}
@@ -533,14 +533,14 @@ namespace NaitonGPS.Services
 				command.Parameters.Add("_productid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_businessid", PgsqlDbType.Integer).Value = 1;
 				command.Parameters.Add("_createdbyemployeeid", PgsqlDbType.Integer).Value = 0;
-				command.Parameters.Add("_assignedtoemployeeid", PgsqlDbType.Integer).Value = _user.PersonId;
+				command.Parameters.Add("_assignedtoemployeeid", PgsqlDbType.Integer).Value = 0;// _user.PersonId;
 				command.Parameters.Add("_stockrackid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_stockid", PgsqlDbType.Integer).Value = 1;
 				command.Parameters.Add("_batchnumber", PgsqlDbType.Text).Value = string.Empty;
 				command.Parameters.Add("_categoryid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_brandid", PgsqlDbType.Integer).Value = DBNull.Value;
 				command.Parameters.Add("_statusid", PgsqlDbType.Integer).Value = 0;
-				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = true;
+				command.Parameters.Add("_isassigned", PgsqlDbType.Boolean).Value = DBNull.Value;// true;
 				command.Parameters.Add("_createddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
 				command.Parameters.Add("_createddateend", PgsqlDbType.Timestamp).Value = DBNull.Value;
 				command.Parameters.Add("_counteddatestart", PgsqlDbType.Timestamp).Value = DBNull.Value;
@@ -668,6 +668,43 @@ namespace NaitonGPS.Services
 					count = 0;
 					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
 					return new List<Product>();
+				}
+			}
+		}
+
+		public async Task<List<Rack>> GetRacks(int rackId, string rackName, string productName, bool isIntegerProduct = false)
+		{
+			try
+			{
+				SimpleWSA.Command command = new SimpleWSA.Command("stockmanager_getfilteredracks");
+				command.Parameters.Add("_rackid", PgsqlDbType.Integer).Value = 0;
+				command.Parameters.Add("_rackname", PgsqlDbType.Varchar).Value = 0;
+				command.Parameters.Add("_product", PgsqlDbType.Varchar).Value = 0;
+				command.Parameters.Add("_isintegerproduct", PgsqlDbType.Boolean).Value = isIntegerProduct;
+
+				command.WriteSchema = WriteSchema.TRUE;
+				string xmlResult = SimpleWSA.Command.Execute(command,
+													RoutineType.DataSet,
+													httpMethod: SimpleWSA.HttpMethod.GET,
+													responseFormat: ResponseFormat.JSON);
+
+				var dict = JsonConvert.DeserializeObject<Dictionary<string, Rack[]>>(xmlResult);
+
+				return dict.First().Value.ToList();
+			}
+			catch (Exception ex)
+			{
+				count++;
+				if (count == 1)
+				{
+					await NewSession(_user.UserEmail, _user.UserPassword);
+					return await GetRacks(rackId, rackName, productName, isIntegerProduct);
+				}
+				else
+				{
+					count = 0;
+					await App.Current.MainPage.DisplayAlert("Sorry", ex.Message, "Ok");
+					return new List<Rack>();
 				}
 			}
 		}

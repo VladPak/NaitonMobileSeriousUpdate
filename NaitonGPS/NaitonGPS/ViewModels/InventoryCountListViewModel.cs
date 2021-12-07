@@ -19,11 +19,12 @@ namespace NaitonGPS.ViewModels
 		private List<InventoryCount> _search;
 		private InventoryCountListPage _page;
 		public ObservableCollection<InventoryCount> List { get; set; }
+		public IList<Rack> RackList { get; set; }
 
 		public Command LoadItemsCommand { get; }
 
 		public Command<InventoryCount> ItemTapped { get; }
-		public Command<InventoryCount> AddRack { get; set; }
+		public Command AddRack { get; set; }
 
 		private bool IsSearch { get; set; }
 
@@ -48,10 +49,9 @@ namespace NaitonGPS.ViewModels
 			List = new ObservableCollection<InventoryCount>();
 			LoadItemsCommand = new Command(async () => await LoadItems());
 			ItemTapped = new Command<InventoryCount>(OnItemSelected);
-			AddRack = new Command<InventoryCount>(OnAddRackButtonClick);
+			AddRack = new Command(OnAddRack);
 
 			var scanner = FreshIOC.Container.Resolve<IScanner>();
-
 			scanner.Enable();
 			scanner.OnScanDataCollected += Scanner_OnScanDataCollected;
 			scanner.SetConfig(new ZebraScannerConfig
@@ -135,14 +135,9 @@ namespace NaitonGPS.ViewModels
 				return;
 			await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item, SetCount), true);
 		}
-		private async void OnAddRackButtonClick(InventoryCount item)
+		private async void OnAddRack()
 		{
-			if (string.IsNullOrWhiteSpace(this.SearchText))
-				return;
-
-			if (item == null)
-				return;
-			//await Shell.Current.Navigation.PushModalAsync(new InventoryCountDetailsPage(item, SetCount), true);
+			await Shell.Current.Navigation.PushModalAsync(new AddRackPage(), true);
 		}
 		private async void SetCount(object sender, InventoryCount item)
 		{

@@ -56,7 +56,7 @@
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <Frame x:DataType="model:Rack" HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="10">
+                                <Frame x:DataType="model:RackMobile" HasShadow="False" BackgroundColor="#f2f4f2" CornerRadius="10">
                                     <Grid ColumnSpacing="0" RowSpacing="0">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*"></RowDefinition>

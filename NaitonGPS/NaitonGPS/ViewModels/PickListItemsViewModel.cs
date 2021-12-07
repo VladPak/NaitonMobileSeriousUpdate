@@ -221,7 +221,7 @@ namespace NaitonGPS.ViewModels
             IsChanged = true;
         }
 
-        async void SetRack(object sender,Rack item)
+        async void SetRack(object sender,RackMobile item)
         {
             await Shell.Current.Navigation.PopModalAsync();
             if (item == null) return;
@@ -320,7 +320,7 @@ namespace NaitonGPS.ViewModels
                 }
                 else
                 {
-                    List<Rack> rackList = new List<Rack>();
+                    List<RackMobile> rackList = new List<RackMobile>();
                     foreach (var dod in PicklistItems.GroupBy(x=>x.DeliveryOrderDetailsId))
                     {
                         rackList.AddRange(await DataManager.GetPickRacks(dod.Key));
